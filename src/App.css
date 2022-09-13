@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:gilron;
+    user-select:none !important;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border: 3px groove #070707;
+    border-right: none;
+    background-position: top;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d0a6ff;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d0a6ff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #8b4dff;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@font-face {
+    font-family: 'gilron';
+    src: url('./components/config/fonts/Gilroy-ExtraBold.otf') format("truetype");
+    font-display: swap
+  }
+  
+/*   @font-face {
+    font-family: 'gilronMedium';
+    src: url('./components/fonts/Gilroy-Medium.ttf') format("truetype");
+    font-display: swap
+  }
+  
+  
+  @font-face {
+    font-family: 'qatar';
+    src: url('./components/fonts/Qatar2022Arabic-Bold.ttf') format("truetype");
+    font-display: swap
+  }
+  
+  
+  @font-face {
+    font-family: 'qatarHeavy';
+    src: url('./components/fonts/Qatar2022Arabic-Heavy.ttf') format("truetype");
+    font-display: swap
+  }
+   */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    background-color: black;
+    user-select: none;
+  }
+  
+  main{
+    overflow: hidden;
+    background: rgb(0,0,0);
+    user-select: none;
+  }
+  
+  
