@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Marketplace = () => {
+const MarketPlace = () => {
   return (
     <div>Marketplace</div>
   )
 }
 
-export default Marketplace
+export default MarketPlace

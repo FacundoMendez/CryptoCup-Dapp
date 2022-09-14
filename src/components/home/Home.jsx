@@ -8,9 +8,8 @@ import "./home.css"
 import LiveMatchesHome from './liveMatchesHome/LiveMatchesHome';
 
 const Home = () => {
+
   const [arrows , setArrows] = useState(1)
-
-
 
   return (
     <>
@@ -27,7 +26,7 @@ const Home = () => {
           </div>
         </div>
     
-          {arrows == 1 ? 
+          {arrows === 1 ? 
             <div className="containerDapp_cards">
               
               <NavLink to="/BasicLadder" >
