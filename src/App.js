@@ -1,10 +1,37 @@
 import './App.css';
+import Home from './components/home/Home';
+import Staking from './components/staking/Staking';
+import Nav from './components/nav/Nav';
+import MatchFeed from './components/matchFeed/MatchFeed';
+import FriendsLadder from './components/friendsLadder/FriendsLadder';
+import BasicLadder from './components/basicLadder/BasicLadder';
+import BoostLadder from './components/boostLadder/BoostLadder';
+import MiniGame from './components/miniGame/MiniGame';
+import ProfileUser from './components/profileUser/ProfileUser';
+import Marketplace from './components/marketPlace/Marketplace';
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <BrowserRouter>
+        <Nav/>
+        <Routes>
+        <Route exact path="/" element={<Home />} />
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/basicLadder" element={<BasicLadder />} />
+            <Route exact path="/boostLadder" element={<BoostLadder />} />
+            <Route exact path="/staking" element={<Staking />} />
+            <Route exact path="/friendsLadder" element={<FriendsLadder />} />
+            <Route exact path="/marketplace" element={<Marketplace />} />
+            <Route exact path="/airdrop" element={<MiniGame />} />
+            <Route exact path="/profileUser" element={<ProfileUser />} />
+            <Route exact path="/matchFeed" element={<MatchFeed />} />
+            <Route   path='*' element={<Home />}  />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,257 @@
+.containerDapp{
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.containerDapp_title{
+    position: relative;
+    width: 75vw;
+    height: 16rem;
+    border: 1px solid #75519C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 4rem;
+}
+.containerDapp_title p{
+    color: rgb(235, 235, 235);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+
+.arrowsHome{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 2.2rem;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+.arrowLeft_home:hover{
+    color: #d6b0ff;
+}
+
+.arrowRight_home:hover{
+    color: #d6b0ff;
+}
+
+.containerDapp_cards{
+    position: relative;
+    width: 75vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    background-color: #291E34;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.cardMain{
+    height: 23.5rem;
+    width: 23.5vw;
+    border-radius: 10px;
+    background: #160D1F;
+    background-image: url("./src/card.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.212);
+    position: relative;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.cardMain::before{
+    height: 23.5rem;
+    width: 23.5vw;
+    position: absolute;
+    content: " ";
+    border-radius: 10px;
+    background: #000000c0;
+}
+
+
+*{
+    text-decoration: none;
+}
+
+.cardMain h2{
+    margin-top: 2rem;
+    color: rgb(235, 235, 235);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    z-index: 1000;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+}
+
+.team1_live,.team2_live, .liveBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.match_live{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    
+}
+
+.flag_team1_live, .flag_team2_live{
+    width: 4.5rem;
+    height: 3rem;
+    border-radius: 10px;
+}
+.flag_live_img{
+    width: 100%;
+    height: 100%;
+    filter: contrast(110%) brightness(110%);
+}
+
+.boxResut_live{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxResut_live p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+.result_team1_live, .result_team2_live{
+    width: 2rem;
+    height: 2.7rem;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+.text_live{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #75519C;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    padding-right: 4rem;
+    height:6rem;
+}
+
+.text_live p{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.activeLive{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    animation: liveNow 2.1s infinite linear;
+}
+
+@keyframes liveNow {
+    0%{
+        background-color: rgba(143, 143, 143, 0);
+    }
+
+    50%{
+        background-color: rgb(190, 26, 26);
+    }
+
+    100%{
+        background-color: rgba(143, 143, 143, 0);
+    }
+}
+
+
+
+.cardMain:hover{
+    background-color: rgba(253, 251, 255, 0.692);
+}
+  
+@media screen and (max-width: 1460px) {
+   
+    .containerDapp_cards{
+        width: 95%;
+        height: 100%;
+    }
+
+    .containerDapp_title{
+        width: 95%;
+    }
+
+    .cardMain{
+        height: 19rem;
+        width: 29vw;
+    }
+    
+    .cardMain::before{
+        height: 19rem;
+        width: 29vw;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 824px) {
+
+    .containerDapp_title{
+        width: 95%;
+        height: 7rem;
+    }
+
+    .containerDapp{
+        height: 100%;
+    }
+
+    .containerDapp_cards{
+        width: 95%;
+        height: 100%;
+        flex-direction: column;
+        padding: 2rem 1rem;
+
+    }
+
+    .cardMain{
+        height: 30rem;
+        width: 85vw;
+    }
+    
+    .cardMain::before{
+        height: 30rem;
+        width: 85vw;
+    }
+ 
+  }
