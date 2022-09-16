@@ -7,16 +7,18 @@ import '@splidejs/react-splide/css';
 import "./sliderBanner.css"
 
 
-/* import '@splidejs/react-splide/css/sea-green'; */
 
-// or only core styles
 
 const SliderBanner = () => {
 
   const options = {
-    type   : 'loop',
+    type   : 'fade',
     perPage: 1,
     focus  : 'center',
+    autoplay : true,
+    pauseOnHover: true,
+    speed: 1500,
+    rewind: true,
   };
   return (
 
