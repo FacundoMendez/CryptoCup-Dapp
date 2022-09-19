@@ -21,38 +21,26 @@ const Nav = () => {
       <ul className='listNav'>
           <NavLink to="/"> <li> <img className='logoNav' src={logoCC} alt="LogoCC" /> </li></NavLink> 
 
-          <NavLink to="/home" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+          <NavLink to="/home" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
             <li> Home</li> 
           </NavLink>
 
-            <li className='ladders_nav'> Ladders
+          <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+            <li>Ladder</li> 
+          </NavLink>
 
-              <ul className='subList_ladders'>
-                <NavLink to="/basicLadder" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-                  <li>Basic Ladder</li>
-                </NavLink>
-                <NavLink to="/boostLadder" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-                  <li>Boost Ladder</li>
-                </NavLink>
-                <NavLink to="/friendsLadder" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                  <li>Friends Ladder</li>
-                </NavLink>
-              </ul>  
-              
-            </li> 
-
-          <NavLink to="/staking" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
+          <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
             <li> Staking</li>
           </NavLink>
 
-          <NavLink to="/marketplace" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
+          <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
             <li> Marketplace </li> 
           </NavLink>
-          <NavLink to="/airdrop" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
+          <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
             <li> Airdrop</li> 
           </NavLink>
 
-          <NavLink to="/matchFeed" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+          <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
             <li> Match Feed</li> 
           </NavLink>
       </ul>

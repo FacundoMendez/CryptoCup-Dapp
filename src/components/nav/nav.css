@@ -27,7 +27,7 @@
     list-style: none;
 }
 
-.listNav li{
+.listNav .link_nav_text{
     display: inline-block;
     letter-spacing: 1px;
     font-size: 1.5rem;
@@ -105,10 +105,42 @@
 }
 
 
-
 .subList_ladders li{
     font-size: 1.5rem;
 }
+
+
+/* effect navbar */
+
+.listNav .link_nav_text:after {
+  content: '';
+  bottom: -3.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+  background: linear-gradient(#721de2da, #c59ef1);;
+  -webkit-box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #6200ffe0, 0px 0px 11px #6200ffe7;
+  box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #6200ffe8, 0px 0px 11px #6200fff3;
+  -webkit-transition: all 0.3s ease-in;
+  z-index: 9999999999 !important ;
+  border-radius: 45px;
+  transition: all 0.3s ease ;
+}
+
+.listNav .link_nav_text:hover:after {
+    width: 100%;
+    height: 3px;
+    filter: drop-shadow(0px -10px 8px rgba(195, 161, 250, 0.267));
+}
+
+.listNav .logoList :after {
+    pointer-events: none;
+}
+
 
 @media screen and (max-width:1440px) {
 
