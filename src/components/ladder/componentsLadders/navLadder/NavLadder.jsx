@@ -2,7 +2,7 @@ import React, {useState , useEffect} from 'react'
 import "./navLadder.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import navLadderFuncional from './navLadderFuncional'
+import navLadderActive from './navLadderActive'
 
 const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
 
@@ -29,7 +29,7 @@ const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
 
     useEffect(() => {
         colorPred()
-        navLadderFuncional()
+        navLadderActive()
     },[])
 
   return (

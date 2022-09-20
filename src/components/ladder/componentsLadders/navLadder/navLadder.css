@@ -3,14 +3,15 @@
     position: relative;
     width: 72vw;
     height: 6rem;
-    border: 1px solid #75519C;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     padding: 0 4rem;
-    margin-top: 1rem;
-/*     overflow: hidden; */
+    margin-top: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
+    background-color: rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(1rem);
 }
 
 .nav_basicLadder h2{
@@ -37,13 +38,41 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
+    position: relative;
 }
+
+.links_BasicLadder li:after {
+    content: '';
+    bottom: -1.8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: linear-gradient(#ead8ffda, #ab61ff);;
+    -webkit-box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #d2b6ffe0, 0px 0px 11px #caa9ffe7;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #be95ff, 0px 0px 11px #924eff;
+    -webkit-transition: all 0.3s ease-in;
+    z-index: 9999999999 !important ;
+    border-radius: 45px;
+    opacity: .7;
+    transition: all 0.3s ease ;
+}
+  
+.links_BasicLadder li:hover:after {
+    width: 100%;
+    height:1px;
+    filter: drop-shadow(0px -10px 8px rgba(195, 161, 250, 0.267));
+}
+  
 
 
 @media screen and (max-width:1440px) {
 
     .nav_basicLadder{
-        width: 80vw;
+        width: 90vw;
         height: 6rem;
         padding: 0 3rem;
     }
@@ -65,7 +94,7 @@
 @media screen and (max-width:1024px) {
 
     .nav_basicLadder{
-        width: 80vw;
+        width: 90vw;
         height: 5rem;
         padding: 0 2rem;
     }
@@ -101,16 +130,17 @@
     }
 
     .box_links_movile{
-        background-color: rgba(21, 14, 31, 0.671);
-        backdrop-filter: blur(1rem);
-        border: 2px solid rgba(185, 153, 245, 0.13);
-        border-radius:5px;
+        background-color: rgba(181, 139, 250, 0.568);
+        backdrop-filter: blur(2rem);
+        border: 2px solid rgba(222, 221, 223, 0.13);
+        border-radius:10px;
+        border-top: none;
         width: 100%;
         position: absolute;
         left: 0;
-        top: 4.9rem;
-        height: 18rem;
-        padding: 1rem 0;
+        top: 4.54rem;
+        height: 16.5rem;
+        padding: 1.3rem 0;
         z-index: 9999 !important;
         visibility: hidden;
         opacity: 0;
@@ -129,11 +159,11 @@
         color: white;
         width: 100%;
         display: flex;
-        height: 16rem;
+        height: 14rem;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap:1rem;
+        gap:.5rem;
     }
 
     .links_movile li{
@@ -146,16 +176,18 @@
         letter-spacing: 1px;
         backdrop-filter: blur(1rem);
         width: 100%;
-        padding: 1rem;
+        padding: 1rem ;
         border-radius: 5px;
         border: 2px solid rgba(219, 192, 255, 0.062);
         border-left: none;
         border-right: none;
+        background-color: rgba(67, 16, 161, 0.89);
+
     }
 
 
     .links_movile li:hover{
-        background-color: #b882ff7c;
+        background-color: #5a12b9f8;
         transition: all .3s ease-in-out;
         text-shadow: 0 0 .1rem black;
     }
@@ -170,6 +202,11 @@
 }
 
 @media screen and (max-width:480px) {
+
+    .nav_basicLadder{
+        width: 98vw;
+        margin-top: 2rem;
+    }
 
     .links_movile li{
         font-size: 1.6rem;  

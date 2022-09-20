@@ -9,7 +9,6 @@ const navFuncional = () => {
     })
     
     for( let element of nav_list_links ){
-
         element.addEventListener("click" , function(){
             listNav.classList.toggle("listNav_active")
         })

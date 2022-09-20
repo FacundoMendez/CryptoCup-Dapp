@@ -5,8 +5,6 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow-y: hidden;
-
 }
 
 
@@ -14,15 +12,14 @@
     position: relative;
     width: 72vw;
     height: 8rem;
-    border: 1px solid #75519C;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     padding: 0 4rem;
     margin-top: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(233, 214, 255, 0.226);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.336);
+    background-color: rgba(22, 22, 22, 0.082);
     backdrop-filter: blur(1rem);
 /*     overflow: hidden; */
 }
@@ -46,32 +43,40 @@
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(85, 84, 84, 0.041);
+    backdrop-filter: blur(1rem);
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .table_container{
     width: 72vw;
     height: 100%;
     position: relative;
-    margin-top: .5rem;    
-    background-color: #291E34;
     overflow: hidden;
     overflow-y:scroll;
+    padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(159, 85, 255, 0.055);
+    background-color: rgba(159, 85, 255, 0.205);
     backdrop-filter: blur(1rem);
+
 }
 
 .table_cabecera{
-    margin-top: 2rem;
+    margin-top: 0rem;
     width: 100%;
     height: 7rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(158, 85, 255, 0.281);
     backdrop-filter: blur(1rem);
-   /*  border-top-left-radius: 15px;
-    border-top-right-radius: 15px; */
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 2px solid rgb(196, 136, 255);
 }
 
 .table_cabecera ul{

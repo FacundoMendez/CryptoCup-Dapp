@@ -5,11 +5,12 @@
     text-align: center;
     margin: 0 auto;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.295);
-    border: 1px solid #75519C;
     border-radius: 15px;
     z-index: 1000;
     padding: .4rem;
-    background-color: black;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(1rem);
   }
   
 .slider img{
