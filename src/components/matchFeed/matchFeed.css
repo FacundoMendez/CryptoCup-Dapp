@@ -117,3 +117,54 @@
     font-size: 2rem;
     color: white;
 }
+
+
+@media screen and (max-width:1440px) {
+
+    .nav_matchFeed {
+        width: 80vw;
+    }
+
+    .table {
+        width: 80vw;
+    }
+
+    .table_container {
+        width: 80vw;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .nav_matchFeed {
+        width: 90vw;
+    }
+
+    .table {
+        width: 90vw;
+    }
+
+    .table_container {
+        width: 90vw;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .nav_matchFeed {
+        width: 98vw;
+    }
+
+    .table {
+        width: 98vw;
+    }
+
+    .table_container {
+        width: 98vw;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+
+}
