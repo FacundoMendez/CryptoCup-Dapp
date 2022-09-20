@@ -15,16 +15,17 @@
 .containerDapp_title{
     position: relative;
     width: 75vw;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
-    padding: 0 4rem;
+    padding: 1rem 4rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
     background-color: rgba(255, 255, 255, 0.164);
     backdrop-filter: blur(1rem);
+    margin: 1rem 0rem;
 }
 .containerDapp_title p{
     color: rgb(235, 235, 235);
@@ -89,7 +90,7 @@
     content: " ";
     border-radius: 10px;
     transition: all .2s ease-in-out;
-    background: #3b3b3b31;
+    background: #16161631;
 }
 
 
@@ -252,18 +253,18 @@
     }
 
     .cardMain{
-        height: 30rem;
-        width: 85vw;
+        height: 33rem;
+        width: 95vw;
     }
     
     .cardMain::before{
-        height: 30rem;
-        width: 85vw;
+        height: 33rem;
+        width: 95vw;
     }
  
   }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
     .match_live{
         display: flex;
@@ -292,9 +293,18 @@
         width: 15rem;
     }
 
+    .cardMain{
+        height: 30rem;
+        width: 95vw;
+    }
+    
+    .cardMain::before{
+        height: 30rem;
+        width: 95vw;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
 
     .text_live p{
         font-size: 1.1rem;
@@ -317,4 +327,15 @@
         border: none;
         text-align: center;
     }
+
+    .cardMain{
+        height: 30rem;
+        width: 95vw;
+    }
+    
+    .cardMain::before{
+        height: 30rem;
+        width: 95vw;
+    }
+
 }
