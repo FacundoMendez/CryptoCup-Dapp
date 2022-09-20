@@ -13,7 +13,7 @@
     gap: 6rem;
     flex-wrap: nowrap;
     z-index: 99999;
-    background-color: rgba(180, 113, 255, 0.308);
+    background-color: rgba(169, 93, 255, 0.247);
     backdrop-filter: blur(1rem);
     border-radius: 25px;
     border-top-left-radius: 0;
@@ -202,6 +202,21 @@
        gap: 6rem;
        opacity: 0;
        transition: all .2s ease-in-out;
+       background-image: url("../config/src/backMatch3.jpg");
+       background-position: 100% 100%;
+       background-size: cover;
+       background-attachment: fixed;
+
+    }
+
+    .listNav::after{
+        width: 110%;
+        height: 100%;
+        content: " ";
+        top: 0rem;
+        background-color: rgba(0, 0, 0, 0.400);
+        position: absolute;
+        z-index: -1;
     }
 
     .listNav_active{
@@ -215,7 +230,6 @@
         transition: all .2s ease-in-out;
      }
  
-
     .listNav li{
         display: inline-block;
         color: white;
@@ -235,7 +249,6 @@
         display: none;
     }
     
-
     .nav_Toggle{
         display: inline-block;
         color: white;
@@ -247,7 +260,4 @@
         position: absolute;
         left: 10%;
     }
-
- 
-    
 }
