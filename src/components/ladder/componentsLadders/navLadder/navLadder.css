@@ -43,7 +43,7 @@
 
 .links_BasicLadder li:after {
     content: '';
-    bottom: -1.8rem;
+    bottom: -1.6rem;
     left: 0;
     right: 0;
     margin: auto;
