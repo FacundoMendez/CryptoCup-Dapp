@@ -1,39 +1,47 @@
-import React, {useEffect} from 'react'
+import React, {useState} from 'react'
+import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import NavLadder from '../componentsLadders/navLadder/NavLadder'
+import Predictions from '../componentsLadders/predictions/Predictions'
+import Ranking from '../componentsLadders/ranking/Ranking'
 import "./basicLadder.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import basicLadderFuncional from './basicLadderFuncional'
+
 
 const BasicLadder = () => {
-  useEffect(() => {
-    basicLadderFuncional()
-  },[])
+
+  const [predictions , setPredictions] = useState(true)
+  const [myPrediction , setMyPrediction] = useState(false)
+  const [ranking , setRanking] = useState(false)
+
   return (
     <div className="basicLadder">
-      <div className="nav_basicLadder">
-         <h2>Basic Ladder</h2>
-         <div className="links_BasicLadder">
-            <ul>
-               <li>Predictions</li>
-               <li>My predictions</li>
-               <li>Ranking</li>
-            </ul>
-         </div>
-         <div className="container_links_movile">
-            <button className="toggle_link" aria-label="Abrir menú"/*  onClick={() => navFuncional()} */>
-              <FontAwesomeIcon icon={faBars} />
-            </button>
+      <NavLadder 
+          ladder="Basic Ladder"
+          setMyPrediction={setMyPrediction}
+          setPredictions={setPredictions}
+          setRanking={setRanking}
+      />
+      <div className="container_basicLadder">
+        
+        {
+          predictions ? 
+            <Predictions/>
+          :
+          null
+        }
 
-            <div className="box_links_movile">
-              <div className="links_movile">
-                  <ul>
-                    <li className='predictions'>Predictions</li>
-                    <li>My predictions</li>
-                    <li className='ranking'>Ranking</li>
-                  </ul>
-              </div>
-            </div>
-         </div>
+        {
+          myPrediction ? 
+            <MyPredictions/>
+          :
+          null
+        }
+        
+        {
+          ranking ? 
+            <Ranking/>
+          :
+          null
+        }
       </div>
     </div>
   )

@@ -1,0 +1,17 @@
+.boostLadder{
+    width: 100%;
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.container_boostLadder{
+    width: 72vw;
+    height: 100%;
+    position: relative;
+    border: 2px solid rgb(198, 154, 255);
+    margin-top: 1rem;
+}

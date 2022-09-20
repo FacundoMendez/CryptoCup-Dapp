@@ -19,29 +19,29 @@ const Nav = () => {
           <FontAwesomeIcon icon={faBars} />
       </button>
       <ul className='listNav'>
-          <NavLink to="/"> <li> <img className='logoNav' src={logoCC} alt="LogoCC" /> </li></NavLink> 
+          <NavLink to="/"> <li className='nav_list_links'> <img className='logoNav' src={logoCC} alt="LogoCC" /> </li></NavLink> 
 
           <NavLink to="/home" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-            <li> Home</li> 
+            <li className='nav_list_links'> Home</li> 
           </NavLink>
 
           <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-            <li>Ladder</li> 
+            <li className='nav_list_links'>Ladder</li> 
           </NavLink>
 
           <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-            <li> Staking</li>
+            <li className='nav_list_links'> Staking</li>
           </NavLink>
 
           <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-            <li> Marketplace </li> 
+            <li className='nav_list_links'> Marketplace </li> 
           </NavLink>
           <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-            <li> Airdrop</li> 
+            <li className='nav_list_links'> Airdrop</li> 
           </NavLink>
 
           <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-            <li> Match Feed</li> 
+            <li className='nav_list_links'> Match Feed</li> 
           </NavLink>
       </ul>
 

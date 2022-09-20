@@ -1,0 +1,114 @@
+.matchFeed{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow-y: hidden;
+
+}
+
+
+.nav_matchFeed{
+    position: relative;
+    width: 72vw;
+    height: 8rem;
+    border: 1px solid #75519C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 4rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(233, 214, 255, 0.226);
+    backdrop-filter: blur(1rem);
+/*     overflow: hidden; */
+}
+
+.nav_matchFeed h2{
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* table */
+
+.table{
+    width: 72vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.table_container{
+    width: 72vw;
+    height: 100%;
+    position: relative;
+    margin-top: .5rem;    
+    background-color: #291E34;
+    overflow: hidden;
+    overflow-y:scroll;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(159, 85, 255, 0.055);
+    backdrop-filter: blur(1rem);
+}
+
+.table_cabecera{
+    margin-top: 2rem;
+    width: 100%;
+    height: 7rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(158, 85, 255, 0.281);
+    backdrop-filter: blur(1rem);
+   /*  border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+}
+
+.table_cabecera ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    height: 7rem;
+    background-color: #ffffff3b;
+    backdrop-filter: blur(.8rem);
+}
+
+.table_cabecera li{
+    font-size: 2rem;
+    color: white;
+}
+
+.table_games {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    height: 10rem;
+    background-color: #ffffff3b;
+    backdrop-filter: blur(.8rem);
+    border-radius: 15px;
+    margin-top: 1rem;
+
+}
+
+.table_campos{
+    font-size: 2rem;
+    color: white;
+}
