@@ -1,0 +1,59 @@
+.friendsLadder{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.container_friendsLadder{
+    width: 72vw;
+    height: 100%;
+    position: relative;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
+    background-color: rgba(255, 255, 255, 0.089);
+    border-bottom: 2px solid rgba(150, 112, 255, 0.281);
+    backdrop-filter: blur(1rem);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+/*     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226); */
+/*     background-color: rgba(158, 85, 255, 0.281); */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 1000;
+}
+
+
+@media screen and (max-width:1440px) {
+    .container_friendsLadder{
+        width: 90vw;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .container_friendsLadder{
+        width: 90vw;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .container_friendsLadder{
+        width: 90vw;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .container_friendsLadder{
+        width: 98vw;
+    }
+}
