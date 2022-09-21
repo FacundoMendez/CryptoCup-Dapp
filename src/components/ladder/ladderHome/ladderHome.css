@@ -22,11 +22,10 @@
     width: 72%;
     height: 10rem;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
-    background-color: rgba(255, 255, 255, 0.103);
+    background-color: rgba(255, 255, 255, 0.171);
     backdrop-filter: blur(1rem);
-
 }
 
 .header_laddersHome h2{
@@ -40,12 +39,12 @@
     display: flex;
     justify-items: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
 }
 
 .header_ladderHome_enlaces li{
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: white;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -59,7 +58,7 @@
 
 .header_ladderHome_enlaces li:after {
     content: '';
-    bottom: -3.2rem;
+    bottom: -2.2rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -188,11 +187,6 @@
         width: 98%;
 
     }
-
-    .container_basicLadder{
-        margin-top: 2rem;
-    }
-
 
 
 }

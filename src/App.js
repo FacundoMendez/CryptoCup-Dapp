@@ -11,12 +11,14 @@ import ProfileUser from './components/profileUser/ProfileUser';
 import Marketplace from "./components/marketPlace/Marketplace"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LadderHome from './components/ladder/ladderHome/LadderHome';
+import Login from './components/nav/login/Login';
 
 
 function App() {
   return (
     <BrowserRouter>
         <Nav/>
+        <Login/>
         <Routes>
         <Route exact path="/" element={<Home />} />
             <Route exact path="/home" element={<Home />} />

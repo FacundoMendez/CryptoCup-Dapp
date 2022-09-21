@@ -1,10 +1,12 @@
 .matchFeed{
     width: 100%;
-    height: 90vh;
+    height: 88.5vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 
@@ -17,7 +19,7 @@
     align-items: center;
     border-radius: 10px;
     padding: 0 4rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
     background-color: rgba(255, 255, 255, 0.185);
     backdrop-filter: blur(1rem);
@@ -72,11 +74,11 @@
     height: 7rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(158, 85, 255, 0.281);
+    border-bottom: 2px solid rgb(196, 136, 255);
     backdrop-filter: blur(1rem);
     border-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: 2px solid rgb(196, 136, 255);
 }
 
 .table_cabecera ul{

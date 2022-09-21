@@ -13,6 +13,7 @@ const Nav = () => {
   },[])
 
 
+
   return (
     <header className='header'>
       <div className="nav">
@@ -52,6 +53,7 @@ const Nav = () => {
             </li>
           </ul>
         </div>
+    
     </header>
     
   )

@@ -13,8 +13,9 @@
     gap: 6rem;
     flex-wrap: nowrap;
     z-index: 99999;
-    background-color: rgba(169, 93, 255, 0.247);
-    backdrop-filter: blur(1rem);
+    background-color: rgba(141, 109, 255, 0.192);
+    backdrop-filter: blur(.8rem);
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.288);
     border-radius: 25px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;

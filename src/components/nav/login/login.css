@@ -1,0 +1,133 @@
+.containerLogin{
+    width: 70rem;
+    height: 35vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(7, 0, 19, 0.623);
+    border-radius: 15px;
+    border: 1px solid rgb(202, 180, 253);
+    backdrop-filter: blur(1rem);
+    z-index: 9999 !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 8rem;
+}
+
+.containerLogin::after{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    z-index: -1;
+}
+
+.login_active{
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+.content_user_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+}
+
+
+.content_user_login label{
+    position: relative;
+    color: white;
+    font-size: 2.8rem;
+    transition: 1.5s;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.content_user_login input{
+    width: 65%;
+    height: 5rem;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.9rem;
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 0px -5px 1rem  rgba(0, 0, 0, 0.205),
+    5px 5px 15px 0 rgba(0, 0, 0, 0.712);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(2rem);
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.content_user_login input:hover{
+    filter: drop-shadow( 0 0 10px rgba(225, 159, 255, 0.466)) ;
+    transition: all .5s ease-in-out;
+}
+
+.buttonAcept_login{
+    width: 90%;
+    height: 5rem;
+    background-color: rgba(161, 110, 255, 0.788);
+    backdrop-filter: blur(1rem);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+    cursor: pointer;
+}
+
+.buttonAcept_login:active{
+    width: 89.9%;
+    height: 4.9rem;
+    filter: drop-shadow(0 0 2px white);
+}
+
+.buttonAcept_login p{
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_flag{
+    border: 2px solid rgb(21, 255, 0);
+    width: 6rem;
+    height: 6rem;
+}
