@@ -16,7 +16,7 @@
     background-color: rgba(158, 83, 255, 0.404);
     border-bottom: 2px solid rgb(196, 136, 255);
     backdrop-filter: blur(.8rem);
-    z-index: 9999;
+    z-index: 999;
 }
 
 .nav_basicLadder::before{
