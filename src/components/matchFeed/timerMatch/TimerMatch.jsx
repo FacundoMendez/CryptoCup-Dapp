@@ -13,10 +13,6 @@ const TimerMatch = ({timer}) => {
         let msecPerHour = msecPerMinute * 60;
         let msecPerDay = msecPerHour * 24;
     
-        useEffect(() => {
-            getTimeMatch()
-           },[]);
-    
         const getTimeMatch=()=>{
             let timeNow=new Date(Date.now())//Get actual time in MS
             let matchStarts = new Date(timer)  //Get match time in MS
@@ -30,6 +26,12 @@ const TimerMatch = ({timer}) => {
             let minutesLeft=Math.floor(diff/msecPerMinute)
             setMinutes(minutesLeft) 
         }
+
+
+        useEffect(() => {
+            getTimeMatch()
+        },[]);
+    
 
   return (
     <div className="reloj">

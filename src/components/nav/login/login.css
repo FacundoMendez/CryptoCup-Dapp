@@ -174,7 +174,7 @@
     height: 2rem;
     clip-path: polygon(50% 0% , 0% 100%, 100% 100%);
     color: white;
-    background-color: rgba(136, 136, 136, 0.945);
+    background-color:rgba(198, 174, 255, 0.534);
     transform: rotate(180deg) translate(-0% , -50%);
     position: absolute;
     right: 15%;
@@ -208,8 +208,8 @@
     gap: 2rem;
     width: 30rem;
     height: 35rem;
-    top: 55%;
-    right: 0rem;
+    top: 50%;
+    right: 2rem;
     padding: 4rem 2rem; 
     overflow: hidden;
     overflow-y: scroll;
@@ -253,18 +253,6 @@
     width: 1.7rem;
     height: 1.7rem;
     cursor: pointer;
-}
-
-
-
-
-@media screen and (max-width:1440px) {
-
-}
-
-
-@media screen and (max-width:1024px) {
-
 }
 
 
@@ -427,4 +415,38 @@
         top: 35%;
    
     }
+}
+
+@media screen and (max-width:350px) {
+    .container_select_flag {
+        position: absolute;
+        background-color: rgba(5, 0, 8, 0.952);
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 30rem;
+        height: 35rem;
+        top: 35%;
+        right: -4.6rem;
+        padding: 4rem 2rem;
+    }
+    .userName_label {
+        font-size: 2rem;
+        margin-left: -8rem;
+    }
+
+    
+    .triangle_flag{
+        width: 2.5rem;
+        height: 2rem;
+        top: -1.5rem;
+        left: 2rem;
+    }
+
+    .circle_flag{
+        left: -4rem;
+    }
+
 }

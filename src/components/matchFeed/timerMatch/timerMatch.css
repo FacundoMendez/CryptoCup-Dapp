@@ -42,4 +42,23 @@
 
 }
 
+@media screen and (max-width:480px) {
+    
+    .reloj{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .reloj p{
+        padding: .8rem .5rem;
+    }
+    
+    .reloj span{
+        padding: 0 .5rem;
+        font-size: 1.3rem;
+    }
+    
+
+}
+
 

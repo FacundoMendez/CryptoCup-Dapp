@@ -207,7 +207,6 @@
        background-position: 100% 100%;
        background-size: cover;
        background-attachment: fixed;
-
     }
 
     .listNav::after{
@@ -262,3 +261,4 @@
         left: 10%;
     }
 }
+
