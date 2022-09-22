@@ -14,7 +14,6 @@
     gap: 1.8rem;
     position: relative;
     padding: 1rem 2vw;
-    padding-top: 1rem;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -22,9 +21,8 @@
     height: 12rem;
     border-radius: 10px;
     margin-top: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
-    background-color: rgba(218, 185, 255, 0.199);
-    backdrop-filter: blur(1rem);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
+    background-color: rgba(133, 100, 177, 0.315);
 }
 
 .header_laddersHome h2{

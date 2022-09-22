@@ -46,15 +46,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 1rem rgba(206, 168, 255, 0.555);
+    box-shadow: 0 0 2rem rgba(192, 143, 255, 0.767);
     padding: 2rem;
     padding-top: 6.4rem;
     border-radius: 15%;
     text-align: center;    
     border-left: 75px solid transparent; 
     border-right: 75px solid transparent; 
-    border-bottom: 38px solid rgba(221, 200, 255, 0.24); 
-    border-top: 38px solid rgba(221, 200, 255, 0.24);
+    border-bottom: 38px solid rgba(192, 143, 255, 0.623);
+    border-top: 38px solid rgba(192, 143, 255, 0.623);
 }
 
 
