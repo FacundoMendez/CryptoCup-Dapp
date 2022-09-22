@@ -23,7 +23,7 @@
     border-radius: 10px;
     margin-top: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
-    background-color: rgba(255, 255, 255, 0.171);
+    background-color: rgba(218, 185, 255, 0.199);
     backdrop-filter: blur(1rem);
 }
 
@@ -57,8 +57,8 @@
 
 .header_ladderHome_enlaces li:after {
     content: '';
-    bottom: -1rem;
     left: 0;
+    bottom: -1rem;
     right: 0;
     margin: auto;
     position: absolute;
