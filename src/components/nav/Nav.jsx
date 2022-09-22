@@ -49,7 +49,7 @@ const Nav = () => {
 
           <ul className='listNav_login'>
             <li className='buttonLogin'>
-              Login
+              Connect
             </li>
           </ul>
         </div>

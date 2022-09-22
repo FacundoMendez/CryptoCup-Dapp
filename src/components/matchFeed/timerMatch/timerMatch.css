@@ -1,0 +1,45 @@
+.reloj{
+    list-style: none;
+    display: flex;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+
+.reloj p{
+    background-color: rgba(243, 243, 243, 0.171);
+    padding: .3rem 1rem ;
+    border-radius: 5px;
+    margin:0 .2rem;
+}
+
+.reloj span{
+    padding: 0 .4rem;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:1400px) {
+    
+    .reloj{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .reloj p{
+        padding: .8rem .5rem;
+    }
+    
+    .reloj span{
+        padding: 0 .5rem;
+        font-size: 1.3rem;
+    }
+    
+
+}
+
+

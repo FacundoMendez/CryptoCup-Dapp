@@ -1,7 +1,7 @@
 .blurLogin{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: rgba(0, 0, 0, 0.548);
     backdrop-filter: blur(1rem);
     position: fixed;
     left: 50%;
@@ -19,15 +19,23 @@
     transition: all .2s ease-in-out;
 }
 
+.blurLogin_exit{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
 
 .containerLogin{
     width: 70rem;
-    height: 35vh;
+    height: 37vh;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(7, 1, 15, 0.76);
+    background-color: rgba(5, 0, 8, 0.952);
     border-radius: 15px;
     border: 1px solid rgb(206, 185, 255);
     backdrop-filter: blur(1rem);
@@ -38,15 +46,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0 0 1rem rgba(206, 168, 255, 0.555);
     padding: 2rem;
     padding-top: 6.4rem;
     border-radius: 15%;
     text-align: center;    
-/*     border-left: 50px solid transparent; 
-    border-right: 50px solid transparent; 
-    border-bottom: 20px solid rgba(198, 174, 255, 0.164); 
-    border-top: 20px solid rgba(198, 174, 255, 0.164);
- */
     border-left: 75px solid transparent; 
     border-right: 75px solid transparent; 
     border-bottom: 38px solid rgba(221, 200, 255, 0.24); 
@@ -185,7 +189,14 @@
     cursor: pointer;
     z-index: 9999;
     position: relative;
+    overflow: hidden;
     background-color: rgba(98, 10, 240, 0.219);
+}
+
+.img_bandera{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .container_select_flag{

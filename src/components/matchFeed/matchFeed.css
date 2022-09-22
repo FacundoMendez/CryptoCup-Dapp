@@ -1,6 +1,6 @@
 .matchFeed{
     width: 100%;
-    height: 88.5vh;
+    height: 88vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -60,7 +60,7 @@
     position: relative;
     overflow: hidden;
     overflow-y:scroll;
-    padding: 1rem;
+    padding: .8rem .2rem;
     border-radius: 5px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(159, 85, 255, 0.205);
@@ -79,6 +79,10 @@
     border-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.status_cabecera{
+    margin-right: 6.6rem;
 }
 
 .table_cabecera ul{
@@ -105,14 +109,20 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
     width: 100%;
-    height: 10rem;
+    margin-left: .2rem;
+    height: 11rem;
     background-color: #ffffff3b;
     backdrop-filter: blur(.8rem);
     border-radius: 15px;
     margin-top: 1rem;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
 
+.table_games:hover{
+    box-shadow: 0 0 1rem rgba(176, 121, 248, 0.418);
+    transition: all .4s ease-in-out;
 }
 
 .table_campos{
@@ -120,53 +130,137 @@
     color: white;
 }
 
+.team1_box, .team2_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.result_team1 , .result_team2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result_team1 p{
+    position: absolute;
+    font-size: 2.8rem;
+    color: white;
+}
+
+.result_team2 p{
+    position: absolute;
+    font-size: 2.8rem;
+    color: white;
+}
+
+.team1_flag{
+    margin-left: 6rem;
+}
+
+.team2_flag{
+    margin-right: -3rem;
+}
+
+
+.team1_flag img, .team2_flag img{
+    object-fit: cover;
+    width: 9rem;
+    height: 5rem;
+    border-radius: 15px;
+    filter: contrast(120%);
+}
+
+.startIn_text{
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+.timer_match{
+    position: relative;
+    right: 0;
+}
+
+.game_match{
+    margin-left: 3rem;
+}
 
 @media screen and (max-width:1440px) {
 
     .nav_matchFeed {
-        width: 80vw;
+        width: 90vw;
     }
 
     .table {
-        width: 80vw;
+        width: 90vw;
     }
 
     .table_container {
-        width: 80vw;
+        width: 90vw;
+    }
+
+    .team1_flag img, .team2_flag img{
+        width: 8rem;
+        height: 5rem;
+    }
+
+    .game_match{
+        margin-left: 1rem;
     }
 }
 
 
 @media screen and (max-width:1024px) {
-    .nav_matchFeed {
-        width: 90vw;
+    .status_cabecera{
+        display: none;
+    }
+    .timer_match{
+        display: none;
     }
 
-    .table {
-        width: 90vw;
+    .game_match{
+        display: none;
     }
 
-    .table_container {
-        width: 90vw;
-    }
-}
-
-
-@media screen and (max-width:600px) {
-    .nav_matchFeed {
-        width: 98vw;
+    .game_cabecera{
+        display: none;
     }
 
-    .table {
-        width: 98vw;
+    .team1_flag{
+        margin-left: 2rem;
+    }
+    
+    .team2_flag{
+        margin-right: 2rem;
+    }
+    .table_games {
+        height: 9rem;
     }
 
-    .table_container {
-        width: 98vw;
-    }
 }
 
 
 @media screen and (max-width:480px) {
+    .team1_flag img, .team2_flag img{
+        width: 6rem;
+        height: 4.5rem;
+    }
 
+    .result_team1 p{
+        font-size: 2.5rem;
+    }
+    
+    .result_team2 p{
+        font-size: 2.5rem;
+    }
+
+    .table_games {
+        height: 8rem;
+    }
 }

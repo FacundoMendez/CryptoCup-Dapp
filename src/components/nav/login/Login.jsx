@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import "./login.css"
 import loginFuncional from './loginFuncional'
 import SelectFlags from './selectFlags/SelectFlags'
@@ -8,8 +8,6 @@ const Login = () => {
 
     useEffect(() => {
         loginFuncional()
-
-
     },[])
 
 
@@ -17,6 +15,7 @@ const Login = () => {
 
   return (
     <div className="blurLogin">
+        <div className="blurLogin_exit"></div>
         <div className=" containerLogin">
             <div className="content_user_login">
                 <div className="username">
