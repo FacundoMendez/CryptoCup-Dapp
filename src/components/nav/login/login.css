@@ -22,12 +22,12 @@
 
 .containerLogin{
     width: 70rem;
-    height: 32vh;
+    height: 35vh;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(7, 0, 19, 0.795);
+    background-color: rgba(7, 1, 15, 0.76);
     border-radius: 15px;
     border: 1px solid rgb(206, 185, 255);
     backdrop-filter: blur(1rem);
@@ -39,10 +39,19 @@
     align-items: center;
     flex-direction: column;
     padding: 2rem;
-    padding-top: 8rem;
+    padding-top: 6.4rem;
+    border-radius: 15%;
+    text-align: center;    
+/*     border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    border-bottom: 20px solid rgba(198, 174, 255, 0.164); 
+    border-top: 20px solid rgba(198, 174, 255, 0.164);
+ */
+    border-left: 75px solid transparent; 
+    border-right: 75px solid transparent; 
+    border-bottom: 38px solid rgba(221, 200, 255, 0.24); 
+    border-top: 38px solid rgba(221, 200, 255, 0.24);
 }
-
-
 
 
 .login_active{
@@ -61,10 +70,10 @@
 }
 
 
-.content_user_login label{
+.userName_label{
     position: relative;
     color: white;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     transition: 1.5s;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -80,7 +89,7 @@
     padding: 1rem;
 }
 
-.content_user_login input{
+#userName_id{
     width: 65%;
     height: 4rem;
     border: none;
@@ -89,8 +98,7 @@
     font-size: 1.9rem;
     padding: 15px;
     border-radius: 40px;
-    box-shadow: 0px -5px 1rem  rgba(0, 0, 0, 0.205),
-    5px 5px 15px 0 rgba(0, 0, 0, 0.712);
+    cursor: pointer;
     border: 1px solid rgb(201, 172, 255);
     transition: 1.5s;
     letter-spacing: 1px;
@@ -116,7 +124,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     cursor: pointer;
 }
 
@@ -134,6 +142,9 @@
     text-transform: uppercase;
 }
 
+
+/* banderas login */
+
 .flag{
     display: flex;
     justify-content: center;
@@ -141,10 +152,268 @@
 }
 
 .box_flag{
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 12rem;
+    height: 6.5rem;
+    position: relative;
+}
+
+.triangle_flag{
+    width: 2.5rem;
+    height: 2rem;
+    clip-path: polygon(50% 0% , 0% 100%, 100% 100%);
+    color: white;
+    background-color: rgba(136, 136, 136, 0.945);
+    transform: rotate(180deg) translate(-0% , -50%);
+    position: absolute;
+    right: 15%;
+    top: 25%;
+}
+
+.circle_flag{
     border: 1px solid rgb(201, 172, 255);
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 9999;
+    position: relative;
+    background-color: rgba(98, 10, 240, 0.219);
+}
+
+.container_select_flag{
+    position: absolute;
+    background-color: rgba(5, 0, 8, 0.952);
+    backdrop-filter: blur(1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 30rem;
+    height: 35rem;
+    top: 55%;
+    right: 0rem;
+    padding: 4rem 2rem; 
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 999;
+    border-radius: 12%;
+    text-align: center;    
+    border-left: 45px solid transparent; 
+    border-right: 45px solid transparent; 
+    border-bottom: 20px solid rgba(198, 174, 255, 0.534); 
+    border-top: 20px solid rgba(198, 174, 255, 0.534);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .15s ease-in-out;
+}
+
+.container_select_flag_active{
+    opacity: 1;
+    visibility: visible;
+    transition: all .15s ease-in-out;
+}
+
+.radio{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    width: 18rem;
+}
+
+.radio p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+
+.radio input{
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width:1440px) {
+
+}
+
+
+@media screen and (max-width:1024px) {
+
+}
+
+
+@media screen and (max-width:800px) {
+
+    .containerLogin{
+        width: 90%;
+        height: 45vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        padding-top: 6.4rem;
+        border-left: 40px solid transparent; 
+        border-right: 40px solid transparent; 
+        border-bottom: 28px solid rgba(221, 200, 255, 0.24); 
+        border-top: 28px solid rgba(221, 200, 255, 0.24);
+    }
+
+    .content_user_login{
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .userName_label{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .username{
+        gap: 2rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    #userName_id{
+        width: 100%;
+        height: 3.8rem;
+        font-size: 1.9rem;
+        padding: 15px;
+    }
+
+    .buttonAcept_login{
+        width: 80%;
+        height: 5rem;
+        bottom: 3rem;
+    }
+
+    .buttonAcept_login:active{
+        width: 89.9%;
+        height: 4.9rem;
+    }
+
+    .buttonAcept_login p{
+        font-size: 2rem;
+    }
+
+    .box_flag{
+        gap: 1rem;
+        width: 12rem;
+        height: 6.5rem;
+    }
+
+    .triangle_flag{
+        width: 2.5rem;
+        height: 2rem;
+        right: 30%;
+        top: 62%;
+    }
+
+    .circle_flag{
+        width: 4.8rem;
+        height: 4.8rem;
+        top: 38%;
+    }
+
+
+}
+
+
+@media screen and (max-width:480px) {
+
+    .containerLogin{
+        width: 90%;
+        height: 45vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        padding-top: 6.4rem;
+        border-left: 40px solid transparent; 
+        border-right: 40px solid transparent; 
+        border-bottom: 28px solid rgba(221, 200, 255, 0.24); 
+        border-top: 28px solid rgba(221, 200, 255, 0.24);
+    }
+
+    .content_user_login{
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .userName_label{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: -5rem;
+        margin-bottom: .5rem;
+    }
+
+    .username{
+        gap: 2rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    #userName_id{
+        width: 25rem;
+        height: 3.8rem;
+        font-size: 1.9rem;
+        padding: 15px;
+    }
+
+    .buttonAcept_login{
+        width: 80%;
+        height: 5rem;
+        bottom: 3rem;
+    }
+
+    .buttonAcept_login:active{
+        width: 89.9%;
+        height: 4.9rem;
+    }
+
+    .buttonAcept_login p{
+        font-size: 2rem;
+    }
+
+    .box_flag{
+        gap: 1rem;
+        width: 12rem;
+        height: 6.5rem;
+        position: absolute;
+    }
+
+    .triangle_flag{
+        width: 2.5rem;
+        height: 2rem;
+        top: -1.5rem;
+        left: 4rem;
+
+    }
+
+    .circle_flag{
+        width: 4.5rem;
+        height: 4.5rem;
+        top: -3rem;
+        left: -2rem;
+    }
+
+    .container_select_flag {
+        top: 35%;
+   
+    }
 }

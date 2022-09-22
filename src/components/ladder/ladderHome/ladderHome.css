@@ -9,13 +9,12 @@
 
 .header_laddersHome{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     gap: 1.8rem;
     position: relative;
     padding: 1rem 2vw;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -29,7 +28,7 @@
 }
 
 .header_laddersHome h2{
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: white;
@@ -44,7 +43,7 @@
 }
 
 .header_ladderHome_enlaces li{
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     color: white;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -58,7 +57,7 @@
 
 .header_ladderHome_enlaces li:after {
     content: '';
-    bottom: -2.2rem;
+    bottom: -1rem;
     left: 0;
     right: 0;
     margin: auto;
