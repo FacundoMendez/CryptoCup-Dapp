@@ -1,11 +1,15 @@
 import React,{useState, Suspense} from 'react'
 import {NavLink} from "react-router-dom";
 import SliderBanner from './slider/SliderBanner';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import "./home.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faTelegram } from "@fortawesome/free-brands-svg-icons"
+import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 import LiveMatchesHome from './liveMatchesHome/LiveMatchesHome';
+import "./home.css"
 
 const Home = () => {
 
@@ -15,8 +19,26 @@ const Home = () => {
     <>
     <Suspense fallback={"loading"}>
       <div className="containerDapp">
-        <LiveMatchesHome/>
+        <div className="container_live_social">
+          <LiveMatchesHome/>
+          <div className="social_nav">
+              <a href="https://twitter.com/CryptoCupQatar" target="_blank" rel="noopener noreferrer" aria-label='twitter red social'>
+                <i className="twitterSocialFooter"> <FontAwesomeIcon icon={faTwitter}  />  </i>   
+              </a>
+              <a href="https://www.instagram.com/cryptocupqatar/" target="_blank" rel="noopener noreferrer" aria-label='instagram red social'>
+                <i className="instagramSocialFooter"> <FontAwesomeIcon icon={faInstagram} /> </i>   
+              </a>
+              <a href="https://t.me/cryptocupqatar" target="_blank" rel="noopener noreferrer" aria-label='telegram red social'>
+                <i className="telegramSocialFooter"> <FontAwesomeIcon icon={faTelegram} /> </i> 
+              </a>
+              <a href="https://discord.gg/ckFmn9xXhw" target="_blank" rel="noopener noreferrer" aria-label='discord red social'>
+                <i className="discordSocialFooter"> <FontAwesomeIcon icon={faDiscord} /> </i>  
+              </a>
+          </div>
+        </div>
+
         <SliderBanner/>
+
         
         <div className="containerDapp_title">
           <p>OUR LADDERS</p>

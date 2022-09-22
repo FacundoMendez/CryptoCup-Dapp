@@ -2,16 +2,17 @@ import React, {useState} from 'react'
 import arg from "../../config/flags/arg.png"
 import bra from "../../config/flags/bra.png"
 
+
 const LiveMatchesHome = () => {
 
     const [matchActive, setMatchActive] = useState(true)
 
 
   return (
-    <div className="containerDapp_title">
+    <div className="liveNav" >
 
             { matchActive ?
-                <div className="liveBox">
+                <div className="liveBox ">
                     <div className="text_live">
                         <p>Live Now</p>
                         <div className="activeLive"></div>
@@ -35,6 +36,7 @@ const LiveMatchesHome = () => {
                             </div>
                         </div>
                     </div>
+ 
                 </div>
             : 
                 null

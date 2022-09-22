@@ -12,6 +12,23 @@
     overflow: hidden;
 }
 
+.liveNav{
+    position: relative;
+    width: 63.5vw;
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem 4rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+    background-color: rgba(133, 100, 177, 0.315);
+    backdrop-filter: blur(1rem);
+    margin: .3rem 0rem;
+    color: white;
+}
+
 .containerDapp_title{
     position: relative;
     width: 75vw;
@@ -27,6 +44,7 @@
     backdrop-filter: blur(1rem);
     margin: .3rem 0rem;
 }
+
 .containerDapp_title p{
     color: white;
     font-size: 2rem;
@@ -206,6 +224,42 @@
         background-color: rgba(143, 143, 143, 0);
     }
 }
+.container_live_social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.social_nav{
+    width: 11vw;
+    position: relative;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+    background-color: rgba(133, 100, 177, 0.315);
+    backdrop-filter: blur(1rem);
+    margin: .3rem 0rem;
+    gap: 1.4rem;
+}
+
+.social_nav i{
+    font-size: 2.8rem;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.social_nav i:hover{
+    color: rgb(192, 153, 255);
+    transition: all .2s ease-in-out;
+}
 
 
 
@@ -222,6 +276,18 @@
 
     .containerDapp_title{
         width: 95%;
+    }
+
+    .liveNav{
+        width: 73vw;
+    }
+
+    .social_nav{
+        width: 20vw;
+    }
+    
+    .container_live_social{
+        gap: 1rem;
     }
 
     .cardMain{
@@ -253,7 +319,6 @@
         height: 100%;
         flex-direction: column;
         padding: 2rem 1rem;
-
     }
 
     .cardMain{
@@ -267,6 +332,15 @@
     }
  
   }
+@media screen and (max-width: 700px) {
+    .social_nav{
+        display: none;
+    }
+
+    .liveNav{
+        width: 95vw;
+    }
+}
 
 @media screen and (max-width: 550px) {
 
