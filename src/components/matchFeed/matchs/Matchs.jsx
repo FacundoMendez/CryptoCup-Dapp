@@ -7,8 +7,7 @@ const TimerMatch = lazy(() => import ('../timerMatch/TimerMatch'))
 
 const Matchs = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
-/*   let timer = 60 */
-    console.log(paisesJson2[nameTeam1])
+
   return (
     <Suspense fallback={<Spinner/>} >
         <div className="table_container">
