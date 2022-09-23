@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {Suspense, useState} from 'react'
 import arg from "../../config/flags/arg.png"
 import bra from "../../config/flags/bra.png"
+import Spinner from '../../config/spinner/Spinner'
 
 
 const LiveMatchesHome = () => {
@@ -9,8 +10,8 @@ const LiveMatchesHome = () => {
 
 
   return (
-    <div className="liveNav" >
-
+    <Suspense fallback={<Spinner/>}>
+        <div className="liveNav" >
             { matchActive ?
                 <div className="liveBox ">
                     <div className="text_live">
@@ -23,26 +24,24 @@ const LiveMatchesHome = () => {
                                 <img className='flag_live_img' src={arg} alt="flag-Team1" />
                             </div>
                         </div>
-
                         <div className="boxResut_live">
                             <div className="result_team1_live">0</div>
                             <p>-</p>
                             <div className="result_team2_live">0</div>
                         </div>
-
                         <div className="team2_live">
                             <div className="flag_team2_live">
                                 <img className='flag_live_img' src={bra} alt="flag-Team1" />
                             </div>
                         </div>
                     </div>
- 
+
                 </div>
             : 
                 null
             }
-            
-    </div>
+        </div>
+    </Suspense>
   )
 }
 

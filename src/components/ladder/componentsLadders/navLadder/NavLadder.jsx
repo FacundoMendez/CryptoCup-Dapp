@@ -1,8 +1,9 @@
-import React, {useState , useEffect} from 'react'
+import React, {useState , useEffect, Suspense} from 'react'
 import "./navLadder.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navLadderActive from './navLadderActive'
+import Spinner from '../../../config/spinner/Spinner'
 
 const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
 
@@ -33,73 +34,75 @@ const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
     },[])
 
   return (
-    <div className="nav_basicLadder">
-        <h2>{ladder}</h2>
-        <div className="links_BasicLadder">
-            <ul>
-                <li className='link_nav' style={{color : colorP}}  onClick={() => {
-                        setPredictions(true) 
-                        setMyPrediction(false)
-                        setRanking(false)    
-                        colorPred()
-                    } }>
-                    Predictions
-                </li>
-                <li className='link_nav'  style={{color : colorM}}  onClick={() => {
-                        setMyPrediction(true)
-                        setPredictions(false) 
-                        setRanking(false) 
-                        colorMyPrediction()
-                    }}>
-                    My predictions 
-                </li>
-                <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
-                        setMyPrediction(false)
-                        setPredictions(false) 
-                        setRanking(true) 
-                        colorRank()
-                    }}>
-                    Ranking
-                </li>
-            </ul>
-        </div>
-        <div className="container_links_movile">
-            <button className="toggle_link" aria-label="Abrir menú">
-                <FontAwesomeIcon icon={faBars} />
-            </button>
-
-            <div className="box_links_movile">
-                <div className="links_movile">
-                    <ul>
-                        <li className='link_nav'   style={{color : colorP}}  onClick={() => {
+    <Suspense fallback={<Spinner/>}>
+        <div className="nav_basicLadder">
+            <h2>{ladder}</h2>
+            <div className="links_BasicLadder">
+                <ul>
+                    <li className='link_nav' style={{color : colorP}}  onClick={() => {
                             setPredictions(true) 
                             setMyPrediction(false)
                             setRanking(false)    
                             colorPred()
-                            } }> 
-                            Predictions
-                        </li>
-                        <li className='link_nav'  style={{color : colorM}}  onClick={() => {
+                        } }>
+                        Predictions
+                    </li>
+                    <li className='link_nav'  style={{color : colorM}}  onClick={() => {
                             setMyPrediction(true)
                             setPredictions(false) 
                             setRanking(false) 
                             colorMyPrediction()
-                            } }>
-                            My predictions
-                        </li>
-                        <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
+                        }}>
+                        My predictions 
+                    </li>
+                    <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
                             setMyPrediction(false)
                             setPredictions(false) 
                             setRanking(true) 
                             colorRank()
-                            }}>
-                            Ranking
-                        </li>
-                    </ul>
+                        }}>
+                        Ranking
+                    </li>
+                </ul>
+            </div>
+            <div className="container_links_movile">
+                <button className="toggle_link" aria-label="Abrir menú">
+                    <FontAwesomeIcon icon={faBars} />
+                </button>
+
+                <div className="box_links_movile">
+                    <div className="links_movile">
+                        <ul>
+                            <li className='link_nav'   style={{color : colorP}}  onClick={() => {
+                                setPredictions(true) 
+                                setMyPrediction(false)
+                                setRanking(false)    
+                                colorPred()
+                                } }> 
+                                Predictions
+                            </li>
+                            <li className='link_nav'  style={{color : colorM}}  onClick={() => {
+                                setMyPrediction(true)
+                                setPredictions(false) 
+                                setRanking(false) 
+                                colorMyPrediction()
+                                } }>
+                                My predictions
+                            </li>
+                            <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
+                                setMyPrediction(false)
+                                setPredictions(false) 
+                                setRanking(true) 
+                                colorRank()
+                                }}>
+                                Ranking
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </Suspense>
   )
 }
 

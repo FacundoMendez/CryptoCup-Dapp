@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
-import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
-import NavLadder from '../componentsLadders/navLadder/NavLadder'
-import Predictions from '../componentsLadders/predictions/Predictions'
-import Ranking from '../componentsLadders/ranking/Ranking'
+import React, {useState, lazy} from 'react'
+import { Suspense } from 'react'
+import Spinner from '../../config/spinner/Spinner'
 import "./basicLadder.css"
+
+const MyPredictions = lazy(() => import ('../componentsLadders/myPrediction/MyPredictions'))
+const NavLadder = lazy(() => import ('../componentsLadders/navLadder/NavLadder'))
+const Predictions = lazy(() => import ('../componentsLadders/predictions/Predictions'))
+const Ranking = lazy(() => import ('../componentsLadders/ranking/Ranking'))
 
 
 const BasicLadder = () => {
@@ -13,37 +16,46 @@ const BasicLadder = () => {
   const [ranking , setRanking] = useState(false)
 
   return (
-    <div className="basicLadder">
-      <NavLadder 
-          ladder="Basic Ladder"
-          setMyPrediction={setMyPrediction}
-          setPredictions={setPredictions}
-          setRanking={setRanking}
-      />
-      <div className="container_basicLadder">
-        
-        {
-          predictions ? 
-            <Predictions/>
-          :
-          null
-        }
+    <Suspense fallback={<Spinner/>}>
+      <div className="basicLadder">
+        <NavLadder 
+            ladder="Basic Ladder"
+            setMyPrediction={setMyPrediction}
+            setPredictions={setPredictions}
+            setRanking={setRanking}
+        />
+        <div className="container_basicLadder">
+          
+          {
+            predictions ? 
+              <Suspense fallback={<Spinner/>}>
+                <Predictions/>
+              </Suspense>
 
-        {
-          myPrediction ? 
-            <MyPredictions/>
-          :
-          null
-        }
-        
-        {
-          ranking ? 
-            <Ranking/>
-          :
-          null
-        }
+            :
+            null
+          }
+
+          {
+            myPrediction ? 
+              <Suspense fallback={<Spinner/>}>
+                <MyPredictions/>
+              </Suspense>
+            :
+            null
+          }
+          
+          {
+            ranking ? 
+              <Suspense fallback={<Spinner/>}>
+                <Ranking/>
+              </Suspense>
+            :
+            null
+          }
+        </div>
       </div>
-    </div>
+    </Suspense>
   )
 }
 

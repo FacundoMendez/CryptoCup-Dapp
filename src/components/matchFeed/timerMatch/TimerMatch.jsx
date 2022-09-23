@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React, {Suspense, useEffect, useState} from 'react'
+import Spinner from '../../config/spinner/Spinner'
 import "./timerMatch.css"
 
 const TimerMatch = ({timer}) => {
@@ -34,11 +35,13 @@ const TimerMatch = ({timer}) => {
     
 
   return (
-    <div className="reloj">
-        <p>{days} <br /> <span id="days">Days</span></p>
-        <p>{hours} <br /> <span id="hours">Hours</span> </p>
-        <p>{minutes} <br /> <span id="minutes">Mins</span></p>
-    </div>
+    <Suspense fallback={<Spinner/>}>
+        <div className="reloj">
+            <p>{days} <br /> <span id="days">Days</span></p>
+            <p>{hours} <br /> <span id="hours">Hours</span> </p>
+            <p>{minutes} <br /> <span id="minutes">Mins</span></p>
+        </div>
+    </Suspense>
   )
 }
 

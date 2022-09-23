@@ -1,6 +1,5 @@
-import React,{useState, Suspense} from 'react'
+import React,{useState, Suspense, lazy} from 'react'
 import {NavLink} from "react-router-dom";
-import SliderBanner from './slider/SliderBanner';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,8 +7,13 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faTelegram } from "@fortawesome/free-brands-svg-icons"
 import { faDiscord } from "@fortawesome/free-brands-svg-icons"
-import LiveMatchesHome from './liveMatchesHome/LiveMatchesHome';
 import "./home.css"
+
+
+const LiveMatchesHome = lazy(() => import ('./liveMatchesHome/LiveMatchesHome'))
+const SliderBanner = lazy(() => import ('./slider/SliderBanner'))
+const Spinner = lazy(() => import ('../config/spinner/Spinner'))
+
 
 const Home = () => {
 
@@ -17,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-    <Suspense fallback={"loading"}>
+    <Suspense fallback={<Spinner/>}>
       <div className="containerDapp">
         <div className="container_live_social">
           <LiveMatchesHome/>
