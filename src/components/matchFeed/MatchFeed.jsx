@@ -1,9 +1,27 @@
-import React,{Suspense, lazy} from 'react'
+import React,{Suspense, lazy, useEffect , useState} from 'react'
 import "./matchFeed.css"
 import Spinner from '../config/spinner/Spinner'
+import api from '../../api'
 const Matchs = lazy(() => import ("./matchs/Matchs"))
 
+
 const MatchFeed = () => {
+
+  
+  const [matchs,setMatchs]=useState([])
+
+  useEffect(() => {
+   getMatchs()
+  },[]);
+
+    //Get all matches from DB
+    const getMatchs=async()=>{
+      const res=await api.get('/matchs/getMatches')
+      const matchsArray=res.data
+      console.log(res.data);
+      setMatchs(matchsArray)
+  }
+
   return (
     <Suspense fallback={<Spinner/>}>
       <div className="matchFeed">
@@ -20,8 +38,20 @@ const MatchFeed = () => {
               <li className='status_cabecera'>STATUS</li>
             </ul>
           </div>
-
-          <Matchs /> 
+          {
+                matchs.map((item,index)=>{
+                    return <Matchs key={index}
+                  timer={item.startDate}
+                  round={item.round}
+         /*          flagTeam1={item.team1}
+                  flagTeam2={banderaEcuador} */
+                  nameTeam1={item.team1}
+                  nameTeam2={item.team2}
+                  resultTeam1={item.scoreTeam1}
+                  resultTeam2={item.scoreTeam2}
+                            />  
+                })
+              }
           
         </div>  
       </div>

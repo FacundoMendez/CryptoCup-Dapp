@@ -1,0 +1,46 @@
+{
+    "Qatar" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "Ecuador" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Ecuador_q551am.jpg",
+        "num":14
+    },
+    "Senegal" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "Netherlands" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "England" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "Iran" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "USA" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
+        "num":0
+    },
+    "Portugal" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Portugal_o61fcj.jpg",
+        "num":0
+    },
+    "Japon" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Jap%C3%B3n_cjfe9x.jpg ",
+        "num":21
+    },
+    "Canada" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Canad%C3%A1_ar86yj.jpg ",
+        "num":8
+    },
+    "Uruguay" : {
+        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Uruguay_bu2mus.jpg ",
+        "num":30
+    }
+}

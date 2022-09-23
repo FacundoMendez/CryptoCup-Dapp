@@ -1,38 +1,38 @@
-import React, {lazy, Suspense} from 'react'
+import React, {lazy, Suspense } from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import paisesJson from "../../config/paises.json"
+import paisesJson2 from "../../config/paises2.json"
 
 const TimerMatch = lazy(() => import ('../timerMatch/TimerMatch'))
 
-const Matchs = () => {
+const Matchs = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
-  let timer = 60
-
-
+/*   let timer = 60 */
+    console.log(paisesJson2[nameTeam1])
   return (
     <Suspense fallback={<Spinner/>} >
         <div className="table_container">
             <div className='table_games' >
-            <div className='table_campos game_match'>16TH</div>
+            <div className='table_campos game_match'>{round}</div>
 
             <div className='table_campos team1_box'>
                 <div className="team1_flag">  
-                    <img src={paisesJson[1].img} alt="bandera team1" />
+                   <img src={paisesJson2[nameTeam1].img} alt="bandera team1" />  
                 </div>                
             </div>
 
             <div className="result_team1 table_campos">
-                <p>0</p>
+                <p>{resultTeam1}</p>
             </div>
 
             <div className="result_team2 table_campos">
-                <p>0</p>
+                <p>{resultTeam2}</p>
             </div>
 
             <div className='table_campos team2_box'>
 
                 <div className="team2_flag">
-                    <img src={paisesJson[0].img} alt="bandera team1" />  
+                    <img src={paisesJson2[nameTeam2].img} alt="bandera team1" />  
                 </div>  
             </div>
 
