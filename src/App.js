@@ -12,12 +12,13 @@ import Marketplace from "./components/marketPlace/Marketplace"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LadderHome from './components/ladder/ladderHome/LadderHome';
 import Login from './components/nav/login/Login';
-
+import NavInventario from './components/nav_inventario/NavInventario';
 
 function App() {
   return (
     <BrowserRouter>
         <Nav/>
+        <NavInventario/>
         <Login/>
         <Routes>
         <Route exact path="/" element={<Home />} />

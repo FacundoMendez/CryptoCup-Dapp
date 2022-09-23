@@ -112,58 +112,53 @@
         "num":21
     },
     {
-        "name": "Corea del Sur",
-        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Corea_jcwos0.jpg ",
-        "num":22
-    },
-    {
         "name": "Marruecos",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Marruecos_d5rsly.jpg",
-        "num":23
+        "num":22
     },
     {
         "name": "Mexico",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/M%C3%A9xico_oswjz2.jpg  ",
-        "num":24
+        "num":23
     },
     {
         "name": "Portugal",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Portugal_o61fcj.jpg ",
-        "num":25
+        "num":24
     },
     {
         "name": "Polonia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Polonia_ldolpc.jpg ",
-        "num":26
+        "num":25
     },
     {
         "name": "Qatar",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Qatar_emccgo.jpg ",
-        "num":27
+        "num":26
     },
     {
         "name": "Serbia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Serbia_do0kab.jpg ",
-        "num":28
+        "num":27
     },
     {
         "name": "Suiza",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Suiza_hhlfet.jpg",
-        "num":29
+        "num":28
     },
     {
         "name": "Senegal",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Senegal_aycies.jpg ",
-        "num":30
+        "num":29
     },
     {
         "name": "Uruguay",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Uruguay_bu2mus.jpg ",
-        "num":31
+        "num":30
     },
     {
         "name": "Túnez",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Tunez_nhofmo.jpg  ",
-        "num":32
+        "num":31
     }
 ]
