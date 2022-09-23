@@ -9,7 +9,6 @@
     gap: 2rem;
     position: fixed;
     box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.329);
-
     background-color: rgba(11, 5, 19, 0.973);
     backdrop-filter: blur(1rem);
     z-index: 9999;
@@ -18,14 +17,14 @@
     border-bottom-left-radius: 0;
     transform: translate(0 , -50%);
     border-left: none;
-    transition: all .8s ease-in-out;
+    transition: all .2s ease ;
 }
 
 .nav_inventario:hover{
     width: 32rem;
     height: 90vh;
     left: 0rem;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease ;
 }
 
 .nav_Toggle_inventario{
@@ -49,17 +48,10 @@
 }
 
 
-/* 
-
-.nav_inventario:hover > .nav_Toggle_inventario img{
-   display: none;
-} */
-
-
 .nav_Toggle_inventario img{
     width: 3.5rem;
     opacity: .5;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
     cursor: pointer;
 }
 

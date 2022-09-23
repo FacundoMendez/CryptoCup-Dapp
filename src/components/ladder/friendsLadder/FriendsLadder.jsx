@@ -1,8 +1,8 @@
 import React , {useState} from 'react'
-import NavLadder from "../ladder/componentsLadders/navLadder/NavLadder"
-import MyPredictions from '../ladder/componentsLadders/myPrediction/MyPredictions'
-import Ranking from '../ladder/componentsLadders/ranking/Ranking'
-import Predictions from '../ladder/componentsLadders/predictions/Predictions'
+import NavLadder from "../componentsLadders/navLadder/NavLadder"
+import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import Ranking from '../componentsLadders/ranking/Ranking'
+/* import Predictions from '../ladder/componentsLadders/predictions/Predictions' */
 import "./friendsLadder.css"
 
 
@@ -22,12 +22,12 @@ const FriendsLadder = () => {
           setRanking={setRanking}
       />
       <div className="container_friendsLadder">
-          {
+{/*           {
             predictions ? 
               <Predictions/>
             :
             null
-          }
+          } */}
 
           {
             myPrediction ? 

@@ -4,17 +4,18 @@ import Home from './components/home/Home';
 import Staking from './components/staking/Staking';
 import Nav from './components/nav/Nav';
 import MatchFeed from './components/matchFeed/MatchFeed';
-import FriendsLadder from './components/friendsLadder/FriendsLadder';
+import FriendsLadder from './components/ladder/friendsLadder/FriendsLadder';
 import BasicLadder from './components/ladder/basicLadder/BasicLadder';
 import BoostLadder from './components/ladder/boostLadder/BoostLadder';
 import MiniGame from './components/miniGame/MiniGame';
 import ProfileUser from './components/profileUser/ProfileUser';
 import Marketplace from "./components/marketPlace/Marketplace"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LadderHome from './components/ladder/ladderHome/LadderHome';
+import LadderHome from './components/ladder/componentsLadders/ladderHome/LadderHome';
 import Login from './components/nav/login/Login';
 import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
+
 
 function App() {
   return (

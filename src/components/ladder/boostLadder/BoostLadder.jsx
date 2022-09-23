@@ -4,7 +4,7 @@ import "./boostLadder.css"
 
 const MyPredictions = lazy(() => import ('../componentsLadders/myPrediction/MyPredictions'))
 const NavLadder = lazy(() => import ('../componentsLadders/navLadder/NavLadder'))
-const Predictions = lazy(() => import ('../componentsLadders/predictions/Predictions'))
+/* const Predictions = lazy(() => import ('../componentsLadders/predictions/Predictions')) */
 const Ranking = lazy(() => import ('../componentsLadders/ranking/Ranking'))
 
 const BoostLadder = () => {
@@ -24,14 +24,14 @@ const BoostLadder = () => {
             setRanking={setRanking}
         />
         <div className="container_boostLadder">
-            {
+ {/*            {
               predictions ? 
                 <Suspense fallback={<Spinner/>}>
                   <Predictions/>
                </Suspense>
               :
               null
-            }
+            } */}
 
             {
               myPrediction ? 

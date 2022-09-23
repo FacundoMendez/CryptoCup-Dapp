@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import paisesJson from "./paises.json"
+import paisesJson from "../../../config/paises.json"
 
 const SelectFlags = () => {
 

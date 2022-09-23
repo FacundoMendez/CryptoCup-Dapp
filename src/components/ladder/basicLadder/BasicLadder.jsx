@@ -5,7 +5,7 @@ import "./basicLadder.css"
 
 const MyPredictions = lazy(() => import ('../componentsLadders/myPrediction/MyPredictions'))
 const NavLadder = lazy(() => import ('../componentsLadders/navLadder/NavLadder'))
-const Predictions = lazy(() => import ('../componentsLadders/predictions/Predictions'))
+const Predictions = lazy(() => import ('./predictionsBasic/PredictionsBasic'))
 const Ranking = lazy(() => import ('../componentsLadders/ranking/Ranking'))
 
 

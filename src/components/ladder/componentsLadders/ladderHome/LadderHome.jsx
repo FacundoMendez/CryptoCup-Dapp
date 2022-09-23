@@ -1,9 +1,9 @@
 import React, {useState, lazy, Suspense} from 'react'
-import Spinner from '../../config/spinner/Spinner'
+import Spinner from '../../../config/spinner/Spinner'
 import "./ladderHome.css"
 
-const BasicLadder = lazy(() => import ('../basicLadder/BasicLadder'))
-const BoostLadder = lazy(() => import ('../boostLadder/BoostLadder'))
+const BasicLadder = lazy(() => import ('../../basicLadder/BasicLadder'))
+const BoostLadder = lazy(() => import ('../../boostLadder/BoostLadder'))
 const FriendsLadder = lazy(() => import ('../../friendsLadder/FriendsLadder'))
 
 const LadderHome = () => {
