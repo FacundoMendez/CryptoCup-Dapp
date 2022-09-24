@@ -12,7 +12,7 @@ const LiveMatchesHome = () => {
   return (
     <Suspense fallback={<Spinner/>}>
         <div className="liveNav" >
-            { matchActive ?
+            { matchActive ?                         /* PARTIDOS EN VIVO */
                 <div className="liveBox ">
                     <div className="text_live">
                         <p>Live Now</p>
@@ -37,7 +37,7 @@ const LiveMatchesHome = () => {
                     </div>
 
                 </div>
-            : 
+            :                        /* PARTIDOS EN VIVO */
                 null
             }
         </div>

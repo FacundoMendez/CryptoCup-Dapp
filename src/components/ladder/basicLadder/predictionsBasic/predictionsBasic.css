@@ -2,8 +2,7 @@
     width: 36rem;
     height: 30rem;
     box-shadow: 0 0 1rem rgba(182, 182, 182, 0.185);
-    background-color: rgba(11, 1, 27, 0.904);
-    backdrop-filter: blur(1rem);
+    background-color: rgba(11, 1, 27, 0.808);
     border-radius: 10px;
     display: flex;
     justify-content: center;
