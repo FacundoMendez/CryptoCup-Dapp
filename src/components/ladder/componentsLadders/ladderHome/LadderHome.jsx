@@ -1,10 +1,10 @@
-import React, {useState, lazy, Suspense} from 'react'
+import React, {useState, Suspense} from 'react'
 import Spinner from '../../../config/spinner/Spinner'
 import "./ladderHome.css"
+import BasicLadder from '../../basicLadder/BasicLadder'
+import BoostLadder from '../../boostLadder/BoostLadder'
+import FriendsLadder from '../../friendsLadder/FriendsLadder'
 
-const BasicLadder = lazy(() => import ('../../basicLadder/BasicLadder'))
-const BoostLadder = lazy(() => import ('../../boostLadder/BoostLadder'))
-const FriendsLadder = lazy(() => import ('../../friendsLadder/FriendsLadder'))
 
 const LadderHome = () => {
 
@@ -38,7 +38,7 @@ const LadderHome = () => {
                 <h2>Ladders</h2>
                 <div className="header_ladderHome_enlaces">
                     <ul>
-                        <li style={{color : colorBasic}}  onClick={() => {
+                        <li className='list_navHome' style={{color : colorBasic}}  onClick={() => {
                                 setLadder(1)
                                 setColorBasic(true) 
                                 setColorBoost(false)
@@ -47,7 +47,7 @@ const LadderHome = () => {
                             }}>
                             Basic Ladder
                         </li>
-                        <li style={{color : colorBoost}}  onClick={() =>{ 
+                        <li className='list_navHome'  style={{color : colorBoost}}  onClick={() =>{ 
                                 setLadder(2)
                                 setColorBasic(false) 
                                 setColorBoost(true)
@@ -56,7 +56,7 @@ const LadderHome = () => {
                             }}>
                             Boost Ladder
                         </li>
-                        <li style={{color : colorFriends}}  onClick={() => {
+                        <li className='list_navHome'  style={{color : colorFriends}}  onClick={() => {
                                 setLadder(3)
                                 setColorBasic(false) 
                                 setColorBoost(false)
