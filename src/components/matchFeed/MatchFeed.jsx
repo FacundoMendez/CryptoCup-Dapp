@@ -9,6 +9,7 @@ const MatchFeed = () => {
 
   
   const [matchs,setMatchs]=useState([])
+  const [loading ,setLoading]=useState(true)
 
   useEffect(() => {
    getMatchs()
@@ -20,6 +21,7 @@ const MatchFeed = () => {
       const matchsArray=res.data
       console.log(res.data);
       setMatchs(matchsArray)
+      setLoading(false) 
   }
 
   return (
@@ -38,21 +40,25 @@ const MatchFeed = () => {
               <li className='status_cabecera'>STATUS</li>
             </ul>
           </div>
-          {
-                matchs.map((item,index)=>{
+          <div>
+            {loading ? <Spinner/> : null}
+          </div>
+          <div className="table_container">
+            <Suspense fallback={<Spinner/>}>
+              {
+                  matchs.map((item,index)=>{
                     return <Matchs key={index}
-                  timer={item.startDate}
-                  round={item.round}
-         /*          flagTeam1={item.team1}
-                  flagTeam2={banderaEcuador} */
-                  nameTeam1={item.team1}
-                  nameTeam2={item.team2}
-                  resultTeam1={item.scoreTeam1}
-                  resultTeam2={item.scoreTeam2}
-                            />  
-                })
-              }
-          
+                      timer={item.startDate}
+                      round={item.round}
+                      nameTeam1={item.team1}
+                      nameTeam2={item.team2}
+                      resultTeam1={item.scoreTeam1}
+                      resultTeam2={item.scoreTeam2}
+                    />  
+                  })
+                }
+              </Suspense>
+          </div>
         </div>  
       </div>
     </Suspense>
