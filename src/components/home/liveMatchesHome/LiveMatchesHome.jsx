@@ -1,13 +1,29 @@
-import React, {Suspense, useState} from 'react'
+import React, {Suspense, useState , useEffect} from 'react'
+import api from '../../../api'
 import arg from "../../config/flags/arg.png"
 import bra from "../../config/flags/bra.png"
 import Spinner from '../../config/spinner/Spinner'
-
+import paisesJson from '../../config/paises2.json'
 
 const LiveMatchesHome = () => {
 
     const [matchActive, setMatchActive] = useState(true)
+    const [matchsLive,setMatchsLive]=useState([])
 
+    useEffect(() => {
+        getLiveMatchs()
+        verifyLiveMatchs() 
+       },[]);
+
+    const getLiveMatchs = async () => {
+        const res = await api.get('/matchs/getLiveMatches')
+        setMatchsLive(res.data)
+        console.log(res.data)
+    }
+
+    const verifyLiveMatchs = () => {
+        (matchsLive) ? setMatchActive(true) : setMatchActive(false)
+    }
 
   return (
     <Suspense fallback={<Spinner/>}>
@@ -18,23 +34,28 @@ const LiveMatchesHome = () => {
                         <p>Live Now</p>
                         <div className="activeLive"></div>
                     </div>
-                    <div className="match_live">
-                        <div className="team1_live">
-                            <div className="flag_team1_live">
-                                <img className='flag_live_img' src={arg} alt="flag-Team1" />
+                    {
+                        matchsLive.map((item , index) => {
+                           return <div key={index} className="match_live">
+                            <div className="team1_live">
+                                <div className="flag_team1_live">
+                                    <img className='flag_live_img' src={paisesJson[item.team1].img} alt="flag-Team1" />
+                                </div>
+                            </div>
+                            <div className="boxResut_live">
+                                <div className="result_team1_live">0</div>
+                                <p>-</p>
+                                <div className="result_team2_live">0</div>
+                            </div>
+                            <div className="team2_live">
+                                <div className="flag_team2_live">
+                                    <img className='flag_live_img' src={paisesJson[item.team2].img} alt="flag-Team1" />
+                                </div>
                             </div>
                         </div>
-                        <div className="boxResut_live">
-                            <div className="result_team1_live">0</div>
-                            <p>-</p>
-                            <div className="result_team2_live">0</div>
-                        </div>
-                        <div className="team2_live">
-                            <div className="flag_team2_live">
-                                <img className='flag_live_img' src={bra} alt="flag-Team1" />
-                            </div>
-                        </div>
-                    </div>
+                        })
+                    }
+                  
 
                 </div>
             :                        /* PARTIDOS EN VIVO */

@@ -8,7 +8,9 @@ const TimerMatch = ({timer}) => {
         const [days,setDays]=useState()
         const [hours,setHours]=useState()
         const [minutes,setMinutes]=useState()
-    
+        const [finishTimer , setFinishTimer] = useState()
+
+
             //Get Unit/MS
         let msecPerMinute = 1000 * 60;
         let msecPerHour = msecPerMinute * 60;
@@ -17,6 +19,10 @@ const TimerMatch = ({timer}) => {
         const getTimeMatch=()=>{
             let timeNow=new Date(Date.now())//Get actual time in MS
             let matchStarts = new Date(timer)  //Get match time in MS
+
+            if (matchStarts<=timeNow) {
+                setFinishTimer(true)
+            }
             let diff=matchStarts-timeNow 
             let daysLeft=Math.floor((matchStarts-timeNow)/msecPerDay)
             setDays(daysLeft); 
@@ -36,11 +42,24 @@ const TimerMatch = ({timer}) => {
 
   return (
     <Suspense fallback={<Spinner/>}>
-        <div className="reloj">
-            <p>{days} <br /> <span id="days">Days</span></p>
-            <p>{hours} <br /> <span id="hours">Hours</span> </p>
-            <p>{minutes} <br /> <span id="minutes">Mins</span></p>
-        </div>
+        {
+            finishTimer ?
+            <div className="reloj">
+                <p>- <br /> <span id="days">Days</span></p>
+                <p>- <br /> <span id="hours">Hours</span> </p>
+                <p>- <br /> <span id="minutes">Mins</span></p>
+            </div>
+
+                :
+
+            <div className="reloj">
+                <p>{days} <br /> <span id="days">Days</span></p>
+                <p>{hours} <br /> <span id="hours">Hours</span> </p>
+                <p>{minutes} <br /> <span id="minutes">Mins</span></p>
+            </div>
+        }
+
+       
     </Suspense>
   )
 }
