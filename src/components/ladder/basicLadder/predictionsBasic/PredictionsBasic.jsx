@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react'
 import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises.json"
 import predictionsBasic_funcional from './predictionsBasic_funcional'
+import errorNoPrediction from './errorNoPrediction/errorNoPrediction'
 
 const Predictions = () => {
 
-  const [activePredicton, setActivePrediction]= useState(2)
+  const [activePrediciton, setActivePrediction]= useState()
 
   useEffect(() => {
     predictionsBasic_funcional()
@@ -29,7 +30,7 @@ const Predictions = () => {
         </div>
 
         <div className="box_select_prediction">
-          <div className="left_pred" id='team1_win_basic' onClick={() => setActivePrediction(1)}>
+          <div className="left_pred" id='team1_win_basic' onClick={() => {setActivePrediction(1)}}>
             <p>1</p>
           </div>
           <div className="center_pred" id="empate_basic" onClick={() => setActivePrediction(2)}>
@@ -39,7 +40,17 @@ const Predictions = () => {
             <p>2</p>
           </div>
         </div>
-        <button className='predict_button'>Predict</button>
+        <button className='predict_button'onClick={() => {
+          if (activePrediciton === undefined){
+            console.log("no prediction")
+            errorNoPrediction()
+          }
+        }}>Predict</button>
+
+        {activePrediciton === 1 ? console.log(activePrediciton): null} {/* team 1 win */}
+        {activePrediciton === 2 ? console.log(activePrediciton): null} {/* empate */}
+        {activePrediciton === 3 ? console.log(activePrediciton): null} {/* team 2 win */}
+
     </div>
   )
 }

@@ -89,6 +89,23 @@
     border-radius: 10px;
 }
 
+.left_pred_active , .center_pred_active  , .right_pred_active {
+    box-shadow: 0 0 1rem rgb(205, 174, 255);
+    animation: errorNoPrediction .9s infinite linear;
+}
+
+@keyframes errorNoPrediction {
+    0%{
+        box-shadow: 0 0 0rem rgba(255, 101, 77, 0);
+    }
+    50%{
+        box-shadow: 0 0 1rem rgb(205, 174, 255);
+    }
+    100%{
+        box-shadow: 0 0 1rem rgba(255, 101, 77, 0);
+    }
+}
+
 .left_pred:active , .center_pred:active , .right_pred:active{
     box-shadow: 0 0 1rem rgba(204, 160, 255, 0.288);
 }
