@@ -10,9 +10,6 @@ const Login = () => {
         loginFuncional()
     },[])
 
-
-
-
   return (
     <div className="blurLogin">
         <div className="blurLogin_exit"></div>

@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import "./predictionsBasic.css"
-import paisesJson from "../../../config/paises.json"
 import predictionsBasic_funcional from './predictionsBasic_funcional'
 import errorNoPrediction from './errorNoPrediction/errorNoPrediction'
+import paisesJson from "../../../config/paises2.json"
 
-const Predictions = () => {
+const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
+  
   useEffect(() => {
     predictionsBasic_funcional()
   },[])
@@ -32,18 +33,17 @@ const Predictions = () => {
             <p className='tt_pred'>Mins</p>
           </div>
         </div>
-        
-        }
+      }
         
 
         <div className="match_result_prediction">
-            <img src={paisesJson[0].img} alt="bandera team 1" />
+            <img src={paisesJson[nameTeam1].img} alt="bandera team 1" />
             
             <p className='resut_team1_prediction'> 0 </p>
             <p className='vs_prediction'> - VS -</p>
             <p className='resut_team2_prediction'> 0 </p>
 
-            <img src={paisesJson[3].img} alt="bandera team 2" />
+            <img src={paisesJson[nameTeam2].img} alt="bandera team 2" />
         </div>
 
         <div className="box_select_prediction">
