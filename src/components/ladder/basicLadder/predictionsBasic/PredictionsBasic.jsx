@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises.json"
+import predictionsBasic_funcional from './predictionsBasic_funcional'
 
 const Predictions = () => {
+
+  const [activePredicton, setActivePrediction]= useState(2)
+
+  useEffect(() => {
+    predictionsBasic_funcional()
+  },[])
+
+
   return (
     <div className="prediciton">
         <div className="liveProduction">
@@ -20,13 +29,13 @@ const Predictions = () => {
         </div>
 
         <div className="box_select_prediction">
-          <div className="left_pred" id='team1_win_basic'>
+          <div className="left_pred" id='team1_win_basic' onClick={() => setActivePrediction(1)}>
             <p>1</p>
           </div>
-          <div className="center_pred" id="empate_basic">
+          <div className="center_pred" id="empate_basic" onClick={() => setActivePrediction(2)}>
             <p>X</p>
           </div>
-          <div className="right_pred" id='team2_win_basic'>
+          <div className="right_pred" id='team2_win_basic' onClick={() => setActivePrediction(3)}>
             <p>2</p>
           </div>
         </div>

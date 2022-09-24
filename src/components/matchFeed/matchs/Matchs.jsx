@@ -1,6 +1,5 @@
 import React, {lazy, Suspense } from 'react'
 import Spinner from '../../config/spinner/Spinner'
-import paisesJson from "../../config/paises.json"
 import paisesJson2 from "../../config/paises2.json"
 
 const TimerMatch = lazy(() => import ('../timerMatch/TimerMatch'))
