@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import "./predictionsBasic.css"
-import predictionsBasic_funcional from './predictionsBasic_funcional'
-import errorNoPrediction from './errorNoPrediction/errorNoPrediction'
 import paisesJson from "../../../config/paises2.json"
 
 const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
@@ -9,18 +7,24 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
 
-/*   useEffect(() => {
-    predictionsBasic_funcional()
-  },[]) */
+  useEffect(() => {
+    if (predictionActive){
+      setColorButton("gray")
+    }
+  },[])
+
+
 
   const [predictionActive , setPredictionActive] = useState(false)
-
+  const [namePredict_button , setNamePredict_button] = useState("Predict")
   const [colorTeam1, setColorTeam1] = useState()
   const [colorEmpate, setColorEmpate] = useState()
   const [colorTeam2 , setColorTeam2] = useState()
   const [colorTeam1_text, setColorTeam1_text] = useState()
   const [colorEmpate_text, setColorEmpate_text] = useState()
   const [colorTeam2_text , setColorTeam2_text] = useState()
+  
+  const [colorButton, setColorButton] = useState("rgba(178, 130, 255, 0.671)")
 
   const colorSetTeam1 = ( ) => {
       setColorTeam1('rgba(168, 255, 222, 0.925)')
@@ -98,15 +102,25 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
             <p>2</p>
           </div>
         </div>
-        <button className='predict_button' disabled={predictionActive === true} onClick={() => {
 
-          setPredictionActive(true)
+        { /* si no hay prediccion hecha muestra el boton en gris */
+          activePrediciton === undefined ?
+            <button className='predict_button predict_button_disable' style={{backgroundColor : "gray"}}>{namePredict_button}</button>
+          :
+           /* si hay prediccion muestra el boton activo */
+          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton}} disabled={predictionActive === true} onClick={() => {
+            setPredictionActive(true)
+            if (activePrediciton === undefined){
+              console.log("no prediction")      
+             
+            }else{
+              console.log("prediction")
+              setColorButton("rgba(2, 2, 10, 0.199)") 
+              setNamePredict_button("Confirmed")   
+            }
+          }}>{namePredict_button}</button>
+        }
 
-          if (activePrediciton === undefined){
-            console.log("no prediction")          
-            errorNoPrediction()
-          }
-        }}>Predict</button>
 
 
         {/* devuelve el estado de la prediccion ( 1 2 3 ) */}

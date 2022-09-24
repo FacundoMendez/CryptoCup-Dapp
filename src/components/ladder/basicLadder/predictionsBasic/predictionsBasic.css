@@ -137,7 +137,20 @@
     box-shadow: 0 0 1rem rgba(204, 160, 255, 0.288);
 }
 
-.predict_button{
+.predict_button_disable{
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(191, 190, 192, 0.671);
+    border:none;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.predict_button_active{
     width: 100%;
     height: 5rem;
     background-color: rgba(178, 130, 255, 0.671);
@@ -151,6 +164,3 @@
     cursor: pointer;
 }
 
-.predict_button:active{
-    box-shadow: 0 0 1rem rgba(204, 160, 255, 0.288);
-}

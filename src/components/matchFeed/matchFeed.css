@@ -193,7 +193,10 @@
 }
 
 .game_match{
-    margin-left: 3rem;
+    margin-left: -1.5rem;
+    width: 14rem;
+    text-align: center;
+    
 }
 
 @media screen and (max-width:1440px) {
