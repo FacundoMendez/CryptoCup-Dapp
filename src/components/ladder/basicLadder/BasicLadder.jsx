@@ -19,15 +19,15 @@ const BasicLadder = () => {
   const [predictionCards,setPredictionCards]=useState([])
 
   useEffect(() => {
-    getMatchs()
+    getPredictionsAvailables()
    },[]);
  
      //Get all matches from DB
-     const getMatchs=async()=>{
-       const res=await api.get('/matchs/getMatches')
-       const matchsArray=res.data
+     const getPredictionsAvailables=async()=>{
+       const res=await api.get('/predictions/')
+       const predictionsArray=res.data
        console.log(res.data);
-       setPredictionCards(matchsArray)
+       setPredictionCards(predictionsArray)
        setLoading(false) 
    }
 
@@ -45,7 +45,7 @@ const BasicLadder = () => {
             {loading ? <Spinner/> : null}
           </div>
           {
-            predictions ? 
+            (predictionCards.length > 0) ? 
             <Suspense fallback={<Spinner/>}>
               { 
                 predictionCards.map((item,index)=>{

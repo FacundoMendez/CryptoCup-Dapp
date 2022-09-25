@@ -7,7 +7,7 @@ import paisesJson from '../../config/paises2.json'
 
 const LiveMatchesHome = () => {
 
-    const [matchActive, setMatchActive] = useState(true)
+    const [matchActive, setMatchActive] = useState()
     const [matchsLive,setMatchsLive]=useState([])
 
     useEffect(() => {
@@ -22,7 +22,8 @@ const LiveMatchesHome = () => {
     }
 
     const verifyLiveMatchs = () => {
-        (matchsLive) ? setMatchActive(true) : setMatchActive(false)
+        (matchsLive.length === 0 ) ? setMatchActive(false) : setMatchActive(true)
+        console.log(matchActive)
     }
 
   return (
