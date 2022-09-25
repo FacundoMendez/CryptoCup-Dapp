@@ -75,9 +75,9 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
         <div className="match_result_prediction">
             <img src={paisesJson[nameTeam1].img} alt="bandera team 1" />
             
-{/*             <p className='resut_team1_prediction'> 0 </p> */}
+
             <p className='vs_prediction'> VS </p>
-{/*             <p className='resut_team2_prediction'> 0 </p> */}
+
 
             <img src={paisesJson[nameTeam2].img} alt="bandera team 2" />
         </div>
