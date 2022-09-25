@@ -57,12 +57,13 @@ const BasicLadder = () => {
                     resultTeam2={item.scoreTeam2}
                   />  
                 })
+                
               }
             </Suspense>
             :
             null
           }
-  
+
           {
             ranking ? 
               <Suspense fallback={<Spinner/>}>
