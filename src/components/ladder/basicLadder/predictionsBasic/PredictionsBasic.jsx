@@ -76,7 +76,7 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
             <img src={paisesJson[nameTeam1].img} alt="bandera team 1" />
             
 {/*             <p className='resut_team1_prediction'> 0 </p> */}
-            <p className='vs_prediction'> - VS -</p>
+            <p className='vs_prediction'> VS </p>
 {/*             <p className='resut_team2_prediction'> 0 </p> */}
 
             <img src={paisesJson[nameTeam2].img} alt="bandera team 2" />
@@ -84,22 +84,28 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
 
         <div className="box_select_prediction">
           <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
-            setActivePrediction(1)
-            colorSetTeam1()
+            if (!predictionActive){
+              setActivePrediction(1)
+              colorSetTeam1()
+            }
             }}>
-            <p>1</p>
+            <p>{nameTeam1}</p>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
-            setActivePrediction(2)
-            colorSetEmpate()
+            if (!predictionActive){
+              setActivePrediction(2)
+              colorSetEmpate()
+            }
             }}>
-            <p>X</p>
+            <p className='tie_pred'>Tie</p>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
-            setActivePrediction(3)
-            colorSetTeam2()
+            if (!predictionActive){
+              setActivePrediction(3)
+              colorSetTeam2()
+            }
             }}>
-            <p>2</p>
+            <p>{nameTeam2}</p>
           </div>
         </div>
 

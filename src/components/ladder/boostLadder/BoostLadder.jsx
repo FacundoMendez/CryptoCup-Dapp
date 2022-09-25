@@ -1,11 +1,9 @@
 import React , {useState , lazy, Suspense} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import "./boostLadder.css"
-
-const MyPredictions = lazy(() => import ('../componentsLadders/myPrediction/MyPredictions'))
-const NavLadder = lazy(() => import ('../componentsLadders/navLadder/NavLadder'))
-/* const Predictions = lazy(() => import ('../componentsLadders/predictions/Predictions')) */
-const Ranking = lazy(() => import ('../componentsLadders/ranking/Ranking'))
+import NavLadder from '../componentsLadders/navLadder/NavLadder'
+import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import Ranking from '../componentsLadders/ranking/Ranking'
 
 const BoostLadder = () => {
 
