@@ -92,14 +92,18 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
             <p>1</p>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
-            setActivePrediction(2)
-            colorSetEmpate()
+            if (!predictionActive){
+              setActivePrediction(2)
+              colorSetEmpate()
+            }
             }}>
             <p>X</p>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
-            setActivePrediction(3)
-            colorSetTeam2()
+            if (!predictionActive){
+              setActivePrediction(3)
+              colorSetTeam2()
+            }
             }}>
             <p>2</p>
           </div>
