@@ -89,7 +89,7 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
               colorSetTeam1()
             }
             }}>
-            <p>1</p>
+            <p>{nameTeam1}</p>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
             if (!predictionActive){
@@ -97,7 +97,7 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
               colorSetEmpate()
             }
             }}>
-            <p>X</p>
+            <p className='tie_pred'>Tie</p>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
             if (!predictionActive){
@@ -105,7 +105,7 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
               colorSetTeam2()
             }
             }}>
-            <p>2</p>
+            <p>{nameTeam2}</p>
           </div>
         </div>
 
