@@ -14,6 +14,9 @@ const Login = () => {
     <div className="blurLogin">
         <div className="blurLogin_exit"></div>
         <div className=" containerLogin">
+            <div className='welcome'>
+                <h1>Welcome to Crypto Cup</h1>
+            </div>
             <div className="content_user_login">
                 <div className="username">
                     <label className='userName_label' htmlFor="userName_label">UserName:</label>

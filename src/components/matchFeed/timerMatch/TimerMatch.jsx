@@ -44,15 +44,14 @@ const TimerMatch = ({timer}) => {
     <Suspense fallback={<Spinner/>}>
         {
             finishTimer ?
-            <div className="reloj">
-                <p>- <br /> <span id="days">Days</span></p>
-                <p>- <br /> <span id="hours">Hours</span> </p>
-                <p>- <br /> <span id="minutes">Mins</span></p>
-            </div>
+            <h1>Finished</h1>
 
                 :
 
             <div className="reloj">
+                <div className='startIn'>
+                    <p className='startIn_text'>START IN: </p> 
+                </div> 
                 <p>{days} <br /> <span id="days">Days</span></p>
                 <p>{hours} <br /> <span id="hours">Hours</span> </p>
                 <p>{minutes} <br /> <span id="minutes">Mins</span></p>

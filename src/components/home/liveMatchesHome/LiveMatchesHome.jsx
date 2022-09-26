@@ -7,22 +7,23 @@ import paisesJson from '../../config/paises2.json'
 
 const LiveMatchesHome = () => {
 
-    const [matchActive, setMatchActive] = useState()
+    const [matchActive, setMatchActive] = useState(false)
     const [matchsLive,setMatchsLive]=useState([])
 
     useEffect(() => {
         getLiveMatchs()
-        verifyLiveMatchs() 
+      
        },[]);
 
     const getLiveMatchs = async () => {
         const res = await api.get('/matchs/getLiveMatches')
         setMatchsLive(res.data)
         console.log(res.data)
+        verifyLiveMatchs() 
     }
 
     const verifyLiveMatchs = () => {
-        (matchsLive.length === 0 ) ? setMatchActive(false) : setMatchActive(true)
+        (matchsLive) ? setMatchActive(true) : setMatchActive(false) 
         console.log(matchActive)
     }
 
@@ -44,9 +45,9 @@ const LiveMatchesHome = () => {
                                 </div>
                             </div>
                             <div className="boxResut_live">
-                                <div className="result_team1_live">0</div>
+                                <div className="result_team1_live">{item.scoreTeam1}</div>
                                 <p>-</p>
-                                <div className="result_team2_live">0</div>
+                                <div className="result_team2_live">{item.scoreTeam2}</div>
                             </div>
                             <div className="team2_live">
                                 <div className="flag_team2_live">

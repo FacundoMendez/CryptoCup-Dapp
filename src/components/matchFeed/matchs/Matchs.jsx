@@ -27,9 +27,7 @@ const Matchs = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
                 </div>  
             </div>
             <div className='table_campos timer_match'>
-                <div className='startIn'>
-                    <p className='startIn_text'>START IN: </p> 
-                </div> 
+                
                 <TimerMatch timer={timer}  />
             </div>
         </div>

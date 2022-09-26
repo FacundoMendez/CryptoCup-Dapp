@@ -73,6 +73,9 @@
     width: 100%;
 }
 
+.welcome {
+    color: white;
+}
 
 .userName_label{
     position: relative;
