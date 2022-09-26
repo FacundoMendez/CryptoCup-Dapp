@@ -57,7 +57,8 @@
 
   .slider img{
     width: 100%;
-    object-fit: none;
+    height: 100%;
+    object-fit: contain;
   }
   
 }

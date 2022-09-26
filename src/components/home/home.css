@@ -271,19 +271,22 @@
    
     .containerDapp_cards{
         width: 95%;
-        height: 100%;
+        height: 20rem;
     }
 
     .containerDapp_title{
         width: 95%;
+        height: 5rem;
     }
 
     .liveNav{
         width: 73vw;
+        height: 5rem;
     }
 
     .social_nav{
         width: 20vw;
+        height: 5rem;
     }
     
     .container_live_social{
@@ -292,12 +295,52 @@
 
     .cardMain{
         height: 19rem;
-        width: 29vw;
+        width: 30.5vw;
     }
     
     .cardMain::before{
         height: 19rem;
-        width: 29vw;
+        width: 30.5vw;
+    }
+  
+  }
+  
+
+  
+@media screen and (max-width: 1200px) {
+   
+    .containerDapp_cards{
+        width: 95%;
+        height: 20rem;
+    }
+
+    .containerDapp_title{
+        width: 95%;
+        height: 5rem;
+    }
+
+    .liveNav{
+        width: 73vw;
+        height: 5rem;
+    }
+
+    .social_nav{
+        width: 20vw;
+        height: 5rem;
+    }
+    
+    .container_live_social{
+        gap: 1rem;
+    }
+
+    .cardMain{
+        height: 19rem;
+        width: 30.5vw;
+    }
+    
+    .cardMain::before{
+        height: 19rem;
+        width: 30.5vw;
     }
   
   }

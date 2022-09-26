@@ -1,14 +1,14 @@
 .nav_inventario{
-    width: 36rem;
+    width: 40rem;
     height: 90vh;
     display: flex;
     justify-content: center;
     top: 54.7%;
-    left: -36.5rem;
+    left: -40rem;
     align-items: center;
     gap: 2rem;
     position: fixed;
-    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.329);
+    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.158);
     background-color: rgba(11, 5, 19, 0.973);
     backdrop-filter: blur(1rem);
     z-index: 9999;
@@ -18,10 +18,12 @@
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
+    border: 6px double rgba(177, 130, 238, 0.479);
+    border-left: none;
 }
 
 .nav_inventario:hover{
-    width: 32rem;
+    width: 40rem;
     height: 90vh;
     left: 0rem;
     transition: all .3s ease ;
@@ -29,16 +31,17 @@
 
 .nav_Toggle_inventario{
     position: fixed;
-    width: 6rem;
+    width: 7rem;
     height: 20vh;
     top: 50%;
-    left: 100.155%;
+    left: 100%;
     transform: translate(0%, -50%);
-    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.329);
     border-radius: 15px;
+    border: 6px double rgba(177, 130, 238, 0.589);
+    border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: rgba(11, 5, 19, 0.973);
+    background-color: rgb(11, 5, 19);
     backdrop-filter: blur(1rem);
     display: flex;
     justify-content: center;
@@ -49,8 +52,8 @@
 
 
 .nav_Toggle_inventario img{
-    width: 3.5rem;
-    opacity: .5;
+    width: 3.1rem;
+    opacity: .7;
     transition: all .4s ease-in-out;
     cursor: pointer;
 }
@@ -59,3 +62,54 @@
     filter: drop-shadow(0 0 10px rgba(112, 2, 255, 0.925));
     transition: all .3s ease-in-out;
 }
+
+
+
+/* tickets y token */
+
+
+
+.tickets_navHorizontal-Basic , .tickets_navHorizontal-Boost , .token_navHorizontal{
+    height: 4.5rem;
+    border: 2px inset rgb(182, 117, 255);
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .2rem 1rem;
+    top: 0;
+}
+
+.tickets_navHorizontal-Basic img , .tickets_navHorizontal-Boost img, .token_navHorizontal img{
+    object-fit: contain;
+    width: 6rem;
+    height: 6rem;
+    margin-left: -1rem;
+    transform: rotate(-18deg);
+    filter: contrast(120%) brightness(105%);
+}
+
+.tickets_navHorizontal-Basic-cant , .contadorToken_navHorizontal , .tickets_navHorizontal-Boost-cant{
+    color: white;
+    /* padding-left: 3rem; */
+    font-size: 1.8rem;
+}
+
+
+/* ticket boost nav */
+
+.box_navHorizontal-contadores{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap:2rem;
+    width: 90%;
+    left: 0;
+    height: 100%;
+    padding-top: 4rem;
+    position: relative;
+}
+
+
+/* CLAIM */

@@ -102,12 +102,20 @@
 
 .userName_label{
     position: relative;
-    color: white;
     font-size: 2.6rem;
     transition: 1.5s;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: bold;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family:gilron;
+    color: transparent;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px #9999ff,
+    inset 0 -2px 5px 1px #9999ff,
+    inset 0 -1px 1px 3px #9999ff;
+    background-image: linear-gradient(160deg, #8f70ff, #c898ff, #d5b9ff, #ffffff, #d5b9ff, #c898ff, #8f70ff);
+
 }
 
 .username{

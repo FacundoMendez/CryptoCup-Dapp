@@ -1,0 +1,55 @@
+.claim{
+    width: 80%;
+    height: 5rem;
+    position: absolute;
+    bottom: 2rem;
+    border: 2px solid  rgba(0, 0, 0, 0.897);
+    font-size: 2rem;
+    border-radius: 15px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1rem rgb(0, 0, 0);
+    letter-spacing: 1px;
+    filter: drop-shadow(0 0 10px black);
+    background-color: rgba(47, 255, 116, 0.89);
+}
+
+.claim p{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1rem black;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.466));
+}
+
+.claim:active{
+    width:79.99%;
+    border: none;
+    height: 4.9rem;
+    box-shadow: 0 0 1rem white;
+}
+
+.claim_disable{
+    width: 80%;
+    height: 5rem;
+    position: absolute;
+    bottom: 2rem;
+    border: 2px solid  rgba(0, 0, 0, 0.89);
+    font-size: 2rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1rem black;
+    letter-spacing: 1px;
+    filter: drop-shadow(0 0 10px black);
+    background-color: rgba(163, 163, 163, 0.89);
+}
+
+.claim_disable p{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1rem black;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.466));
+}

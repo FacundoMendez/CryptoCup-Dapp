@@ -1,7 +1,7 @@
 import React, {Suspense}  from 'react'
-import back1 from "./src/sliderImg1.jpg"
-import back2 from "./src/sliderImg2.jpg"
-import back3 from "./src/sliderImg3.jpg"
+import back1 from "./src/slider1.jpeg"
+/* import back2 from "./src/slider2.jpeg" */
+import back3 from "./src/slider3.jpeg"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import "./sliderBanner.css"
@@ -26,13 +26,13 @@ const SliderBanner = () => {
       <div className="slider">
         <Splide aria-label="My Favorite Images" 
           options={ options } >
-          <SplideSlide>
+     {/*      <SplideSlide>
 
             <Suspense fallback={<Spinner/>}>
               <img src={back2} alt="background Slider 1"/>
             </Suspense>
 
-          </SplideSlide>
+          </SplideSlide> */}
           <SplideSlide>
 
             <Suspense fallback={<Spinner/>}>
