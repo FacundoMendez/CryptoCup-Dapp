@@ -8,16 +8,28 @@
     top: 50%;
     transform: translate(-50% , -50%);
     z-index: 9999;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .2s ease-in-out;
-}
-
-.blurLogin_active{
     visibility: visible;
     opacity: 1;
     transition: all .2s ease-in-out;
 }
+
+.exit_login_x img{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0rem;
+    right: -8rem;
+    cursor: pointer;
+    opacity: .6;
+    transition: all .3s ease-in-out;
+}
+
+.exit_login_x img:hover{
+    filter: drop-shadow( 0 0 10px rgba(186, 143, 255, 0.514));
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+
 
 .blurLogin_exit{
     width: 100%;
@@ -29,8 +41,8 @@
 }
 
 .containerLogin{
-    width: 70rem;
-    height: 43vh;
+    width: 78rem;
+    height: 46vh;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -40,8 +52,8 @@
     border: 1px solid rgb(206, 185, 255);
     backdrop-filter: blur(1rem);
     z-index: 9999 !important;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     transition: all .2s ease-in-out;
     display: flex;
     align-items: center;
@@ -52,18 +64,17 @@
     gap: 3rem;
     border-radius: 15%;
     text-align: center;    
-    border-left: 75px solid transparent; 
-    border-right: 75px solid transparent; 
+    border-left: 115px solid transparent; 
+    border-right: 115px solid transparent; 
     border-bottom: 38px solid rgba(192, 143, 255, 0.623);
     border-top: 38px solid rgba(192, 143, 255, 0.623);
 }
 
 
-.login_active{
-    visibility: visible;
-    opacity: 1;
+/* .login_active{
+
     transition: all .2s ease-in-out;
-}
+} */
 
 .content_user_login{
     display: flex;
@@ -271,27 +282,44 @@
 }
 
 
+@media screen and (max-width:1440px) {
+    .container_select_flag {
+        width: 30rem;
+        height: 35rem;
+        top: 70%;
+        right: 2rem;
+        padding: 4rem 2rem;
+    }
+
+}
+
+
 @media screen and (max-width:800px) {
 
     .containerLogin{
         width: 90%;
-        height: 42rem;
+        height: 46rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
         gap: 3rem;
-        border-left: 40px solid transparent; 
-        border-right: 40px solid transparent; 
-        border-bottom: 28px solid rgba(221, 200, 255, 0.24); 
-        border-top: 28px solid rgba(221, 200, 255, 0.24);
     }
+
+    .container_select_flag {
+        width: 30rem;
+        height: 35rem;
+        top: 65%;
+        right: 2rem;
+        padding: 4rem 2rem;
+    }
+
 
     .welcome_login {
         text-transform: uppercase;
         width: 100%;
-        padding: 1rem;
-        font-size: 1.5rem;
+        padding: 1rem 0;
+        font-size: 1.3rem;
     }
     
 
@@ -360,17 +388,42 @@
 @media screen and (max-width:580px) {
 
     .containerLogin{
-        width: 90%;
-        height: 42rem;
-        top: 50%;
+        width: 95%;
+        height: 46rem;
+        top: 53%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
         gap: 3.5rem;
+        border-left: 80px solid transparent; 
+        border-right: 80px solid transparent; 
+        border-bottom: 38px solid rgba(192, 143, 255, 0.623);
+        border-top: 38px solid rgba(192, 143, 255, 0.623);
+    }
+
+    .container_select_flag {
+        width: 30rem;
+        height: 35rem;
+        top: 72%;
+        right: 3rem;
+        padding: 4rem 2rem;
+    }
+
+
+    .exit_login_x img {
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 0rem;
+        right: -6rem;
+        cursor: pointer;
+        opacity: .6;
+        transition: all .3s ease-in-out;
     }
 
     .welcome_login {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        padding: 0;
     }
 
     .content_user_login{
@@ -379,7 +432,7 @@
     }
 
     .userName_label{
-        font-size: 2.3rem;
+        font-size: 2rem;
         text-align: center;
     }
 
@@ -391,15 +444,16 @@
     .containerLogin{
         width: 90%;
         padding: 2rem;
-        padding-top: 4rem;
+        padding-top: 0rem;
     }
 
 
     .container_select_flag{
         width: 30rem;
         height: 35rem;
-        top: 42%;
-        left: 2rem;
+        top: 50%;
+        left: 0rem;
+        right: 0;
     }
 
     .content_user_login{
@@ -407,7 +461,7 @@
         gap: .5rem;
     }
     .welcome_login {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 0;
     }
     .userName_label{
@@ -473,24 +527,28 @@
 @media screen and (max-width:420px) {
     .containerLogin{
         width: 90%;
-        height: 45rem;
-        top: 52%;
+        height: 50rem;
+        top: 53%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
         gap: 4rem;
+        border-left: 70px solid transparent; 
+        border-right: 70px solid transparent; 
+        border-bottom: 38px solid rgba(192, 143, 255, 0.623);
+        border-top: 38px solid rgba(192, 143, 255, 0.623);
     }
 
     .container_select_flag {
         gap: 2rem;
         width: 30rem;
         height: 35rem;
-        top: 47%;
+        top: 50%;
         left: -2rem;
         padding: 4rem 2rem;
     }
     .welcome_login {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 0;
         font-weight: bold;
     }
@@ -511,9 +569,15 @@
         left: -4rem;
     }
 
+    .exit_login_x img {
+        width: 3.5rem;
+        height: 3.5rem;
+        right: -5.5rem;
+    }
+
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:360px) {
 
     .containerLogin{
         width: 90%;
@@ -522,19 +586,26 @@
         left: 50%;
         padding: 2rem;
         gap: 4rem;
+        border-left: 60px solid transparent; 
+        border-right: 60px solid transparent; 
+    }
+    .exit_login_x img {
+        width: 3rem;
+        height: 3rem;
+        right: -5rem;
     }
 
     .container_select_flag {
         gap: 2rem;
         width: 30rem;
         height: 35rem;
-        top: 47%;
-        left: -4.5rem;
+        top: 59%;
+        left: -6rem;
         padding: 4rem 2rem;
     }
 
     .welcome_login {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0;
         font-weight: bold;
     }

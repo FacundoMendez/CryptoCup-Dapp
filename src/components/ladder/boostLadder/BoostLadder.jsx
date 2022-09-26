@@ -1,9 +1,10 @@
-import React , {useState , lazy, Suspense} from 'react'
+import React , {useState , Suspense} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import "./boostLadder.css"
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
-import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
-import Ranking from '../componentsLadders/ranking/Ranking'
+/* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import Ranking from '../componentsLadders/ranking/Ranking' */
+import candado from "../../config/src/candado.png"
 
 const BoostLadder = () => {
 
@@ -22,29 +23,32 @@ const BoostLadder = () => {
             setRanking={setRanking}
         />
         <div className="container_boostLadder">
- {/*            {
+            {
               predictions ? 
-                <Suspense fallback={<Spinner/>}>
+         /*        <Suspense fallback={<Spinner/>}>
                   <Predictions/>
-               </Suspense>
+               </Suspense> */
+               <img className='candado' src={candado} alt="candado" />
               :
               null
-            } */}
+            }
 
             {
               myPrediction ? 
-                <Suspense fallback={<Spinner/>}>
+       /*          <Suspense fallback={<Spinner/>}>
                   <MyPredictions/>
-                </Suspense>
+                </Suspense> */
+                <img className='candado' src={candado} alt="candado" />
               :
               null
             }
             
             {
               ranking ? 
-                <Suspense fallback={<Spinner/>}>
+           /*      <Suspense fallback={<Spinner/>}>
                   <Ranking/>
-                </Suspense>
+                </Suspense> */
+                <img className='candado' src={candado} alt="candado" />
               :
               null
             }

@@ -1,10 +1,10 @@
 import React , {useState} from 'react'
 import NavLadder from "../componentsLadders/navLadder/NavLadder"
-import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
-import Ranking from '../componentsLadders/ranking/Ranking'
+/* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import Ranking from '../componentsLadders/ranking/Ranking' */
 /* import Predictions from '../ladder/componentsLadders/predictions/Predictions' */
 import "./friendsLadder.css"
-
+import candado from "../../config/src/candado.png"
 
 const FriendsLadder = () => {
 
@@ -22,23 +22,26 @@ const FriendsLadder = () => {
           setRanking={setRanking}
       />
       <div className="container_friendsLadder">
-{/*           {
+          {
             predictions ? 
-              <Predictions/>
+            /*   <Predictions/> */
+            <img className='candado' src={candado} alt="candado" />
             :
             null
-          } */}
+          }
 
           {
             myPrediction ? 
-              <MyPredictions/>
+              /* <MyPredictions/> */
+              <img className='candado' src={candado} alt="candado" />
             :
             null
           }
           
           {
             ranking ? 
-              <Ranking/>
+              /* <Ranking/> */
+              <img className='candado' src={candado} alt="candado" />
             :
             null
           }

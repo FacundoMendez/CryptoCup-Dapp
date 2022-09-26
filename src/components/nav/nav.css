@@ -40,7 +40,12 @@
     list-style: none;
 }
 
-.listNav .link_nav_text{
+.nav_list_desconected{
+    margin-right: 55rem;
+    font-size: 2rem;
+}
+
+.listNav .link_nav_text, .link_nav_text_desconected{
     display: inline-block;
     letter-spacing: 1px;
     font-size: 1.6rem;
@@ -65,7 +70,7 @@
     list-style: none;
 }
 
-.buttonLogin{
+.buttonLogin , .buttonLogin_desconnect{
     display: inline-block;
     color: #ffffff;
     letter-spacing: 1px;
@@ -87,11 +92,12 @@
     backdrop-filter: blur(1rem);
 }
 
-.buttonLogin:active{
+.buttonLogin:active, .buttonLogin_desconnect:active{
     width: 13.9rem;
     height: 4.4rem;
     box-shadow: 0 0 1rem rgba(100, 4, 255, 0.226);
 }
+
 
 .nav_Toggle{
     display: none;
@@ -133,6 +139,31 @@
 
 
 /* effect navbar */
+
+.link_nav_text_desconected::after{
+    content: '';
+    bottom: -3.3rem;
+    left: 0;
+    right: 0;
+    margin-right: 55rem;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: linear-gradient(#ead8ffda, #ab61ff);;
+    -webkit-box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #d2b6ffe0, 0px 0px 11px #caa9ffe7;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 60%), 0px 0px 32px #be95ff, 0px 0px 11px #924eff;
+    -webkit-transition: all 0.3s ease-in;
+    z-index: 9999999999 !important ;
+    border-radius: 15px;
+    transition: all 0.3s ease ;
+}
+
+.link_nav_text_desconected:hover:after {
+    width: 10%;
+    height: 2px;
+    filter: drop-shadow(0px -10px 8px rgba(195, 161, 250, 0.267));
+}
 
 .listNav .link_nav_text:after {
   content: '';
@@ -188,6 +219,13 @@
     .nav{
         padding: 0 1rem;
         justify-content: flex-end;
+    }
+
+    .nav_list_desconected{
+        margin-right: 0rem;
+        font-size: 2rem;
+        position: absolute;
+        top: -15rem;
     }
 
     .listNav{

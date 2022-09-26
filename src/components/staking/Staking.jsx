@@ -1,8 +1,9 @@
 import React from 'react'
+import candado from "../config/src/candado.png"
 
 const Staking = () => {
   return (
-    <div>Staking</div>
+    <img className='candado' src={candado} alt="candado" />
   )
 }
 

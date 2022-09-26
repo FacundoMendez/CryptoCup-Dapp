@@ -1,8 +1,9 @@
 import React from 'react'
+import candado from "../config/src/candado.png"
 
 const ProfileUser = () => {
   return (
-    <div>ProfileUser</div>
+    <img className='candado' src={candado} alt="candado" />
   )
 }
 

@@ -1,11 +1,13 @@
-import React, {useState, lazy, Suspense, useEffect} from 'react'
+import React, {useState, Suspense, useEffect} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import "./basicLadder.css"
 import api from '../../../api'
-/* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions' */
+import candado from "../../config/src/candado.png"
+
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
-import Ranking from '../componentsLadders/ranking/Ranking'
+/* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
+import Ranking from '../componentsLadders/ranking/Ranking' */
 
 
 const BasicLadder = () => {
@@ -43,8 +45,9 @@ const BasicLadder = () => {
           <div>
             {loading ? <Spinner/> : null}
           </div>
+
           {
-            (predictionCards.length > 0) ? 
+            (predictionCards.length > 0) && predictions ? 
             <Suspense fallback={<Spinner/>}>
               { 
                 predictionCards.map((item,index)=>{
@@ -56,8 +59,7 @@ const BasicLadder = () => {
                     resultTeam1={item.scoreTeam1}
                     resultTeam2={item.scoreTeam2}
                   />  
-                })
-                
+                })   
               }
             </Suspense>
             :
@@ -65,9 +67,20 @@ const BasicLadder = () => {
           }
 
           {
+            myPrediction ? 
+              <Suspense fallback={<Spinner/>}>
+                {/*  <MyPredictions/>  */}
+                <img className='candado' src={candado} alt="candado" />
+              </Suspense>
+            :
+            null
+          }
+
+          {
             ranking ? 
               <Suspense fallback={<Spinner/>}>
-                <Ranking/>
+                {/*  <Ranking/> */}
+                <img className='candado' src={candado} alt="candado" />
               </Suspense>
             :
             null

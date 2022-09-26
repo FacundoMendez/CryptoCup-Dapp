@@ -73,5 +73,19 @@ html::after{
     user-select: none;
 
   }
+
+  .candado{
+    object-fit: contain;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: contrast(105%) brightness(25%) drop-shadow(0 0 5px rgba(163, 82, 255, 0.616));
+  }
   
   
