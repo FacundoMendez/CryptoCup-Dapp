@@ -120,7 +120,6 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
               console.log("no prediction")      
              
             }else{
-              console.log("prediction")
               setColorButton("rgba(2, 2, 10, 0.199)") 
               setNamePredict_button("Confirmed")   
             }

@@ -30,7 +30,7 @@
 
 .containerLogin{
     width: 70rem;
-    height: 37vh;
+    height: 43vh;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -48,7 +48,8 @@
     flex-direction: column;
     box-shadow: 0 0 2rem rgba(192, 143, 255, 0.767);
     padding: 2rem;
-    padding-top: 6.4rem;
+    padding-top: 3rem;
+    gap: 3rem;
     border-radius: 15%;
     text-align: center;    
     border-left: 75px solid transparent; 
@@ -73,8 +74,19 @@
     width: 100%;
 }
 
-.welcome {
-    color: white;
+.welcome_login {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family:gilron;
+    color: transparent;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px #9999ff,
+    inset 0 -2px 5px 1px #9999ff,
+    inset 0 -1px 1px 3px #9999ff;
+    background-image: linear-gradient(160deg, #8f70ff, #c898ff, #d5b9ff, #ffffff, #d5b9ff, #c898ff, #8f70ff);
 }
 
 .userName_label{
@@ -211,7 +223,7 @@
     gap: 2rem;
     width: 30rem;
     height: 35rem;
-    top: 50%;
+    top: 60%;
     right: 2rem;
     padding: 4rem 2rem; 
     overflow: hidden;
@@ -263,17 +275,25 @@
 
     .containerLogin{
         width: 90%;
-        height: 45vh;
+        height: 42rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
-        padding-top: 6.4rem;
+        gap: 3rem;
         border-left: 40px solid transparent; 
         border-right: 40px solid transparent; 
         border-bottom: 28px solid rgba(221, 200, 255, 0.24); 
         border-top: 28px solid rgba(221, 200, 255, 0.24);
     }
+
+    .welcome_login {
+        text-transform: uppercase;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    
 
     .content_user_login{
         width: 100%;
@@ -336,20 +356,21 @@
 }
 
 
-@media screen and (max-width:480px) {
+
+@media screen and (max-width:580px) {
 
     .containerLogin{
         width: 90%;
-        height: 45vh;
+        height: 42rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 2rem;
-        padding-top: 6.4rem;
-        border-left: 40px solid transparent; 
-        border-right: 40px solid transparent; 
-        border-bottom: 28px solid rgba(221, 200, 255, 0.24); 
-        border-top: 28px solid rgba(221, 200, 255, 0.24);
+        gap: 3.5rem;
+    }
+
+    .welcome_login {
+        font-size: 1.2rem;
     }
 
     .content_user_login{
@@ -358,7 +379,39 @@
     }
 
     .userName_label{
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width:490px) {
+
+    .containerLogin{
+        width: 90%;
+        padding: 2rem;
+        padding-top: 4rem;
+    }
+
+
+    .container_select_flag{
+        width: 30rem;
+        height: 35rem;
+        top: 42%;
+        left: 2rem;
+    }
+
+    .content_user_login{
+        width: 100%;
+        gap: .5rem;
+    }
+    .welcome_login {
+        font-size: 1rem;
+        padding: 0;
+    }
+    .userName_label{
+        font-size: 2.2rem;
         text-align: center;
         margin-left: -5rem;
         margin-bottom: .5rem;
@@ -384,7 +437,7 @@
     }
 
     .buttonAcept_login:active{
-        width: 89.9%;
+        width: 79.9%;
         height: 4.9rem;
     }
 
@@ -414,29 +467,35 @@
         left: -2rem;
     }
 
-    .container_select_flag {
-        top: 35%;
-   
-    }
 }
 
-@media screen and (max-width:350px) {
+
+@media screen and (max-width:420px) {
+    .containerLogin{
+        width: 90%;
+        height: 45rem;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        gap: 4rem;
+    }
+
     .container_select_flag {
-        position: absolute;
-        background-color: rgba(5, 0, 8, 0.952);
-        -webkit-backdrop-filter: blur(1rem);
-        backdrop-filter: blur(1rem);
-        display: flex;
-        flex-direction: column;
         gap: 2rem;
         width: 30rem;
         height: 35rem;
-        top: 35%;
-        right: -4.6rem;
+        top: 47%;
+        left: -2rem;
         padding: 4rem 2rem;
     }
+    .welcome_login {
+        font-size: 1.4rem;
+        padding: 0;
+        font-weight: bold;
+    }
     .userName_label {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-left: -8rem;
     }
 
@@ -450,6 +509,56 @@
 
     .circle_flag{
         left: -4rem;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+
+    .containerLogin{
+        width: 90%;
+        height: 42rem;
+        top: 52%;
+        left: 50%;
+        padding: 2rem;
+        gap: 4rem;
+    }
+
+    .container_select_flag {
+        gap: 2rem;
+        width: 30rem;
+        height: 35rem;
+        top: 47%;
+        left: -4.5rem;
+        padding: 4rem 2rem;
+    }
+
+    .welcome_login {
+        font-size: 1.2rem;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .userName_label {
+        font-size: 2rem;
+        margin-left: -8rem;
+    }
+    #userName_id {
+        width: 20rem;
+        height: 3.8rem;
+        font-size: 1.9rem;
+        padding: 15px;
+    }
+    
+    .triangle_flag{
+        width: 2.5rem;
+        height: 2rem;
+        top: -1.5rem;
+        left: 4rem;
+    }
+
+    .circle_flag{
+        left: -2rem;
     }
 
 }

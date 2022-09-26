@@ -14,7 +14,7 @@ const Login = () => {
     <div className="blurLogin">
         <div className="blurLogin_exit"></div>
         <div className=" containerLogin">
-            <div className='welcome'>
+            <div className='welcome_login'>
                 <h1>Welcome to Crypto Cup</h1>
             </div>
             <div className="content_user_login">
