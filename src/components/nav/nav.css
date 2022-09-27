@@ -107,7 +107,7 @@
     right: 22%;
     overflow: hidden;
     border: 2px solid rgba(28, 2, 90, 0.137);
-    filter: drop-shadow(0 0 5px rgba(151, 120, 221, 0.363));
+    filter: drop-shadow(0 0 2px rgba(150, 120, 221, 0.158));
 }
 
 .user_flag img{
