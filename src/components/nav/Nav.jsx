@@ -7,6 +7,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navFuncional from './navFuncional'
 import ContextConnected from '../config/context/ConnectedContext'
 import Login from './login/Login'
+import paisesJson from "../config/paises2.json"
+
 
 const Nav = () => {
 
@@ -86,6 +88,13 @@ const Nav = () => {
             }
 
           </ul>
+
+          { Connected.userLogginActive ?    
+            <div className="user_flag">
+              <img src={paisesJson.USA.img} alt="user flag" />
+            </div>
+          :
+          null}
 
           { Connected.userLogginActive ?    
           <ul className='listNav_login'>
