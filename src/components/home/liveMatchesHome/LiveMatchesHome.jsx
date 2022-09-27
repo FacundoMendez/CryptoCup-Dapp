@@ -14,7 +14,9 @@ const LiveMatchesHome = () => {
        },[]);
 
     const getLiveMatchs = async () => {
-        const res = await api.get('/matchs/getLiveMatches')
+        const res = await api.get('/matches/getLiveMatches')
+        console.log(res)
+        console.log("SII")
         setMatchsLive(res.data)
         verifyLiveMatchs() 
     }
