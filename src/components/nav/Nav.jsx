@@ -69,8 +69,8 @@ const Nav = () => {
       console.log("abrir popup");
         
     } else {
-      Connected.setActiveLogin(true)
-      console.log("Conectar usuario");
+      Connected.setActiveLogin(false)
+      Connected.setUserLoginActive(true)
     }
   }
   

@@ -52,6 +52,7 @@ const BasicLadder = () => {
               { 
                 predictionCards.map((item,index)=>{
                   return <Predictions key={index}
+                    id={item._id}
                     timer={item.startDate}
                     round={item.round}
                     nameTeam1={item.team1}

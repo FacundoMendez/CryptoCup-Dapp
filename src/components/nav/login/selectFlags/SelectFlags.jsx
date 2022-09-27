@@ -10,7 +10,7 @@ const SelectFlags = () => {
         <div className="flag">
             <div className="box_flag">
                 <div className="circle_flag">
-                    <img className='img_bandera' src={paisesJson.paisFlag.img} alt="flag" />
+                    {/* <img className='img_bandera' src={paisesJson.paisFlag.img} alt="flag" /> */}
                 </div>
                 <div className="triangle_flag"></div>
             </div>

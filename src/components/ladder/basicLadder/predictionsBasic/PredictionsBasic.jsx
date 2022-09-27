@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
+import api from '../../../../api'
 
-const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
+const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
@@ -13,7 +14,12 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
     }
   },[])
 
-
+  const makePrediction = async (pred) => {
+    const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
+      address: 'Fred',
+      prediction: pred
+    })
+  }
 
   const [predictionActive , setPredictionActive] = useState(false)
   const [namePredict_button , setNamePredict_button] = useState("Predict")
@@ -87,6 +93,7 @@ const Predictions = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) 
             if (!predictionActive){
               setActivePrediction(1)
               colorSetTeam1()
+              makePrediction(document.querySelector("left_pred").innerHTML)
             }
             }}>
             <p>{nameTeam1}</p>

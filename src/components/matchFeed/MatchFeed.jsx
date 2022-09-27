@@ -17,7 +17,7 @@ const MatchFeed = () => {
 
     //Get all matches from DB
     const getMatchs=async()=>{
-      const res=await api.get('/matchs/getMatches')
+      const res=await api.get('/matches/getMatches')
       const matchsArray=res.data
       console.log(res.data);
       setMatchs(matchsArray)

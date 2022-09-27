@@ -4,6 +4,7 @@ import loginFuncional from './loginFuncional'
 import SelectFlags from './selectFlags/SelectFlags'
 import ContextConnected from '../../config/context/ConnectedContext'
 import x from "../src/x.png"
+import api from '../../../api'
 
 const Login = () => {
 
@@ -12,6 +13,7 @@ const Login = () => {
     },[])
 
     const Connected = useContext(ContextConnected)
+
 
   return (
     <div className="blurLogin">
