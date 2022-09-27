@@ -111,6 +111,25 @@
 }
 
 
+@media screen and (max-width:1480px) {
+    .nav_inventario{
+        height: 89vh;
+    }
+    .nav_inventario:hover {
+        height: 89vh;
+        margin-top: .5rem;
+    }
+
+    
+    .nav_Toggle_inventario{
+      
+    }
+    
+
+    
+}
+
+
 @media screen and (max-width:1024px) {
     .nav_inventario{
         width: 100vw;
