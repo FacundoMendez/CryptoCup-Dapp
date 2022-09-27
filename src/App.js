@@ -18,7 +18,7 @@ import ContextConnected from './components/config/context/ConnectedContext';
 function App() {
 
 
-  const [userLogginActive , setUserLoginActive] = useState(true) /* manda si el usuario esta conectado */
+  const [userLogginActive , setUserLoginActive] = useState(false) /* manda si el usuario esta conectado */
 
   const [activeLogin , setActiveLogin] = useState(false) /* activa el popup de login */
 
