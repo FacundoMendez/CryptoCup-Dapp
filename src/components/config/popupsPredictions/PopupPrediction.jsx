@@ -1,22 +1,25 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useContext} from 'react'
 import popupPredictionFuncional from './popupPedictionFuncional'
 import "./popupPrediction.css"
+import ContextConnected from '../context/ConnectedContext'
 
-const PopupPrediction = ({confirmedPrediction}) => {
+const PopupPrediction = () => {
   useEffect(() => {
-    popupPredictionFuncional(confirmedPrediction)
+    popupPredictionFuncional(ConfirmPopupContext.confirmedPrediction)
   },[])
+
+  const ConfirmPopupContext = useContext(ContextConnected)
   
     return (
     <>
-    {confirmedPrediction ? 
-    <div className="popupConfirmed">
-        <p>Prediccion Succesfully Created</p>
-    </div>
-    :
-    <div className="popupRejected">
-        <p>PREDICTION ALREADY MADE</p>
-    </div>
+    {ConfirmPopupContext.confirmedPrediction === true ? 
+      <div className="popupConfirmed">
+          <p>Prediccion Succesfully Created</p>
+      </div>
+      :
+      <div className="popupRejected">
+          <p>prediction already made</p>
+      </div>
     }
     </>
   )

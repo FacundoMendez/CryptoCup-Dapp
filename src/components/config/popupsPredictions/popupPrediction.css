@@ -1,6 +1,6 @@
 
 .popupConfirmed{
-    width: 30rem;
+    width: 35rem;
     height: 4.5rem;
     border-radius: 10px;
     background-color: #5eda92c5;
@@ -12,8 +12,8 @@
     align-items: center;
     filter: drop-shadow(0 0 2px rgba(189, 255, 209, 0.623));
     text-transform: uppercase;
-    top: .7rem;
-    right: 1%;
+    top: 14rem;
+    right: 15%;
     opacity: 0;
     transition: all 1s ease-in-out;
     animation: jittery 3s infinite;
@@ -34,11 +34,8 @@
 }
 
 
-
-
-
 .popupRejected{
-    width: 30rem;
+    width: 35rem;
     height: 4.5rem;
     border-radius: 10px;
     background-color: #da5e5ec5;
@@ -50,8 +47,8 @@
     align-items: center;
     filter: drop-shadow(0 0 2px rgba(255, 189, 189, 0.623));
     text-transform: uppercase;
-    top: .7rem;
-    right: 1%;
+    top: 14rem;
+    right: 15%;
     opacity: 0;
     transition: all 1s ease-in-out;
     animation: jittery 3s infinite;
@@ -69,4 +66,83 @@
     opacity: 1;
     transition: all 1s ease-in-out;
     animation: jittery 3s infinite;
+}
+
+@media screen and (max-width:1440px) {
+        
+    .popupConfirmed{
+        width: 35rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 6%;
+        opacity:0;
+    }
+
+    .popupRejected{
+        width: 35rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 6%;
+        opacity: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width:800px) {
+        
+    .popupConfirmed{
+        width: 35rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 10%;
+        opacity:0;
+    }
+
+    .popupRejected{
+        width: 35rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 10%;
+        opacity: 0;
+    }
+
+}
+
+
+@media screen and (max-width:400px) {
+        
+    .popupConfirmed{
+        width: 33rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 4%;
+        opacity: 0;
+    }
+
+    .popupRejected{
+        width: 30rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 4%;
+        opacity: 0;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+        
+    .popupConfirmed{
+        width: 32rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 3%;
+        opacity: 0;
+    }
+
 }

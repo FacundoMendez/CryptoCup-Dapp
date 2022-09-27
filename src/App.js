@@ -20,7 +20,7 @@ function App() {
 
   const [userLogginActive , setUserLoginActive] = useState(false) /* manda si el usuario esta conectado */
   const [activeLogin , setActiveLogin] = useState(false) /* activa el popup de login */
-
+  const [confirmedPrediction , setConfirmedPrediction] = useState(true)
   const [provider,setProvider]=useState(undefined)
   const [account,setAccount]=useState(undefined)
   const [signer,setSigner]=useState(undefined)
@@ -47,7 +47,9 @@ function App() {
       paisFlag,
       setPaisFlag,
       userData,
-      setUserData
+      setUserData,
+      setConfirmedPrediction,
+      confirmedPrediction
       }}>
       <BrowserRouter>
           <Suspense fallback={<Spinner/>}>

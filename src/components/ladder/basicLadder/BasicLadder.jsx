@@ -1,11 +1,12 @@
-import React, {useState, Suspense, useEffect} from 'react'
+import React, {useState, Suspense, useEffect ,useContext} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import "./basicLadder.css"
 import api from '../../../api'
 import candado from "../../config/src/candado.png"
-
+import ContextConnected from '../../config/context/ConnectedContext'
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
+import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
 /* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
 import Ranking from '../componentsLadders/ranking/Ranking' */
 
@@ -18,6 +19,8 @@ const BasicLadder = () => {
   const [loading ,setLoading]=useState(true)
     
   const [predictionCards,setPredictionCards]=useState([])
+
+  const PredictionContext = useContext(ContextConnected)
 
   useEffect(() => {
     getPredictionsAvailables()
@@ -35,6 +38,9 @@ const BasicLadder = () => {
   return (
     <Suspense fallback={<Spinner/>}>
       <div className="basicLadder">
+      {PredictionContext.confirmedPrediction === true  ? <PopupPrediction /> : null}
+      {PredictionContext.confirmedPrediction === false ? <PopupPrediction /> : null}
+      
         <NavLadder 
             ladder="Basic Ladder"
             setMyPrediction={setMyPrediction}
