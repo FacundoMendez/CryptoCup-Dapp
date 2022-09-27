@@ -3,7 +3,7 @@
     height: 90vh;
     display: flex;
     justify-content: center;
-    top: 54.7%;
+    top: 54.8%;
     left: -40rem;
     align-items: center;
     gap: 2rem;
@@ -15,7 +15,7 @@
     border-radius: 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border: 6px double rgba(177, 130, 238, 0.479);
+    border: 2px solid rgba(177, 130, 238, 0.479);
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
@@ -29,7 +29,7 @@
 
 .nav_inventario:hover{
     width: 40rem;
-    height: 90vh;
+    height: 90.5vh;
     left: 0rem;
     transition: all .3s ease ;
 }
@@ -42,11 +42,10 @@
     left: 100%;
     transform: translate(0%, -50%);
     border-radius: 15px;
-    border: 6px double rgba(177, 130, 238, 0.589);
+    border: 5px double rgba(177, 130, 238, 0.589);
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: rgb(11, 5, 19);
     backdrop-filter: blur(1rem);
     display: flex;
     justify-content: center;
