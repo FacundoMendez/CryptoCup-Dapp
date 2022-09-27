@@ -21,6 +21,7 @@ export const verificarExistencia = async (signer, signature)=>{
 
 export const getUserData = async (signer, signature)=>{
     try {
+        console.log(signer)
         const res = await api.post('/user/getUser', { address: signer, signature });
         console.log(res)
         return res.data
