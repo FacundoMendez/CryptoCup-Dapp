@@ -83,7 +83,7 @@
     transition: all .5s ease-in-out;
     backdrop-filter: blur(1rem);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
-    background-color: rgba(255, 255, 255, 0.080);
+    background-color: rgba(133, 100, 177, 0.315);
     backdrop-filter: blur(1rem);
 }
 
