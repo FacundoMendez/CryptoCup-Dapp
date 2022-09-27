@@ -16,7 +16,7 @@ const FriendsLadder = () => {
   return (
   <div className="friendsLadder"> 
       <NavLadder 
-          ladder="friends Ladder"
+          ladder="Challenge Room"
           setMyPrediction={setMyPrediction}
           setPredictions={setPredictions}
           setRanking={setRanking}

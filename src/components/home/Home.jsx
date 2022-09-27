@@ -61,36 +61,28 @@ const Home = () => {
               { Connected.userLogginActive ? 
                 <NavLink to="/ladder" >
                   <div className="containerDapp_cards-basic cardMain">
-                    <h2>Basic Ladder</h2>
                   </div>
                 </NavLink>
                 :
                 <div className="containerDapp_cards-basic cardMain">
-                  <h2>Basic Ladder</h2>
                 </div>
               }
               
               { Connected.userLogginActive ? 
                 <NavLink to="/ladder" >
-                  <div className="containerDapp_cards-boost cardMain">
-                    <h2>Boost Ladder</h2>
-                  </div>
+                  <div className="containerDapp_cards-boost cardMain"></div>
                 </NavLink>
                 :
-                <div className="containerDapp_cards-boost cardMain">
-                  <h2>Boost Ladder</h2>
-                </div>
+                <div className="containerDapp_cards-boost cardMain"></div>
               }
 
             { Connected.userLogginActive ? 
               <NavLink to="/ladder" >
                 <div className="containerDapp_cards-friends cardMain ">
-                  <h2>Friends Ladder</h2>
                 </div>
               </NavLink> 
               : 
               <div className="containerDapp_cards-friends cardMain ">
-                <h2>Friends Ladder</h2>
               </div>
             }   
             </div>

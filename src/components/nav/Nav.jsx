@@ -112,7 +112,7 @@ const Nav = () => {
 
             { Connected.userLogginActive ?    
 
-            <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
+              <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
                 <li className='nav_list_links'> Staking</li>
               </NavLink> 
               :
@@ -153,7 +153,7 @@ const Nav = () => {
               </li>
             </ul>
           :
-          <ul className='listNav_login' onClick={ () => /* Connected.setActiveLogin(true) */ init()}>
+          <ul className='listNav_login' onClick={ () => init()}>
             <li className='buttonLogin'>
               Connect
             </li>

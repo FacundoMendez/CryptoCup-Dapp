@@ -92,16 +92,55 @@
     width: 23.8vw;
     border-radius: 10px;
     background: #160D1F;
-    background-image: url("./src/card.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.212);
+    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.822);
     position: relative;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    filter: drop-shadow(0 0 10px rgba(154, 120, 248, 0.473));
+
+}
+
+.containerDapp_cards-basic{
+    background-image: url("./src/CardDappBasicLadder.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+} 
+.containerDapp_cards-boost{
+    background-image: url("./src/CardDappBoostLadder.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.containerDapp_cards-friends{
+    background-image: url("./src/ChallengeRoom.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.containerDapp_cards-staking{
+    background-image: url("../config/src/candado.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.993);
+}  
+.containerDapp_cards-marketplace {
+    background-image: url("../config/src/candado.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.993);
+}
+.containerDapp_cards-miniGames{
+    background-image: url("../config/src/candado.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.993);
 }
 
 .cardMain::before{
@@ -120,13 +159,23 @@
 }
 
 .cardMain h2{
-    margin-top: 2rem;
     color: white;
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     z-index: 1000;
     letter-spacing: 1px;
     transition: all .5s ease-in-out;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family:gilron;
+    color: transparent;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px #9999ff,
+    inset 0 -2px 5px 1px #9999ff,
+    inset 0 -1px 1px 3px #9999ff;
+    background-image: linear-gradient(160deg, #8f70ff, #c898ff, #d5b9ff, #ffffff, #d5b9ff, #c898ff, #8f70ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .team1_live,.team2_live, .liveBox {
@@ -263,9 +312,6 @@
 
 
 
-.cardMain:hover{
-    background-color: rgba(253, 251, 255, 0.692);
-}
   
 @media screen and (max-width: 1460px) {
    

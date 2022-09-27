@@ -1,7 +1,5 @@
 import React, {Suspense, useState , useEffect} from 'react'
 import api from '../../../api'
-import arg from "../../config/flags/arg.png"
-import bra from "../../config/flags/bra.png"
 import Spinner from '../../config/spinner/Spinner'
 import paisesJson from '../../config/paises2.json'
 
@@ -18,7 +16,6 @@ const LiveMatchesHome = () => {
     const getLiveMatchs = async () => {
         const res = await api.get('/matchs/getLiveMatches')
         setMatchsLive(res.data)
-        console.log(res.data)
         verifyLiveMatchs() 
     }
 

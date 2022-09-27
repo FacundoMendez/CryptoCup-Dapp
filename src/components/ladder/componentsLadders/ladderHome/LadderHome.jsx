@@ -63,7 +63,7 @@ const LadderHome = () => {
                                 setColorFriends(true)    
                                 colorFriendsFuction()
                             }}>
-                            Friends Ladder
+                            Challenge Room
                         </li>
                     </ul>
                 </div>
