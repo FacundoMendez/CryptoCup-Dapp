@@ -300,3 +300,13 @@
     }
 }
 
+@media screen and (max-width:500px) {
+    
+    .buttonLogin , .buttonLogin_desconnect{
+        font-size: 1.7rem;
+        width: 14rem;
+        height: 4.5rem;
+        right: 2rem;
+    }
+
+}

@@ -294,13 +294,13 @@
     }
 
     .cardMain{
-        height: 19rem;
-        width: 30.5vw;
+        height: 18rem;
+        width: 30.1vw;
     }
     
     .cardMain::before{
-        height: 19rem;
-        width: 30.5vw;
+        height: 18rem;
+        width: 30.1vw;
     }
   
   }
@@ -332,15 +332,14 @@
     .container_live_social{
         gap: 1rem;
     }
-
     .cardMain{
-        height: 19rem;
-        width: 30.5vw;
+        height: 18rem;
+        width: 29.3vw;
     }
     
     .cardMain::before{
-        height: 19rem;
-        width: 30.5vw;
+        height: 18rem;
+        width: 29.3vw;
     }
   
   }
@@ -365,8 +364,8 @@
     }
 
     .cardMain{
-        height: 33rem;
-        width: 95vw;
+        height: 25rem;
+        width: 90vw;
     }
     
     .cardMain::before{
@@ -415,13 +414,13 @@
     }
 
     .cardMain{
-        height: 30rem;
-        width: 95vw;
+        height: 25rem;
+        width: 90vw;
     }
     
     .cardMain::before{
-        height: 30rem;
-        width: 95vw;
+        height: 25rem;
+        width: 90vw;
     }
 }
 
@@ -431,7 +430,24 @@
         font-size: 1.1rem;
     }
 
+    .containerDapp_title{
+        width: 95%;
+        height: 5rem;
+    }
 
+
+    .activeLive {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        margin-top: -.4rem;
+        animation: liveNow 2.1s infinite linear;
+    }
+
+    .social_nav{
+        width: 20vw;
+        height: 5rem;
+    }
     .text_live {
         gap: 1rem;
         padding-right: 2rem;
@@ -450,13 +466,13 @@
     }
 
     .cardMain{
-        height: 30rem;
-        width: 95vw;
+        height: 25rem;
+        width: 90vw;
     }
     
     .cardMain::before{
-        height: 30rem;
-        width: 95vw;
+        height: 25rem;
+        width: 90vw;
     }
 
 }
