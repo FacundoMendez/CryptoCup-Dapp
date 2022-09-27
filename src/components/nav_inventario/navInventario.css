@@ -15,10 +15,10 @@
     border-radius: 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border: 6px double rgba(177, 130, 238, 0.479);
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
-    border: 6px double rgba(177, 130, 238, 0.479);
 }
 
 .nav_inventario:hover{
