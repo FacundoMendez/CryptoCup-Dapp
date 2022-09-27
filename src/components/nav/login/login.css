@@ -315,6 +315,49 @@
 }
 
 
+@media screen and (max-width:1244px) {
+    .container_select_flag {
+        width: 30rem;
+        height: 24.5rem;
+        top: 70%;
+        right: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .container_select_flag p{
+        font-size: 1.5rem;
+    }
+    .containerLogin{
+        width: 75%;
+        height: 39rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+}
+
+
+@media screen and (max-width:1020px) {
+    .container_select_flag {
+        width: 30rem;
+        height: 24.5rem;
+        top: 70%;
+        right: 2rem;
+        padding: 4rem 2rem;
+    }
+
+    .container_select_flag p{
+        font-size: 1.5rem;
+    }
+    .containerLogin{
+        width: 90%;
+    }
+
+}
+
 @media screen and (max-width:800px) {
 
     .containerLogin{

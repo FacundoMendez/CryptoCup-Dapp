@@ -7,9 +7,14 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navFuncional from './navFuncional'
 import ContextConnected from '../config/context/ConnectedContext'
 import Login from './login/Login'
+<<<<<<< HEAD
 import { verificarExistencia } from './verifyUser'
 import { ethers } from 'ethers'
 import api from "../../api"
+=======
+import paisesJson from "../config/paises2.json"
+
+>>>>>>> 9ee4fe81f676a7b6cb84922eff1e69e283bd20e3
 
 const Nav = () => {
 
@@ -138,6 +143,13 @@ const Nav = () => {
             }
 
           </ul>
+
+          { Connected.userLogginActive ?    
+            <div className="user_flag">
+              <img src={paisesJson.USA.img} alt="user flag" />
+            </div>
+          :
+          null}
 
           { Connected.userLogginActive ?    
           <ul className='listNav_login'>

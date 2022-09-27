@@ -18,7 +18,7 @@
   height: 39vh;
   object-fit: cover;
   border-radius: 15px;
-  filter: contrast(105%) brightness(105%) ;
+  filter: contrast(110%) brightness(105%) ;
   z-index: 900;
 }
 
