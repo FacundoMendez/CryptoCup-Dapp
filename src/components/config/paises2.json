@@ -162,13 +162,6 @@
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Qatar_emccgo.jpg ",
         "num":26
     },
-    
-    "Serbia" :{
-        "name": "Serbia",
-        "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Serbia_do0kab.jpg ",
-        "num":27
-    },
-    
     "Switzerland" :{
         "name": "Suiza",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Suiza_hhlfet.jpg",
@@ -190,6 +183,56 @@
     "Tunisia" :{
         "name": "Túnez",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Tunez_nhofmo.jpg  ",
+        "num":31
+    },
+    "Jamaica" :{
+        "name": "Jamaica",
+        "img": "https://static4.depositphotos.com/1011936/341/i/600/depositphotos_3417601-stock-photo-jamaican-flag-in-the-wind.jpg",
+        "num":31
+    },
+    "Chile" :{
+        "name": "Chile",
+        "img": "https://media.istockphoto.com/photos/waving-chile-flag-picture-id486201129?k=20&m=486201129&s=170667a&w=0&h=LY-zDEi7jq8y2bYIShs9k6NgZJvN4dfLNU6fyvxymPs=",
+        "num":31
+    },
+    "Czech Republic" :{
+        "name": "Czech Republic",
+        "img": "https://c4.wallpaperflare.com/wallpaper/751/787/664/bandera-checa-republica-wallpaper-preview.jpg",
+        "num":31
+    },
+    "Norway" :{
+        "name": "Norway",
+        "img": "https://image.winudf.com/v2/image1/Y29tLmhkZmxhZ3Mubm9yd2F5LndhbGxwYXBlci5pbWFnZXNfc2NyZWVuXzVfMTYxNzk5NzQxOV8wMTE/screen-9.jpg?fakeurl=1&type=.webp",
+        "num":31
+    },
+    "Serbia" :{
+        "name": "Serbia",
+        "img": "https://t3.ftcdn.net/jpg/05/28/41/54/360_F_528415456_9FemVfuGSGdO73QCmMAHCh6TU4SYR4jQ.jpg",
+        "num":31
+    },
+    "Paraguay" :{
+        "name": "Paraguay",
+        "img": "https://ak.picdn.net/shutterstock/videos/1084839430/thumb/1.jpg?ip=x480",
+        "num":31
+    },
+    "Morocco" :{
+        "name": "Morocco",
+        "img": "https://wallpaperaccess.com/full/3840659.jpg",
+        "num":31
+    },
+    "Peru" :{
+        "name": "Peru",
+        "img": "https://travel.mqcdn.com/mapquest/travel/wp-content/uploads/2021/01/peru-flag-with-coat-of-arms-722x480.jpg",
+        "num":31
+    },
+    "El Salvador" :{
+        "name": "El Salvador",
+        "img": "https://i.pinimg.com/originals/be/97/50/be9750020891295b8e45b9a6a936a28e.jpg",
+        "num":31
+    },
+    "Colombia" :{
+        "name": "Colombia",
+        "img": "https://media.istockphoto.com/photos/colombias-flag-picture-id508515841?k=20&m=508515841&s=612x612&w=0&h=fQ7fexfVO7hp2nmRUmvJcv6fm37aC0UaYnDWkbc5x_o=",
         "num":31
     }
 }

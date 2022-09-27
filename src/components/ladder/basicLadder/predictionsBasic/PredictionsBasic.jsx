@@ -2,13 +2,13 @@ import React, {useState, useEffect , useContext} from 'react'
 import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
-
+import ContextConnected from '../../../config/context/ConnectedContext'
 const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
- /*  const Connected = useContext(ContextConnected) */
-
+ const Connected = useContext(ContextConnected)
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
+  const [predictionChoose,setPredictionChoose] = useState()
 
   useEffect(() => {
     if (predictionActive){
@@ -16,14 +16,19 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
     }
   },[])
 
-  const makePrediction = async (pred) => {
-    /* const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
+  const makePrediction = async () => {
+    const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
       address: Connected.account[0] ,
-      prediction: pred
-    })  */
-    console.log("ANDANDOO");
-    console.log(" es " +pred);
-  /*   console.log(Connected.account[0]); */
+      prediction: predictionChoose
+    })  
+        //FACU !! MEJORAR ALERTAS DARLE ESTILO FACHERO
+    if (res.data === "Prediction Succesfully Created.") alert ("Prediccion Succesfully Created.") //Que aparezca con color de que se hizo correctamente
+    if (res.data ==="prediction already made") alert("PREDICTION ALREADY MADE")  //que aparezca con color erroneo
+
+  }
+
+  const makePredd = async () => {
+    console.log("Ay me apretaste")
   }
 
   const [predictionActive , setPredictionActive] = useState(false)
@@ -98,7 +103,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             if (!predictionActive){
               setActivePrediction(1)
               colorSetTeam1()
-              makePrediction(document.getElementById(`left_${nameTeam1}`).innerText)
+              setPredictionChoose(document.getElementById(`left_${nameTeam1}`).innerText)
             }
             }}>
             <p id={"left_" + nameTeam1}>{nameTeam1}</p>
@@ -107,6 +112,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             if (!predictionActive){
               setActivePrediction(2)
               colorSetEmpate()
+              setPredictionChoose("Tie")
             }
             }}>
             <p id='tie_prediction' className='tie_pred'>Tie</p>
@@ -115,9 +121,10 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             if (!predictionActive){
               setActivePrediction(3)
               colorSetTeam2()
+              setPredictionChoose(document.getElementById(`right_${nameTeam2}`).innerText)
             }
             }}>
-            <p id='right_prediction'>{nameTeam2}</p>
+            <p id={'right_' + nameTeam2}>{nameTeam2}</p>
           </div>
         </div>
 
@@ -128,6 +135,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
            /* si hay prediccion muestra el boton activo */
           <button className='predict_button predict_button_active' style={{backgroundColor : colorButton}} disabled={predictionActive === true} onClick={() => {
             setPredictionActive(true)
+            makePrediction()
             if (activePrediciton === undefined){
               console.log("no prediction")      
              
