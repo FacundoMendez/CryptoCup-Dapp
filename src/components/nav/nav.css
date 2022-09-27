@@ -234,7 +234,13 @@
     .listNav li{
         font-size: 1.45rem;
     }
+
+    .user_flag{
+        right: 22%;
+    }
 }
+
+
 
 @media screen and (max-width:1024px) {
 
@@ -320,6 +326,16 @@
         position: absolute;
         left: 10%;
     }
+
+    .user_flag{
+        right: 26%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .user_flag{
+        right: 33%;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -331,4 +347,15 @@
         right: 2rem;
     }
 
+    .user_flag{
+        right: 45%;
+    }
+}
+
+
+@media screen and (max-width:350px) {
+
+    .user_flag{
+        right: 50%;
+    }
 }
