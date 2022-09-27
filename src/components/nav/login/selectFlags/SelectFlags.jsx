@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import ContextConnected from '../../../config/context/ConnectedContext'
 import paisesJson from "../../../config/paises2.json"
 
@@ -25,7 +25,7 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Arabia Saudita</p>
-                    <input className="select_value_flag" type="radio" value="option3" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Arabia Saudita"} onClick={() =>   Connected.setPaisFlag("Arabia Saudita")} />
+                    <input className="select_value_flag" type="radio" value="option3" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Saudi Arabia"} onClick={() =>   Connected.setPaisFlag("Saudi Arabia")} />
                 </label>
                 <label className="radio control-radio">
                     <p>Australia</p>
@@ -33,7 +33,7 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Brasil</p>
-                    <input className="select_value_flag" type="radio" value="option5" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Brasil"} onClick={() =>   Connected.setPaisFlag("Brasil")}  />
+                    <input className="select_value_flag" type="radio" value="option5" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Brazil"} onClick={() =>   Connected.setPaisFlag("Brazil")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Bélgica</p>
@@ -45,15 +45,15 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Corea del Sur</p>
-                    <input  className="select_value_flag" type="radio" value="option8" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Corea del Sur"} onClick={() =>  Connected.setPaisFlag("Corea del Sur")}  />
+                    <input  className="select_value_flag" type="radio" value="option8" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "South Korea"} onClick={() =>  Connected.setPaisFlag("South Korea")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Canadá</p>
-                    <input className="select_value_flag" type="radio" value="option9" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Canada"} onClick={() =>   Connected.setPaisFlag("Canadá")}  />
+                    <input className="select_value_flag" type="radio" value="option9" readOnly={true} name="radioBFlags" checked={Connected.paisFlag === "Canada"} onClick={() =>   Connected.setPaisFlag("Canada")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Camerún</p>
-                    <input className="select_value_flag" type="radio" value="option10" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Camerun"} onClick={() => Connected.setPaisFlag("Camerun")}  />
+                    <input className="select_value_flag" type="radio" value="option10" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Cameroon"} onClick={() => Connected.setPaisFlag("Cameroon")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Costa Rica</p>
@@ -65,11 +65,11 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>España</p>
-                    <input className="select_value_flag" type="radio" value="option13" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "España"} onClick={() => Connected.setPaisFlag("España")}  />
+                    <input className="select_value_flag" type="radio" value="option13" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Spain"} onClick={() => Connected.setPaisFlag("Spain")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Estados Unidos</p>
-                    <input className="select_value_flag" type="radio" value="option14" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Estados Unidos"} onClick={() => Connected.setPaisFlag("Estados Unidos")}  />
+                    <input className="select_value_flag" type="radio" value="option14" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "United States"} onClick={() => Connected.setPaisFlag("United States")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Ecuador </p>
@@ -101,7 +101,7 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Japón</p>
-                    <input className="select_value_flag" type="radio" value="option22" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Japon"} onClick={() => Connected.setPaisFlag("Japon")}  />
+                    <input className="select_value_flag" type="radio" value="option22" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Japan"} onClick={() => Connected.setPaisFlag("Japan")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Marruecos</p>
@@ -129,7 +129,7 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Suiza</p>
-                    <input className="select_value_flag" type="radio" value="option29" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Suiza"} onClick={() => Connected.setPaisFlag("Suiza")}  />
+                    <input className="select_value_flag" type="radio" value="option29" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Switzerland"} onClick={() => Connected.setPaisFlag("Switzerland")}  />
                 </label>
                 <label className="radio control-radio">
                     <p>Senegal</p>
@@ -141,7 +141,7 @@ const SelectFlags = () => {
                 </label>
                 <label className="radio control-radio">
                     <p>Túnez</p>
-                    <input className="select_value_flag" type="radio" value="option32" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Tunez"} onClick={() => Connected.setPaisFlag("Tunez")}  />
+                    <input className="select_value_flag" type="radio" value="option32" readOnly={true} name="radioFlags " checked={Connected.paisFlag === "Tunisia"} onClick={() => Connected.setPaisFlag("Tunisia")}  />
                 </label>
             </div>
         </div>

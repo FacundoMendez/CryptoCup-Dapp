@@ -10,13 +10,15 @@ import Login from './login/Login'
 import { getUserData, verificarExistencia } from './verifyUser'
 import { ethers } from 'ethers'
 import paisesJson from "../config/paises2.json"
-import api from "../../api"
+import PopupError from '../config/popupsErrors/PopupError'
 
 const Nav = () => {
 
   useEffect(() => {
     navFuncional()
   },[])
+
+    const [chainIncorrecta , setChainIncorrecta] = useState(false)
 
     const Connected = useContext(ContextConnected)
 
@@ -35,7 +37,7 @@ const Nav = () => {
                   
                 getMessage(newProvider, newAccount, newSigner)  
               } else {
-                alert("chain erronea")
+                setChainIncorrecta(true)
               }       
           }
         
@@ -72,6 +74,7 @@ const Nav = () => {
 
   return (
     <header className='header'>
+      {chainIncorrecta ? <PopupError chainIncorrecta={chainIncorrecta} /> : null}
       <div className="nav">
           <button className="nav_Toggle" aria-label="Abrir menú">
               <FontAwesomeIcon icon={faBars} />

@@ -3,7 +3,7 @@ import "./claim.css"
 
 const Claim = () => {
 
-    const [activeClaim, setActiveClaim] = useState(true)
+    const [activeClaim, setActiveClaim] = useState(false)
 
   return (
     <>

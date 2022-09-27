@@ -3,12 +3,16 @@ import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
+import PopupPrediction from '../../../config/popupsPredictions/PopupPrediction'
+
+
 const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
  const Connected = useContext(ContextConnected)
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
   const [predictionChoose,setPredictionChoose] = useState()
+  const [confirmedPrediction , setConfirmedPrediction] = useState()
 
   useEffect(() => {
     if (predictionActive){
@@ -21,16 +25,21 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
       address: Connected.account[0] ,
       prediction: predictionChoose
     })  
-        //FACU !! MEJORAR ALERTAS DARLE ESTILO FACHERO
-    if (res.data === "Prediction Succesfully Created.") alert ("Prediccion Succesfully Created.") //Que aparezca con color de que se hizo correctamente
-    if (res.data ==="prediction already made") alert("PREDICTION ALREADY MADE")  //que aparezca con color erroneo
-
+    if (res.data === "Prediction Succesfully Created.") {
+      //Que aparezca con color de que se hizo correctamente
+      setConfirmedPrediction(true)
+    }
+    
+    if (res.data ==="prediction already made") {
+      //que aparezca con color erroneo
+      setConfirmedPrediction(false)
+    }
   }
 
-  const makePredd = async () => {
+/*   const makePredd = async () => {
     console.log("Ay me apretaste")
   }
-
+ */
   const [predictionActive , setPredictionActive] = useState(false)
   const [namePredict_button , setNamePredict_button] = useState("Predict")
   const [colorTeam1, setColorTeam1] = useState()
@@ -69,6 +78,8 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
   return (
     <div className="prediciton">
+      {confirmedPrediction ? <PopupPrediction confirmedPrediction={confirmedPrediction} /> : null}
+      {confirmedPrediction === false ? <PopupPrediction confirmedPrediction={confirmedPrediction} /> : null}
       {
         liveNowPrediction ?                          /* si esta en vivo */
           <div className="livePrediction">
@@ -149,9 +160,9 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
 
         {/* devuelve el estado de la prediccion ( 1 2 3 ) */}
-        {activePrediciton === 1 ? console.log(activePrediciton): null} {/* team 1 win */}
-        {activePrediciton === 2 ? console.log(activePrediciton): null} {/* empate */}
-        {activePrediciton === 3 ? console.log(activePrediciton): null} {/* team 2 win */}
+       {/*  {activePrediciton === 1 ? console.log(activePrediciton): null} */} {/* team 1 win */}
+        {/* {activePrediciton === 2 ? console.log(activePrediciton): null} */} {/* empate */}
+        {/* {activePrediciton === 3 ? console.log(activePrediciton): null} */} {/* team 2 win */}
 
     </div>
   )

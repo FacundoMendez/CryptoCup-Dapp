@@ -1,0 +1,112 @@
+
+/* error no metamask */
+
+.errorNoMetamask{
+    width: 50rem;
+    height: 5rem;
+    border-radius: 10px;
+    background-color: #000000ec;
+    backdrop-filter: blur(2rem);
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 6px rgba(255, 96, 4, 0.623));
+    top: 11.5rem;
+    right: 2%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+    z-index: 9999;
+}
+
+.errorNoMetamask p{
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.errorNoMetamask_active{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+}
+
+
+@keyframes jittery {
+    5%, 50% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    15% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1) rotate(-3deg);
+    }
+    25% {
+      transform: scale(1) rotate(3deg);
+    }
+    30% {
+      transform: scale(1) rotate(-2deg);
+    }
+    35% {
+      transform: scale(1) rotate(1deg);
+    }
+    40% {
+      transform: scale(1) rotate(0);
+    }
+}
+
+
+
+
+
+@media screen and (min-width:2000px) {
+
+    .errorNoMetamask p{
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+
+@media screen  and (max-width: 1440px){
+
+
+    .errorNoMetamask p{
+        font-size: 1.4rem;
+    }
+    
+}
+
+
+
+@media screen  and (max-width: 480px){
+
+    .errorNoMetamask{
+        width: 36rem;
+    }
+    
+    .errorNoMetamask p{
+        font-size: 1.4rem;
+        letter-spacing: 0;
+    }
+}
+
+@media screen  and (max-width: 373px){
+
+    .errorNoMetamask{
+        width: 31rem;
+        left: .4rem;
+    }
+    
+    .errorNoMetamask p{
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+}

@@ -34,7 +34,8 @@ const Login = () => {
                 <img src={x} alt="exit" />
             </div>
             <div className='welcome_login'>
-                <h1>Welcome to Crypto Cup</h1>
+                <h1>Welcome to Crypto Cup </h1>
+                <p>V. Alpha</p>
             </div>
             <div className="content_user_login">
                 <div className="username">
