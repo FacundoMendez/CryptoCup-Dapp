@@ -143,7 +143,7 @@ const Nav = () => {
 
           { Connected.userLogginActive ?    
             <div className="user_flag">
-              <img src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
+             {/*  <img src={paisesJson[Connected.userData.flag].img} alt="user flag" />  */}
             </div>
           :
           null}

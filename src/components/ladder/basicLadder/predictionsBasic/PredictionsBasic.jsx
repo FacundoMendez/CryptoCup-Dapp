@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect , useContext} from 'react'
 import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 
 const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
+
+ /*  const Connected = useContext(ContextConnected) */
 
   const [activePrediciton, setActivePrediction]= useState()
   const [liveNowPrediction, setLiveNowPrediction]= useState(false)
@@ -15,10 +17,13 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
   },[])
 
   const makePrediction = async (pred) => {
-    const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
-      address: 'Fred',
+    /* const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
+      address: Connected.account[0] ,
       prediction: pred
-    })
+    })  */
+    console.log("ANDANDOO");
+    console.log(" es " +pred);
+  /*   console.log(Connected.account[0]); */
   }
 
   const [predictionActive , setPredictionActive] = useState(false)
@@ -93,10 +98,10 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             if (!predictionActive){
               setActivePrediction(1)
               colorSetTeam1()
-              makePrediction(document.querySelector("left_pred").innerHTML)
+              makePrediction(document.getElementById(`left_${nameTeam1}`).innerText)
             }
             }}>
-            <p>{nameTeam1}</p>
+            <p id={"left_" + nameTeam1}>{nameTeam1}</p>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
             if (!predictionActive){
@@ -104,7 +109,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
               colorSetEmpate()
             }
             }}>
-            <p className='tie_pred'>Tie</p>
+            <p id='tie_prediction' className='tie_pred'>Tie</p>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
             if (!predictionActive){
@@ -112,7 +117,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
               colorSetTeam2()
             }
             }}>
-            <p>{nameTeam2}</p>
+            <p id='right_prediction'>{nameTeam2}</p>
           </div>
         </div>
 
