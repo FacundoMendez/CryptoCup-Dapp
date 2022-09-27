@@ -222,6 +222,8 @@
 
     .nav{
         padding: 0 1rem;
+        background-color: rgba(85, 52, 116, 0.897);
+
     }
 
     .listNav{
@@ -247,7 +249,10 @@
     .nav{
         padding: 0 1rem;
         justify-content: flex-end;
+    
     }
+
+    
 
     .nav_list_desconected{
         margin-right: 0rem;
