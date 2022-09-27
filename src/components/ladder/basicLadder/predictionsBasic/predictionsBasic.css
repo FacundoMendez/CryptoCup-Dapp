@@ -1,8 +1,6 @@
 .prediciton{
     width: 36rem;
     height: 30rem;
-    box-shadow: 0 0 1rem rgba(182, 182, 182, 0.185);
-    background-color: rgba(11, 1, 27, 0.904);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -11,7 +9,7 @@
     gap:1rem;
     padding: 1rem;
     margin: 2rem;
-    background-color: #c2c2c271;
+    background-color: #c2c2c260;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     box-shadow: rgba(166, 128, 255, 0.336) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.301) -3px -3px 6px 1px inset;
