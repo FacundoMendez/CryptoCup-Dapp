@@ -236,7 +236,7 @@
     }
 
     .user_flag{
-        right: 22%;
+        right: 20%;
     }
 }
 
@@ -354,7 +354,6 @@
 
 
 @media screen and (max-width:350px) {
-
     .user_flag{
         right: 50%;
     }
