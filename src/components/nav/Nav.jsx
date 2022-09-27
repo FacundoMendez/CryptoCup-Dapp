@@ -30,10 +30,10 @@ const Nav = () => {
     const init=async ()=>{
       try {
           if (window.ethereum) {
-              const newProvider = new ethers.providers.Web3Provider(window.ethereum);
+              const newProvider = await new ethers.providers.Web3Provider(window.ethereum);
               const { chainId } = await newProvider.getNetwork();
               const newAccount = await window.ethereum.request({ method: 'eth_requestAccounts' });
-              const newSigner = newProvider.getSigner();
+              const newSigner = await newProvider.getSigner();
               if (chainId === 56) {
                   setProvider(newProvider)
                   setAccount(newAccount)
@@ -53,13 +53,16 @@ const Nav = () => {
 
       //Obtenemos mensaje a firmar por metamask
   const getMessage = async (_provider, _account, _signer) => {
-    const currBlock = await provider.getBlockNumber();
-    const { timestamp } = await provider.getBlock(currBlock);
+    const currBlock = await _provider.getBlockNumber();
+    const { timestamp } = await _provider.getBlock(currBlock);
     const message = timestamp - (timestamp % 86400);
-    const signature = await _signer.signMessage(message.toString()) // Este valor habria que guardarlo durante todo el dia.
 
-    const userRegistered = await verificarExistencia(_account[0], signature) 
-    console.log(userRegistered)
+    console.log(message)
+    const signature = await _signer.signMessage(message.toString()) // Este valor habria que guardarlo durante todo el dia.
+    console.log(signature)
+    console.log(_account[0])
+
+    const userRegistered = await verificarExistencia(_account[0], signature);
     
     if (userRegistered === false) {
       Connected.setActiveLogin(true)
