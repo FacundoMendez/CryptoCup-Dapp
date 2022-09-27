@@ -4,7 +4,7 @@ import paisesJson2 from "../../config/paises2.json"
 
 const TimerMatch = lazy(() => import ('../timerMatch/TimerMatch'))
 
-const Matchs = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
+const Matchs = ({timer, finishDate ,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
 
     
   return (
@@ -29,7 +29,7 @@ const Matchs = ({timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
             </div>
             <div className='table_campos timer_match'>
                 
-                <TimerMatch timer={timer}  />
+                <TimerMatch timer={timer} finishDate={finishDate}  />
             </div>
         </div>
     </Suspense>
