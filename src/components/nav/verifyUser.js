@@ -18,3 +18,13 @@ export const verificarExistencia = async (signer, signature)=>{
         console.log(error)
     }
 }
+
+export const getUserData = async (signer, signature)=>{
+    try {
+        const res = await api.post('/user/getUser', { address: signer, signature });
+        console.log(res)
+        return res.data
+    } catch (error) {
+        console.log(error)
+    }
+}

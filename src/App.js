@@ -19,15 +19,35 @@ function App() {
 
 
   const [userLogginActive , setUserLoginActive] = useState(false) /* manda si el usuario esta conectado */
-
   const [activeLogin , setActiveLogin] = useState(false) /* activa el popup de login */
+
+  const [provider,setProvider]=useState(undefined)
+  const [account,setAccount]=useState(undefined)
+  const [signer,setSigner]=useState(undefined)
+
+  const [signature, setSignature] = useState(undefined)
+  const [paisFlag, setPaisFlag] = useState("Alemania")
+
+  const [userData, setUserData] = useState(undefined)
 
   return (
     <ContextConnected.Provider value={{
       userLogginActive, 
       setUserLoginActive,
       setActiveLogin,
-      activeLogin
+      activeLogin,
+      provider,
+      setProvider,
+      account,
+      setAccount,
+      signer,
+      setSigner,
+      signature,
+      setSignature,
+      paisFlag,
+      setPaisFlag,
+      userData,
+      setUserData
       }}>
       <BrowserRouter>
           <Suspense fallback={<Spinner/>}>

@@ -5,6 +5,7 @@ import SelectFlags from './selectFlags/SelectFlags'
 import ContextConnected from '../../config/context/ConnectedContext'
 import x from "../src/x.png"
 import api from '../../../api'
+import { getUserData } from '../verifyUser'
 
 const Login = () => {
 
@@ -14,6 +15,16 @@ const Login = () => {
 
     const Connected = useContext(ContextConnected)
 
+    const register = async (username, flag) => {
+        const res = await api.post('/user/createUser', { address: Connected.account[0], signature: Connected.signature, username, flag });
+        if(res.data === "Account Succesfully Created."){
+            const userRes = await getUserData(Connected.account[0], Connected.signature);
+            Connected.setUserData(userRes.data);
+            
+            Connected.setActiveLogin(false);
+            Connected.setUserLoginActive(true);
+        }
+    }
 
   return (
     <div className="blurLogin">
@@ -34,7 +45,7 @@ const Login = () => {
                 <SelectFlags/>
             </div>
 
-            <div className="buttonAcept_login">
+            <div className="buttonAcept_login" onClick={() => register(document.querySelector("#userName_id").value, Connected.paisFlag)}> {/* Aca Falta hacer el pais dinamico. */}
                 <p>Confirm</p>
             </div>
         </div>

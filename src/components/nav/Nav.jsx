@@ -7,8 +7,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navFuncional from './navFuncional'
 import ContextConnected from '../config/context/ConnectedContext'
 import Login from './login/Login'
-import { verificarExistencia } from './verifyUser'
+import { getUserData, verificarExistencia } from './verifyUser'
 import { ethers } from 'ethers'
+import paisesJson from "../config/paises2.json"
 import api from "../../api"
 
 const Nav = () => {
@@ -19,13 +20,6 @@ const Nav = () => {
 
     const Connected = useContext(ContextConnected)
 
-    //conexiones blockchain
-    const [provider,setProvider]=useState(undefined)
-    const [account,setAccount]=useState(undefined)
-    const [signer,setSigner]=useState(undefined)
-    /* const [connected, setConnected] = useState(false); */
-
-
     //Cargamos datos blockchain del usuario y generamos mensaje
     const init=async ()=>{
       try {
@@ -35,13 +29,13 @@ const Nav = () => {
               const newAccount = await window.ethereum.request({ method: 'eth_requestAccounts' });
               const newSigner = await newProvider.getSigner();
               if (chainId === 56) {
-                  setProvider(newProvider)
-                  setAccount(newAccount)
-                  setSigner(newSigner)
+                Connected.setProvider(newProvider)
+                Connected.setAccount(newAccount)
+                Connected.setSigner(newSigner)
                   
-                  getMessage(newProvider, newAccount, newSigner)  
+                getMessage(newProvider, newAccount, newSigner)  
               } else {
-                  alert("chain erronea")
+                alert("chain erronea")
               }       
           }
         
@@ -57,20 +51,21 @@ const Nav = () => {
     const { timestamp } = await _provider.getBlock(currBlock);
     const message = timestamp - (timestamp % 86400);
 
-    console.log(message)
-    const signature = await _signer.signMessage(message.toString()) // Este valor habria que guardarlo durante todo el dia.
-    console.log(signature)
-    console.log(_account[0])
+    const signature = await _signer.signMessage(message.toString()); // Aca hay que guardar el valor durante todo el dia y en el context para solo tener que pedirlo una vez.
+    Connected.setSignature(signature);
 
     const userRegistered = await verificarExistencia(_account[0], signature);
     
     if (userRegistered === false) {
-      Connected.setActiveLogin(true)
-      console.log("abrir popup");
+      Connected.setActiveLogin(true);
         
     } else {
-      Connected.setActiveLogin(false)
-      Connected.setUserLoginActive(true)
+      const userRes = await getUserData(_account[0], signature);
+      console.log(userRes)
+      Connected.setUserData(userRes.data);
+
+      Connected.setActiveLogin(false);
+      Connected.setUserLoginActive(true);
     }
   }
   
@@ -148,7 +143,7 @@ const Nav = () => {
 
           { Connected.userLogginActive ?    
             <div className="user_flag">
-           {/*    <img src={paisesJson.USA.img} alt="user flag" /> */}
+              <img src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
             </div>
           :
           null}
