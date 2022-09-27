@@ -61,8 +61,7 @@ const Nav = () => {
         
     } else {
       const userRes = await getUserData(_account[0], signature);
-      console.log(userRes)
-      Connected.setUserData(userRes.data);
+      Connected.setUserData(userRes.user);
 
       Connected.setActiveLogin(false);
       Connected.setUserLoginActive(true);
