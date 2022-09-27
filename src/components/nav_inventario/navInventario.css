@@ -19,7 +19,6 @@
     border-left: none;
     transition: all .2s ease ;
     border: 6px double rgba(177, 130, 238, 0.479);
-    border-left: none;
 }
 
 .nav_inventario:hover{
@@ -112,4 +111,58 @@
 }
 
 
-/* CLAIM */
+@media screen and (max-width:1024px) {
+    .nav_inventario{
+        width: 100vw;
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        top: 159.3%;
+        left: 0rem;
+        align-items: center;
+        border: 6px double rgba(177, 130, 238, 0.479);
+        border-top-left-radius: 15px;
+        gap: 2rem;
+        z-index: 9999;
+        transform: translate(0 , -50%);
+    }
+    
+    .nav_inventario:hover{
+        width: 100vw;
+        height: 120vh;
+        top: 100%;
+        transition: all .3s ease ;
+    }
+    
+    .nav_Toggle_inventario{
+        position: fixed;
+        width: 20rem;
+        height: 5.5vh;
+        top:-4.7rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 15px;
+        border: 6px double rgba(177, 130, 238, 0.589);
+        border-left: 6px double rgba(177, 130, 238, 0.589);
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: rgb(11, 5, 19);
+        backdrop-filter: blur(1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: all .2s ease-in-out;
+    }
+    
+    
+    .nav_Toggle_inventario img{
+        width: 3.1rem;
+        opacity: .7;
+        transition: all .4s ease-in-out;
+        transform: rotate(-90deg);
+        cursor: pointer;
+    }
+    
+}
