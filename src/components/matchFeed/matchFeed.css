@@ -13,7 +13,7 @@
 .nav_matchFeed{
     position: relative;
     width: 72vw;
-    height: 8rem;
+    height: 11rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,15 @@
     background-color: rgba(133, 100, 177, 0.315);
     backdrop-filter: blur(1rem);
 /*     overflow: hidden; */
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
+
+
 
 .nav_matchFeed h2{
     color: white;
@@ -50,9 +58,14 @@
     backdrop-filter: blur(1rem);
     margin-top: 1rem;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
+
 
 .table_container{
     width: 72vw;
@@ -61,10 +74,9 @@
     overflow: hidden;
     padding: .8rem .2rem;
     border-radius: 5px;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(159, 85, 255, 0.205);
     backdrop-filter: blur(1rem);
     overflow: scroll;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 
 }
 
@@ -79,6 +91,8 @@
     border-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .status_cabecera{
@@ -113,17 +127,19 @@
     width: 99.5%;
     margin-left: .57rem;
     height: 10rem;
-    background-color: #ffffff36;
-    backdrop-filter: blur(.8rem);
     border-radius: 15px;
-    margin-top: 1rem;
+    margin-top: 1.8rem;
     transition: all .4s ease-in-out;
     cursor: pointer;
     overflow: hidden;
+    background-color: #c5a1ff36;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(166, 128, 255, 0.336) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.301) -3px -3px 6px 1px inset;
 }
 
 .table_games:hover{
-    box-shadow: 0 0 1rem rgba(176, 121, 248, 0.418);
+    box-shadow: rgba(235, 235, 236, 0.747) 3px 3px 6px 0px inset, rgba(223, 223, 223, 0.712) -3px -3px 6px 1px inset;
     transition: all .4s ease-in-out;
 }
 
@@ -149,17 +165,13 @@
     align-items: center;
 }
 
-.result_team1 p{
+.result_team1 p , .result_team2 p{
     position: absolute;
     font-size: 2.8rem;
     color: white;
 }
 
-.result_team2 p{
-    position: absolute;
-    font-size: 2.8rem;
-    color: white;
-}
+
 
 .team1_flag{
     margin-left: 0rem;
@@ -172,11 +184,11 @@
 
 .team1_flag img, .team2_flag img{
     object-fit: cover;
-    width: 9rem;
-    height: 5rem;
+    width: 10rem;
+    height: 6rem;
     border-radius: 15px;
-    filter: contrast(115%) ;
-    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.541);
+    filter: contrast(110%) ;
+    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.178);
     border: 2px solid rgba(194, 168, 235, 0.219);
 }
 

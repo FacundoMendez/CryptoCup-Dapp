@@ -27,6 +27,12 @@
     backdrop-filter: blur(1rem);
     margin: .3rem 0rem;
     color: white;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .containerDapp_title{
@@ -43,6 +49,12 @@
     background-color: rgba(133, 100, 177, 0.315);
     backdrop-filter: blur(1rem);
     margin: .3rem 0rem;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .containerDapp_title p{
@@ -85,6 +97,12 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
     background-color: rgba(133, 100, 177, 0.315);
     backdrop-filter: blur(1rem);
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .cardMain{
@@ -281,6 +299,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1rem;
+    
 }
 
 .social_nav{
@@ -297,6 +316,12 @@
     backdrop-filter: blur(1rem);
     margin: .3rem 0rem;
     gap: 1.4rem;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .social_nav i{

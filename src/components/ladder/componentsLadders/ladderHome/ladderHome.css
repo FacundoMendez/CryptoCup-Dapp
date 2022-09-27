@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+
 }
 
 .header_laddersHome{
@@ -21,8 +22,12 @@
     height: 12rem;
     border-radius: 10px;
     margin-top: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(133, 100, 177, 0.315);
+    background-image: url("../../../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .header_laddersHome h2{

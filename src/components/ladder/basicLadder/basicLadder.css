@@ -7,18 +7,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .container_basicLadder{
     width: 72vw;
     height: 100%;
     position: relative;
-    border-radius: 15px;
     padding: 4rem 8.5rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(159, 85, 255, 0.205);
     border-bottom: 2px solid rgba(150, 112, 255, 0.281);
-    backdrop-filter: blur(1rem);
+    border-radius: 15px;
     font-size: 2rem;
     color: white;
     text-align: center;
@@ -29,7 +27,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
+    background-image: url("../../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
+
 
 
 @media screen and (max-width:1440px) {

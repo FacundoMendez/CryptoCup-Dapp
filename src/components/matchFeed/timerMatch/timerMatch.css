@@ -7,9 +7,10 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: .9rem;
+    gap: 1rem;
     width: 21rem;
     text-transform: uppercase;
+    margin-top: 0;
 }
 
 .finished_matchFeed{
@@ -23,17 +24,24 @@
     align-items: center;
 }
 
-.reloj p{
-    background-color: rgba(243, 243, 243, 0.171);
-    padding: .3rem 1rem ;
+
+.time_matchFeed p{
+    background-color: rgba(255, 255, 255, 0.233);
+    padding: .3rem 1.5rem ;
     border-radius: 5px;
+    text-shadow: 0 0 .2rem rgba(0, 0, 0, 0.425);
     margin:0 .2rem;
+}
+
+.startIn_text{
+    background-color: transparent;
+    letter-spacing: 1px;
 }
 
 .reloj span{
     padding: 0 .4rem;
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     display: flex;
 }

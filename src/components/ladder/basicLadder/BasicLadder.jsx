@@ -42,9 +42,10 @@ const BasicLadder = () => {
             setRanking={setRanking}
         />
         <div className="container_basicLadder">
-          <div>
+          <div className='spin' >
             {loading ? <Spinner/> : null}
           </div>
+
 
           {
             (predictionCards.length > 0) && predictions ? 

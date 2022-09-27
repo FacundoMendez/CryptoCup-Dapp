@@ -49,27 +49,27 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
   const [colorEmpate_text, setColorEmpate_text] = useState()
   const [colorTeam2_text , setColorTeam2_text] = useState()
   
-  const [colorButton, setColorButton] = useState("rgba(178, 130, 255, 0.671)")
+  const [colorButton, setColorButton] = useState("rgba(168, 255, 222, 0.975)")
 
   const colorSetTeam1 = ( ) => {
       setColorTeam1('rgba(168, 255, 222, 0.925)')
-      setColorEmpate('rgba(177, 129, 253, 0.199)')
-      setColorTeam2('rgba(177, 129, 253, 0.199)')
+      setColorEmpate('#32059bb6')
+      setColorTeam2('#32059bb6')
       setColorTeam1_text("black")
       setColorEmpate_text("white")
       setColorTeam2_text("white")
   }
   const colorSetEmpate = ( ) => {
-    setColorTeam1('rgba(177, 129, 253, 0.199)')
+    setColorTeam1('#32059bb6')
     setColorEmpate('rgba(168, 255, 222, 0.925)')
-    setColorTeam2('rgba(177, 129, 253, 0.199)')
+    setColorTeam2('#32059bb6')
     setColorTeam1_text("white")
     setColorEmpate_text("black")
     setColorTeam2_text("white")
   }
   const colorSetTeam2 = ( ) => {
-    setColorTeam1('rgba(177, 129, 253, 0.199)')
-    setColorEmpate('rgba(177, 129, 253, 0.199)')
+    setColorTeam1('#32059bb6')
+    setColorEmpate('#32059bb6')
     setColorTeam2('rgba(168, 255, 222, 0.925)')
     setColorTeam1_text("white")
     setColorEmpate_text("white")
@@ -141,17 +141,17 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
         { /* si no hay prediccion hecha muestra el boton en gris */
           activePrediciton === undefined ?
-            <button className='predict_button predict_button_disable' style={{backgroundColor : "gray"}}>{namePredict_button}</button>
+            <button className='predict_button predict_button_disable' style={{backgroundColor : "rgba(223, 223, 223, 0.671)" }}>{namePredict_button}</button>
           :
            /* si hay prediccion muestra el boton activo */
-          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton}} disabled={predictionActive === true} onClick={() => {
+          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton ,color: "rgba(10, 0, 37, 0.842) " , fontFamily:"qatarHeavy"}} disabled={predictionActive === true} onClick={() => {
             setPredictionActive(true)
             makePrediction()
             if (activePrediciton === undefined){
               console.log("no prediction")      
              
             }else{
-              setColorButton("rgba(2, 2, 10, 0.199)") 
+              setColorButton("rgba(178, 130, 255, 0.671)") 
               setNamePredict_button("Confirmed")   
             }
           }}>{namePredict_button}</button>

@@ -19,6 +19,12 @@
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 .nav_inventario:hover{
@@ -47,6 +53,12 @@
     align-items: center;
     gap: 2rem;
     transition: all .2s ease-in-out;
+    background-image: url("../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
 }
 
 

@@ -2,7 +2,7 @@
     width: 36rem;
     height: 30rem;
     box-shadow: 0 0 1rem rgba(182, 182, 182, 0.185);
-    background-color: rgba(11, 1, 27, 0.808);
+    background-color: rgba(11, 1, 27, 0.904);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -11,6 +11,11 @@
     gap:1rem;
     padding: 1rem;
     margin: 2rem;
+    background-color: #c2c2c271;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(166, 128, 255, 0.336) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.301) -3px -3px 6px 1px inset;
+
 }
 
 .livePrediction{
@@ -27,6 +32,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align:center;
+
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 .active_live_prediction{
     width: 1.3rem;
@@ -38,7 +47,6 @@
 .time_prediction{
     width: 100%;
     height: 5rem;
-    backdrop-filter: blur(1rem);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -60,6 +68,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #32059bb6;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .tt_pred{
@@ -83,20 +95,25 @@
     align-items: center;
     flex-direction: row;
     border-radius: 10px;
-    gap: 2rem;
+    gap: 3.8rem;
+    background-color: #32059bb6;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .match_result_prediction img{
-    width: 6.52rem;
+    width: 8.5rem;
     border-radius: 10px;
-    box-shadow: 0 0 1rem rgba(192, 152, 255, 0.288);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     margin: 0 1rem;
 }
 
 
 .vs_prediction{
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;
+    font-family: qatar;
     font-style: oblique;
 }
 
@@ -122,6 +139,10 @@
     flex-direction: column;
     font-size: 2rem;
     border-radius: 10px;
+    background-color: #32059bb6;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .left_pred_active , .center_pred_active  , .right_pred_active {
@@ -148,14 +169,16 @@
 .predict_button_disable{
     width: 100%;
     height: 5rem;
-    background-color: rgba(191, 190, 192, 0.671);
+    background-color: rgba(192, 190, 190, 0.671);
     border:none;
     border-radius: 15px;
     font-size: 1.9rem;
+    text-shadow: 0 0 .8rem rgba(0, 0, 0, 0.733);
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .predict_button_active{
@@ -170,5 +193,6 @@
     letter-spacing: 1px;
     color: white;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
