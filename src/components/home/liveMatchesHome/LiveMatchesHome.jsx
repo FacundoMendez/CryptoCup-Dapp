@@ -23,8 +23,7 @@ const LiveMatchesHome = () => {
     }
 
     const verifyLiveMatchs = () => {
-        (matchsLive) ? setMatchActive(true) : setMatchActive(false) 
-        console.log(matchActive)
+        (matchsLive.lenght > 0) ? setMatchActive(true) : setMatchActive(false) 
     }
 
   return (
@@ -57,8 +56,6 @@ const LiveMatchesHome = () => {
                         </div>
                         })
                     }
-                  
-
                 </div>
             :                        /* PARTIDOS EN VIVO */
                 null
