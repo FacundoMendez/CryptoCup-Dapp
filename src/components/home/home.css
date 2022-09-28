@@ -112,12 +112,11 @@
     background: #160D1F;
     display: flex;
     justify-content: center;
-    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.822);
+    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.829);
     position: relative;
     cursor: pointer;
     transition: all .2s ease-in-out;
-    filter: drop-shadow(0 0 10px rgba(154, 120, 248, 0.473));
-
+    filter: drop-shadow(0 0 10px rgba(154, 120, 248, 0.534));
 }
 
 .containerDapp_cards-basic{
@@ -125,6 +124,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: contrast(105%) brightness(105%);
 
 } 
 .containerDapp_cards-boost{
@@ -132,12 +132,16 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: contrast(105%) brightness(105%);
+
 } 
 .containerDapp_cards-friends{
     background-image: url("./src/ChallengeRoom.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: contrast(105%) brightness(105%);
+
 } 
 .containerDapp_cards-staking{
     background-image: url("../config/src/candado.png");
@@ -145,6 +149,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.993);
+    filter: contrast(105%) brightness(105%);
+
 }  
 .containerDapp_cards-marketplace {
     background-image: url("../config/src/candado.png");
@@ -152,6 +158,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.993);
+    filter: contrast(105%) brightness(105%);
+
 }
 .containerDapp_cards-miniGames{
     background-image: url("../config/src/candado.png");
@@ -159,6 +167,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.993);
+    filter: contrast(105%) brightness(105%);
+
 }
 
 .cardMain::before{
