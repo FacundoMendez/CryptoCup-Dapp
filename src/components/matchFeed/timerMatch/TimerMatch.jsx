@@ -2,15 +2,15 @@ import React, {Suspense, useEffect, useState} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import "./timerMatch.css"
 
-const TimerMatch = ({timer}) => {
+const TimerMatch = ({timer, finishDate}) => {
 
         //Set time lefts
         const [days,setDays]=useState()
         const [hours,setHours]=useState()
         const [minutes,setMinutes]=useState()
-        const [finishTimer , setFinishTimer] = useState()
+        const [statusTimer , setStatusTimer] = useState()
 
-
+        console.log(finishDate);
             //Get Unit/MS
         let msecPerMinute = 1000 * 60;
         let msecPerHour = msecPerMinute * 60;
@@ -19,16 +19,21 @@ const TimerMatch = ({timer}) => {
         const getTimeMatch=()=>{
             let timeNow=new Date(Date.now())//Get actual time in MS
             let matchStarts = new Date(timer)  //Get match time in MS
-
-            if (matchStarts<=timeNow) {
-                setFinishTimer(true)
+            
+            if (finishDate<=timeNow) {
+                setStatusTimer("finished")
+            }
+            if (timer>=timeNow) {
+                setStatusTimer("startIn")
             }
             let diff=matchStarts-timeNow 
             let daysLeft=Math.floor((matchStarts-timeNow)/msecPerDay)
             setDays(daysLeft); 
+            
             diff=diff-(daysLeft*msecPerDay)
             let hoursLeft=Math.floor(diff/msecPerHour)
             setHours(hoursLeft)
+
             diff=diff-(hoursLeft*msecPerHour)
             let minutesLeft=Math.floor(diff/msecPerMinute)
             setMinutes(minutesLeft) 
@@ -43,13 +48,13 @@ const TimerMatch = ({timer}) => {
   return (
     <Suspense fallback={<Spinner/>}>
         {
-            finishTimer ?
+            statusTimer==="finished" ?
             
             <div className="reloj">
                 <h2 className='finished_matchFeed'>Finished</h2>
             </div>
                 :
-
+            statusTimer==="startIn" ?
             <div className="reloj">
                 <div className='startIn'>
                     <p className='startIn_text'>START IN: </p> 
@@ -60,7 +65,14 @@ const TimerMatch = ({timer}) => {
                     <p>{minutes} <br /> <span id="minutes">Mins</span></p>
                 </div>
             </div>
-        }
+                 :
+            <div className="reloj">
+                <h2 className='finished_matchFeed'>Live</h2>
+            </div>
+            
+            
+
+    }
 
        
     </Suspense>

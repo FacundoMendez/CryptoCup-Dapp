@@ -23,7 +23,8 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
   const makePrediction = async () => {
     const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
       address: Connected.account[0] ,
-      prediction: predictionChoose
+      prediction: predictionChoose,
+      signature: Connected.signature
     })  
     if (res.data === "Prediction Succesfully Created") {
       //Que aparezca con color de que se hizo correctamente

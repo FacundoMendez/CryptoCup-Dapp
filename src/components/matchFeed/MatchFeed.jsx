@@ -19,7 +19,6 @@ const MatchFeed = () => {
     const getMatchs=async()=>{
       const res=await api.get('/matches/getMatches')
       const matchsArray=res.data
-      console.log(res.data);
       setMatchs(matchsArray)
       setLoading(false) 
   }
@@ -49,6 +48,7 @@ const MatchFeed = () => {
                   matchs.map((item,index)=>{
                     return <Matchs key={index}
                       timer={item.startDate}
+                      finishDate={item.finishDate}
                       round={item.round}
                       nameTeam1={item.team1}
                       nameTeam2={item.team2}

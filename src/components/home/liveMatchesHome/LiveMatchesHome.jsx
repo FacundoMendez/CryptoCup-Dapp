@@ -14,13 +14,13 @@ const LiveMatchesHome = () => {
        },[]);
 
     const getLiveMatchs = async () => {
-        const res = await api.get('/matchs/getLiveMatches')
+        const res = await api.get('/matches/getLiveMatches')
         setMatchsLive(res.data)
         verifyLiveMatchs() 
     }
 
     const verifyLiveMatchs = () => {
-        (matchsLive.lenght > 0) ? setMatchActive(true) : setMatchActive(false) 
+        (matchsLive.lenght>0) ? setMatchActive(true) : setMatchActive(false) 
     }
 
   return (
