@@ -52,6 +52,7 @@ const BasicLadder = () => {
             {loading ? <Spinner/> : null}
           </div>
 
+          <div className="blur"></div>
 
           {
             (predictionCards.length > 0) && predictions ? 

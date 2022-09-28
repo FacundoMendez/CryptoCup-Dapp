@@ -132,7 +132,7 @@
     transition: all .4s ease-in-out;
     cursor: pointer;
     overflow: hidden;
-    background-color: #c5a1ff36;
+    background-color: #f2dcff36;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     box-shadow: rgba(166, 128, 255, 0.336) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.301) -3px -3px 6px 1px inset;

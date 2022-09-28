@@ -23,6 +23,10 @@ const BoostLadder = () => {
             setRanking={setRanking}
         />
         <div className="container_boostLadder">
+
+
+        <div className="blur"></div>
+
             {
               predictions ? 
          /*        <Suspense fallback={<Spinner/>}>

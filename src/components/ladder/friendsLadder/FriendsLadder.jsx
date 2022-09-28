@@ -22,6 +22,8 @@ const FriendsLadder = () => {
           setRanking={setRanking}
       />
       <div className="container_friendsLadder">
+        
+        <div className="blur"></div>
           {
             predictions ? 
             /*   <Predictions/> */

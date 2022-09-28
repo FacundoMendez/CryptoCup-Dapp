@@ -3,7 +3,6 @@ import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
-import PopupPrediction from '../../../config/popupsPredictions/PopupPrediction'
 
 
 const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
@@ -16,7 +15,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
   useEffect(() => {
     if (predictionActive){
-      setColorButton("gray")
+      setColorButton("rgba(223, 223, 223, 0.671)")
     }
   },[])
 

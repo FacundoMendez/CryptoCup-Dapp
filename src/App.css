@@ -41,19 +41,19 @@
     font-family: 'gilron';
     src: url('./components/config/fonts/Gilroy-ExtraBold.otf') format("truetype");
     font-display: swap
-  }
+}
   
-  @font-face {
-    font-family: 'qatarHeavy';
-    src: url('./components/config/fonts/Qatar2022Arabic-Heavy.ttf') format("truetype");
-    font-display: swap
-  }
+@font-face {
+  font-family: 'qatarHeavy';
+  src: url('./components/config/fonts/Qatar2022Arabic-Heavy.ttf') format("truetype");
+  font-display: swap
+}
 
-  @font-face {
-    font-family: 'qatar';
-    src: url('./components/config/fonts/Qatar2022Arabic-Bold.ttf') format("truetype");
-    font-display: swap
-  }
+@font-face {
+  font-family: 'qatar';
+  src: url('./components/config/fonts/Qatar2022Arabic-Bold.ttf') format("truetype");
+  font-display: swap
+}
   
 
 html {
