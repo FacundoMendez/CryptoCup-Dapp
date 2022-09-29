@@ -122,7 +122,7 @@
     height: 9rem;
     border-radius: 15px;
     margin-top: 1.8rem;
-    transition: all .4s ease-in-out;
+    transition: all .1s ease-in-out;
     cursor: pointer;
     overflow: hidden;
     background-color: #f2dcff36;
@@ -133,7 +133,6 @@
 
 .table_games:hover{
     box-shadow: rgba(235, 235, 236, 0.747) 3px 3px 6px 0px inset, rgba(223, 223, 223, 0.712) -3px -3px 6px 1px inset;
-    transition: all .4s ease-in-out;
 }
 
 .table_campos{
