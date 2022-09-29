@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navLadderActive from './navLadderActive'
 import Spinner from '../../../config/spinner/Spinner'
 
-const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
+const NavLadder = ({ladder, setMyRecord, setMatches , setRanking }) => {
 
     const [colorP, setColorP] = useState("bebdff")
     const [colorM, setColorM] = useState("#white")
@@ -17,7 +17,7 @@ const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
         setColorP('#bebdff')
         setColorR('white')
     }
-    const colorMyPrediction= ( ) => {
+    const ColorMyRecord= ( ) => {
         setColorM('#bebdff')
         setColorP('white')
         setColorR('white')
@@ -40,24 +40,24 @@ const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
             <div className="links_BasicLadder">
                 <ul>
                     <li className='link_nav' style={{color : colorP}}  onClick={() => {
-                            setPredictions(true) 
-                            setMyPrediction(false)
+                            setMatches(true) 
+                            setMyRecord(false)
                             setRanking(false)    
                             colorPred()
                         } }>
-                        Predictions
+                        Matches
                     </li>
                     <li className='link_nav'  style={{color : colorM}}  onClick={() => {
-                            setMyPrediction(true)
-                            setPredictions(false) 
+                            setMyRecord(true)
+                            setMatches(false) 
                             setRanking(false) 
-                            colorMyPrediction()
+                            ColorMyRecord()
                         }}>
-                        My predictions 
+                        My Record
                     </li>
                     <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
-                            setMyPrediction(false)
-                            setPredictions(false) 
+                            setMyRecord(false)
+                            setMatches(false) 
                             setRanking(true) 
                             colorRank()
                         }}>
@@ -74,24 +74,24 @@ const NavLadder = ({ladder, setMyPrediction, setPredictions , setRanking }) => {
                     <div className="links_movile">
                         <ul>
                             <li className='link_nav'   style={{color : colorP}}  onClick={() => {
-                                setPredictions(true) 
-                                setMyPrediction(false)
+                                setMatches(true) 
+                                setMyRecord(false)
                                 setRanking(false)    
                                 colorPred()
                                 } }> 
-                                Predictions
+                                Matches
                             </li>
                             <li className='link_nav'  style={{color : colorM}}  onClick={() => {
-                                setMyPrediction(true)
-                                setPredictions(false) 
+                                setMyRecord(true)
+                                setMatches(false) 
                                 setRanking(false) 
-                                colorMyPrediction()
+                                ColorMyRecord()
                                 } }>
-                                My predictions
+                                My Record
                             </li>
                             <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
-                                setMyPrediction(false)
-                                setPredictions(false) 
+                                setMyRecord(false)
+                                setMatches(false) 
                                 setRanking(true) 
                                 colorRank()
                                 }}>

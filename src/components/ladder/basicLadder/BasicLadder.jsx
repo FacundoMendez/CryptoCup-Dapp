@@ -13,8 +13,8 @@ import Ranking from '../componentsLadders/ranking/Ranking' */
 
 const BasicLadder = () => {
 
-  const [predictions , setPredictions] = useState(true)
-  const [myPrediction , setMyPrediction] = useState(false)
+  const [Matches , setMatches] = useState(true)
+  const [myRecord , setMyRecord] = useState(false)
   const [ranking , setRanking] = useState(false)
   const [loading ,setLoading]=useState(true)
     
@@ -43,10 +43,11 @@ const BasicLadder = () => {
       
         <NavLadder 
             ladder="Basic Ladder"
-            setMyPrediction={setMyPrediction}
-            setPredictions={setPredictions}
+            setMyRecord={setMyRecord}
+            setMatches={setMatches}
             setRanking={setRanking}
         />
+        
         <div className="container_basicLadder">
           <div className='spin' >
             {loading ? <Spinner/> : null}
@@ -54,8 +55,11 @@ const BasicLadder = () => {
 
           <div className="blur"></div>
 
+
+          {/* matches */}
+
           {
-            (predictionCards.length > 0) && predictions ? 
+            (predictionCards.length > 0) && Matches ? 
             <Suspense fallback={<Spinner/>}>
               { 
                 predictionCards.map((item,index)=>{
@@ -75,8 +79,10 @@ const BasicLadder = () => {
             null
           }
 
+          {Matches ? <p className='noPredictionText'> No Prediction </p> : null}
+
           {
-            myPrediction ? 
+            myRecord ? 
               <Suspense fallback={<Spinner/>}>
                 {/*  <MyPredictions/>  */}
                 <img className='candado' src={candado} alt="candado" />

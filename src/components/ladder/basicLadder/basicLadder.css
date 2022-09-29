@@ -52,6 +52,21 @@
     z-index: -1;
 }
 
+.noPredictionText{
+    position: absolute;
+    font-size: 13rem;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color:  rgba(215, 173, 255, 0.082);
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.158);
+    font-family: qatarHeavy;
+    width: 100%;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%);   
+    position: absolute;
+    line-height: 16rem;
+}
 
 
 @media screen and (max-width:1440px) {
