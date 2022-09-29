@@ -58,6 +58,9 @@ const BasicLadder = () => {
 
           {/* matches */}
 
+          {(predictionCards.length <= 0) && Matches? <p className='noPredictionText'> No Prediction </p> : null}
+
+
           {
             (predictionCards.length > 0) && Matches ? 
             <Suspense fallback={<Spinner/>}>
@@ -79,7 +82,6 @@ const BasicLadder = () => {
             null
           }
 
-          {Matches ? <p className='noPredictionText'> No Prediction </p> : null}
 
           {
             myRecord ? 

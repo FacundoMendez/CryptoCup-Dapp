@@ -1,17 +1,16 @@
 .friendsLadder{
     width: 100%;
-    height: 75vh;
+    height: 78vh;
     display: flex;
     position: relative;
     overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .container_friendsLadder{
-    width: 72vw;
+    width: 74vw;
     height: 100%;
     position: relative;
     border-radius: 15px;
@@ -23,7 +22,6 @@
     font-size: 2rem;
     color: white;
     text-align: center;
-
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     z-index: 1000;

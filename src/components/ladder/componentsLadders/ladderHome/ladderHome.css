@@ -12,26 +12,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.8rem;
+    gap: 1.3rem;
     position: relative;
     padding: 1rem 2vw;
     border-top: none;
     border-right: none;
     border-left: none;
-    width: 72%;
-    height: 12rem;
+    width: 74vw;
+    height: 10rem;
     border-radius: 10px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-image: url("../../../config/src/backMatch2.jpg");
     background-position: 100% 100%;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.151) -3px -3px 6px 1px inset;
 
 }
 
 .header_laddersHome h2{
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-top: 1rem;
@@ -47,7 +47,7 @@
 }
 
 .header_ladderHome_enlaces li{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: white;
     letter-spacing: 1px;
     text-transform: uppercase;

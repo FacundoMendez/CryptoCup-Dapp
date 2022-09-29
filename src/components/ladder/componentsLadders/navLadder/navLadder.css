@@ -1,9 +1,9 @@
 .nav_basicLadder{
     z-index: 9998;
     position: relative;
-    width: 72vw;
+    width: 74vw;
     margin-top: 1rem;
-    height: 7.8rem;
+    height: 7rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(181, 136, 255, 0.658);
     border-bottom: 2px solid rgba(255, 255, 255, 0.336);
@@ -12,17 +12,16 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.411) -3px -3px 6px 1px inset;
-     display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
-    
 }
 
 
 .nav_basicLadder h2{
     color: white;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -42,7 +41,7 @@
 
 .links_BasicLadder li{
     color: white;
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
@@ -51,7 +50,7 @@
 
 .links_BasicLadder li:after {
     content: '';
-    bottom: -2.4rem;
+    bottom: -2.1rem;
     left: 0;
     right: 0;
     margin: auto;

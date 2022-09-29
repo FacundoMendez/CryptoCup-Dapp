@@ -1,25 +1,24 @@
 .matchFeed{
     width: 100%;
-    height: 88vh;
+    height: 89.5vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
 }
 
 
 .nav_matchFeed{
     position: relative;
-    width: 72vw;
-    height: 11rem;
+    width: 74vw;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     padding: 0 4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
     background-color: rgba(133, 100, 177, 0.315);
     backdrop-filter: blur(1rem);
@@ -29,24 +28,20 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
 }
-
-
 
 .nav_matchFeed h2{
     color: white;
-    font-size: 3.2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-
 /* table */
 
 .table{
-    width: 72vw;
-    height: 80vh;
+    width: 74vw;
+    height: 78vh;
     position: relative;
     display: flex;
     justify-items: center;
@@ -63,12 +58,11 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
 }
 
 
 .table_container{
-    width: 72vw;
+    width: 74vw;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -76,14 +70,13 @@
     border-radius: 5px;
     backdrop-filter: blur(1rem);
     overflow: scroll;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
+    box-shadow: rgba(166, 128, 255, 0.144) 3px 3px 6px 0px inset,rgba(170, 139, 255, 0.219)) -3px -3px 6px 1px inset;
 }
 
 .table_cabecera{
     margin-top: 0rem;
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(158, 85, 255, 0.281);
     border-bottom: 2px solid rgb(196, 136, 255);
@@ -92,11 +85,11 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
+    position: relative;
 }
 
 .status_cabecera{
-    margin-right: 6.6rem;
+    margin-right: 6rem;
 }
 
 .table_cabecera ul{
@@ -107,13 +100,13 @@
     flex-direction: row;
     gap: 2rem;
     width: 100%;
-    height: 7rem;
+    height: 6rem;
     background-color: #ffffff2d;
     backdrop-filter: blur(.8rem);
 }
 
 .table_cabecera li{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     letter-spacing: 1px;
 }
@@ -126,7 +119,7 @@
     flex-direction: row;
     width: 99.5%;
     margin-left: .57rem;
-    height: 10rem;
+    height: 9rem;
     border-radius: 15px;
     margin-top: 1.8rem;
     transition: all .4s ease-in-out;
@@ -144,7 +137,7 @@
 }
 
 .table_campos{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     letter-spacing: 1px;
 }
@@ -167,11 +160,9 @@
 
 .result_team1 p , .result_team2 p{
     position: absolute;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     color: white;
 }
-
-
 
 .team1_flag{
     margin-left: 0rem;

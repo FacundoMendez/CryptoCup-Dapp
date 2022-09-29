@@ -23,7 +23,7 @@ const FriendsLadder = () => {
       />
       <div className="container_friendsLadder">
         
-        <div className="blur"></div>
+        <div className="blur_boost"></div>
           {
             predictions ? 
             /*   <Predictions/> */

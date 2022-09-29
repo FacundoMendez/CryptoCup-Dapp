@@ -1,18 +1,16 @@
 .boostLadder{
     width: 100%;
-    height: 75vh;
+    height: 78vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     position: relative;
     justify-content: center;
-    margin-bottom: 1rem;
-
 }
 
 .container_boostLadder{
-    width: 72vw;
+    width: 74vw;
     height: 100%;
     position: relative;
     border-radius: 15px;
@@ -34,7 +32,23 @@
 
 }
 
-
+.blur_boost{
+    width: 73.6vw;
+    height: 63rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(1rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
 
 @media screen and (max-width:1440px) {
     .container_boostLadder{

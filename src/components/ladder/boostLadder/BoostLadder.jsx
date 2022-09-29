@@ -25,7 +25,8 @@ const BoostLadder = () => {
         <div className="container_boostLadder">
 
 
-        <div className="blur"></div>
+        <div className="blur_boost"></div>
+
 
             {
               predictions ? 
