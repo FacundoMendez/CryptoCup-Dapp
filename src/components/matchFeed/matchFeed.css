@@ -70,7 +70,7 @@
     border-radius: 5px;
     backdrop-filter: blur(1rem);
     overflow: scroll;
-    box-shadow: rgba(166, 128, 255, 0.144) 3px 3px 6px 0px inset,rgba(170, 139, 255, 0.219)) -3px -3px 6px 1px inset;
+    box-shadow: rgba(166, 128, 255, 0.096) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.116) -3px -3px 6px 1px inset;
 }
 
 .table_cabecera{
@@ -176,11 +176,11 @@
 .team1_flag img, .team2_flag img{
     object-fit: cover;
     width: 10rem;
+    margin-top: .5rem;
     height: 6rem;
     border-radius: 15px;
     filter: contrast(110%) ;
-    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.178);
-    border: 2px solid rgba(194, 168, 235, 0.219);
+    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.116);
 }
 
 .startIn_text{
