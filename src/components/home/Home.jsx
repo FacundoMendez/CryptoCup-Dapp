@@ -9,6 +9,8 @@ import { faTelegram } from "@fortawesome/free-brands-svg-icons"
 import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 import "./home.css"
 import ContextConnected from '../config/context/ConnectedContext';
+import PopupError from '../config/popupsErrors/PopupError';
+import { useEffect } from 'react';
 
 
 const LiveMatchesHome = lazy(() => import ('./liveMatchesHome/LiveMatchesHome'))
@@ -19,13 +21,29 @@ const Spinner = lazy(() => import ('../config/spinner/Spinner'))
 const Home = () => {
 
   const [arrows , setArrows] = useState(1)
+  const [connectedPopup , setConnectedPopup] = useState()
+
 
   const Connected = useContext(ContextConnected)
+
+  useEffect(() => {
+
+    if(connectedPopup === true){
+      setTimeout(() => {
+        setConnectedPopup(false)
+      }, 6000);
+    }
+
+  },[connectedPopup])
 
   return (
     <>
     <Suspense fallback={<Spinner/>}>
       <div className="containerDapp">
+
+        {connectedPopup ? <PopupError connectedPopup={connectedPopup}  /> : null }
+
+
         <div className="container_live_social">
           <LiveMatchesHome/>
           <div className="social_nav">
@@ -60,30 +78,26 @@ const Home = () => {
               
               { Connected.userLogginActive ? 
                 <NavLink to="/ladder" >
-                  <div className="containerDapp_cards-basic cardMain">
-                  </div>
+                  <div className="containerDapp_cards-basic cardMain" ></div>
                 </NavLink>
                 :
-                <div className="containerDapp_cards-basic cardMain">
-                </div>
+                <div className="containerDapp_cards-basic cardMain" onClick={() => setConnectedPopup(true) }> </div>
               }
               
               { Connected.userLogginActive ? 
                 <NavLink to="/ladder" >
-                  <div className="containerDapp_cards-boost cardMain"></div>
+                  <div className="containerDapp_cards-boost cardMain" ></div>
                 </NavLink>
                 :
-                <div className="containerDapp_cards-boost cardMain"></div>
+                <div className="containerDapp_cards-boost cardMain" onClick={() => setConnectedPopup(true) }></div>
               }
 
             { Connected.userLogginActive ? 
               <NavLink to="/ladder" >
-                <div className="containerDapp_cards-friends cardMain ">
-                </div>
+                <div className="containerDapp_cards-friends cardMain " ></div>
               </NavLink> 
               : 
-              <div className="containerDapp_cards-friends cardMain ">
-              </div>
+              <div className="containerDapp_cards-friends cardMain " onClick={() => setConnectedPopup(true) }> </div>
             }   
             </div>
 
@@ -92,12 +106,12 @@ const Home = () => {
           <div className="containerDapp_cards">
             { Connected.userLogginActive ?    
                 <NavLink to="/Staking" >
-                   <div className="containerDapp_cards-staking cardMain ">
+                   <div className="containerDapp_cards-staking cardMain " >
                      <h2>Staking</h2>
                    </div>
                 </NavLink>
             :
-              <div className="containerDapp_cards-staking cardMain ">
+              <div className="containerDapp_cards-staking cardMain " onClick={() => setConnectedPopup(true) }>
                 <h2>Staking</h2>
               </div>
             }
@@ -105,12 +119,12 @@ const Home = () => {
             { Connected.userLogginActive ?    
 
               <NavLink to="/Marketplace" >
-                <div className="containerDapp_cards-marketplace cardMain">
+                <div className="containerDapp_cards-marketplace cardMain" >
                   <h2>MarketPlace</h2>
                 </div>
               </NavLink>
             :
-              <div className="containerDapp_cards-marketplace cardMain ">
+              <div className="containerDapp_cards-marketplace cardMain " onClick={() => setConnectedPopup(true) }>
                 <h2>Marketplace</h2>
               </div>
             }
@@ -118,12 +132,12 @@ const Home = () => {
             { Connected.userLogginActive ?    
 
               <NavLink to="/airdrop" >
-                <div className="containerDapp_cards-miniGames cardMain ">
+                <div className="containerDapp_cards-miniGames cardMain " >
                   <h2>Mini Games</h2>
                 </div>
               </NavLink> 
               :
-              <div className="containerDapp_cards-miniGames cardMain ">
+              <div className="containerDapp_cards-miniGames cardMain " onClick={() => setConnectedPopup(true) }>
                 <h2>Mini Games</h2>
               </div>
             }
