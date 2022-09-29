@@ -1,37 +1,32 @@
 .nav_inventario{
-    width: 40rem;
-    height: 90vh;
+    padding: 0 2rem;
+    height: 90.3vh;
+    width: 37rem;
     display: flex;
     justify-content: center;
     top: 54.8%;
-    left: -40rem;
+    left: -37rem;
     align-items: center;
     gap: 2rem;
     position: fixed;
     box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.158);
-    background-color: rgba(11, 5, 19, 0.973);
-    backdrop-filter: blur(1rem);
-    z-index: 9999;
+    background-color: rgba(11, 5, 19, 0.781);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border: 2px solid rgba(177, 130, 238, 0.479);
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
-    background-image: url("../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
+    box-shadow: rgba(166, 128, 255, 0.226) -3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    z-index: 9999;
 }
 
 .nav_inventario:hover{
-    width: 40rem;
-    height: 90.5vh;
+    width: 37rem;
+    height: 90.3vh;
     left: 0rem;
-    transition: all .3s ease ;
+    transition: all .2s ease ;
 }
 
 .nav_Toggle_inventario{
@@ -39,27 +34,22 @@
     width: 7rem;
     height: 20vh;
     top: 50%;
-    left: 100%;
+    left: 99.4%;
     transform: translate(0%, -50%);
     border-radius: 15px;
-    border: 5px double rgba(177, 130, 238, 0.589);
-    border-left: none;
+    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.158);
+    background-color: rgba(11, 5, 19, 0.781);
+    backdrop-filter: blur(10px);
+    border: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    backdrop-filter: blur(1rem);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     transition: all .2s ease-in-out;
-    background-image: url("../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
+    box-shadow: rgba(166, 128, 255, 0.226) 0px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
-
 
 .nav_Toggle_inventario img{
     width: 3.1rem;
@@ -73,11 +63,7 @@
     transition: all .3s ease-in-out;
 }
 
-
-
 /* tickets y token */
-
-
 
 .tickets_navHorizontal-Basic , .tickets_navHorizontal-Boost , .token_navHorizontal{
     height: 4.5rem;
@@ -86,14 +72,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: .2rem 1rem;
+    padding: .2rem 1.3rem;
     top: 0;
 }
 
 .tickets_navHorizontal-Basic img , .tickets_navHorizontal-Boost img, .token_navHorizontal img{
     object-fit: contain;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     margin-left: -1rem;
     transform: rotate(-18deg);
     filter: contrast(120%) brightness(105%);
@@ -104,7 +90,6 @@
     /* padding-left: 3rem; */
     font-size: 1.8rem;
 }
-
 
 /* ticket boost nav */
 
