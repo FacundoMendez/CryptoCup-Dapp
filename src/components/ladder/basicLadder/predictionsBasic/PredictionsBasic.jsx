@@ -28,17 +28,23 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
     if (res.data === "Prediction Succesfully Created") {
       //Que aparezca con color de que se hizo correctamente
       Connected.setConfirmedPrediction(true)
+
+      setTimeout(() => {
+        Connected.setConfirmedPrediction()
+      }, 6000);
     }
     
-    if (res.data ==="Prediction already made") {
+    if (res.data === "Prediction already made") {
       //que aparezca con color erroneo
       Connected.setConfirmedPrediction(false)
+
+      setTimeout(() => {
+        Connected.setConfirmedPrediction()
+      }, 6000);
     }
   }
 
-  const makePredd = async () => {
-    console.log("Ay me apretaste")
-  }
+
 
   const [predictionActive , setPredictionActive] = useState(false)
   const [namePredict_button , setNamePredict_button] = useState("Predict")

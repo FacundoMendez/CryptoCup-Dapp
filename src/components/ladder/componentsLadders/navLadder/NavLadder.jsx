@@ -41,16 +41,25 @@ const NavLadder = ({ladder, setMyRecord, setMatches , setRanking }) => {
                 <ul>
                     <li className='link_nav' style={{color : colorP}}  onClick={() => {
                             colorPred()
+                            setMatches(true) 
+                            setMyRecord(false)
+                            setRanking(false)  
                         } }>
                         Matches
                     </li>
                     <li className='link_nav'  style={{color : colorM}}  onClick={() => {
                             ColorMyRecord()
+                            setMyRecord(true)
+                            setMatches(false) 
+                            setRanking(false) 
                         }}>
                         My Record
                     </li>
                     <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
                             colorRank()
+                            setMyRecord(false)
+                            setMatches(false) 
+                            setRanking(true) 
                         }}>
                         Ranking
                     </li>

@@ -50,18 +50,13 @@ const BasicLadder = () => {
           <div className='spin' >
             {loading ? <Spinner/> : null}
           </div>
-
           <div className="blur"></div>
 
 
           {/* matches */}
-
-          {(predictionCards.length <= 0) && Matches? <p className='noPredictionText'> No Prediction </p> : null}
-
-
-          {
-            (predictionCards.length > 0) && Matches ? 
-            <Suspense fallback={<Spinner/>}>
+          
+          { (predictionCards.length > 0 ) && Matches ? 
+              <Suspense fallback={<Spinner/>}>
               { 
                 predictionCards.map((item,index)=>{
                   return <Predictions key={index}
@@ -75,7 +70,7 @@ const BasicLadder = () => {
                   />  
                 })   
               }
-            </Suspense>
+              </Suspense>
             :
             null
           }
