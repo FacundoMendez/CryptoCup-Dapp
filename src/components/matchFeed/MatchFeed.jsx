@@ -1,9 +1,8 @@
-import React,{Suspense, lazy, useEffect , useState} from 'react'
+import React,{Suspense, useEffect , useState} from 'react'
 import "./matchFeed.css"
 import Spinner from '../config/spinner/Spinner'
 import api from '../../api'
-const Matchs = lazy(() => import ("./matchs/Matchs"))
-
+import Matchs from './matchs/Matchs'
 
 const MatchFeed = () => {
 

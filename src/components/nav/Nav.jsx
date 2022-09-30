@@ -144,24 +144,24 @@ const Nav = () => {
           </ul>
 
           { Connected.userLogginActive ?    
-            <div className="user_flag">
-              <img src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
-            </div>
+            <NavLink to="/profileUser" className="user_flag"> 
+                <img src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
+            </NavLink> 
           :
           null}
 
           { Connected.userLogginActive ?    
-          <ul className='listNav_login'>
+            <ul className='listNav_login'>
               <li className='buttonLogin' onClick={() => Connected.setUserLoginActive(false)}>
                 Disconnect
               </li>
             </ul>
           :
-          <ul className='listNav_login' onClick={ () => init()}>
-            <li className='buttonLogin'>
-              Connect
-            </li>
-          </ul>
+            <ul className='listNav_login' onClick={ () => init()}>
+              <li className='buttonLogin'>
+                Connect
+              </li>
+            </ul>
           }
 
         </div>

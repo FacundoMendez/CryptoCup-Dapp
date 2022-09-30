@@ -7,8 +7,8 @@ import Spinner from '../../../config/spinner/Spinner'
 
 const NavLadder = ({ladder, setMyRecord, setMatches , setRanking }) => {
 
-    const [colorP, setColorP] = useState("bebdff")
-    const [colorM, setColorM] = useState("#white")
+    const [colorP, setColorP] = useState("#bebdff")
+    const [colorM, setColorM] = useState("white")
     const [colorR , setColorR] = useState("white")
 
 
@@ -40,25 +40,16 @@ const NavLadder = ({ladder, setMyRecord, setMatches , setRanking }) => {
             <div className="links_BasicLadder">
                 <ul>
                     <li className='link_nav' style={{color : colorP}}  onClick={() => {
-                            setMatches(true) 
-                            setMyRecord(false)
-                            setRanking(false)    
                             colorPred()
                         } }>
                         Matches
                     </li>
                     <li className='link_nav'  style={{color : colorM}}  onClick={() => {
-                            setMyRecord(true)
-                            setMatches(false) 
-                            setRanking(false) 
                             ColorMyRecord()
                         }}>
                         My Record
                     </li>
                     <li className='link_nav'  style={{color : colorR}}  onClick={() =>  {
-                            setMyRecord(false)
-                            setMatches(false) 
-                            setRanking(true) 
                             colorRank()
                         }}>
                         Ranking

@@ -114,6 +114,8 @@
     overflow: hidden;
     border: 2px solid rgba(28, 2, 90, 0.137);
     filter: drop-shadow(0 0 2px rgba(150, 120, 221, 0.158));
+    cursor: pointer;
+    z-index: 999;
 }
 
 .user_flag img{
@@ -122,6 +124,7 @@
     position: absolute;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .nav_Toggle{

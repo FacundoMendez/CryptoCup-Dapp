@@ -8,8 +8,8 @@ import candado from "../../config/src/candado.png"
 
 const BoostLadder = () => {
 
-  const [myPrediction , setMyPrediction] = useState(false)
-  const [predictions , setPredictions] = useState(true)
+  const [myRecord , setMyRecord] = useState(false)
+  const [Matches , setMatches] = useState(true)
   const [ranking , setRanking] = useState(false)
 
 
@@ -18,8 +18,8 @@ const BoostLadder = () => {
       <div className="boostLadder">
         <NavLadder 
             ladder="Boost Ladder"
-            setMyPrediction={setMyPrediction}
-            setPredictions={setPredictions}
+            setMyRecord={setMyRecord}
+            setMatches={setMatches}
             setRanking={setRanking}
         />
         <div className="container_boostLadder">
@@ -29,7 +29,7 @@ const BoostLadder = () => {
 
 
             {
-              predictions ? 
+              Matches ? 
          /*        <Suspense fallback={<Spinner/>}>
                   <Predictions/>
                </Suspense> */
@@ -39,7 +39,7 @@ const BoostLadder = () => {
             }
 
             {
-              myPrediction ? 
+              myRecord ? 
        /*          <Suspense fallback={<Spinner/>}>
                   <MyPredictions/>
                 </Suspense> */

@@ -7,8 +7,6 @@ import ContextConnected from '../../config/context/ConnectedContext'
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
-/* import MyPredictions from '../componentsLadders/myPrediction/MyPredictions'
-import Ranking from '../componentsLadders/ranking/Ranking' */
 
 
 const BasicLadder = () => {

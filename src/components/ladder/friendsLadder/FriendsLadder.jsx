@@ -8,8 +8,8 @@ import candado from "../../config/src/candado.png"
 
 const FriendsLadder = () => {
 
-  const [predictions , setPredictions] = useState(true)
-  const [myPrediction , setMyPrediction] = useState(false)
+  const [Matches , setMatches] = useState(true)
+  const [myRecord , setMyRecord] = useState(false)
   const [ranking , setRanking] = useState(false)
 
 
@@ -17,15 +17,15 @@ const FriendsLadder = () => {
   <div className="friendsLadder"> 
       <NavLadder 
           ladder="Challenge Room"
-          setMyPrediction={setMyPrediction}
-          setPredictions={setPredictions}
+          setMyRecord={setMyRecord}
+          setMatches={setMatches}
           setRanking={setRanking}
       />
       <div className="container_friendsLadder">
         
         <div className="blur_boost"></div>
           {
-            predictions ? 
+            Matches ? 
             /*   <Predictions/> */
             <img className='candado' src={candado} alt="candado" />
             :
@@ -33,7 +33,7 @@ const FriendsLadder = () => {
           }
 
           {
-            myPrediction ? 
+            myRecord ? 
               /* <MyPredictions/> */
               <img className='candado' src={candado} alt="candado" />
             :
