@@ -1,12 +1,14 @@
-import React, {useState, Suspense} from 'react'
+import React, {useState, Suspense , useContext} from 'react'
 import Spinner from '../../../config/spinner/Spinner'
 import "./ladderHome.css"
 import BasicLadder from '../../basicLadder/BasicLadder'
 import BoostLadder from '../../boostLadder/BoostLadder'
 import FriendsLadder from '../../friendsLadder/FriendsLadder'
-
+import ContextConnected from '../../../config/context/ConnectedContext'
 
 const LadderHome = () => {
+
+    const Connected = useContext(ContextConnected)
 
     const [ladder, setLadder]= useState(1)
 
@@ -33,6 +35,10 @@ const LadderHome = () => {
 
   return (
     <Suspense fallback={<Spinner/>}>
+
+    {
+        Connected.userLogginActive ? 
+
         <div className="container_LaddersHome">
             <div className="header_laddersHome">
                 <h2>Ladders</h2>
@@ -87,6 +93,11 @@ const LadderHome = () => {
                 : null}
             </div>
         </div>
+    : 
+        window.location.href = "/"
+    }
+
+        
     </Suspense>
   )
 }

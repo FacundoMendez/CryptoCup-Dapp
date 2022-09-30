@@ -56,16 +56,16 @@ function App() {
             <Nav/>
             <NavInventario/>
             <Routes>
-            <Route exact path="/" element={<Home />} />
+                <Route exact path="/" element={<Home />} />
                 <Route exact path="/home" element={<Home />} />
-                  <Route exact path="/ladder" element={<LadderHome/>}/>
-                  <Route exact path="/staking" element={<Staking />} />
-                  <Route exact path="/friendsLadder" element={<FriendsLadder />} />
-                  <Route exact path="/marketplace" element={<Marketplace />} />
-                  <Route exact path="/airdrop" element={<MiniGame />} />
-                  <Route exact path="/profileUser" element={<ProfileUser />} />
-                  <Route exact path="/matchFeed" element={<MatchFeed />} />
-                  <Route path='*' element={<Home />}  />
+                <Route exact path="/ladder" element={<LadderHome/>}/>
+                <Route exact path="/staking" element={<Staking />} />
+                <Route exact path="/friendsLadder" element={<FriendsLadder />} />
+                <Route exact path="/marketplace" element={<Marketplace />} />
+                <Route exact path="/airdrop" element={<MiniGame />} />
+                <Route exact path="/profileUser" element={<ProfileUser />} />
+                <Route exact path="/matchFeed" element={<MatchFeed />} />
+                <Route path='*' element={<Home />}  />
             </Routes>
           </Suspense>
       </BrowserRouter>
