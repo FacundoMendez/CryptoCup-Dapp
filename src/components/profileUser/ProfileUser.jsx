@@ -91,6 +91,7 @@ const ProfileUser = () => {
                     <p className='puntuacion_ticket'>#0</p>
                   </div>
               </div>
+              
           </div>
           }
 

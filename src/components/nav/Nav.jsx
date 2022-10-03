@@ -11,6 +11,7 @@ import { getUserData, verificarExistencia } from './verifyUser'
 import { ethers } from 'ethers'
 import paisesJson from "../config/paises2.json"
 import PopupError from '../config/popupsErrors/PopupError'
+import userImg from "./src/profile.png"
 
 const Nav = () => {
 
@@ -145,8 +146,11 @@ const Nav = () => {
 
           { Connected.userLogginActive ?    
             <NavLink to="/profileUser" className="user_flag"> 
-                <img src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
+                <img className='pais_profile_img' src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
+                <img className='profile_img' src={userImg} alt="profile user" />
+
             </NavLink> 
+              
           :
           null}
 

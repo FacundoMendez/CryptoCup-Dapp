@@ -110,21 +110,33 @@
     width: 5.5rem;
     position: absolute;
     background-color: rgba(122, 43, 226, 0.329);
-    right: 22%;
-    overflow: hidden;
+    right: 22.5%;
     border: 2px solid rgba(28, 2, 90, 0.137);
     filter: drop-shadow(0 0 2px rgba(150, 120, 221, 0.158));
     cursor: pointer;
     z-index: 999;
 }
 
-.user_flag img{
+.pais_profile_img{
     width: 100%;
     height: 100%;
     position: absolute;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+}
+
+.profile_img{
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    left: 5.5rem;
+    top: 1.5rem;
+    margin-left: .5rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.247));
 }
 
 .nav_Toggle{
