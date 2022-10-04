@@ -242,5 +242,11 @@
     "Milan" : {
         "name" : "Milan" , 
         "img" :"https://image.pngaaa.com/212/4759212-middle.png"
+    },
+    "PSG" : {
+        "img" :"https://e7.pngegg.com/pngimages/314/110/png-clipart-paris-saint-germain-f-c-paris-saint-germain-feminines-france-ligue-1-coupe-de-la-ligue-uefa-financial-fair-play-regulations-football-blue-emblem.png"
+    },
+    "Benfica" : {
+        "img":"https://1000marcas.net/wp-content/uploads/2021/05/Benfica-logo.png"
     }
 }
