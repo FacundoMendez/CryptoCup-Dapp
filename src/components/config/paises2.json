@@ -248,5 +248,11 @@
     },
     "Benfica" : {
         "img":"https://1000marcas.net/wp-content/uploads/2021/05/Benfica-logo.png"
+    },
+    "Real Madrid" : {
+        "img":"https://w7.pngwing.com/pngs/592/526/png-transparent-history-of-real-madrid-c-f-logo-la-liga-others-miscellaneous-cdr-emblem.png"
+    },
+    "Shaktar" : {
+        "img" : "http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/288.png"
     }
 }
