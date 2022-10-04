@@ -18,6 +18,7 @@ const BasicLadder = () => {
     
   const [predictionCards,setPredictionCards]=useState([])
 
+  const Connected = useContext(ContextConnected)
   const PredictionContext = useContext(ContextConnected)
 
   useEffect(() => {
@@ -26,7 +27,10 @@ const BasicLadder = () => {
  
      //Get all matches from DB
      const getPredictionsAvailables=async()=>{
-       const res=await api.get('/predictions/')
+       const res=await api.post(`/predictions/`, {
+        address: Connected.account[0] ,
+        signature: Connected.signature
+       })
        const predictionsArray=res.data
        console.log(res.data);
        setPredictionCards(predictionsArray)

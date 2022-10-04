@@ -6,6 +6,7 @@ import ContextConnected from '../config/context/ConnectedContext'
 import profileTicketsMovement from './profileTicketsMovement'
 import ticketBasicImg from "../nav_inventario/src/ticketBasic.png"
 import ticketBoostImg from "../nav_inventario/src/ticketBoost.png"
+import api from '../../api'
 
 
 
@@ -16,6 +17,8 @@ const ProfileUser = () => {
   useEffect(() => {
     profileTicketsMovement()
   },[])
+
+
 
   const [ticketBasic, setTicketBasic] = useState(true)
   const [ticketBoost, setTicketBoost] = useState()
@@ -43,10 +46,10 @@ const ProfileUser = () => {
         <div className="profileUser">
 
           <div className="nav_profileUser">
-            <img src={paisesJson["Argentina"].img} alt="Flag user" />
+            <img src={paisesJson[Connected.userData.flag].img} alt="Flag user" />
             <div className="data_user_name">
-              <h2>Name User</h2>
-              <p>0xcD914730f947186d58b64b999Cd7c9B6f90c0EA2</p>
+              <h2>{Connected.userData.username}</h2>
+              <p>{Connected.userData.address}</p>
             </div>
           </div>
 
