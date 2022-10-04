@@ -234,5 +234,13 @@
         "name": "Colombia",
         "img": "https://media.istockphoto.com/photos/colombias-flag-picture-id508515841?k=20&m=508515841&s=612x612&w=0&h=fQ7fexfVO7hp2nmRUmvJcv6fm37aC0UaYnDWkbc5x_o=",
         "num":31
+    },
+    "Chelsea" : {
+        "name":"Chelsea",
+        "img": "https://logodownload.org/wp-content/uploads/2017/02/chelsea-fc-logo-1.png"
+    },
+    "Milan" : {
+        "name" : "Milan" , 
+        "img" :"https://image.pngaaa.com/212/4759212-middle.png"
     }
 }

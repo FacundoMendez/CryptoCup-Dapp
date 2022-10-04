@@ -10,19 +10,20 @@ const LiveMatchesHome = () => {
 
     useEffect(() => {
         getLiveMatchs()
-      
        },[]);
-
+    
     const getLiveMatchs = async () => {
         const res = await api.get('/matches/getLiveMatches')
         setMatchsLive(res.data)
-        verifyLiveMatchs() 
+        verifyLiveMatchs(res.data) 
     }
-
-    const verifyLiveMatchs = () => {
-        (matchsLive.lenght>0) ? setMatchActive(true) : setMatchActive(false) 
+   
+   
+    const verifyLiveMatchs = (array) => {
+        console.log(array);
+        (array.length>0) ? setMatchActive(true) : setMatchActive(false) 
     }
-
+   
   return (
     <Suspense fallback={<Spinner/>}>
         <div className="liveNav" >
