@@ -67,3 +67,18 @@
   
 }
 
+
+@media screen and (max-width: 480px) {
+  /* slider */
+  .slider{
+    width: 95%;
+    padding: .2rem;
+  }
+
+  .slider img{
+    width: 100%;
+    object-fit: contain;
+  }
+  
+}
+

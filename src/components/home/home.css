@@ -54,7 +54,6 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
 }
 
 .containerDapp_title p{
@@ -413,12 +412,12 @@
         gap: 1rem;
     }
     .cardMain{
-        height: 18rem;
+        height: 16rem;
         width: 29.3vw;
     }
     
     .cardMain::before{
-        height: 18rem;
+        height: 16rem;
         width: 29.3vw;
     }
   
@@ -444,12 +443,13 @@
     }
 
     .cardMain{
-        height: 25rem;
+        height: 30rem;
         width: 90vw;
+        object-fit: cover;
     }
     
     .cardMain::before{
-        height: 33rem;
+        height: 32rem;
         width: 95vw;
     }
  
@@ -462,6 +462,22 @@
     .liveNav{
         width: 95vw;
     }
+
+    .cardMain{
+        height: 22rem;
+        width: 90vw;
+        object-fit: cover;
+    }
+
+    .cardMain::before{
+        height: 22rem;
+        width: 90vw;
+    }
+
+    .containerDapp_title {
+        padding: 0 2rem;
+        height: 5.5rem;
+      }
 }
 
 @media screen and (max-width: 550px) {
@@ -484,6 +500,7 @@
 
     .containerDapp_title {
       padding: 0 2rem;
+      height: 5.5rem;
     }
 
     .text_live {
@@ -494,12 +511,12 @@
     }
 
     .cardMain{
-        height: 25rem;
+        height: 24rem;
         width: 90vw;
     }
     
     .cardMain::before{
-        height: 25rem;
+        height: 24rem;
         width: 90vw;
     }
 }
@@ -546,12 +563,12 @@
     }
 
     .cardMain{
-        height: 25rem;
+        height: 18rem;
         width: 90vw;
     }
     
     .cardMain::before{
-        height: 25rem;
+        height: 18rem;
         width: 90vw;
     }
 

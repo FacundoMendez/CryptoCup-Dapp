@@ -37,10 +37,21 @@
     letter-spacing: 1px;
 }
 
+
+.container_box_table{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+
 /* table */
 
 .table{
-    width: 74vw;
+    width: 59vw;
     height: 78vh;
     position: relative;
     display: flex;
@@ -62,7 +73,7 @@
 
 
 .table_container{
-    width: 74vw;
+    width: 59vw;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -119,7 +130,7 @@
     flex-direction: row;
     width: 99.5%;
     margin-left: .57rem;
-    height: 9rem;
+    height: 8.5rem;
     border-radius: 15px;
     margin-top: 1.8rem;
     transition: all .1s ease-in-out;
@@ -136,7 +147,7 @@
 }
 
 .table_campos{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
     letter-spacing: 1px;
 }
@@ -159,7 +170,7 @@
 
 .result_team1 p , .result_team2 p{
     position: absolute;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     color: white;
 }
 
@@ -174,9 +185,9 @@
 
 .team1_flag img, .team2_flag img{
     object-fit: cover;
-    width: 10rem;
+    width: 8.5rem;
     margin-top: .5rem;
-    height: 6rem;
+    height: 5.5rem;
     border-radius: 15px;
     filter: contrast(110%) ;
     box-shadow: 0 0 1rem rgba(168, 130, 255, 0.116);
@@ -187,7 +198,7 @@
     text-align: center;
     padding-top: 1rem;
     letter-spacing: 1px;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 .timer_match{
     position: relative;

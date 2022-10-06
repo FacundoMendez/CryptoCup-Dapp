@@ -82,7 +82,24 @@ const Nav = () => {
               <FontAwesomeIcon icon={faBars} />
           </button>
           <ul className='listNav'>
-              <NavLink to="/"> <li className='nav_list_links'> <img className='logoNav' src={logoCC} alt="LogoCC" /> </li></NavLink> 
+ 
+              { Connected.userLogginActive ?    
+
+                  <NavLink to="/"> 
+                    <li className='nav_list_links'> 
+                      <img className='logoNav' src={logoCC} alt="LogoCC" /> 
+                    </li>
+                  </NavLink> 
+
+                  :
+
+                  <NavLink to="/"> 
+                    <li className='link_nav_text_desconected'> 
+                      <img className='logoNav logoNav_desconect' src={logoCC} alt="LogoCC" /> 
+                    </li>
+                  </NavLink> 
+                }
+
     
               { Connected.userLogginActive ?    
 
@@ -104,7 +121,9 @@ const Nav = () => {
                 <li className='nav_list_links'> Match Feed</li> 
               </NavLink> 
               :
-              null
+              <NavLink to="/matchFeed" className="link_nav_text_desconected" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+                <li className='nav_list_links nav_list_desconected'> Match Feed</li> 
+              </NavLink> 
             }
 
             { Connected.userLogginActive ?    
@@ -147,7 +166,7 @@ const Nav = () => {
 
           { Connected.userLogginActive ?    
             <NavLink to="/profileUser" className="user_flag"> 
-                <img className='pais_profile_img' src={paisesJson[Connected.userData.flag].img} alt="user flag" /> 
+                {/* <img className='pais_profile_img' src={paisesJson[Connected.userData.flag].img} alt="user flag" />  */}   {/*  ==>  arreglar img pais */}
                 <img className='profile_img' src={userImg} alt="profile user" />
 
             </NavLink> 
