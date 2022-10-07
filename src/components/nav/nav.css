@@ -98,11 +98,11 @@
 }
 
 
-.buttonLogin:active, .buttonLogin_desconnect:active{
+/* .buttonLogin:active, .buttonLogin_desconnect:active{
     width: 13.9rem;
     height: 4.4rem;
     box-shadow: 0 0 1rem rgba(100, 4, 255, 0.226);
-}
+} */
 
 .user_flag{
     border-radius: 100%;

@@ -181,8 +181,8 @@ const Nav = () => {
               </li>
             </ul>
           :
-            <ul className='listNav_login' onClick={ () => init()}>
-              <li className='buttonLogin'>
+            <ul className='listNav_login' /* onClick={ () => init()} */>
+              <li className='buttonLogin' style={{backgroundColor: "gray"}}>
                 Connect
               </li>
             </ul>

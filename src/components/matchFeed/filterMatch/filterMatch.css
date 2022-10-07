@@ -8,8 +8,6 @@
     flex-direction: column;
     gap: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(85, 84, 84, 0.041);
     backdrop-filter: blur(1rem);
     margin-top: 1rem;
     border-radius: 15px;
