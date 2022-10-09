@@ -1,6 +1,6 @@
 .filterMatch{
-    width: 28rem;
-    height: 73rem;
+    width: 14.5vw;
+    height: 73vh;
     position: relative;
     display: flex;
     justify-items: center;
@@ -17,6 +17,10 @@
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
      */
+}
+
+.filterMatch_movil{
+    display: none;
 }
 
 .filter{
@@ -75,4 +79,61 @@
     display: inline-block;
     opacity: 1;
     transition: all .5 ease;
+}
+
+@media screen and (max-width:1440px) {
+    .boxFilter{
+        width: 99%;
+        height: 16rem;
+    }
+    
+}
+@media screen and (max-width:1170px) {
+
+    .filterMatch{
+        display: none;
+    }
+
+    .filterMatch_movil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 12%;
+        z-index: 999;
+        top: 4.5%;
+    }
+
+    .toggle_filter{
+        position: absolute;
+        top: 0;
+        width: 3rem;
+        height: 3rem;
+        right: 0;
+    }
+    
+
+    .box_filterMatch_movil{
+        width: 30rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        right: 4.5rem;
+        top: 17.9rem;
+        height: 79vh;
+        position: fixed;
+        transform: translate(15%, 0);
+        border-radius: 15px;
+        background-image: url("../../config/src/backMatch2.jpg");
+        background-position: 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+        color: white;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        display: none;
+    }
 }

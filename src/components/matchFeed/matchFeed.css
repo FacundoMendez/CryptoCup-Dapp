@@ -219,11 +219,12 @@
     }
 
     .table {
-        width: 90vw;
+        width: 75vw;
     }
 
+
     .table_container {
-        width: 90vw;
+        width: 75vw;
     }
 
     .team1_flag img, .team2_flag img{
@@ -237,15 +238,24 @@
 }
 
 
-@media screen and (max-width:1024px) {
-    .status_cabecera{
-        display: none;
-    }
+@media screen and (max-width:1174px) {
+
     
+    .table_cabecera ul {
+        width: 90vw;
+    }
 
     .table_games {
-        width: 142%;
+        width: 90vw;
         margin-left: .2rem;
+    }
+
+    .table {
+        width: 90vw;
+    }
+
+    .table_container {
+        width: 90vw;
     }
 
 
@@ -258,13 +268,7 @@
         color: white;
     }
 
-    .game_match{
-        display: none;
-    }
-
-    .game_cabecera{
-        display: none;
-    }
+  
 
     .team1_flag{
         margin-left: 2rem;
@@ -292,6 +296,49 @@
         margin-left: .2rem;
     }
 
+    .status_cabecera{
+        display: none;
+    }
+    
+        
+    .table_cabecera ul {
+        width: 92vw;
+    }
+    .game_match {
+        margin-left: -3rem;
+    }
+
+    .team1_box, .team2_box{
+        gap: 1rem;
+    }
+    
+    
+    .result_team1 p , .result_team2 p{
+        font-size: 2.1rem;
+    }
+    
+    .team1_flag{
+        margin-left: 0rem;
+    }
+    
+    .team2_flag{
+        margin-right: 2rem;
+    }
+    
+    
+    .team1_flag img, .team2_flag img{
+        width: 8.5rem;
+        margin-top: .5rem;
+        height: 5.5rem;
+    }
+    
+    .startIn_text{
+        width: 100%;
+        padding-top: 1rem;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
+
 }
 
 
@@ -303,16 +350,21 @@
     }
 
     .result_team1 p{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .result_team2 p{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .table_games {
-        width: 170%;
+        width: 174%;
         margin-left: .2rem;
+    }
+    .game_match {
+        margin-left: 0rem;
+        font-size: 1.2rem;
+        width: 7rem;
     }
 
     .team1_flag{

@@ -264,7 +264,6 @@
     .nav{
         padding: 0 1rem;
         justify-content: flex-end;
-    
     }
 
     .nav_list_desconected{
@@ -272,8 +271,22 @@
         font-size: 2.2rem;
         position: absolute;
         top: -15rem;
-        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .link_nav_text_desconected{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        left: 0rem;
     }
 
     .matchDesconect{
@@ -324,12 +337,14 @@
      }
  
     .listNav li{
-        display: inline-block;
+        display: flex;
+
         color: white;
         letter-spacing: 1px;
         font-size: 2rem;
         text-transform: uppercase;
         position: relative;
+
     }
 
     .listNav_login{

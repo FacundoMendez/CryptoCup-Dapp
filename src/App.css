@@ -65,7 +65,7 @@ html {
     background-position: 100% 100%;
     background-size: cover;
     background-attachment: fixed;
-  }
+}
 
 html::after{
   width: 100%;
