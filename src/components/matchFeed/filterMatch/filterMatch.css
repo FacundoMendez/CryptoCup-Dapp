@@ -86,10 +86,8 @@
         width: 99%;
         height: 16rem;
     }
-    
-}
-@media screen and (max-width:1170px) {
 
+    
     .filterMatch{
         display: none;
     }
@@ -136,4 +134,8 @@
         letter-spacing: 1px;
         display: none;
     }
+    
+}
+@media screen and (max-width:1170px) {
+
 }

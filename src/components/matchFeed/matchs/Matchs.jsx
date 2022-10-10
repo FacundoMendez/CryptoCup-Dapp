@@ -19,6 +19,7 @@ const Matchs = ({timer, finishDate ,nameTeam1,nameTeam2,resultTeam1,resultTeam2,
             <div className="result_team1 table_campos">
                 <p>{resultTeam1}</p>
             </div>
+            <p className='gion'>-</p> 
             <div className="result_team2 table_campos">
                 <p>{resultTeam2}</p>
             </div>

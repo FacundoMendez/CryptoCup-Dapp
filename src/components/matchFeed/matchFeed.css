@@ -209,32 +209,42 @@
     margin-left: -1.5rem;
     width: 14rem;
     text-align: center;
-    
+}
+
+.gion{
+    color: white;
 }
 
 @media screen and (max-width:1440px) {
 
     .nav_matchFeed {
         width: 90vw;
+        left: .5rem;
+    }
+
+    .table_cabecera ul {
+        width: 90vw;
+    }
+
+    .table_games {
+        width: 88.7vw;
     }
 
     .table {
-        width: 75vw;
+        width: 90vw;
     }
-
 
     .table_container {
-        width: 75vw;
+        width: 90vw;
     }
+
+  
 
     .team1_flag img, .team2_flag img{
         width: 8rem;
         height: 5rem;
     }
 
-    .game_match{
-        margin-left: 1rem;
-    }
 }
 
 
@@ -245,9 +255,9 @@
         width: 90vw;
     }
 
+
     .table_games {
-        width: 90vw;
-        margin-left: .2rem;
+        width: 88.7vw;
     }
 
     .table {
@@ -289,11 +299,61 @@
 }
 
 
+@media screen and (max-width:950px) {
+
+    .table_cabecera ul {
+        width: 90vw;
+    }
+
+
+    .table_games {
+        width: 88vw;
+    }
+
+    .table {
+        width: 90vw;
+    }
+
+    .table_container {
+        width: 90vw;
+    }
+
+
+    .table_cabecera ul{
+        gap: 0rem;
+    }
+    
+    .table_cabecera li{
+        font-size: 1.7rem;
+        color: white;
+    }
+
+  
+
+    .team1_flag{
+        margin-left: -2rem;
+    }
+    
+    .team2_flag{
+        margin-right: -4rem;
+    }
+  
+    .result_team1 p{
+        font-size: 2.2rem;
+    }
+    
+    .result_team2 p{
+        font-size: 2.2rem;
+    }
+
+}
+
+
+
 @media screen and (max-width:780px) {
 
     .table_games {
         width: 148%;
-        margin-left: .2rem;
     }
 
     .status_cabecera{
@@ -319,6 +379,58 @@
     
     .team1_flag{
         margin-left: 0rem;
+    }
+    
+    .team2_flag{
+        margin-right: 2rem;
+    }
+    
+    
+    .team1_flag img, .team2_flag img{
+        width: 8.5rem;
+        margin-top: .5rem;
+        height: 5.5rem;
+    }
+    
+    .startIn_text{
+        width: 100%;
+        padding-top: 1rem;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media screen and (max-width:560px) {
+
+    .table_games {
+        width: 158%;
+    }
+
+    .status_cabecera{
+        display: none;
+    }
+    
+        
+    .table_cabecera ul {
+        width: 92vw;
+    }
+    .game_match {
+        margin-left: -3rem;
+    }
+
+    .team1_box, .team2_box{
+        gap: 1rem;
+    }
+    
+    
+    .result_team1 p , .result_team2 p{
+        font-size: 2.1rem;
+    }
+    
+    .team1_flag{
+        margin-left: -3rem;
     }
     
     .team2_flag{
