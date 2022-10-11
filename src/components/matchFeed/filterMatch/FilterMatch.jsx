@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import "./filterMatch.css"
 import filterMatchFucional from './filterMatchFucional'
 import filterImg from "../../config/src/filter.png"
+import busquedaImg from "../../config/src/busqueda.png"
+
 
 const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
 
@@ -34,6 +36,7 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
             </div>
              <div className="boxFilter boxFilter2">
                 <input type="text" name="buscadorPaises" placeholder='Search country' id='filterTeam' onChange={busqueda}/>
+                <img className='logoBusqueda' src={busquedaImg} alt="busqueda" />
             </div>
             {/*
             <div className="filter filter3"> 

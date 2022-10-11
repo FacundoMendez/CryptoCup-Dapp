@@ -7,14 +7,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
+
+
 
 .container_basicLadder{
     width: 74vw;
     height: 100%;
     position: relative;
-    padding: 4rem 8.5rem;
     border-bottom: 2px solid rgba(150, 112, 255, 0.281);
     border-radius: 15px;
     font-size: 2rem;
@@ -32,6 +32,25 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+}
+
+
+
+.box_predictions{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    padding: 3rem 8.5rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .blur{

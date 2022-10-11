@@ -87,7 +87,7 @@
 .table_cabecera{
     margin-top: 0rem;
     width: 100%;
-    height: 6rem;
+    height: 7.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(158, 85, 255, 0.281);
     border-bottom: 2px solid rgb(196, 136, 255);
@@ -132,7 +132,7 @@
     margin-left: .57rem;
     height: 8.5rem;
     border-radius: 15px;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
     transition: all .1s ease-in-out;
     cursor: pointer;
     overflow: hidden;
