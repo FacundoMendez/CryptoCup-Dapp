@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
     <Suspense fallback={<Spinner/>}>
-      <div className="containerDapp">
+      <div className="containerDapp" >
 
         {connectedPopup ? <PopupError connectedPopup={connectedPopup}  /> : null }
 

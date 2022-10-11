@@ -24,7 +24,6 @@
     height: 100%;
 }
 
-
 .myPrediction{
     width: 30rem;
     height: 30rem;
@@ -47,7 +46,7 @@
 }
 
 .predictionLose{
-    background-color: #ffb9b9c2; 
+    background-color: #f36868c2; 
 }
 
 .box_match_mypred{
@@ -85,15 +84,44 @@
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.date_match , .result_mypred{
-    height: 10rem;
+.date_match {
+    height: 15rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     border-radius: 10px;
-    gap: 3.8rem;
+    background-color: #290285dc;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.date_match{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.date_match p{
+    font-size: 1.5rem;
+    letter-spacing: .5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.884);
+    font-family: qatar;
+}
+
+.result_mypred{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
     background-color: #290285dc;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -120,38 +148,37 @@
     font-family: qatarHeavy;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.788);
-
 }
 
 
 .mySelection img{
     width: 7rem;
     height: 7rem;
-    object-fit: cover;
+    object-fit: contain;
  /*    border-radius: 50%; */
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    filter: contrast(110%) drop-shadow(0 0 15px rgba(12, 12, 12, 0.671));
+    box-shadow: rgba(104, 103, 103, 0.24) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.082) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    filter: contrast(110%) drop-shadow(0 0 15px rgba(39, 38, 38, 0.671));
     border-radius: 10px;
-
 }
 
 
-
-.result_mypred , .date_match p{
+.result_mypred {
     font-size: 1.9rem;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.884);
     font-family: qatarHeavy;
 }
 
+
+
 .resut_win{
     color: #bcffe3f3;
-    background-color: rgba(0, 128, 0, 0.685);
+    background-color: #54f3b1f3;
 }
 
 .resutl_lose{
     color: #fdcbcbef; 
-    background-color: rgba(255, 0, 0, 0.452);
+    background-color: #ff4a4af8;
 }
 
 

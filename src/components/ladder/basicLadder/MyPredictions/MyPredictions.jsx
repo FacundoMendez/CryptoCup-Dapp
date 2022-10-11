@@ -8,7 +8,6 @@ const MyPredictions = () => {
   
   const Connected = useContext(ContextConnected)
 
-  const [predictionSuccess , setPredictionSuccess] = useState(false)  /* si esta en true, acerto , sino perdio */
   const [predictionsHistory , setPredictionsHistory] = useState([])
 
   useEffect(() => {
@@ -31,9 +30,17 @@ const MyPredictions = () => {
 
           {
             predictionsHistory.map( (item , index ) => {
-              return  <div key={index} className={predictionSuccess ?  "myPrediction predictionSuccess" : "myPrediction predictionLose"}>
+              return  <div key={index} className={
+                item.relatedGame[0].result === "" ? 
+                   "myPrediction " 
+                   :  item.relatedGame[0].result == item.prediction ? 
+                    "myPrediction predictionSuccess" 
+                   :
+                   "myPrediction predictionLose"
+                }>
               <div className="date_match">
-                <p> 00/00/2022 </p>
+                <p> -/-/-   </p>
+                <p>{item.relatedGame[0].team1} &nbsp; vs &nbsp; {item.relatedGame[0].team2} </p>
               </div>
             <div className="box_match_mypred">
   
@@ -53,15 +60,23 @@ const MyPredictions = () => {
   
             </div>
             {
-              (item.relatedGame[0].result == item.prediction) ? 
-  
-              <div className="result_mypred resut_win">
-                <p>WIN</p>
-              </div>
+              (item.relatedGame[0].result === "") ? 
+    
+                <div className="result_mypred ">
+                  <p></p>
+                </div>
+
+              : item.relatedGame[0].result == item.prediction ?
+
+                <div className="result_mypred resut_win">
+                  <p>WIN</p>
+                </div>
+
               :
+
               <div className="result_mypred resutl_lose">
-              <p></p>
-            </div>
+                <p>LOSE</p>
+              </div>
   
             }
           </div>

@@ -35,6 +35,11 @@
     overflow-x: scroll;
 }
 
+
+.text_live {
+    width: 15rem;
+}
+
 .liveNav::-webkit-scrollbar {
     width: 5px;
     height: .3rem;
@@ -358,6 +363,10 @@
 
   
 @media screen and (max-width: 1460px) {
+
+    .text_live {
+        width: 15rem;
+    }
    
     .containerDapp_cards{
         width: 90%;
