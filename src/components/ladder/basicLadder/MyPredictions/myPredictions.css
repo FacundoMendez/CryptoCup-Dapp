@@ -145,11 +145,13 @@
 }
 
 .resut_win{
-    color: #bcffe3f3;;
+    color: #bcffe3f3;
+    background-color: rgba(0, 128, 0, 0.685);
 }
 
 .resutl_lose{
-    color: #fdcbcbef; ;
+    color: #fdcbcbef; 
+    background-color: rgba(255, 0, 0, 0.452);
 }
 
 

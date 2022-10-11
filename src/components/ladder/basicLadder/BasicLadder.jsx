@@ -88,8 +88,8 @@ const BasicLadder = () => {
             {
               myRecord ? 
                 <Suspense fallback={<Spinner/>}>
-                  {/* <MyPredictions/> */}
-                  <img className='candado' src={candado} alt="candado" />
+                  <MyPredictions/> 
+                  {/* <img className='candado' src={candado} alt="candado" /> */}
                 </Suspense>
               :
               null
