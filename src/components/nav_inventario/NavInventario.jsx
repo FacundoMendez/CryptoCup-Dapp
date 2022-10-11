@@ -6,11 +6,13 @@ import ticketBasic from "./src/ticketBasic.png"
 import ticketBoost from "./src/ticketBoost.png"
 import token from "./src/tokenNav.png"
 import Claim from './claim/Claim'
+import api from '../../api'
 
 const NavInventario = () => {
 
   
   const Connected = useContext(ContextConnected)
+
 
   return (
     <>
@@ -39,7 +41,7 @@ const NavInventario = () => {
             <div className="token_navHorizontal">
                 <img src={token} alt="Token Nav" />
                 <div className="contadorToken_navHorizontal">
-                    <p>0</p>
+                    <p>{Connected.userData.inventory.tokenBalance}</p>
                 </div>
             </div>
         </div>
