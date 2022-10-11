@@ -22,7 +22,7 @@ const PopupError = ({chainIncorrecta , connectedPopup}) => {
 
     {connectedPopup ?
         <div className="errorNoMetamask" style={{  width: "40rem" }}>
-            <p className='connectMetamask' style={{fontSize: "2rem" ,color: "white" }} > Coming soon&nbsp;  - &nbsp; 11 October  {/* Please connect to Metamask! */}</p>
+            <p className='connectMetamask' style={{fontSize: "2rem" ,color: "white" }} > Please connect to Metamask!</p>
         </div> 
         :
         null
