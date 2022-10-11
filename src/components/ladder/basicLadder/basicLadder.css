@@ -53,31 +53,11 @@
     overflow-y: scroll;
 }
 
-.blur{
-    width: 73.3vw;
-    height: 63vh;
-    position: fixed;
-    top: 64%;
-    left: 50%;
-    border-radius: 15px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
-}
-
-
 
 
 @media screen and (max-width:1440px) {
     .container_basicLadder{
         width: 90vw;
-        padding: 2rem 4rem;
         justify-content: center;
         gap: 3rem;
     }

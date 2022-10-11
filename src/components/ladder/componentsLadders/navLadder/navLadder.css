@@ -142,7 +142,6 @@
     }
 
     .box_links_movile{
-        border: 2px solid rgba(222, 221, 223, 0.13);
         border-radius:10px;
         border-top: none;
         border-top-left-radius: 0;
@@ -162,6 +161,12 @@
         background-attachment: fixed;
         border: 2px solid rgba(255, 255, 255, 0.178);
         border-top: none;
+        background-image: url("../../../config/src/backMatch3.jpg");
+        background-position: 100% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    
     }
 
     .box_links_movile_active{
@@ -197,7 +202,7 @@
         border: 2px solid rgba(219, 192, 255, 0.062);
         border-left: none;
         border-right: none;
-        background-color: rgb(28, 19, 46);
+        background-color: rgba(26, 18, 43, 0.726);
     }
 
 

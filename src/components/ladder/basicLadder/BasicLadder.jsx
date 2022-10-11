@@ -61,7 +61,6 @@ const BasicLadder = () => {
             </div>
             <div className="blur"></div>
 
-
             {/* matches */}
             
             { (predictionCards.length > 0 ) && Matches ? 
@@ -86,15 +85,17 @@ const BasicLadder = () => {
             }
           </div>
 
-          {
-            myRecord ? 
-              <Suspense fallback={<Spinner/>}>
-                {/* <MyPredictions/> */}
-                <img className='candado' src={candado} alt="candado" />
-              </Suspense>
-            :
-            null
-          }
+            {
+              myRecord ? 
+                <Suspense fallback={<Spinner/>}>
+                  {/* <MyPredictions/> */}
+                  <img className='candado' src={candado} alt="candado" />
+                </Suspense>
+              :
+              null
+            }
+
+
 
           {
             ranking ? 
