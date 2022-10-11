@@ -58,7 +58,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
 
   const [predictionActive , setPredictionActive] = useState(false)
-  const [namePredict_button , setNamePredict_button] = useState("Predict")
+  const [namePredict_button , setNamePredict_button] = useState("choose")
   const [colorTeam1, setColorTeam1] = useState()
   const [colorEmpate, setColorEmpate] = useState()
   const [colorTeam2 , setColorTeam2] = useState()

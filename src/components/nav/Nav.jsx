@@ -156,7 +156,7 @@ const Nav = () => {
             { Connected.userLogginActive ?    
 
               <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-                <li className='nav_list_links'> Airdrop</li> 
+                <li className='nav_list_links'> Mini Game</li> 
               </NavLink> 
               :
               null
