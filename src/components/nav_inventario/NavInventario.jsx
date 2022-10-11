@@ -47,7 +47,7 @@ const NavInventario = () => {
         </div>
 
 
-        <Claim/>
+        {/* <Claim/> */}
 
       </div>
       :

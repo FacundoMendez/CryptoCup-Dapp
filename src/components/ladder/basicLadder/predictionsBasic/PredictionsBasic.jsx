@@ -29,8 +29,15 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
     if (res.data === "Prediction Succesfully Created.") {
       //Que aparezca con color de que se hizo correctamente
       //DESAPARECER LA PREDICCIÓN CONFIRMADA
-      Connected.setConfirmedPrediction(true)
+      setActivePrediction()
+      setColorTeam1('#32059bb6')
+      setColorEmpate('#32059bb6')
+      setColorTeam2('#32059bb6')
+      setColorTeam1_text("white")
+      setColorEmpate_text("white")
+      setColorTeam2_text("white")
 
+      Connected.setConfirmedPrediction(true)
       setTimeout(() => {
         Connected.setConfirmedPrediction()
       }, 6000);
@@ -117,29 +124,23 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
         <div className="box_select_prediction">
           <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
-            if (!predictionActive){
               setActivePrediction(1)
               colorSetTeam1()
               setPredictionChoose(document.getElementById(`left_${nameTeam1}`).innerText)
-            }
             }}>
             <p id={"left_" + nameTeam1}>{nameTeam1}</p>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
-            if (!predictionActive){
               setActivePrediction(2)
               colorSetEmpate()
               setPredictionChoose("Tie")
-            }
             }}>
             <p id='tie_prediction' className='tie_pred'>Tie</p>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
-            if (!predictionActive){
               setActivePrediction(3)
               colorSetTeam2()
               setPredictionChoose(document.getElementById(`right_${nameTeam2}`).innerText)
-            }
             }}>
             <p id={'right_' + nameTeam2}>{nameTeam2}</p>
           </div>
@@ -150,17 +151,13 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             <button className='predict_button predict_button_disable' style={{backgroundColor : "rgba(223, 223, 223, 0.671)" }}>{namePredict_button}</button>
           :
            /* si hay prediccion muestra el boton activo */
-          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton ,color: "rgba(10, 0, 37, 0.842) " , fontFamily:"qatarHeavy"}} disabled={predictionActive === true} onClick={() => {
-            setPredictionActive(true)
+          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton ,color: "rgba(10, 0, 37, 0.842) " }}  onClick={() => {
+            setPredictionActive(false)
             makePrediction()
             if (activePrediciton === undefined){
               console.log("no prediction")      
              
-            }else{
-              setColorButton("rgba(178, 130, 255, 0.671)") 
-              setNamePredict_button("Confirmed")   
-            }
-          }}>{namePredict_button}</button>
+            }}}>{namePredict_button}</button>
         }
 
 

@@ -7,6 +7,7 @@ import ContextConnected from '../../config/context/ConnectedContext'
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
+import MyPredictions from './MyPredictions/MyPredictions'
 
 
 const BasicLadder = () => {
@@ -21,9 +22,10 @@ const BasicLadder = () => {
   const Connected = useContext(ContextConnected)
   const PredictionContext = useContext(ContextConnected)
 
+
   useEffect(() => {
     getPredictionsAvailables()
-   },[]);
+   },[predictionCards]);
  
      //Get all matches from DB
      const getPredictionsAvailables=async()=>{
@@ -51,39 +53,41 @@ const BasicLadder = () => {
         />
         
         <div className="container_basicLadder">
-          <div className='spin' >
-            {loading ? <Spinner/> : null}
+
+          <div className="box_predictions">
+            <div className='spin' >
+              {loading ? <Spinner/> : null}
+            </div>
+            <div className="blur"></div>
+
+
+            {/* matches */}
+            
+            { (predictionCards.length > 0 ) && Matches ? 
+                <Suspense fallback={<Spinner/>}>
+                { 
+                  predictionCards.map((item,index)=>{
+                    return <Predictions key={index}
+                      id={item._id}
+                      timer={item.startDate}
+                      round={item.round}
+                      nameTeam1={item.team1}
+                      nameTeam2={item.team2}
+                      resultTeam1={item.scoreTeam1}
+                      resultTeam2={item.scoreTeam2}
+                    />  
+                  })   
+                }
+                </Suspense>
+              :
+              null
+            }
           </div>
-          <div className="blur"></div>
-
-
-          {/* matches */}
-          
-          { (predictionCards.length > 0 ) && Matches ? 
-              <Suspense fallback={<Spinner/>}>
-              { 
-                predictionCards.map((item,index)=>{
-                  return <Predictions key={index}
-                    id={item._id}
-                    timer={item.startDate}
-                    round={item.round}
-                    nameTeam1={item.team1}
-                    nameTeam2={item.team2}
-                    resultTeam1={item.scoreTeam1}
-                    resultTeam2={item.scoreTeam2}
-                  />  
-                })   
-              }
-              </Suspense>
-            :
-            null
-          }
-
 
           {
             myRecord ? 
               <Suspense fallback={<Spinner/>}>
-                {/*  <MyPredictions/>  */}
+                {/* <MyPredictions/> */}
                 <img className='candado' src={candado} alt="candado" />
               </Suspense>
             :

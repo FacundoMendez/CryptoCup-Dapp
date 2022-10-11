@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import "./filterMatch.css"
 import filterMatchFucional from './filterMatchFucional'
 import filterImg from "../../config/src/filter.png"
+import busquedaImg from "../../config/src/busqueda.png"
+
 
 const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
 

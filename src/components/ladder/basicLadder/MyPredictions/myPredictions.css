@@ -1,0 +1,280 @@
+.container_myPrediction{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: .5rem;
+    margin-top: .2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* cabecera */
+
+
+
+.table_cabecera_myPrediction{
+    width: 100%;
+    height: 6rem;
+    background-color: rgba(158, 85, 255, 0.281);
+    border-bottom: 2px solid rgb(196, 136, 255);
+    backdrop-filter: blur(1rem);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    position: relative;
+    z-index: 9999;
+}
+
+
+.table_cabecera_myPrediction ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    height: 6rem;
+    backdrop-filter: blur(2rem);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.table_cabecera_myPrediction li{
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.status_cabecera_myPrediction{
+    margin-right: 6rem;
+}
+
+
+
+/* my predictions */
+
+/* .myPrediction{
+    position: relative;
+    width: 99%;
+    height: 8.5rem;
+    border-radius: 10px;
+    padding: 0 0rem;
+    margin-top: 1rem;
+    background-color: rgba(133, 100, 177, 0.315);
+    backdrop-filter: blur(1rem);
+    overflow: hidden;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+*/
+
+.myPrediction{
+    width: 35rem;
+    height: 26rem;
+    border: 2px solid rgb(250, 249, 249);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.box_match_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 2px solid rgb(255, 254, 254);
+    width: 100%;
+    height: 60%;
+}
+
+
+/* my selecty */
+
+.mySelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+
+.date_match , .result_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    height: 10rem;
+}
+
+
+.flag_mySelection_mypred ,.flag_result_mypred{
+    width: 40%;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flag_mySelection_mypred p , .flag_result_mypred p{
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+}
+
+
+.mySelection img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/*
+
+
+ */
+
+/* mi selection */
+/* .mySelection{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    flex-direction: row; 
+}
+
+.flag_mySelection_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 35%;
+    height: 100%;
+    background-color:rgba(48, 0, 124, 0.897);
+    transform:skew(-26deg);
+    border-radius: 5px;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+
+}
+
+.flag_mySelection_mypred img{
+    width: 95%;
+    height: 95%;
+    filter: contrast(110%);
+    object-fit: cover;    
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
+    border-radius: 5px;
+
+}
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+.flag_mySelection_mypred::before {
+    content: "";
+    width: 105%;
+    height: 105%;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ffd9b, #000a0700 50%, #00ff8810);
+      position: absolute;
+      z-index: -1;
+      animation: spin 2.5s linear infinite;
+    border-radius: 5px;
+
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  } */
+
+/* box flags */
+/* 
+.teams_mypred{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.flag_team1_mypred, .flag_team2_mypred ,.tie_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    height: 90%;
+    background-color:rgba(182, 155, 255, 0.466);
+    transform:skew(-26deg);
+    border-radius: 5px;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+}
+
+.tie_mypred{
+    background-color: rgba(255, 255, 255, 0.863);
+    color: rgb(113, 103, 150);
+    font-size: 2rem;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+}
+
+.tie_mypred p{
+    letter-spacing: 1.5px;
+    text-shadow: 
+      -1px -1px 1px rgba(0, 0, 0, 0.466), 
+      1px .5px 1px #180353f6;
+
+}
+
+.flag_team1_mypred , .result_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.flag_team1_mypred img, .flag_team2_mypred img{
+    width: 99%;
+    height: 100%;
+    filter: contrast(110%);
+    object-fit: cover;    
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
+    border-radius: 5px;
+}
+ */
