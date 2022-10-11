@@ -61,7 +61,7 @@ const Nav = () => {
     
     if (userRegistered === false) {
       Connected.setActiveLogin(true);
-        
+        console.log("LOGEADO");
     } else {
       const userRes = await getUserData(_account[0], signature);
       console.log(userRes);
