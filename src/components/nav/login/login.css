@@ -1,7 +1,7 @@
 .blurLogin{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.548);
+    background-color: rgba(0, 0, 0, 0.658);
     backdrop-filter: blur(1rem);
     position: fixed;
     left: 50%;
@@ -14,11 +14,11 @@
 }
 
 .exit_login_x img{
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     position: absolute;
-    top: 0rem;
-    right: -8rem;
+    top: 2rem;
+    right: 2rem;
     cursor: pointer;
     opacity: .6;
     transition: all .3s ease-in-out;
@@ -41,15 +41,14 @@
 }
 
 .containerLogin{
-    width: 78rem;
-    height: 46vh;
+    width: 65rem;
+    height: 40vh;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(5, 0, 8, 0.952);
+    background-color: rgba(5, 0, 8, 0.055);
     border-radius: 15px;
-    border: 1px solid rgb(206, 185, 255);
     backdrop-filter: blur(1rem);
     z-index: 9999 !important;
     visibility: visible;
@@ -58,41 +57,47 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 2rem rgba(192, 143, 255, 0.767);
-    padding: 2rem;
-    padding-top: 3rem;
-    gap: 3rem;
-    border-radius: 15%;
+    padding-top: 0rem;
+    gap: 4.5rem;
     text-align: center;    
-    border-left: 115px solid transparent; 
-    border-right: 115px solid transparent; 
-    border-bottom: 38px solid rgba(192, 143, 255, 0.623);
-    border-top: 38px solid rgba(192, 143, 255, 0.623);
+    background-image: url("../../config/src/backMatch2.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(164, 108, 255, 0.651) 3px 3px 6px 0px inset, rgba(164, 108, 255, 0.651) -3px -3px 6px 1px inset;
+    border-radius: 15px;
 }
 
+.containerLogin::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.233);
+    z-index: -1;
+    backdrop-filter: blur(.5rem);
+    border-radius: 15px;
 
-/* .login_active{
-
-    transition: all .2s ease-in-out;
-} */
+}
 
 .content_user_login{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
 }
 
 .welcome_login {
     text-transform: uppercase;
     width: 100%;
-    padding: 0rem;
-    font-size: 1.6rem;
+    padding: .5rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
     -webkit-background-clip: text;
     background-clip: text;
-    font-family:gilron;
+    font-family:qatar;
     color: transparent;
     text-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px #9999ff,
     inset 0 -2px 5px 1px #9999ff,
@@ -101,12 +106,13 @@
 }
 
 .welcome_login p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    font-style: oblique;
 }
 
 .userName_label{
     position: relative;
-    font-size: 2.6rem;
+    font-size: 2rem;
     transition: 1.5s;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -127,8 +133,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1.5rem;
+    margin-left: 2.5rem;
 }
 
 #userName_id{
@@ -137,7 +143,7 @@
     border: none;
     outline: none;
     color: white;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     padding: 15px;
     border-radius: 40px;
     cursor: pointer;
@@ -158,7 +164,7 @@
 .buttonAcept_login{
     width: 90%;
     height: 5rem;
-    background-color: rgba(161, 110, 255, 0.788);
+    background-color: rgba(143, 82, 255, 0.699);
     backdrop-filter: blur(1rem);
     border-radius: 10px;
     text-align: center;
@@ -177,7 +183,7 @@
 }
 
 .buttonAcept_login p{
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
@@ -208,27 +214,28 @@
 }
 
 .triangle_flag{
-    width: 2.5rem;
-    height: 2rem;
+    width: 2rem;
+    height: 1.5rem;
     clip-path: polygon(50% 0% , 0% 100%, 100% 100%);
     color: white;
     background-color:rgba(198, 174, 255, 0.534);
     transform: rotate(180deg) translate(-0% , -50%);
     position: absolute;
-    right: 15%;
-    top: 25%;
+    right: 28%;
+    top: 35%;
 }
 
 .circle_flag{
-    border: 1px solid rgb(201, 172, 255);
-    width: 5.5rem;
-    height: 5.5rem;
-    border-radius: 50%;
+    width: 5rem;
+    height: 6.5rem;
+    transform:skew(-18deg);
+    border-radius: 10px;
     cursor: pointer;
     z-index: 9999;
     position: relative;
     overflow: hidden;
     background-color: rgba(98, 10, 240, 0.219);
+    border: 2px solid rgba(15, 1, 43, 0.192);
 }
 
 .img_bandera{
@@ -251,7 +258,7 @@
     padding: 4rem 2rem; 
     overflow: hidden;
     overflow-y: scroll;
-    z-index: 999;
+    z-index: 9999;
     border-radius: 12%;
     text-align: center;    
     border-left: 45px solid transparent; 
@@ -268,6 +275,7 @@
     visibility: visible;
     transition: all .15s ease-in-out;
 }
+
 
 .radio{
     display: flex;
@@ -294,410 +302,163 @@
 }
 
 
+
 @media screen and (max-width:1440px) {
-    .container_select_flag {
-        width: 30rem;
-        height: 24.5rem;
-        top: 70%;
-        right: 2rem;
-        padding: 4rem 2rem;
-    }
-
-    .container_select_flag p{
-        font-size: 1.5rem;
-    }
-    .containerLogin{
-        width: 58%;
-        height: 39rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2rem;
-        gap: 3rem;
-    }
-
-}
-
-
-@media screen and (max-width:1244px) {
-    .container_select_flag {
-        width: 30rem;
-        height: 24.5rem;
-        top: 70%;
-        right: 2rem;
-        padding: 4rem 2rem;
-    }
-
-    .container_select_flag p{
-        font-size: 1.5rem;
-    }
-    .containerLogin{
-        width: 75%;
-        height: 39rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2rem;
-        gap: 3rem;
-    }
-
-}
-
-
-@media screen and (max-width:1020px) {
-    .container_select_flag {
-        width: 30rem;
-        height: 24.5rem;
-        top: 70%;
-        right: 2rem;
-        padding: 4rem 2rem;
-    }
-
-    .container_select_flag p{
-        font-size: 1.5rem;
-    }
-    .containerLogin{
-        width: 90%;
-    }
-
-}
-
-@media screen and (max-width:800px) {
-
-    .containerLogin{
-        width: 90%;
-        height: 46rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2rem;
-        gap: 3rem;
-    }
 
     .container_select_flag {
         width: 30rem;
         height: 35rem;
-        top: 65%;
-        right: 2rem;
-        padding: 4rem 2rem;
+        top: 68%;
+        right: 6rem;
     }
-
-
-    .welcome_login {
-        text-transform: uppercase;
-        width: 100%;
-        padding: 1rem 0;
-        font-size: 1.3rem;
-    }
-    
-
-    .content_user_login{
-        width: 100%;
-        gap: .5rem;
-    }
-
-    .userName_label{
-        font-size: 2.5rem;
-        text-align: center;
-    }
-
-    .username{
-        gap: 2rem;
-        padding: 1rem;
-        flex-direction: column;
-    }
-
-    #userName_id{
-        width: 100%;
-        height: 3.8rem;
-        font-size: 1.9rem;
-        padding: 15px;
-    }
-
-    .buttonAcept_login{
-        width: 80%;
-        height: 5rem;
-        bottom: 3rem;
-    }
-
-    .buttonAcept_login:active{
-        width: 89.9%;
-        height: 4.9rem;
-    }
-
-    .buttonAcept_login p{
-        font-size: 2rem;
-    }
-
-    .box_flag{
-        gap: 1rem;
-        width: 12rem;
-        height: 6.5rem;
-    }
-
-    .triangle_flag{
-        width: 2.5rem;
-        height: 2rem;
-        right: 30%;
-        top: 62%;
-    }
-
-    .circle_flag{
-        width: 4.8rem;
-        height: 4.8rem;
-        top: 38%;
-    }
-
 
 }
 
 
 
-@media screen and (max-width:580px) {
+@media screen and (max-width:1150px) {
+
+    .container_select_flag {
+        width: 30rem;
+        height: 35rem;
+        top: 68%;
+        right: 6rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:700px) {
 
     .containerLogin{
-        width: 95%;
-        height: 46rem;
+        width: 90%;
         top: 53%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2rem;
+        height: 35vh;
         gap: 3.5rem;
-        border-left: 80px solid transparent; 
-        border-right: 80px solid transparent; 
-        border-bottom: 38px solid rgba(192, 143, 255, 0.623);
-        border-top: 38px solid rgba(192, 143, 255, 0.623);
     }
 
     .container_select_flag {
         width: 30rem;
         height: 35rem;
-        top: 72%;
-        right: 3rem;
-        padding: 4rem 2rem;
+        top: 62%;
+        right: 2rem;
     }
-
-
     .exit_login_x img {
-        width: 4rem;
-        height: 4rem;
-        position: absolute;
-        top: 0rem;
-        right: -6rem;
-        cursor: pointer;
-        opacity: .6;
-        transition: all .3s ease-in-out;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     .welcome_login {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 0;
     }
 
     .content_user_login{
         width: 100%;
-        gap: .5rem;
+        gap: 1rem;
     }
 
     .userName_label{
         font-size: 2rem;
         text-align: center;
     }
-
+    #userName_id {
+        width: 45%;
+        height: 4rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
 }
 
 
 @media screen and (max-width:490px) {
-
     .containerLogin{
-        width: 90%;
-        padding: 2rem;
-        padding-top: 0rem;
-    }
-
-
-    .container_select_flag{
-        width: 30rem;
-        height: 35rem;
-        top: 50%;
-        left: 0rem;
-        right: 0;
-    }
-
-    .content_user_login{
-        width: 100%;
-        gap: .5rem;
-    }
-    .welcome_login {
-        font-size: 1.3rem;
-        padding: 0;
-    }
-    .userName_label{
-        font-size: 2.2rem;
-        text-align: center;
-        margin-left: -5rem;
-        margin-bottom: .5rem;
-    }
-
-    .username{
-        gap: 2rem;
-        padding: 1rem;
-        flex-direction: column;
-    }
-
-    #userName_id{
-        width: 25rem;
-        height: 3.8rem;
-        font-size: 1.9rem;
-        padding: 15px;
-    }
-
-    .buttonAcept_login{
-        width: 80%;
-        height: 5rem;
-        bottom: 3rem;
-    }
-
-    .buttonAcept_login:active{
-        width: 79.9%;
-        height: 4.9rem;
-    }
-
-    .buttonAcept_login p{
-        font-size: 2rem;
-    }
-
-    .box_flag{
-        gap: 1rem;
-        width: 12rem;
-        height: 6.5rem;
-        position: absolute;
-    }
-
-    .triangle_flag{
-        width: 2.5rem;
-        height: 2rem;
-        top: -1.5rem;
-        left: 4rem;
-
-    }
-
-    .circle_flag{
-        width: 4.5rem;
-        height: 4.5rem;
-        top: -3rem;
-        left: -2rem;
-    }
-
-}
-
-
-@media screen and (max-width:420px) {
-    .containerLogin{
-        width: 90%;
-        height: 50rem;
+        width: 95%;
         top: 53%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 2rem;
-        gap: 4rem;
-        border-left: 70px solid transparent; 
-        border-right: 70px solid transparent; 
-        border-bottom: 38px solid rgba(192, 143, 255, 0.623);
-        border-top: 38px solid rgba(192, 143, 255, 0.623);
+        height: 35vh;
+        gap: 3.5rem;
     }
 
     .container_select_flag {
-        gap: 2rem;
         width: 30rem;
         height: 35rem;
-        top: 50%;
-        left: -2rem;
-        padding: 4rem 2rem;
+        top: 62%;
+        right: 2rem;
     }
-    .welcome_login {
-        font-size: 1.2rem;
-        padding: 0;
-        font-weight: bold;
-    }
-    .userName_label {
-        font-size: 1.8rem;
-        margin-left: -8rem;
-    }
-
-    
-    .triangle_flag{
+    .exit_login_x img {
         width: 2.5rem;
-        height: 2rem;
-        top: -1.5rem;
-        left: 2rem;
-    }
-
-    .circle_flag{
-        left: -4rem;
-    }
-
-    .exit_login_x img {
-        width: 3.5rem;
-        height: 3.5rem;
-        right: -5.5rem;
-    }
-
-}
-
-@media screen and (max-width:360px) {
-
-    .containerLogin{
-        width: 90%;
-        height: 42rem;
-        top: 52%;
-        left: 50%;
-        padding: 2rem;
-        gap: 4rem;
-        border-left: 60px solid transparent; 
-        border-right: 60px solid transparent; 
-    }
-    .exit_login_x img {
-        width: 3rem;
-        height: 3rem;
-        right: -5rem;
-    }
-
-    .container_select_flag {
-        gap: 2rem;
-        width: 30rem;
-        height: 35rem;
-        top: 59%;
-        left: -6rem;
-        padding: 4rem 2rem;
+        top:1rem;
+        right: 1.2rem;
+        height: 2.5rem;
     }
 
     .welcome_login {
         font-size: 1rem;
         padding: 0;
-        font-weight: bold;
     }
 
-    .userName_label {
-        font-size: 2rem;
-        margin-left: -8rem;
+    .content_user_login{
+        width: 100%;
+        gap: 0rem;
+    }
+
+    .userName_label{
+        font-size: 1.6rem;
+        letter-spacing: .2px;
+        text-align: center;
     }
     #userName_id {
-        width: 20rem;
-        height: 3.8rem;
-        font-size: 1.9rem;
-        padding: 15px;
+        width: 14rem;
+        height: 3rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .circle_flag {
+        width: 4.5rem;
+        height: 6rem;
+        left: 2rem;
+    }
+
+    .triangle_flag {
+        right: 20%;
+        top: 35%;
+    }
+}
+
+
+
+@media screen and (max-width:350px) {
+    #userName_id {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+    .container_select_flag {
+        right: .3rem;
     }
     
-    .triangle_flag{
-        width: 2.5rem;
-        height: 2rem;
-        top: -1.5rem;
-        left: 4rem;
+    .welcome_login {
+        font-size: .8rem;
+        padding: 0;
+    }
+    .circle_flag {
+        width: 3.5rem;
+        height: 6rem;
+        left: 2rem;
     }
 
-    .circle_flag{
-        left: -2rem;
+    .triangle_flag {
+        right: 30%;
+        top: 35%;
     }
 
+    .username {
+        gap: .5rem;
+        margin-left: 4rem;
+    }
 }
