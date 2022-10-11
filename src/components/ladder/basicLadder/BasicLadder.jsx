@@ -25,7 +25,7 @@ const BasicLadder = () => {
 
   useEffect(() => {
     getPredictionsAvailables()
-   },[predictionCards]);
+   },[]);
  
      //Get all matches from DB
      const getPredictionsAvailables=async()=>{
@@ -38,6 +38,7 @@ const BasicLadder = () => {
        setPredictionCards(predictionsArray)
        setLoading(false) 
    }
+
 
   return (
     <Suspense fallback={<Spinner/>}>
@@ -75,6 +76,7 @@ const BasicLadder = () => {
                       nameTeam2={item.team2}
                       resultTeam1={item.scoreTeam1}
                       resultTeam2={item.scoreTeam2}
+                      getPredictionsAvailables={getPredictionsAvailables}
                     />  
                   })   
                 }

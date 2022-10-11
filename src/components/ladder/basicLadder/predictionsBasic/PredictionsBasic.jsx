@@ -5,7 +5,7 @@ import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
 
 
-const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round}) => {
+const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round, getPredictionsAvailables}) => {
 
  const Connected = useContext(ContextConnected)
   const [activePrediciton, setActivePrediction]= useState()
@@ -36,6 +36,8 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
       setColorTeam1_text("white")
       setColorEmpate_text("white")
       setColorTeam2_text("white")
+
+      getPredictionsAvailables()
 
       Connected.setConfirmedPrediction(true)
       setTimeout(() => {
