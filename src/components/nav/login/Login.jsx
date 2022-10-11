@@ -19,7 +19,7 @@ const Login = () => {
         const res = await api.post('/user/createUser', { address: Connected.account[0], signature: Connected.signature, username, flag });
         if(res.data === "Account Succesfully Created."){
             const userRes = await getUserData(Connected.account[0], Connected.signature);
-            Connected.setUserData(userRes.user);
+            Connected.setUserData(userRes);
 
             Connected.setActiveLogin(false);
             Connected.setUserLoginActive(true);
