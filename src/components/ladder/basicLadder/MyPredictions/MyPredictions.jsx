@@ -23,11 +23,14 @@ const MyPredictions = () => {
         <div className="box_match_mypred">
           <div className="mySelection">
             <div className="flag_mySelection_mypred">
+              <p>My choice</p>
               <img src={paisesJson["Argentina"].img} alt="bandera team 1" />
             </div>
 
             <div className="flag_result_mypred">
-            <img src={paisesJson["Alemania"].img} alt="bandera team 1" />
+              <p>Result</p>
+
+              <img src={paisesJson["Alemania"].img} alt="bandera team 1" />
             </div>
           </div>
         </div>

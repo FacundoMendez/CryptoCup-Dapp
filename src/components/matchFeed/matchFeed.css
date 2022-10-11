@@ -184,10 +184,10 @@
 
 
 .team1_flag img, .team2_flag img{
-    object-fit: cover;
+    object-fit: contain;
     width: 8.5rem;
     margin-top: .5rem;
-    height: 5.5rem;
+    height: 6.5rem;
     border-radius: 15px;
     filter: contrast(110%) ;
     box-shadow: 0 0 1rem rgba(168, 130, 255, 0.116);

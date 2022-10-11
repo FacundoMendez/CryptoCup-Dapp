@@ -36,7 +36,6 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
             </div>
              <div className="boxFilter boxFilter2">
                 <input type="text" name="buscadorPaises" placeholder='Search country' id='filterTeam' onChange={busqueda}/>
-                <img className='logoBusqueda' src={busquedaImg} alt="busqueda" />
             </div>
             {/*
             <div className="filter filter3"> 

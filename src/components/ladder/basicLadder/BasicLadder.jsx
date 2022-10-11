@@ -22,9 +22,10 @@ const BasicLadder = () => {
   const Connected = useContext(ContextConnected)
   const PredictionContext = useContext(ContextConnected)
 
+
   useEffect(() => {
     getPredictionsAvailables()
-   },[]);
+   },[predictionCards]);
  
      //Get all matches from DB
      const getPredictionsAvailables=async()=>{
@@ -86,7 +87,8 @@ const BasicLadder = () => {
           {
             myRecord ? 
               <Suspense fallback={<Spinner/>}>
-                <MyPredictions/>
+                {/* <MyPredictions/> */}
+                <img className='candado' src={candado} alt="candado" />
               </Suspense>
             :
             null
