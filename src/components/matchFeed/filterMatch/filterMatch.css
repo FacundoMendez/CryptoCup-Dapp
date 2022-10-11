@@ -40,6 +40,7 @@
     letter-spacing: 1px;
     padding: 0 2rem;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .triangleFilter{
@@ -72,7 +73,6 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-    
 }
 
 .boxFilter_active{
@@ -80,6 +80,36 @@
     opacity: 1;
     transition: all .5 ease;
 }
+
+
+/* filter match */
+
+.boxFilter2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+#filterTeam{
+    width: 90%;
+    height: 4rem;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(202, 162, 255, 0.295);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    background: rgba(190, 141, 255, 0.151);
+    backdrop-filter: blur(2rem);
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+}
+
 
 @media screen and (max-width:1440px) {
     .boxFilter{

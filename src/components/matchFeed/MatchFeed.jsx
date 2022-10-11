@@ -12,6 +12,7 @@ const MatchFeed = () => {
   
   const [matchs,setMatchs]=useState([])
   const [loading ,setLoading]=useState(true)
+  const [filterBusqueda , setFilterBusqueda] = useState()
 
   useEffect(() => {
    getMatchs()
@@ -25,6 +26,8 @@ const MatchFeed = () => {
       setLoading(false) 
   }
 
+
+
   return (
     <Suspense fallback={<Spinner/>}>
 
@@ -34,7 +37,10 @@ const MatchFeed = () => {
           </div>
 
         <div className="container_box_table">
-          <FilterMatch/>
+          <FilterMatch 
+            filterBusqueda={filterBusqueda}  
+            setFilterBusqueda={setFilterBusqueda}
+            />
 
             <div className="table">
               <div className="table_cabecera">
