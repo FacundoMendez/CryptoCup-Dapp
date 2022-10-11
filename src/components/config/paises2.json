@@ -235,24 +235,71 @@
         "img": "https://media.istockphoto.com/photos/colombias-flag-picture-id508515841?k=20&m=508515841&s=612x612&w=0&h=fQ7fexfVO7hp2nmRUmvJcv6fm37aC0UaYnDWkbc5x_o=",
         "num":31
     },
-    "Chelsea" : {
-        "name":"Chelsea",
-        "img": "https://logodownload.org/wp-content/uploads/2017/02/chelsea-fc-logo-1.png"
-    },
     "Milan" : {
         "name" : "Milan" , 
-        "img" :"https://image.pngaaa.com/212/4759212-middle.png"
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_186/v1665458706/CryptocupQatar/Equipos%20Champions/Milan_bv6ygz.png"
     },
     "PSG" : {
-        "img" :"https://e7.pngegg.com/pngimages/314/110/png-clipart-paris-saint-germain-f-c-paris-saint-germain-feminines-france-ligue-1-coupe-de-la-ligue-uefa-financial-fair-play-regulations-football-blue-emblem.png"
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_296,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/PSG_icy6lg.png"
     },
     "Benfica" : {
-        "img":"https://1000marcas.net/wp-content/uploads/2021/05/Benfica-logo.png"
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_169,q_auto:eco,w_300/v1665458704/CryptocupQatar/Equipos%20Champions/Benfica_heic5m.png"
     },
     "Real Madrid" : {
-        "img":"https://w7.pngwing.com/pngs/592/526/png-transparent-history-of-real-madrid-c-f-logo-la-liga-others-miscellaneous-cdr-emblem.png"
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_214/v1665458706/CryptocupQatar/Equipos%20Champions/RealMadrid_bhinq5.png"
     },
     "Shaktar" : {
-        "img" : "http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/288.png"
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_189,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Shakthar_qxgtjq.png"
+    },
+    "Maccabi Haifa" : {
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_289,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Maccabi_Haifa_b5yrka.png"
+    },
+    "Napoli" : {
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Napoli_erxyq4.png"
+    },
+    "Dortmund" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Dortmund_pffpkx.png"
+    },
+    "Kobenhavn" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_299/v1665458705/CryptocupQatar/Equipos%20Champions/Kobenhavn_v5ghgj.png"
+    },
+    "Manchester City" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/ManchesterCity_tvlpvm.png"
+    },
+    "Liverpool" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_222/v1665458705/CryptocupQatar/Equipos%20Champions/Livelpool_kakgi0.png"
+    },
+    "Brujas" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/ClubBrujas_io2mef.png"
+    },
+    "Juventus" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_150/v1665458705/CryptocupQatar/Equipos%20Champions/Juventus_bq8seb.png"
+    },
+    "Inter" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/InterMilan_jffvrq.png"
+    },
+    "Bayern" : {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/Bayern_dgpgdu.png"
+    },
+    "Chelsea": {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/Chelsea_rxbcg6.png"
+    },
+    "Ajax": {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_298/v1665458705/CryptocupQatar/Equipos%20Champions/Ajax_djaaqc.png"
+    },
+    "Barcelona": {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_296/v1665458704/CryptocupQatar/Equipos%20Champions/Barcelona_ykeggx.png"
+    },
+    "Atletico Madrid": {
+        "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458704/CryptocupQatar/Equipos%20Champions/AtleticoMadrid_zbdpua.png"
+    },
+    "Viktoria Plezñ" : {
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_212/v1665458706/CryptocupQatar/Equipos%20Champions/Viktoria_Plzen_na5dkl.png"
+    },
+    "Sevilla" : {
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Sevilla_emlgz9.png"
+    },
+    "Rangers" : {
+        "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Rangers_ggmkie.png"
     }
 }
