@@ -238,7 +238,6 @@
         width: 90vw;
     }
 
-  
 
     .team1_flag img, .team2_flag img{
         width: 8rem;
@@ -303,6 +302,7 @@
 
     .table_cabecera ul {
         width: 90vw;
+        gap: 0rem;
     }
 
 
@@ -319,10 +319,6 @@
     }
 
 
-    .table_cabecera ul{
-        gap: 0rem;
-    }
-    
     .table_cabecera li{
         font-size: 1.7rem;
         color: white;
@@ -408,14 +404,31 @@
         width: 158%;
     }
 
+    .nav_matchFeed {
+        width: 95vw;
+        left: -0rem;
+    }
+
+    .table_cabecera ul {
+        width: 95vw;
+    }
+
+    .table {
+        width: 95vw;
+        margin-left: -1rem;
+    }
+
+    .table_container {
+        width: 95vw;
+    }
+
+
     .status_cabecera{
         display: none;
     }
     
         
-    .table_cabecera ul {
-        width: 92vw;
-    }
+
     .game_match {
         margin-left: -3rem;
     }

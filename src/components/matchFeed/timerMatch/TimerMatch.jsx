@@ -10,7 +10,7 @@ const TimerMatch = ({timer, finishDate}) => {
         const [minutes,setMinutes]=useState()
         const [statusTimer , setStatusTimer] = useState()
 
-        console.log(finishDate);
+       /*  console.log(finishDate); */
             //Get Unit/MS
         let msecPerMinute = 1000 * 60;
         let msecPerHour = msecPerMinute * 60;
