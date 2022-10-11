@@ -32,7 +32,14 @@
     background-size: cover;
     background-attachment: fixed;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    overflow-x: scroll;
+}
 
+.liveNav::-webkit-scrollbar {
+    width: 5px;
+    height: .3rem;
+    border-right: none;
+    background-position: top;
 }
 
 .containerDapp_title{
@@ -226,14 +233,18 @@
 }
 
 .flag_team1_live, .flag_team2_live{
-    width: 4.5rem;
+    width: 3rem;
     height: 3rem;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .flag_live_img{
-    width: 100%;
-    height: 100%;
-    filter: contrast(110%) brightness(110%);
+    width: 4rem;
+    object-fit: contain;
+    height: 4rem;
+    filter: contrast(110%) brightness(110%) drop-shadow( 0 0 1px rgba(255, 255, 255, 0.24));
 }
 
 .boxResut_live{
@@ -359,12 +370,12 @@
     }
 
     .liveNav{
-        width: 70vw;
+        width:67vw;
         height: 5rem;
     }
 
     .social_nav{
-        width: 19vw;
+        width: 22vw;
         height: 5rem;
     }
     
@@ -397,14 +408,13 @@
         width: 95%;
         height: 5rem;
     }
-
     .liveNav{
-        width: 73vw;
+        width:70vw;
         height: 5rem;
     }
 
     .social_nav{
-        width: 20vw;
+        width: 24vw;
         height: 5rem;
     }
     
@@ -419,6 +429,11 @@
     .cardMain::before{
         height: 16rem;
         width: 29.3vw;
+    }
+
+    .text_live {
+        height: 6rem;
+        width: 15rem;
     }
   
   }
@@ -451,6 +466,11 @@
     .cardMain::before{
         height: 32rem;
         width: 95vw;
+    }
+
+    .liveNav {
+        width: 73vw;
+        height: 5rem;
     }
  
   }
@@ -488,7 +508,6 @@
         align-items: center;
         gap: 1rem;
         padding: 0 2rem;
-        border: none;
         text-align: center;
     }
 
@@ -524,14 +543,13 @@
 @media screen and (max-width: 440px) {
 
     .text_live p{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .containerDapp_title{
         width: 95%;
         height: 5rem;
     }
-
 
     .activeLive {
         width: 1.5rem;
@@ -541,26 +559,11 @@
         animation: liveNow 2.1s infinite linear;
     }
 
-    .social_nav{
-        width: 20vw;
-        height: 5rem;
-    }
+
     .text_live {
-        gap: 1rem;
-        padding-right: 2rem;
-        height: 6rem;
-        width: 11rem;
+        width: 13rem;
     }
 
-    .match_live {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .5rem;
-        padding: 0 0rem;
-        border: none;
-        text-align: center;
-    }
 
     .cardMain{
         height: 18rem;
