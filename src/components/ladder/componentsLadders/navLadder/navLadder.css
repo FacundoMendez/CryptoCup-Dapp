@@ -96,6 +96,10 @@
         font-size: 1.6rem;
     }
 
+    .links_BasicLadder li:after {
+        bottom: -1.8rem;
+    }
+      
 }
 
 @media screen and (max-width:1024px) {
