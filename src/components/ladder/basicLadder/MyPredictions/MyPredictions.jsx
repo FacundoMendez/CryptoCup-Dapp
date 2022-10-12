@@ -3,11 +3,12 @@ import "./myPredictions.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
+import Spinner from '../../../config/spinner/Spinner'
 
 const MyPredictions = () => {
   
   const Connected = useContext(ContextConnected)
-
+  const [loading ,setLoading]=useState(true)
   const [predictionsHistory , setPredictionsHistory] = useState([])
 
   useEffect(() => {
@@ -20,6 +21,7 @@ const MyPredictions = () => {
     })
     console.log(res.data);
     setPredictionsHistory(res.data)
+    setLoading(false) 
   }
   
   
@@ -27,7 +29,9 @@ const MyPredictions = () => {
     <div className="container_myPrediction">
 
         <div className="box_myPrediction">
-
+          <div className='spin' >
+              {loading ? <Spinner/> : null}
+            </div>
           {
             predictionsHistory.map( (item , index ) => {
               return  <div key={index} className={
