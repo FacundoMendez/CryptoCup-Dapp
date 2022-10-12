@@ -1,6 +1,6 @@
 .friendsLadder{
     width: 100%;
-    height: 78vh;
+    height: 77vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -15,8 +15,6 @@
     position: relative;
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(159, 85, 255, 0.205);
     border-bottom: 2px solid rgba(150, 112, 255, 0.281);
     backdrop-filter: blur(1rem);
     font-size: 2rem;
@@ -25,11 +23,9 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     z-index: 1000;
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
 
 }
 

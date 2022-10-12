@@ -9,8 +9,6 @@
     align-items: center;
     gap: 2rem;
     position: fixed;
-    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.158);
-    background-color: rgba(11, 5, 19, 0.781);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     border-top-left-radius: 0;
@@ -18,8 +16,10 @@
     transform: translate(0 , -50%);
     border-left: none;
     transition: all .2s ease ;
-    box-shadow: rgba(166, 128, 255, 0.226) -3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
     z-index: 9999;
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
 }
 
 .nav_inventario:hover{
@@ -32,13 +32,11 @@
 .nav_Toggle_inventario{
     position: fixed;
     width: 7rem;
-    height: 20vh;
+    height: 15vh;
     top: 50%;
     left: 99.4%;
     transform: translate(0%, -50%);
-    border-radius: 15px;
-    box-shadow: 0 0 .7rem rgba(213, 184, 252, 0.158);
-    background-color: rgba(11, 5, 19, 0.781);
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     border: none;
     border-top-left-radius: 0;
@@ -48,7 +46,21 @@
     align-items: center;
     gap: 2rem;
     transition: all .2s ease-in-out;
-    box-shadow: rgba(166, 128, 255, 0.226) 0px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgb(70, 37, 155) 0%, rgb(23, 10, 39) 90%);
+    animation: tab 3s infinite linear ;
+}
+
+@keyframes tab {
+
+    0%{
+    }
+    50%{
+        box-shadow: rgba(191, 152, 255, 0.363) 3px 3px 10px 0px inset, rgba(191, 152, 255, 0.699) -3px -3px 10px 1px inset;
+    }
+    10%{
+    }
+    
 }
 
 .nav_Toggle_inventario img{

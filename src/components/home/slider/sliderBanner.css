@@ -4,18 +4,14 @@
     position: relative;
     text-align: center;
     margin: 0 auto;
-    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.295);
     border-radius: 15px;
     z-index: 1000;
     padding: .7rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(255, 255, 255, 0.13);
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: rgba(167, 112, 255, 0.288);
+    border: 1px solid #b26aff75;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.315) 0%, rgba(20, 11, 44, 0.692) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-  }
+}
   
 .slider img{
   width: 100%;

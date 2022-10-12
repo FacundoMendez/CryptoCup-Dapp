@@ -20,13 +20,8 @@
     border-radius: 10px;
     padding: 0 4rem;
     margin-top: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.336);
-    background-color: rgba(133, 100, 177, 0.315);
-    backdrop-filter: blur(1rem);
-    background-image: url("../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: radial-gradient(circle, rgba(254, 254, 255, 0.219) 0%, rgba(20, 11, 44, 0.733) 60%);
+    background-color: rgb(91, 44, 168);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
@@ -70,16 +65,12 @@
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(85, 84, 84, 0.041);
     backdrop-filter: blur(1rem);
     margin-top: 1rem;
     border-radius: 15px;
-    background-image: url("../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
     overflow-y:scroll ;
 }
 
@@ -103,13 +94,14 @@
 .profile_cabecera{
     width: 74vw;
     height: 6rem;
-    background-color: rgba(158, 85, 255, 0.281);
-    border-bottom: 2px solid rgb(196, 136, 255);
     backdrop-filter: blur(1rem);
     border-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.171);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(54, 45, 78, 0.918) 60%);
+    background-color: rgba(61, 15, 134, 0.932);
     position: absolute;
     top: 12rem;
     z-index: 999;

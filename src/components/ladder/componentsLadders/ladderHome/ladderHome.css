@@ -5,7 +5,6 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-
 }
 
 .header_laddersHome{
@@ -14,20 +13,19 @@
     justify-content: space-between;
     gap: 1.3rem;
     position: relative;
-    padding: 1rem 2vw;
+    padding: 0rem 2vw;
+    padding-bottom: 1rem;
     border-top: none;
     border-right: none;
     border-left: none;
     width: 74vw;
-    height: 10rem;
+    height: 11rem;
     border-radius: 10px;
     margin-top: 1rem;
-    background-image: url("../../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.151) -3px -3px 6px 1px inset;
-
+    backdrop-filter: blur(1rem);
+    background: radial-gradient(circle, rgba(254, 254, 255, 0.219) 0%, rgba(20, 11, 44, 0.733) 60%);
+    background-color: rgb(91, 44, 168);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
 .header_laddersHome h2{

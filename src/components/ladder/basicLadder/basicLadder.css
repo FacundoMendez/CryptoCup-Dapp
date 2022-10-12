@@ -1,6 +1,6 @@
 .basicLadder{
     width: 100%;
-    height: 78vh;
+    height: 77vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -8,8 +8,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
 
 .container_basicLadder{
     width: 74vw;
@@ -27,14 +25,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    backdrop-filter: blur(1rem);
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
 }
-
-
 
 .box_predictions{
     width: 100%;
