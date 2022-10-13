@@ -162,13 +162,6 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
             }}}>{namePredict_button}</button>
         }
 
-
-
-        {/* devuelve el estado de la prediccion ( 1 2 3 ) */}
-        {/*  {activePrediciton === 1 ? console.log(activePrediciton): null} */} {/* team 1 win */}
-        {/* {activePrediciton === 2 ? console.log(activePrediciton): null} */} {/* empate */}
-        {/* {activePrediciton === 3 ? console.log(activePrediciton): null} */} {/* team 2 win */}
-
     </div>
   )
 }

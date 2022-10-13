@@ -149,18 +149,14 @@
         visibility: hidden;
         opacity: 0;
         transition: all .2s ease-in-out;
-        filter: drop-shadow(0 0 3px rgba(77, 54, 119, 0.459));
         border: 2px solid rgba(255, 255, 255, 0.178);
         border-radius:10px;
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        background-image: url("../../../config/src/backMatch3.jpg");
-        background-position: 100% 100%;
-        background-size: cover;
-        background-attachment: fixed;
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-    
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
+        background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
+        background-color: rgba(61, 15, 134, 0.932);
     }
 
     .box_links_movile_active{
@@ -195,7 +191,10 @@
         border: 2px solid rgba(219, 192, 255, 0.062);
         border-left: none;
         border-right: none;
-        background-color: rgba(26, 18, 43, 0.726);
+        background: radial-gradient(circle, rgba(254, 254, 255, 0.116) 0%, rgba(20, 11, 44, 0.733) 60%);
+        background-color: rgb(91, 44, 168);
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+        text-shadow: 0 0 .2rem black;
     }
 
 

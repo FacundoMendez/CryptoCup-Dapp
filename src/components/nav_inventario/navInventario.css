@@ -138,10 +138,9 @@
         height: 120vh;
         display: flex;
         justify-content: center;
-        top: 157.5%;
+        top: 158%;
         left: 0rem;
         align-items: center;
-        border: 6px double rgba(177, 130, 238, 0.479);
         border-top-left-radius: 15px;
         gap: 2rem;
         z-index: 9999;
