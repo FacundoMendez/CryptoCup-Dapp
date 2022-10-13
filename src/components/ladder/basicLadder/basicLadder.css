@@ -29,6 +29,8 @@
     box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
     background: rgb(39,25,78);
     background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .box_predictions{
@@ -53,23 +55,14 @@
 @media screen and (max-width:1440px) {
     .container_basicLadder{
         width: 90vw;
+        height: 70vh;
         justify-content: center;
         gap: 3rem;
     }
     
-    .blur{
-        width: 89vw;
-        height: 60vh;
-        position: fixed;
-        top: 65%;
-        left: 50%;
-    }
 
-    .box_predictions{
-        width: 100%;
-        height: 100%;
-        padding: 3rem 6.8rem;
-        font-size: 2rem;
+    .basicLadder{
+        height: 76vh;
     }
 
 }
@@ -79,12 +72,20 @@
     .container_basicLadder{
         width: 90vw;
     }
+    
+    .basicLadder{
+        height: 75vh;
+    }
 }
 
 
 @media screen and (max-width:600px) {
     .container_basicLadder{
         width: 90vw;
+    }
+
+    .basicLadder{
+        height: 75vh;
     }
 }
 
@@ -93,4 +94,12 @@
     .container_basicLadder{
         width: 98vw;
     }
+
+
+    .basicLadder{
+        height: 75vh;
+        top: -1rem;
+    }
+    
+    
 }

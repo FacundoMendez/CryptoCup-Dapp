@@ -208,6 +208,9 @@
     text-shadow: 0 0 .1rem rgb(0, 0, 0);
 }
 
+.list_nav_ocultar{
+    display: none;
+}
 
 /* desconect */
 
@@ -260,7 +263,8 @@
         justify-content: flex-end;
     }
 
-    .nav_list_desconected{
+   
+    .nav_list_desconected {
         margin-right: 0rem;
         font-size: 2.2rem;
         position: absolute;
@@ -350,6 +354,10 @@
     .logoNav{
         display: none;
     }
+    .logoNav_desconect{
+        display: none;
+    }
+
     
     .nav_Toggle{
         display: inline-block;

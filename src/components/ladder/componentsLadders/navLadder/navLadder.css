@@ -140,25 +140,21 @@
     }
 
     .box_links_movile{
-        border-radius:10px;
-        border-top: none;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        width: 100%;
+        width: 90vw;
         position: fixed;
-        left: 0;
-        top: 5.1rem;
+        left: 5vw;
+        top: 26.7rem;
         height: 16.5rem;
         padding: 1.3rem 0;
         visibility: hidden;
         opacity: 0;
         transition: all .2s ease-in-out;
         filter: drop-shadow(0 0 3px rgba(77, 54, 119, 0.459));
-        background-position:top;
-        background-size: cover;
-        background-attachment: fixed;
         border: 2px solid rgba(255, 255, 255, 0.178);
+        border-radius:10px;
         border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         background-image: url("../../../config/src/backMatch3.jpg");
         background-position: 100% 100%;
         background-size: cover;
@@ -216,6 +212,9 @@
     .nav_basicLadder{
         width: 90vw;
     }
+
+    
+
 }
 
 @media screen and (max-width:480px) {
@@ -231,5 +230,12 @@
     }
     .nav_basicLadder h2{
         font-size: 2rem;
+    }
+
+    .box_links_movile{
+        width: 98vw;
+        left: .9vw;
+        top: 29.5rem;
+        height: 16.5rem;
     }
 }

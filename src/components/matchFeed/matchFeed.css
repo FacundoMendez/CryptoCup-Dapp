@@ -19,7 +19,6 @@
     border-radius: 10px;
     padding: 0 4rem;
     margin-top: 1rem;
-
     background: radial-gradient(circle, rgba(254, 254, 255, 0.219) 0%, rgba(20, 11, 44, 0.733) 60%);
     background-color: rgb(91, 44, 168);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
