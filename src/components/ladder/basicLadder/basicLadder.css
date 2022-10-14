@@ -1,6 +1,6 @@
 .basicLadder{
     width: 100%;
-    height: 78vh;
+    height: 77vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -8,8 +8,6 @@
     align-items: center;
     justify-content: center;
 }
-
-
 
 .container_basicLadder{
     width: 74vw;
@@ -27,14 +25,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    backdrop-filter: blur(1rem);
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
+    overflow: hidden;
+    overflow-y: scroll;
+    
 }
-
-
 
 .box_predictions{
     width: 100%;
@@ -50,7 +48,24 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    margin-bottom: 2rem;
+
+}
+
+.noPredictions{
+    font-size: 5rem ;
+    font-family: qatar;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color:  rgba(215, 173, 255, 0.274);
+    -webkit-text-fill-color: rgba(2, 1, 1, 0.096);
+    font-family: qatarHeavy;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-transform: uppercase;
 }
 .alertNoPredictions {
     width: 70%;
@@ -69,23 +84,14 @@
 @media screen and (max-width:1440px) {
     .container_basicLadder{
         width: 90vw;
+        height: 70vh;
         justify-content: center;
         gap: 3rem;
     }
     
-    .blur{
-        width: 89vw;
-        height: 60vh;
-        position: fixed;
-        top: 65%;
-        left: 50%;
-    }
 
-    .box_predictions{
-        width: 100%;
-        height: 100%;
-        padding: 3rem 6.8rem;
-        font-size: 2rem;
+    .basicLadder{
+        height: 76vh;
     }
 
 }
@@ -95,12 +101,20 @@
     .container_basicLadder{
         width: 90vw;
     }
+    
+    .basicLadder{
+        height: 75vh;
+    }
 }
 
 
 @media screen and (max-width:600px) {
     .container_basicLadder{
         width: 90vw;
+    }
+
+    .basicLadder{
+        height: 75vh;
     }
 }
 
@@ -109,4 +123,12 @@
     .container_basicLadder{
         width: 98vw;
     }
+
+
+    .basicLadder{
+        height: 75vh;
+        top: -1rem;
+    }
+    
+    
 }

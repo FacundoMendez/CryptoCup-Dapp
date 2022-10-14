@@ -8,15 +8,8 @@
     flex-direction: column;
     gap: 1rem;
     overflow: hidden;
-    backdrop-filter: blur(1rem);
     margin-top: 1rem;
     border-radius: 15px;
- /*    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-     */
 }
 
 .filterMatch_movil{
@@ -26,12 +19,9 @@
 .filter{
     width: 99%;
     height: 6rem;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
     border-radius: 10px;
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -62,16 +52,12 @@
     width: 99%;
     height: 16rem;
     border-radius: 10px;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 0px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px 0px 6px 0px inset;
     margin-top: -.7rem;
     position: relative;
     display: none;
     opacity: 0;
     transition: all .5 ease;
-    background-image: url("../../config/src/backMatch2.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
@@ -103,11 +89,9 @@
     transition: 1.5s;
     letter-spacing: 1px;
     background: rgba(190, 141, 255, 0.151);
-    backdrop-filter: blur(2rem);
     font-style: oblique;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
 
@@ -129,7 +113,7 @@
         position: absolute;
         right: 12%;
         z-index: 999;
-        top: 4.5%;
+        top: 6%;
     }
 
     .toggle_filter{

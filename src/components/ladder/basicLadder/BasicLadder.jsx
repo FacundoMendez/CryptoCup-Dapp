@@ -56,14 +56,17 @@ const BasicLadder = () => {
         <div className="container_basicLadder">
 
           <div className="box_predictions">
+
             <div className='spin' >
               {loading ? <Spinner/> : null}
             </div>
-            <div className="blur"></div>
+        
+
+
 
             {/* matches */}
             
-            { (predictionCards.length > 0 ) && Matches ? 
+          { (predictionCards.length > 0 ) && Matches ? 
                 <Suspense fallback={<Spinner/>}>
                 { 
                   predictionCards.map((item,index)=>{
@@ -81,9 +84,11 @@ const BasicLadder = () => {
                 }
                 </Suspense>
               :
-              null
+              loading === false && (predictionCards.length <= 0 ) && Matches ? <p className='noPredictions'> NO MATCHS </p> : null 
             }
           </div>
+
+  
 
             {
               myRecord ? 

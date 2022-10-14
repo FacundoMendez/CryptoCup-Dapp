@@ -57,27 +57,19 @@
   
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-    background-color: #160D1F;
-    user-select: none;
-    background-image: url("./components/config/src/backMatch3.jpg");
-    background-position: 100% 100%;
-    background-size: cover;
-    background-attachment: fixed;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  user-select: none;
+  background-image: url("./components/config/src/backMatch7.png");
+  background-size: cover;
+  background-attachment: fixed;
+  filter: contrast(113%);
 }
 
-html::after{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.886);
-  content: " ";
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50% , -50%);
-  z-index: -1;
-}
+body{
+  background-image: url("./components/config/src/backMatch7.png");
+  background-size: cover;
+  background-attachment: fixed;}
   
   main{
     overflow: hidden;
@@ -97,7 +89,7 @@ html::after{
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: contrast(105%) brightness(25%) drop-shadow(0 0 5px rgba(163, 82, 255, 0.616));
+    filter:brightness(75%) drop-shadow(0 0 5px rgba(163, 82, 255, 0.616));
   }
   
   

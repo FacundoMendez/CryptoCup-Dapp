@@ -5,6 +5,7 @@ import api from '../../api'
 import Matchs from './matchs/Matchs'
 import ContextConnected from '../config/context/ConnectedContext'
 import FilterMatch from './filterMatch/FilterMatch'
+import Paginacion from '../config/paginacion/Paginacion'
 
 const MatchFeed = () => {
 
@@ -26,6 +27,22 @@ const MatchFeed = () => {
       setLoading(false) 
   }
 
+      /* paginacion */
+
+      const [number, setNumber] = useState(1); 
+      const [postPerPage] = useState(8);
+      const lastPost = number * postPerPage;
+      const firstPost = lastPost - postPerPage;
+      const currentPost = matchs.slice(firstPost, lastPost);
+      const pageNumber = [];
+
+      for (let i = 1; i <= Math.ceil(matchs.length / postPerPage); i++) {
+        pageNumber.push(i);
+      }
+
+
+
+      /* ------------ */
 
 
   return (
@@ -58,7 +75,7 @@ const MatchFeed = () => {
               <div className="table_container">
                 <Suspense fallback={<Spinner/>}>
                   {
-                      matchs.map((item,index)=>{
+                      currentPost.map((item,index)=>{
                         return <Matchs key={index}
                           timer={item.startDate}
                           finishDate={item.finishDate}
@@ -70,6 +87,15 @@ const MatchFeed = () => {
                         />  
                       })
                     }
+                  {!loading ?  
+                    <Paginacion 
+                      setNumber={setNumber}
+                      number= {number}
+                      pageNumber={ pageNumber}
+                    />
+                  : 
+                  null}
+       
                   </Suspense>
               </div>
             </div>  

@@ -94,8 +94,8 @@ const Nav = () => {
                   :
 
                   <NavLink to="/"> 
-                    <li className='link_nav_text_desconected'> 
-                      <img className='logoNav logoNav_desconect' src={logoCC} alt="LogoCC" /> 
+                    <li className='link_nav_text_desconected_logo'> 
+                      <img className=' logoNav_desconect' src={logoCC} alt="LogoCC" /> 
                     </li>
                   </NavLink> 
                 }
