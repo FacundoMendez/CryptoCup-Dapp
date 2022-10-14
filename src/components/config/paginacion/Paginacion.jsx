@@ -22,12 +22,10 @@ const Paginacion = ({number, setNumber , pageNumber }) => {
                 {pageNumber.map((Elem , index) => {
                 return (
                     <div key={index}>
-                    <button
-                        className="numbers"
-                        onClick={() => ChangePage(Elem)}
-                    >
+                      <button
+                          className="numbers"onClick={() => ChangePage(Elem)}>
                         {Elem}
-                    </button>
+                      </button>
                     </div>
                 );
                 })}

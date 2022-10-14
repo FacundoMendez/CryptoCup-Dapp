@@ -29,7 +29,7 @@ const MatchFeed = () => {
 
       /* paginacion */
 
-      const [number, setNumber] = useState(1); 
+/*       const [number, setNumber] = useState(1); 
       const [postPerPage] = useState(8);
       const lastPost = number * postPerPage;
       const firstPost = lastPost - postPerPage;
@@ -40,7 +40,7 @@ const MatchFeed = () => {
         pageNumber.push(i);
       }
 
-
+ */
 
       /* ------------ */
 
@@ -75,7 +75,7 @@ const MatchFeed = () => {
               <div className="table_container">
                 <Suspense fallback={<Spinner/>}>
                   {
-                      currentPost.map((item,index)=>{
+                      matchs.map((item,index)=>{
                         return <Matchs key={index}
                           timer={item.startDate}
                           finishDate={item.finishDate}
@@ -87,14 +87,14 @@ const MatchFeed = () => {
                         />  
                       })
                     }
-                  {!loading ?  
+{/*                   {!loading ?  
                     <Paginacion 
                       setNumber={setNumber}
                       number= {number}
                       pageNumber={ pageNumber}
                     />
                   : 
-                  null}
+                  null} */}
        
                   </Suspense>
               </div>

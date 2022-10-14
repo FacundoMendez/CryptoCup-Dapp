@@ -29,7 +29,7 @@ const MyPredictions = () => {
 
     /* paginacion */
 
-    const [number, setNumber] = useState(1); 
+   /*  const [number, setNumber] = useState(1); 
     const [postPerPage] = useState(8);
     const lastPost = number * postPerPage;
     const firstPost = lastPost - postPerPage;
@@ -38,7 +38,7 @@ const MyPredictions = () => {
   
     for (let i = 1; i <= Math.ceil(predictionsHistory.length / postPerPage); i++) {
       pageNumber.push(i);
-    }
+    } */
   
   
   
@@ -55,7 +55,7 @@ const MyPredictions = () => {
 
 
           {
-           currentPost.map( (item , index ) => {        /* <-  paginacion */
+           predictionsHistory.map( (item , index ) => {        /* <-  paginacion */
               return  <div key={index} className={
                 item.relatedGame[0].result === "" ? 
                    "myPrediction " 
@@ -111,7 +111,7 @@ const MyPredictions = () => {
           }
       </div>
 
-    {!loading  ?  
+{/*     {!loading  ?  
       <Paginacion
         setNumber={setNumber}
         number= {number}
@@ -119,7 +119,7 @@ const MyPredictions = () => {
       />
     : 
       null
-    }
+    } */}
     
     </div>
   )

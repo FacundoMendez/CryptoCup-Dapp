@@ -1,6 +1,7 @@
 .friendsLadder{
     width: 100%;
-    height: 77vh;
+    height: 86vh;
+    margin-top: 1rem;
     display: flex;
     position: relative;
     overflow: hidden;

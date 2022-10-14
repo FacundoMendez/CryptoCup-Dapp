@@ -66,10 +66,7 @@ html {
   filter: contrast(113%);
 }
 
-body{
-  background-image: url("./components/config/src/backMatch7.png");
-  background-size: cover;
-  background-attachment: fixed;}
+
   
   main{
     overflow: hidden;
