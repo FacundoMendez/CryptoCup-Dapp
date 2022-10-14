@@ -123,7 +123,8 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
             <img src={paisesJson[nameTeam2].img} alt="bandera team 2" />
         </div>
-
+    
+     {/*  hacer form con submit y values */}
         <div className="box_select_prediction">
           <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
               setActivePrediction(1)
