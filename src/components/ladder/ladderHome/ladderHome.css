@@ -3,11 +3,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 
 .slider_cards{
     width: 70%;
 }
+
+.splide {
+    padding: 0em !important;
+}
+
+.splide__pagination {
+    bottom: -2.3rem !important;
+    opacity: .6 !important;
+}
+
 
 .box_splide{
     overflow: hidden;
@@ -29,7 +40,11 @@
     height: 100%;
     object-fit: contain;
     cursor: pointer;
-    filter: brightness(105%) contrast(92%) ; 
+    filter: brightness(105%) contrast(97%) ; 
+}
+
+.splide__arrow--prev, .splide__arrow--next , .splide__pagination__page{
+    filter: hue-rotate(80deg) drop-shadow( 0 0 2px rgba(139, 89, 255, 0.658));
 }
 
 
