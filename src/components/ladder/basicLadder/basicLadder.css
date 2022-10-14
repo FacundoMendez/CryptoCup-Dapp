@@ -52,8 +52,19 @@
     flex-wrap: wrap;
     overflow-y: scroll;
 }
+.alertNoPredictions {
+    width: 70%;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-
+.alertNoPredictions p {
+    color: black;
+}
 
 @media screen and (max-width:1440px) {
     .container_basicLadder{
