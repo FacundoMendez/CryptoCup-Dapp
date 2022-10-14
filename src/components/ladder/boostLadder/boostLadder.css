@@ -1,6 +1,7 @@
 .boostLadder{
     width: 100%;
-    height: 77vh;
+    height: 86vh;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +33,10 @@
 @media screen and (max-width:1440px) {
     .container_boostLadder{
         width: 90vw;
+    }
+
+    .boostLadder{
+        height: 85vh;
     }
 }
 

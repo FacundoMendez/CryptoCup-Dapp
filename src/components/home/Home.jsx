@@ -77,7 +77,7 @@ const Home = () => {
             <div className="containerDapp_cards">
               
               { Connected.userLogginActive ? 
-                <NavLink to="/ladder" >
+                <NavLink to="/basicLadder" >
                   <div className="containerDapp_cards-basic cardMain" ></div>
                 </NavLink>
                 :
@@ -85,7 +85,7 @@ const Home = () => {
               }
               
               { Connected.userLogginActive ? 
-                <NavLink to="/ladder" >
+                <NavLink to="/boostLadder" >
                   <div className="containerDapp_cards-boost cardMain" ></div>
                 </NavLink>
                 :
@@ -93,7 +93,7 @@ const Home = () => {
               }
 
             { Connected.userLogginActive ? 
-              <NavLink to="/ladder" >
+              <NavLink to="/challengeLadder" >
                 <div className="containerDapp_cards-friends cardMain " ></div>
               </NavLink> 
               : 

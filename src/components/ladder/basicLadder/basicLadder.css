@@ -1,6 +1,7 @@
 .basicLadder{
     width: 100%;
-    height: 77vh;
+    height: 86vh;
+    margin-top: 1rem;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -84,14 +85,13 @@
 @media screen and (max-width:1440px) {
     .container_basicLadder{
         width: 90vw;
-        height: 70vh;
         justify-content: center;
         gap: 3rem;
     }
     
 
     .basicLadder{
-        height: 76vh;
+        height: 86vh;
     }
 
 }
@@ -103,7 +103,7 @@
     }
     
     .basicLadder{
-        height: 75vh;
+        height: 85vh;
     }
 }
 
@@ -114,7 +114,7 @@
     }
 
     .basicLadder{
-        height: 75vh;
+        height: 85vh;
     }
 }
 
@@ -126,7 +126,7 @@
 
 
     .basicLadder{
-        height: 75vh;
+        height: 85vh;
         top: -1rem;
     }
     
