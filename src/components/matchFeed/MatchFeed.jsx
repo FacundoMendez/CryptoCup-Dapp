@@ -87,11 +87,15 @@ const MatchFeed = () => {
                         />  
                       })
                     }
-                  <Paginacion 
-                    setNumber={setNumber}
-                    number= {number}
-                    pageNumber={ pageNumber}
-                  />
+                  {!loading ?  
+                    <Paginacion 
+                      setNumber={setNumber}
+                      number= {number}
+                      pageNumber={ pageNumber}
+                    />
+                  : 
+                  null}
+       
                   </Suspense>
               </div>
             </div>  

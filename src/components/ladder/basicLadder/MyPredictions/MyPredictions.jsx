@@ -111,11 +111,16 @@ const MyPredictions = () => {
           }
       </div>
 
+    {!loading  ?  
       <Paginacion
         setNumber={setNumber}
         number= {number}
         pageNumber={ pageNumber}
       />
+    : 
+      null
+    }
+    
     </div>
   )
 }
