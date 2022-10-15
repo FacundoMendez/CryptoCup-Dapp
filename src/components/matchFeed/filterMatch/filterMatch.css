@@ -92,6 +92,45 @@
     font-style: oblique;
     font-weight: bold;
     border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 90;
+}
+
+.formMatch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonSubmitMatch{
+    background-color: transparent;
+    width: 4.5rem;
+    height: 4.5rem;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    left: -.1rem;
+    overflow: hidden;
+    top: .2rem;
+    z-index: 100;
+    padding: .2rem;
+
+}
+
+.busquedaMatchFeed{
+    width: 4rem;
+    height: 4rem;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    border: 1px solid rgba(202, 162, 255, 0.295);
+    padding: .5rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgba(190, 141, 255, 0.151);
+    filter: brightness(85%);
 }
 
 

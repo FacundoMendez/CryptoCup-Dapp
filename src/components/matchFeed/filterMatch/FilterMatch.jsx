@@ -46,9 +46,11 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
                 <div className="triangleFilter triangleFilter2"></div>
             </div>
              <div className="boxFilter boxFilter2">
-                <form action="POST" onSubmit={busqueda}>
+                <form className='formMatch' action="POST" onSubmit={busqueda}>
                     <input type="text" name="buscadorPaises" placeholder='Search country'  onChange={inputValue}  id='filterTeam' />
-                    <button type="submit">Search</button> 
+                    <button className='buttonSubmitMatch' type="submit">
+                        <img className='busquedaMatchFeed' src={busquedaImg} alt="busqueda" />    
+                    </button> 
                 </form>
                 
             </div>
