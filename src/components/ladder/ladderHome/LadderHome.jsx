@@ -36,7 +36,6 @@ const LadderHome = () => {
     cover: true,
     type: "loop",
     fixedHeight:true,
-    lazyLoad:true,
     omitEnd:true,
     autoplay : true,
     gap: "2.5em",
