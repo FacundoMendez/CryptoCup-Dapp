@@ -33,7 +33,6 @@ const LadderHome = () => {
   const options = {
     perPage: 3,
     perMove: 1,
-    focus: "center",
     cover: true,
     type: "loop",
     fixedHeight:true,
@@ -76,11 +75,11 @@ const LadderHome = () => {
                                     </NavLink>
                                   </Suspense>
                                   :
-                                  <NavLink to="">
-                                     <Suspense fallback={<Spinner/>}>
-                                        <img  src={basicImg} alt="Basic ladder Slider " onClick={() => setConnectedPopup(true) }/>
-                                      </Suspense>
-                                  </NavLink>
+                                    <Suspense fallback={<Spinner/>}>
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img  src={basicImg} alt="Basic ladder Slider " />
+                                      </div>
+                                    </Suspense>
                                 }
                             </SplideSlide>
                         </Suspense>
@@ -90,14 +89,15 @@ const LadderHome = () => {
                                   {Connected.userLogginActive ? 
                                    <Suspense fallback={<Spinner/>}>
                                       <NavLink to="/boostLadder">
+                                        
                                           <img src={boostImg} alt="Boost ladder Slider "/>
                                       </NavLink>
                                     </Suspense> 
                                     :
                                     <Suspense fallback={<Spinner/>}>
-                                      <NavLink to="">
-                                          <img src={boostImg} alt="Boost ladder Slider " onClick={() => setConnectedPopup(true) }/>
-                                      </NavLink>
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img src={boostImg} alt="Boost ladder Slider " />
+                                      </div>
                                     </Suspense>
                                   }
                             </SplideSlide>
@@ -113,9 +113,9 @@ const LadderHome = () => {
                                     </Suspense>
                                     :
                                     <Suspense fallback={<Spinner/>}>
-                                      <NavLink to="">
-                                          <img src={challengeImg} alt="Challenge ladder Slider " onClick={() => setConnectedPopup(true) }/>
-                                      </NavLink>
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img src={challengeImg} alt="Challenge ladder Slider " />
+                                      </div>
                                     </Suspense>
                                   }
                             </SplideSlide>

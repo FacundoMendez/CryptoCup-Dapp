@@ -12,8 +12,6 @@ const FriendsLadder = () => {
   const Connected = useContext(ContextConnected)
 
   return (
-    <>
- 
         <div className="friendsLadder"> 
             <NavLadder 
                 ladder="Challenge Room"
@@ -49,9 +47,6 @@ const FriendsLadder = () => {
                 }
               </div>
           </div>
-
-
-    </>
   )
 }
 

@@ -16,7 +16,7 @@ import LadderHome from './components/ladder/ladderHome/LadderHome';
 
 const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
 const BoostLadder = lazy(() => import ('./components/ladder/boostLadder/BoostLadder'))
-const challengeLadder = lazy(() => import ("./components/ladder/friendsLadder/FriendsLadder"))
+const FriendsLadder = lazy(() => import ("./components/ladder/friendsLadder/FriendsLadder"))
 
 
 
@@ -67,7 +67,7 @@ function App() {
 
                 <Route exact path="/basicLadder" element={<BasicLadder/>}/>
                 <Route exact path="/boostLadder" element={<BoostLadder/>}/>
-                <Route exact path="/challengeLadder" element={<challengeLadder/>}/>
+                <Route exact path="/challengeLadder" element={<FriendsLadder/>}/>
 
                 <Route exact path="/staking" element={<Staking />} />
                 <Route exact path="/marketplace" element={<Marketplace />} />
