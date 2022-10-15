@@ -48,6 +48,13 @@
 }
 
 
+/* .candadoLadders{
+    position: absolute;
+    border: 2px solid red;
+    z-index: 2000;
+    left:0;
+}
+ */
 @media screen and (max-width:1170px) {
     
 .slider_cards{

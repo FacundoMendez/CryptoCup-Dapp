@@ -9,6 +9,7 @@ import '@splidejs/react-splide/css/sea-green';
 import basicImg from "./src/basic.jpg"
 import boostImg from "./src/boost.jpg"
 import challengeImg from "./src/challenge.jpg"
+import candado from "../../config/src/candado.png"
 
 const LadderHome = () => {
 
@@ -69,9 +70,10 @@ const LadderHome = () => {
                         
                         <Suspense fallback={<Spinner/>}>
                             <SplideSlide className='box_splide'>
-                                    {/* <NavLink to="/challengeLadder"> */}
+                                    <NavLink to="/challengeLadder">
                                         <img src={challengeImg} alt="Challenge ladder Slider "/>
-                                    {/* </NavLink> */}
+                                       {/*  <img className='candadoLadders' src={candado} alt="" /> */}
+                                    </NavLink>
                             </SplideSlide>
                         </Suspense>
 
@@ -80,7 +82,7 @@ const LadderHome = () => {
             </div>
         </Suspense>
     : 
-     window.location.href = "/ladder"
+     window.location.href = "/"
     }
 
     </>
