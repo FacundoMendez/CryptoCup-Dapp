@@ -83,84 +83,45 @@ const Nav = () => {
           </button>
           <ul className='listNav'>
  
-              { Connected.userLogginActive ?    
 
                   <NavLink to="/"> 
                     <li className='nav_list_links'> 
                       <img className='logoNav' src={logoCC} alt="LogoCC" /> 
                     </li>
                   </NavLink> 
-
-                  :
-
-                  <NavLink to="/"> 
-                    <li className='link_nav_text_desconected_logo'> 
-                      <img className=' logoNav_desconect' src={logoCC} alt="LogoCC" /> 
-                    </li>
-                  </NavLink> 
-                }
-
     
-              { Connected.userLogginActive ?    
 
                 <NavLink to="/home" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                   <li className='nav_list_links'> Home</li> 
                 </NavLink> 
 
-                  :
-           
-                <NavLink to="/home" className="link_nav_text_desconected" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                  <li className='nav_list_links nav_list_desconected'> Home</li> 
-                </NavLink> 
-              }
 
-
-            { Connected.userLogginActive ?    
 
               <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Match Feed</li> 
               </NavLink> 
-              :
-              <NavLink to="/matchFeed" className="link_nav_text_desconected" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                <li className='nav_list_links nav_list_desconected'> Match Feed</li> 
-              </NavLink> 
-            }
-
-            { Connected.userLogginActive ?    
+           
 
               <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                  <li className='nav_list_links'>Ladders</li> 
               </NavLink> 
-              :
-              null
-            }
-
-            { Connected.userLogginActive ?    
+           
 
               <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
                 <li className='nav_list_links'> Staking</li>
               </NavLink> 
-              :
-              null
-            }
-
-            { Connected.userLogginActive ?    
+             
 
               <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Marketplace </li> 
               </NavLink> 
-              :
-              null
-            }
+           
             
-            { Connected.userLogginActive ?    
 
               <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
                 <li className='nav_list_links'> Mini Game</li> 
               </NavLink> 
-              :
-              null
-            }
+            
 
           </ul>
 

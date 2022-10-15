@@ -1,10 +1,9 @@
 import './App.css';
-import { Suspense , useState} from 'react';
+import { Suspense , useState, lazy} from 'react';
 import Home from './components/home/Home';
 import Staking from './components/staking/Staking';
 import Nav from './components/nav/Nav';
 import MatchFeed from './components/matchFeed/MatchFeed';
-import FriendsLadder from './components/ladder/friendsLadder/FriendsLadder';
 import MiniGame from './components/miniGame/MiniGame';
 import ProfileUser from './components/profileUser/ProfileUser';
 import Marketplace from "./components/marketPlace/Marketplace"
@@ -13,12 +12,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
 import ContextConnected from './components/config/context/ConnectedContext';
-import BasicLadder from './components/ladder/basicLadder/BasicLadder';
-import BoostLadder from './components/ladder/boostLadder/BoostLadder';
 import LadderHome from './components/ladder/ladderHome/LadderHome';
 
-function App() {
+const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
+const BoostLadder = lazy(() => import ('./components/ladder/boostLadder/BoostLadder'))
+const challengeLadder = lazy(() => import ("./components/ladder/friendsLadder/FriendsLadder"))
 
+
+
+function App() {
 
   const [userLogginActive , setUserLoginActive] = useState(false) /* manda si el usuario esta conectado */
   const [activeLogin , setActiveLogin] = useState(false) /* activa el popup de login */
@@ -65,7 +67,7 @@ function App() {
 
                 <Route exact path="/basicLadder" element={<BasicLadder/>}/>
                 <Route exact path="/boostLadder" element={<BoostLadder/>}/>
-                <Route exact path="/challengeLadder" element={<FriendsLadder/>}/>
+                <Route exact path="/challengeLadder" element={<challengeLadder/>}/>
 
                 <Route exact path="/staking" element={<Staking />} />
                 <Route exact path="/marketplace" element={<Marketplace />} />

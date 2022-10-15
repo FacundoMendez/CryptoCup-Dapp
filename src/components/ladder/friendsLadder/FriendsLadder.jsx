@@ -13,8 +13,7 @@ const FriendsLadder = () => {
 
   return (
     <>
-    {
-      Connected.userLogginActive ? 
+ 
         <div className="friendsLadder"> 
             <NavLadder 
                 ladder="Challenge Room"
@@ -51,9 +50,7 @@ const FriendsLadder = () => {
               </div>
           </div>
 
-        : 
-        window.location.href = "/"
-      }
+
     </>
   )
 }
