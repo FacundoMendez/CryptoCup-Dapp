@@ -3,15 +3,13 @@ import back1 from "./src/slider1.jpeg"
 /* import back2 from "./src/slider2.jpeg" */
 import back3 from "./src/slider3.jpeg"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
 import "./sliderBanner.css"
 import Spinner from '../../config/spinner/Spinner';
 
 
-
 const SliderBanner = () => {
 
-  const options = {
+  const options2 = {
     type   : 'fade',
     perPage: 1,
     focus  : 'center',
@@ -24,15 +22,8 @@ const SliderBanner = () => {
 
     <Suspense fallback={<Spinner/>}>
       <div className="slider">
-        <Splide aria-label="My Favorite Images" 
-          options={ options } >
-     {/*      <SplideSlide>
+        <Splide aria-label="My Favorite Images"  options={ options2 } >
 
-            <Suspense fallback={<Spinner/>}>
-              <img src={back2} alt="background Slider 1"/>
-            </Suspense>
-
-          </SplideSlide> */}
           <SplideSlide>
 
             <Suspense fallback={<Spinner/>}>

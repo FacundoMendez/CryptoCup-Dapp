@@ -12,9 +12,6 @@ const FriendsLadder = () => {
   const Connected = useContext(ContextConnected)
 
   return (
-    <>
-    {
-      Connected.userLogginActive ? 
         <div className="friendsLadder"> 
             <NavLadder 
                 ladder="Challenge Room"
@@ -50,11 +47,6 @@ const FriendsLadder = () => {
                 }
               </div>
           </div>
-
-        : 
-        window.location.href = "/"
-      }
-    </>
   )
 }
 
