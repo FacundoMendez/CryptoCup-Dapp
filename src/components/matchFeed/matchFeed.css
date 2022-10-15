@@ -1,6 +1,6 @@
 .matchFeed{
     width: 100%;
-    height: 89.5vh;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -46,7 +46,7 @@
 
 .table{
     width: 59vw;
-    height: 76vh;
+    height: 76.5vh;
     position: relative;
     display: flex;
     justify-items: center;
@@ -54,6 +54,7 @@
     flex-direction: column;
     overflow: hidden;
     margin-top: 1rem;
+    padding-bottom: .6rem;
     border-radius: 15px;
     background: rgb(39,25,78);
     background: radial-gradient(circle, rgba(108, 50, 243, 0.315) 0%, rgba(20, 11, 44, 0.692) 60%);
@@ -214,6 +215,7 @@
 
     .table {
         width: 90vw;
+        height: 74vh;
     }
 
     .table_container {
@@ -293,20 +295,17 @@
     }
 
     .table {
-        width: 90vw;
+        width: 90vw;  
     }
 
     .table_container {
         width: 90vw;
     }
 
-
     .table_cabecera li{
         font-size: 1.7rem;
         color: white;
     }
-
-  
 
     .team1_flag{
         margin-left: -2rem;

@@ -51,15 +51,16 @@ const MatchFeed = () => {
         <div className="matchFeed">
           <div className="nav_matchFeed">
             <h2>Match Feed</h2>
+            
           </div>
 
         <div className="container_box_table">
-          <FilterMatch 
-            getMatchs = {getMatchs}
-            setMatchs = {setMatchs} 
-            filterBusqueda={filterBusqueda}  
-            setFilterBusqueda={setFilterBusqueda}
-            />
+            <FilterMatch 
+                getMatchs = {getMatchs}
+                setMatchs = {setMatchs} 
+                filterBusqueda={filterBusqueda}  
+                setFilterBusqueda={setFilterBusqueda}
+              />
 
             <div className="table">
               <div className="table_cabecera">
