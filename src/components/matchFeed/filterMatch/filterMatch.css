@@ -167,28 +167,149 @@
     .box_filterMatch_movil{
         width: 30rem;
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 2rem;
-        right: 4.5rem;
-        top: 17.9rem;
-        height: 79vh;
+        top: 10rem;
         position: fixed;
         transform: translate(15%, 0);
         border-radius: 15px;
-        background-image: url("../../config/src/backMatch2.jpg");
-        background-position: 100% 100%;
-        background-size: cover;
-        background-attachment: fixed;
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+        right: 8vw;
+        backdrop-filter: blur(1rem);
+        box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+        background: rgb(22, 14, 44);
         color: white;
         font-size: 1.8rem;
         letter-spacing: 1px;
-        display: none;
+        visibility: hidden;
+        padding: 2rem 1rem;
+        opacity: 0;
+        transition: all .3s ease-in-out;
     }
+    
+    .box_filterMatch_movil_active{
+        display: flex;
+        top: 19.5rem;
+        opacity: 1;
+        visibility: visible;
+        transition: all .3s ease-in-out;
+    }
+
+        
+    .boxFilter_movile{
+        width: 99%;
+        height: 16rem;
+        border-radius: 10px;
+        margin-top: -.7rem;
+        position: relative;
+        display: none;
+        opacity: 0;
+        transition: all .5 ease;
+        background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    }
+
+    .boxFilter_movile_active{
+        display: inline-block;
+        opacity: 1;
+        transition: all .5 ease;
+    }
+
+
+
+        
+    /* filter match */
+
+    .boxFilter2_movile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6rem;
+    }
+
+    #filterTeam_movile{
+        width: 90%;
+        height: 4rem;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid rgba(202, 162, 255, 0.295);
+        transition: 1.5s;
+        letter-spacing: 1px;
+        background: rgba(190, 141, 255, 0.151);
+        font-style: oblique;
+        font-weight: bold;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        z-index: 90;
+    }
+
+    .formMatch_movile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonSubmitMatch_movile{
+        background-color: transparent;
+        width: 4.5rem;
+        height: 4.5rem;
+        position: relative;
+        border: none;
+        cursor: pointer;
+        left: -.1rem;
+        overflow: hidden;
+        top: .2rem;
+        z-index: 100;
+        padding: .2rem;
+
+    }
+
+    .busquedaMatchFeed_movile{
+        width: 4rem;
+        height: 4rem;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        border: 1px solid rgba(202, 162, 255, 0.295);
+        padding: .5rem;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: rgba(190, 141, 255, 0.151);
+        filter: brightness(85%);
+    }
+
+
     
 }
 @media screen and (max-width:1170px) {
 
+    .box_filterMatch_movil{
+        right: 9vw;
+    }
+}
+
+@media screen and (max-width:860px) {
+
+    .box_filterMatch_movil{
+        right: 9.5vw;
+    }
+}
+
+@media screen and (max-width:660px) {
+
+    .box_filterMatch_movil{
+        right: 12.5vw;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .box_filterMatch_movil{
+        right: 14.5vw;
+    }
 }

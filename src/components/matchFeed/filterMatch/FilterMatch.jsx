@@ -12,7 +12,7 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
         filterMatchFucional()
     },[])
 
- 
+    /* busqueda desktop */
     const busqueda = async e =>{
         const team = document.querySelector("#filterTeam").value
         console.log("buscando..." + team);
@@ -24,8 +24,20 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
         }
     }
 
+    /* busqueda Movile */
+
+    const busqueda_movile = async e =>{
+        const team = document.querySelector("#filterTeam_movile").value
+        console.log("buscando..." + team);
+        e.preventDefault()
+        setFilterBusqueda(team)
+        if (team !== "") {
+            const res = await api.get(`/matches/getFileteredByTeam/${team}`) 
+            setMatchs(res.data); 
+        }
+    }
+
     const inputValue = e => {
-        console.log(e.target.value);
         if (e.target.value === "") getMatchs()
     } 
 
@@ -52,7 +64,6 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
                         <img className='busquedaMatchFeed' src={busquedaImg} alt="busqueda" />    
                     </button> 
                 </form>
-                
             </div>
             {/*
             <div className="filter filter3"> 
@@ -86,13 +97,19 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
                 
                 </div> */}
 
-                <div className=" filter2_movil"> 
-                    TEAM 
-                    <div className="triangleFilter triangleFilter2"></div>
-                </div>
-                <div className=" boxFilter2">
+            <div className="filter filter2_movile"> 
+                TEAM 
+                <div className="triangleFilter triangleFilter2_movile"></div>
+            </div>
+             <div className="boxFilter_movile boxFilter2_movile">
+                <form className='formMatch_movile' action="POST" onSubmit={busqueda_movile}>
+                    <input type="text" name="buscadorPaises_movile" placeholder='Search country'  onChange={inputValue}  id='filterTeam_movile' />
+                    <button className='buttonSubmitMatch_movile' type="submit">
+                        <img className='busquedaMatchFeed_movile' src={busquedaImg} alt="busqueda" />    
+                    </button> 
+                </form>
+            </div>
                 
-                </div>
 {/* 
                 <div className=" filter3_movil"> 
                     STATUS 
