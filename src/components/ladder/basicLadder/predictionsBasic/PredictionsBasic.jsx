@@ -125,36 +125,37 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
         </div>
     
      {/*  hacer form con submit y values */}
-        <div className="box_select_prediction">
+        <form className="box_select_prediction">
           <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
               setActivePrediction(1)
               colorSetTeam1()
               setPredictionChoose(document.getElementById(`left_${nameTeam1}`).innerText)
             }}>
-            <p id={"left_" + nameTeam1}>{nameTeam1}</p>
+            <button type="button" value={nameTeam1} readOnly id={"left_" + nameTeam1}>{nameTeam1}</button>
           </div>
           <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
               setActivePrediction(2)
               colorSetEmpate()
               setPredictionChoose("Tie")
             }}>
-            <p id='tie_prediction' className='tie_pred'>Tie</p>
+            <button type="button" value="Tie" id='tie_prediction' readOnly className='tie_pred'>Tie</button>
           </div>
           <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
               setActivePrediction(3)
               colorSetTeam2()
               setPredictionChoose(document.getElementById(`right_${nameTeam2}`).innerText)
             }}>
-            <p id={'right_' + nameTeam2}>{nameTeam2}</p>
+            <button type="button" value={nameTeam2} readOnly id={'right_' + nameTeam2}>{nameTeam2} </button>
           </div>
-        </div>
+        
 
         { /* si no hay prediccion hecha muestra el boton en gris */
           activePrediciton === undefined ?
             <button className='predict_button predict_button_disable' style={{backgroundColor : "rgba(223, 223, 223, 0.671)" }}>{namePredict_button}</button>
           :
            /* si hay prediccion muestra el boton activo */
-          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton ,color: "rgba(10, 0, 37, 0.842) " }}  onClick={() => {
+          <button className='predict_button predict_button_active' style={{backgroundColor : colorButton ,color: "rgba(10, 0, 37, 0.842) " }}  onClick={ e => {
+            e.preventDefault()
             setPredictionActive(false)
             makePrediction()
             if (activePrediciton === undefined){
@@ -162,6 +163,7 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
              
             }}}>{namePredict_button}</button>
         }
+        </form>
 
     </div>
   )

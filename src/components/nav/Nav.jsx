@@ -12,17 +12,21 @@ import { ethers } from 'ethers'
 import paisesJson from "../config/paises2.json"
 import PopupError from '../config/popupsErrors/PopupError'
 import userImg from "./src/profile.png"
+import api from '../../api'
+import Cookies from 'universal-cookie/cjs/Cookies'
 
 const Nav = () => {
 
   useEffect(() => {
+    /* console.log(cookies.get("gandalf")); */
     navFuncional()
+    userInited() //persistencia
   },[])
 
     const [chainIncorrecta , setChainIncorrecta] = useState(false)
 
     const Connected = useContext(ContextConnected)
-
+    const cookies = new Cookies()
     //Cargamos datos blockchain del usuario y generamos mensaje
     const init=async ()=>{
       try {
@@ -47,6 +51,30 @@ const Nav = () => {
       }
   }
 
+  const userInited = async () => {
+     const res = await api.get('/user/cookieLogin') 
+     if (res.status === 200) {
+        const {address , signature} = res.data 
+
+        const userRes = await getUserData(address, signature);
+        Connected.setUserData(userRes);
+        Connected.setUserLoginActive(true);
+        Connected.setAccount([address])
+        Connected.setActiveLogin(false);
+        Connected.setSignature(signature);
+       
+     }
+     console.log(res.data);
+  }
+
+  const logOut =  async () => {
+      const res = await api.get('/user/logout') 
+      cookies.remove("gandalf")
+      Connected.setUserData(undefined);
+      Connected.setUserLoginActive(false);
+      Connected.setSignature(undefined);
+  }
+ 
 
       //Obtenemos mensaje a firmar por metamask
   const getMessage = async (_provider, _account, _signer) => {
@@ -61,10 +89,8 @@ const Nav = () => {
     
     if (userRegistered === false) {
       Connected.setActiveLogin(true);
-        console.log("LOGEADO");
     } else {
       const userRes = await getUserData(_account[0], signature);
-      console.log(userRes);
       Connected.setUserData(userRes);
 
       Connected.setActiveLogin(false);
@@ -175,7 +201,7 @@ const Nav = () => {
 
           { Connected.userLogginActive ?    
             <ul className='listNav_login'>
-              <li className='buttonLogin' onClick={() => Connected.setUserLoginActive(false)}>
+              <li className='buttonLogin' onClick={() => logOut()}>
                 Disconnect
               </li>
             </ul>

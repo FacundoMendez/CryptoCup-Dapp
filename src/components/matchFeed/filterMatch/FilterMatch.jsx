@@ -3,20 +3,31 @@ import "./filterMatch.css"
 import filterMatchFucional from './filterMatchFucional'
 import filterImg from "../../config/src/filter.png"
 import busquedaImg from "../../config/src/busqueda.png"
+import api from '../../../api'
 
 
-const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
+const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}) => {
 
     useEffect(() => {
         filterMatchFucional()
     },[])
 
  
-    const busqueda = e =>{
-        setFilterBusqueda(e.target.value)
-        console.log(e.target.value)
+    const busqueda = async e =>{
+        const team = document.querySelector("#filterTeam").value
+        console.log("buscando..." + team);
+        e.preventDefault()
+        setFilterBusqueda(team)
+        if (team !== "") {
+            const res = await api.get(`/matches/getFileteredByTeam/${team}`) 
+            setMatchs(res.data); 
+        }
     }
 
+    const inputValue = e => {
+        console.log(e.target.value);
+        if (e.target.value === "") getMatchs()
+    } 
 
 
   return (
@@ -35,7 +46,11 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda}) => {
                 <div className="triangleFilter triangleFilter2"></div>
             </div>
              <div className="boxFilter boxFilter2">
-                <input type="text" name="buscadorPaises" placeholder='Search country' id='filterTeam' onChange={busqueda}/>
+                <form action="POST" onSubmit={busqueda}>
+                    <input type="text" name="buscadorPaises" placeholder='Search country'  onChange={inputValue}  id='filterTeam' />
+                    <button type="submit">Search</button> 
+                </form>
+                
             </div>
             {/*
             <div className="filter filter3"> 

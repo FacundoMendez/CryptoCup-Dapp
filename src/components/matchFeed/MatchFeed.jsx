@@ -55,6 +55,8 @@ const MatchFeed = () => {
 
         <div className="container_box_table">
           <FilterMatch 
+            getMatchs = {getMatchs}
+            setMatchs = {setMatchs} 
             filterBusqueda={filterBusqueda}  
             setFilterBusqueda={setFilterBusqueda}
             />
