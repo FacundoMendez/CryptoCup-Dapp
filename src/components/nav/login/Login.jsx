@@ -93,7 +93,7 @@ const Login = () => {
         
                 :
 
-                <div className="buttonAcept_login" type="submit" style={{backgroundColor:"gray"}} > 
+                <div className="buttonAcept_login" type="submit" style={{backgroundColor:"gray"}} disabled="disabled" > 
                     <p>Confirm</p>
                 </div>
             }

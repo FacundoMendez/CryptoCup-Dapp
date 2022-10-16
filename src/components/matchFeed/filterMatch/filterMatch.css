@@ -55,31 +55,89 @@
     border-radius: 10px;
     margin-top: -.7rem;
     position: relative;
-    display: none;
     opacity: 0;
     transition: all .5 ease;
     background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: none !important;
+    transition: all .5 ease;
 }
 
 .boxFilter_active{
-    display: inline-block;
+    display: flex !important;
+    position: relative;
     opacity: 1;
     transition: all .5 ease;
 }
 
 
-/* filter match */
+/* filter fecha */
 
-.boxFilter2{
+.boxFilter2,.boxFilter1 , .boxFilter3{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 6rem;
 }
 
-#filterTeam{
-    width: 90%;
+.formMatch , .formFecha, .formStatus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#filterFecha{
+    width: 21rem;
+    height: 4rem;
+    border: none;
+    outline: none;
+    color: rgb(231, 231, 231);
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(202, 162, 255, 0.295);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    background: rgba(190, 141, 255, 0.151);
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 90;
+    cursor: pointer;
+}
+
+
+.formFecha input[type="date"] {
+    color: #ffffff;
+    font-family: qatar;
+    font-size: 1.6rem;
+}
+
+.formFecha input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: 0 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: auto;
+}
+
+
+
+
+
+/* filter match */
+
+
+#filterTeam , #filterState{
+    width: 11vw;
     height: 4rem;
     border: none;
     outline: none;
@@ -98,11 +156,7 @@
     z-index: 90;
 }
 
-.formMatch{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .buttonSubmitMatch{
     background-color: transparent;
@@ -135,6 +189,123 @@
 }
 
 
+
+/* filter state */
+
+.boxFilter3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15rem;
+}
+
+
+.formStatus{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.formStatus p{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    padding: 0 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lab_filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.8rem;
+    font-size: 1.6rem;
+    padding: 0 5rem;
+}
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0px; top: 0px;
+    width: 25px; height: 24px;
+    border: 2px ridge #c4aeff;
+    background-color: rgba(247, 242, 255, 0.932);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 0px; left: 6px;
+    font-size: 23px;
+    line-height: 1.2;
+    color: #5409ad;
+    transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #999999;
+    background-color: #dddddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999999;
+}
+[type="checkbox"]:disabled + label {
+    color: #aaaaaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px dotted #a9a9ff;
+}
+/* hover style just for information */
+label:hover:before {
+    border: 2px solid #865df8!important;
+    background: #5b00ff;
+}
+
+
+
+
+
+
 @media screen and (max-width:1440px) {
     .boxFilter{
         width: 99%;
@@ -153,11 +324,10 @@
         position: absolute;
         right: 12%;
         z-index: 999;
-        top: 6%;
+        top: 4rem;
     }
 
     .toggle_filter{
-        position: absolute;
         top: 0;
         width: 3rem;
         height: 3rem;
@@ -190,7 +360,7 @@
     
     .box_filterMatch_movil_active{
         display: flex;
-        top: 20.2rem;
+        top: 19rem;
         opacity: 1;
         visibility: visible;
         transition: all .3s ease-in-out;
@@ -203,7 +373,7 @@
         border-radius: 10px;
         margin-top: -.8rem;
         position: relative;
-        display: none;
+        display: none !important; 
         opacity: 0;
         transition: all .5 ease;
         background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
@@ -211,25 +381,24 @@
     }
 
     .boxFilter_movile_active{
-        display: inline-block;
+        display: flex !important;
         opacity: 1;
         transition: all .5 ease;
     }
 
 
+    /* filter fecha */     /* filter match */
 
-        
-    /* filter match */
 
-    .boxFilter2_movile{
+    .boxFilter2_movile , .boxFilter1_movile{
         display: flex;
         justify-content: center;
         align-items: center;
         height: 6rem;
     }
 
-    #filterTeam_movile{
-        width: 90%;
+    #filterTeam_movile , #filterFecha_movile {
+        width: 21rem;
         height: 4rem;
         border: none;
         outline: none;
@@ -266,7 +435,6 @@
         top: .2rem;
         z-index: 100;
         padding: .2rem;
-
     }
 
     .busquedaMatchFeed_movile{
@@ -285,6 +453,40 @@
     }
 
 
+    /* filter status */
+    
+    .boxFilter3_movile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 15rem;
+    }
+
+    .formStatus_movile{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .formStatus_movile p{
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        color: white;
+        padding: 0 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+    
+ 
     
 }
 @media screen and (max-width:1170px) {

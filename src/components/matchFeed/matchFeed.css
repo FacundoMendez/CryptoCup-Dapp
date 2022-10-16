@@ -12,7 +12,7 @@
 .nav_matchFeed{
     position: relative;
     width: 74vw;
-    height: 10rem;
+    height: 9rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -215,8 +215,9 @@
 
     .table {
         width: 90vw;
-        height: 74vh;
+        height: 72vh;
     }
+
 
     .table_container {
         width: 90vw;
@@ -244,7 +245,7 @@
     }
 
     .table {
-        width: 90vw;
+        width: 90vw;  
     }
 
     .table_container {
@@ -296,7 +297,10 @@
 
     .table {
         width: 90vw;  
+        height: 73vh;
     }
+
+
 
     .table_container {
         width: 90vw;
@@ -380,6 +384,11 @@
         overflow: scroll;
     }
 
+            
+    .table{
+        height: 70vh;
+    }
+
 }
 
 
@@ -413,6 +422,9 @@
     }
     
         
+    .table{
+        height: 70vh;
+    }
 
     .game_match {
         margin-left: -3rem;
@@ -461,6 +473,10 @@
 
     .result_team1 p{
         font-size: 2rem;
+    }
+
+    .table{
+        height: 68vh;
     }
     
     .result_team2 p{

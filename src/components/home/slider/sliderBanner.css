@@ -22,6 +22,21 @@
   z-index: 900;
 }
 
+.splide__arrow--next {
+  right: 3.5rem !important;
+}
+
+.splide__arrow--prev {
+  left: 3.5rem !important;
+}
+
+.splide__arrow--prev, .splide__arrow--next , .splide__pagination__page{
+  filter: hue-rotate(80deg) drop-shadow( 0 0 2px rgba(139, 89, 255, 0.658));
+}
+
+.splide {
+  padding: 0rem !important;
+}
 
 @media screen and (max-width: 1460px) {
   /* slider */

@@ -1,6 +1,5 @@
 import './App.css';
 import { Suspense , useState, lazy} from 'react';
-import Home from './components/home/Home';
 import Staking from './components/staking/Staking';
 import Nav from './components/nav/Nav';
 import MatchFeed from './components/matchFeed/MatchFeed';
@@ -12,8 +11,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
 import ContextConnected from './components/config/context/ConnectedContext';
-import LadderHome from './components/ladder/ladderHome/LadderHome';
 
+const Home = lazy(() => import ('./components/home/Home'))
+const LadderHome = lazy(() => import ("./components/ladder/ladderHome/LadderHome"))
 const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
 const BoostLadder = lazy(() => import ('./components/ladder/boostLadder/BoostLadder'))
 const FriendsLadder = lazy(() => import ("./components/ladder/friendsLadder/FriendsLadder"))
@@ -71,7 +71,7 @@ function App() {
 
                 <Route exact path="/staking" element={<Staking />} />
                 <Route exact path="/marketplace" element={<Marketplace />} />
-                <Route exact path="/airdrop" element={<MiniGame />} />
+                <Route exact path="/cryptoBall" element={<MiniGame />} />
                 <Route exact path="/profileUser" element={<ProfileUser />} />
                 <Route exact path="/matchFeed" element={<MatchFeed />} />
                 <Route path='*' element={<Home />}  />

@@ -3,51 +3,57 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+}
+*{
+    text-decoration: none;
 }
 
 .slider_cards{
-    width: 70%;
-}
-
-.splide {
-    padding: 0em !important;
+    width: 66%;
 }
 
 .splide__pagination {
     bottom: -2.3rem !important;
-    opacity: .6 !important;
+    opacity: .8 !important;
 }
 
-
 .box_splide{
-    overflow: hidden;
     position: relative;
     text-align: center;
     border-radius: 15px !important;
     z-index: 1000;
-    padding: .4rem;
-    border: 1px solid #b26aff75;
-    background: radial-gradient(circle, rgba(108, 50, 243, 0.315) 0%, rgba(20, 11, 44, 0.692) 60%);
-    background-color: rgba(28, 25, 32, 0.884);
+    padding: .5rem;
+    border: 1px solid #b26aff3b;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    background-image: url("./src/Recuadro.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-
 .box_splide img{
-    border-radius: 15px;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
     object-fit: contain;
     cursor: pointer;
-    filter: brightness(105%) contrast(97%) ; 
+    filter: brightness(105%) contrast(98%) ; 
 }
 
 .splide__arrow--prev, .splide__arrow--next , .splide__pagination__page{
     filter: hue-rotate(80deg) drop-shadow( 0 0 2px rgba(139, 89, 255, 0.658));
-}
-
-
+  }
+  
+  .splide {
+    padding: 0rem !important;
+  }
+.splide__arrow--next {
+    right: 3.5rem !important;
+  }
+  
+  .splide__arrow--prev {
+    left: 3.5rem !important;
+  }
 /* .candadoLadders{
     position: absolute;
     border: 2px solid red;
