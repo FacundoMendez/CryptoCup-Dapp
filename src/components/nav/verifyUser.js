@@ -18,7 +18,7 @@ export const verificarExistencia = async (signer, signature)=>{
         else {
             return false
         }
-
+        console.log(res.data);
     } catch (error) {
         console.log(error)
     }
