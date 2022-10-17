@@ -110,45 +110,35 @@ const Nav = () => {
           <ul className='listNav'>
  
 
-                  <NavLink to="/"> 
-                    <li className='nav_list_links'> 
-                      <img className='logoNav' src={logoCC} alt="LogoCC" /> 
-                    </li>
-                  </NavLink> 
-    
+              <NavLink to="/"> 
+                <li className='nav_list_links'> 
+                  <img className='logoNav' src={logoCC} alt="LogoCC" /> 
+                </li>
+              </NavLink> 
 
-                <NavLink to="/home" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                  <li className='nav_list_links'> Home</li> 
-                </NavLink> 
-
-
+              <NavLink to="/home" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+                <li className='nav_list_links'> Home</li> 
+              </NavLink> 
 
               <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Match Feed</li> 
               </NavLink> 
-           
 
               <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                  <li className='nav_list_links'>Ladders</li> 
               </NavLink> 
            
-
               <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
                 <li className='nav_list_links'> Staking</li>
               </NavLink> 
              
-
               <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Marketplace </li> 
               </NavLink> 
-           
-            
 
               <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
                 <li className='nav_list_links'> Mini Game</li> 
               </NavLink> 
-            
-
           </ul>
 
           { Connected.userLogginActive ?    

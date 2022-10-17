@@ -5,18 +5,22 @@ import { NavLink } from 'react-router-dom'
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "./ladderHome.css"
-import '@splidejs/react-splide/css/sea-green';
+import '@splidejs/splide/css/sea-green';
 import basicImg from "./src/basic.jpg"
 import boostImg from "./src/boost.jpg"
 import challengeImg from "./src/challenge.jpg"
+import cryptoBallImg from "./src/cryptoBall.jpeg"
 import candado from "../../config/src/candado.png"
 import PopupError from '../../config/popupsErrors/PopupError';
+import ladderHomeEffect from './ladderHomeEffect';
 
 const LadderHome = () => {
 
 
   const [connectedPopup , setConnectedPopup] = useState()
   useEffect(() => {
+
+    ladderHomeEffect()
 
     if(connectedPopup === true){
       setTimeout(() => {
@@ -36,9 +40,13 @@ const LadderHome = () => {
     cover: true,
     type: "loop",
     fixedHeight:true,
-    lazyLoad:true,
-    omitEnd:true,
+    preloadPages:4,
+    resetProgress:true,
     autoplay : true,
+    rewind: true,
+    fixedHeight:true,
+    omitEnd:true,
+    padding:"0rem",
     gap: "2.5em",
     breakpoints: {
       1170: {
@@ -115,6 +123,24 @@ const LadderHome = () => {
                                     <Suspense fallback={<Spinner/>}>
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={challengeImg} alt="Challenge ladder Slider " />
+                                      </div>
+                                    </Suspense>
+                                  }
+                            </SplideSlide>
+                        </Suspense>
+
+                        <Suspense fallback={<Spinner/>}>
+                            <SplideSlide className='box_splide'>
+                                  {Connected.userLogginActive ? 
+                                    <Suspense fallback={<Spinner/>}>
+                                      <NavLink to="/cryptoBall">
+                                          <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />
+                                      </NavLink>
+                                    </Suspense>
+                                    :
+                                    <Suspense fallback={<Spinner/>}>
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />
                                       </div>
                                     </Suspense>
                                   }

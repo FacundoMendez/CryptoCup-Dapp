@@ -143,7 +143,7 @@
         width: 90vw;
         position: fixed;
         left: 5vw;
-        top: 26.7rem;
+        top: 15.6rem;
         height: 16.5rem;
         padding: 1.3rem 0;
         visibility: hidden;
@@ -234,7 +234,6 @@
     .box_links_movile{
         width: 98vw;
         left: .9vw;
-        top: 29.5rem;
         height: 16.5rem;
     }
 }

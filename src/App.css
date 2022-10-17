@@ -10,6 +10,7 @@
     -ms-user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar {
