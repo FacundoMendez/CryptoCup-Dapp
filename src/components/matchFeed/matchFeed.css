@@ -202,32 +202,56 @@
 
     .nav_matchFeed {
         width: 90vw;
+        height: 7rem;
         left: .5rem;
     }
 
+    .table_cabecera {
+        height: 5rem;
+    }
+
+    
+    .table_cabecera li{
+        font-size: 1.5rem;
+    }
+
+
     .table_cabecera ul {
         width: 90vw;
+        height: 5rem;
     }
 
     .table_games {
         width: 88.7vw;
+        height: 7rem;
     }
 
     .table {
         width: 90vw;
-        height: 72vh;
+        height: 70vh;
     }
-
 
     .table_container {
         width: 90vw;
     }
 
+    .nav_matchFeed h2 {
+        font-size: 2.3rem;
+    }
 
     .team1_flag img, .team2_flag img{
         width: 8rem;
         height: 5rem;
     }
+
+    .team1_flag{
+        margin-left: 4rem;
+    }
+    
+    .team2_flag{
+        margin-right: 3rem;
+    }
+    
 
 }
 
@@ -261,8 +285,6 @@
         font-size: 1.7rem;
         color: white;
     }
-
-  
 
     .team1_flag{
         margin-left: 2rem;

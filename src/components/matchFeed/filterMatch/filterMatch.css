@@ -303,15 +303,11 @@ label:hover:before {
 
 
 
-
-
-
 @media screen and (max-width:1440px) {
     .boxFilter{
         width: 99%;
         height: 16rem;
     }
-
     
     .filterMatch{
         display: none;
@@ -324,7 +320,8 @@ label:hover:before {
         position: absolute;
         right: 12%;
         z-index: 999;
-        top: 4rem;
+        top: 3rem;
+        cursor: pointer;
     }
 
     .toggle_filter{
@@ -360,7 +357,7 @@ label:hover:before {
     
     .box_filterMatch_movil_active{
         display: flex;
-        top: 19rem;
+        top: 17rem;
         opacity: 1;
         visibility: visible;
         transition: all .3s ease-in-out;
