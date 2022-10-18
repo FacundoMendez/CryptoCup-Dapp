@@ -27,8 +27,10 @@
     box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
     background: rgb(39,25,78);
     background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
-
+    overflow-y: scroll;
 }
+
+
 
 
 @media screen and (max-width:1440px) {
