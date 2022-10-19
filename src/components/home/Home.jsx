@@ -40,7 +40,6 @@ const Home = () => {
   return (
     <>
       <div className="containerDapp" >
-        <Preload/>
 
         {connectedPopup ? <PopupError connectedPopup={connectedPopup}  /> : null }
 
