@@ -44,7 +44,6 @@ const BasicLadder = () => {
   return (
     <Suspense fallback={<Spinner/>}>
       <div className="basicLadder">
-        <Preload/>
       {PredictionContext.confirmedPrediction === true  ? <PopupPrediction /> : null}
       {PredictionContext.confirmedPrediction === false ? <PopupPrediction /> : null}
       
