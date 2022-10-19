@@ -11,9 +11,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
 import ContextConnected from './components/config/context/ConnectedContext';
+import LadderHome from './components/ladder/ladderHome/LadderHome';
 
 const Home = lazy(() => import ('./components/home/Home'))
-const LadderHome = lazy(() => import ("./components/ladder/ladderHome/LadderHome"))
 const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
 const BoostLadder = lazy(() => import ('./components/ladder/boostLadder/BoostLadder'))
 const ChallengeLadder = lazy(() => import ("./components/ladder/challengeLadder/ChallengeLadder"))
