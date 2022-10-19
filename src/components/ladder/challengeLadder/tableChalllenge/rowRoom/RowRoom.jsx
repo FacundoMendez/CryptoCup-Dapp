@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./rowRoom.css"
 import paisesPrueba from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 
-const RowRoom = () => {
+const RowRoom = ({roomOcupada, setRoomOcupada}) => {
+
+
   return (
     <div className='rowRoom'>
         <div className="RoomId room_data">
@@ -14,13 +16,7 @@ const RowRoom = () => {
             <div className="team1_romFlag "> 
                 <img src={paisesPrueba.Argentina.img} alt="flag1 room" />
             </div>
-            <div className="result-team1">
-                <p>0</p>
-            </div>
             <div className="result_rom"> VS </div>
-            <div className="result-team2">
-                <p>0</p>
-            </div>
             <div className="team2_romFlag ">
                 <img src={paisesPrueba.Alemania.img} alt="flag1 room" />
             </div>
@@ -34,12 +30,20 @@ const RowRoom = () => {
 
         <div className="amount_room room_data">
             <img src={imgToken} alt="token room" />
-            <p>10</p>
+            <p>0</p>
         </div>
 
-        <button className='challenge room_data'>
-            CHALLENGE
-        </button>
+        {roomOcupada ? 
+            <button className='challenge room_data' style={{background: "gray" , cursor:"auto"}}>
+                full room
+            </button>
+        :
+            <button className='challenge room_data'>
+                CHALLENGE
+            </button>
+        }
+
+      
     </div>
   )
 }

@@ -1,8 +1,18 @@
+.container_navChallenge{
+    position: relative;
+    width: 74vw;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 .nav_challengeRoom{
     z-index: 9998;
     position: relative;
-    width: 74vw;
-    margin-top: 1rem;
+    width: 60vw;
     height: 7rem;
     border-radius: 15px;
     border-bottom-left-radius: 0;
@@ -15,7 +25,26 @@
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
     background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
     background-color: rgba(61, 15, 134, 0.932);
+    margin-top: 0rem;
 }
+
+.box_create_sala{
+    z-index: 9998;
+    position: relative;
+    width: 20vw;
+    margin-top: 1rem;
+    height: 7rem;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0rem;
+
+}
+  
 
 
 .nav_challengeRoom h2{
@@ -71,7 +100,62 @@
     height:3px;
     filter: drop-shadow(0px -10px 8px rgba(195, 161, 250, 0.267));
 }
-  
+
+
+/* container create room *//* container filter */
+.container_createRoom , .containerFilter_match{
+    width: 25rem;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: -1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.171);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 90%);
+    background-color: rgba(61, 15, 134, 0.932);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    gap: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.container_createRoom{
+    box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgba(139, 51, 190, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%);
+    background-color: rgba(68, 19, 146, 0.932);
+}
+
+.container_createRoom:hover {
+    box-shadow: rgba(143, 22, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgba(140, 46, 194, 0.863) 0%, rgba(107, 82, 175, 0.801) 80%);
+    background-color: rgba(70, 12, 104, 0.932);
+}
+
+.containerFilter_match:hover{
+    box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
+    background: radial-gradient(circle, rgba(185, 65, 255, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%);
+    background-color: rgba(68, 19, 146, 0.932);
+    transition: all .5s ease-in-out;
+}
+
+/* container filter */
+
+.busqueda_match{
+    width: 2.5rem;
+}
+
+
+.box_id_match{
+    display: none;
+}
+
 
 
 @media screen and (max-width:1440px) {

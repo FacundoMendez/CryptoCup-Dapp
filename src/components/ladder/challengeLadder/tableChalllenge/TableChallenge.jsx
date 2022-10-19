@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useMemo} from 'react'
-import { useTable, getCellProps, } from 'react-table'
+import { useTable} from 'react-table'
 import api from '../../../../api';
 import CabeceraRoom from './cabeceraRoom/CabeceraRoom';
 import RowRoom from './rowRoom/RowRoom';
@@ -12,7 +12,7 @@ const TableChallenge = () => {
 
     const getData = () => [
         {
-          name: "ID Room",
+          id: "1",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -21,7 +21,7 @@ const TableChallenge = () => {
           team2Img:" " ,
         },
         {
-          name: "ID Room",
+          id: "2",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -30,7 +30,7 @@ const TableChallenge = () => {
           team2Img:" " ,
         },
         {
-          name: "ID Room",
+          id: "3",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -39,7 +39,7 @@ const TableChallenge = () => {
           team2Img:" " ,
         },
         {
-          name: "ID Room",
+          id: "4",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -48,7 +48,7 @@ const TableChallenge = () => {
           team2Img:" " ,
         },
         {
-          name: "ID Room",
+          id: "5",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -57,7 +57,7 @@ const TableChallenge = () => {
           team2Img:" " ,
         },
         {
-          name: "ID Room",
+          id: "6",
           title: "Team1 - vs - Team2",
           amount: "0",
           owner: "TEAM",
@@ -67,23 +67,29 @@ const TableChallenge = () => {
         },
       ];
 
-      const columns = React.useMemo(
+      const [roomOcupada , setRoomOcupada] = useState(false)
+
+
+      const columns = useMemo(
         () => [
           {
-            accessor: "name",
+            accessor: "id",
           }
         
         ],
         []
       );
 
-      const data = React.useMemo(() => getData(), []);
+      const data = useMemo(() => getData(), []);
 
-      const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+      const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow  } =
       useTable({
         columns,
         data,
       });
+
+
+      
 
   return (
     <div className="container_tableChallenge">
@@ -109,7 +115,11 @@ const TableChallenge = () => {
                                     <td className='row-map' {...cell.getCellProps()}>
                                         {/* {cell.render("Cell")} */}
                                         {row.cells.map((cell) => {
-                                           return <RowRoom key={cell.row.original }/>   
+                                           return <RowRoom 
+                                                      key={cell.row.original }
+                                                      roomOcupada={roomOcupada}
+                                                      setRoomOcupada={setRoomOcupada}
+                                                    />   
                                         })}
                                     </td>
                                 )

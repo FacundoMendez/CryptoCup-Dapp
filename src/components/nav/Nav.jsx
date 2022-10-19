@@ -136,9 +136,6 @@ const Nav = () => {
                 <li className='nav_list_links'> Marketplace </li> 
               </NavLink> 
 
-              <NavLink to="/airdrop" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
-                <li className='nav_list_links'> Mini Game</li> 
-              </NavLink> 
           </ul>
 
           { Connected.userLogginActive ?    

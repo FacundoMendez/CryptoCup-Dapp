@@ -22,7 +22,7 @@
 }
 
 .MatchRoom img , .ownerRoom img{
-    width: 6rem;
+    width: 6.5rem;
     border-radius: 5px;
 }
 
@@ -36,6 +36,9 @@
     background-color: rgba(68, 19, 146, 0.932);
     color: white;
     cursor: pointer;
+    margin-right: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    text-transform: uppercase;
 }
 
 .room_data{

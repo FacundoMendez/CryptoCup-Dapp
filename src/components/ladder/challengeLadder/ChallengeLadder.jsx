@@ -13,6 +13,7 @@ const ChallengeLadder = () => {
   const [history , setHistory] = useState(false)
   const Connected = useContext(ContextConnected)
 
+
   return (
         <div className="friendsLadder"> 
             <NavChallenge 
@@ -20,14 +21,14 @@ const ChallengeLadder = () => {
                 setMyRooms={setMyRooms}
                 setPublicRooms={setPublicRooms}
                 setHistory={setHistory}
-            />
+              />
+
             <div className="container_friendsLadder">
               
               <div className="blur_boost"></div>
                 {
                   publicRooms ? 
-
-                  <img className='candado' src={candado} alt="candado" />
+                    <img className='candado' src={candado} alt="candado" />
                   :
                   null
                 }
