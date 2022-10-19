@@ -1,0 +1,9 @@
+const preloadFuncional = () => {
+    let preload = document.querySelector(".preload");  
+    setTimeout(function(){
+        preload.classList.add("cerrar");
+        preload.style.zIndex=0;
+    },700)
+}
+
+export default preloadFuncional;

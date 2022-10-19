@@ -13,6 +13,7 @@ import cryptoBallImg from "./src/cryptoBall.jpeg"
 import candado from "../../config/src/candado.png"
 import PopupError from '../../config/popupsErrors/PopupError';
 import ladderHomeEffect from './ladderHomeEffect';
+import Preload from "../../config/preload/Preload"
 
 const LadderHome = () => {
 
@@ -69,8 +70,8 @@ const LadderHome = () => {
     <>
     
     {connectedPopup ? <PopupError connectedPopup={connectedPopup}  /> : null }
-          <Suspense fallback={<Spinner/>}>
             <div className="container_LaddersHome">
+                <Preload />
                 <div className="slider_cards">
                     <Splide aria-label="ladders" options={ options } >
                     
@@ -150,7 +151,6 @@ const LadderHome = () => {
                     </Splide>
                 </div>
             </div>
-        </Suspense>
 
     </>
     

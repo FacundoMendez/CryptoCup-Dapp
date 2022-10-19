@@ -4,6 +4,7 @@ import "./boostLadder.css"
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
+import Preload from '../../config/preload/Preload'
 
 const BoostLadder = () => {
 
@@ -16,8 +17,8 @@ const BoostLadder = () => {
     <>
     {
       Connected.userLogginActive ? 
-        <Suspense fallback={<Spinner/>}>
           <div className="boostLadder">
+            <Preload/>
             <NavLadder 
                 ladder="Boost Ladder"
                 setMyRecord={setMyRecord}
@@ -49,7 +50,6 @@ const BoostLadder = () => {
                 }
               </div>
           </div>
-      </Suspense>
         : 
         window.location.href = "/"
       }

@@ -11,6 +11,7 @@ import "./home.css"
 import ContextConnected from '../config/context/ConnectedContext';
 import PopupError from '../config/popupsErrors/PopupError';
 import { useEffect } from 'react';
+import Preload from '../config/preload/Preload';
 
 
 const LiveMatchesHome = lazy(() => import ('./liveMatchesHome/LiveMatchesHome'))
@@ -38,8 +39,8 @@ const Home = () => {
 
   return (
     <>
-    <Suspense fallback={<Spinner/>}>
       <div className="containerDapp" >
+        <Preload/>
 
         {connectedPopup ? <PopupError connectedPopup={connectedPopup}  /> : null }
 
@@ -145,7 +146,6 @@ const Home = () => {
           </div>
           }
       </div>
-    </Suspense>
   </>
   )
 }

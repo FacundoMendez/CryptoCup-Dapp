@@ -5,6 +5,7 @@ import api from '../../api'
 import Matchs from './matchs/Matchs'
 import ContextConnected from '../config/context/ConnectedContext'
 import FilterMatch from './filterMatch/FilterMatch'
+import Preload from '../config/preload/Preload'
 
 
 const MatchFeed = () => {
@@ -46,9 +47,9 @@ const MatchFeed = () => {
 
 
   return (
-    <Suspense fallback={<Spinner/>}>
-
+      
         <div className="matchFeed">
+          <Preload/>
           <div className="nav_matchFeed">
             <h2>Match Feed</h2>
             
@@ -104,7 +105,6 @@ const MatchFeed = () => {
             </div>  
           </div>
         </div>
-    </Suspense>
   )
 }
 
