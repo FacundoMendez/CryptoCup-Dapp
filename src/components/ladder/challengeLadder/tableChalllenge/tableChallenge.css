@@ -1,0 +1,14 @@
+.row-map{
+    padding: 1rem;
+    
+}
+
+.table_rows{
+    width: 100%;
+    
+}
+
+.rowRoom{
+    background-color: #cbb1fa3b;
+    box-shadow: rgb(166 128 255 / 34%) 3px 3px 6px 0px inset, rgb(170 139 255 / 30%) -3px -3px 6px 1px inset;
+}

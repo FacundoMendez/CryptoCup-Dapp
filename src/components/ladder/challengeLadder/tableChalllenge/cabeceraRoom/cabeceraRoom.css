@@ -1,0 +1,38 @@
+.navCabecera_room{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7rem;
+    padding: 2rem .5rem ;
+    border: 2px solid gray;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(159, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(61, 25, 78);
+    background: radial-gradient(circle, rgb(93, 60, 146) 0%, rgba(29, 13, 48, 0.966) 60%);
+}
+
+.cab_row{
+    width: 24rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.vacio{
+    width: 20rem;
+}
+
+.owner{
+    width: 20rem;
+    margin-left: 12rem;
+}
+
+.match_room{
+    margin-left: 5rem;
+}

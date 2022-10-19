@@ -70,7 +70,7 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
             {/* FILTER FECHA */}
 
             <div className="filter filter1"> 
-                FECHA 
+                DATE 
                 <div className="triangleFilter triangleFilter1"></div>
             </div>
             <div className="boxFilter boxFilter1">
@@ -121,7 +121,7 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
                     </p>
                     <p>
                         <input type="checkbox" id="filter_vivo"  />
-                        <label className='lab_filter' htmlFor="filter_vivo">Vivo</label>
+                        <label className='lab_filter' htmlFor="filter_vivo">LIVE</label>
                     </p>
                     <p>
                         <input type="checkbox" id="filter_finished" />

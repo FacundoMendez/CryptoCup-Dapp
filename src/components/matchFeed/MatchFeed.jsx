@@ -5,7 +5,7 @@ import api from '../../api'
 import Matchs from './matchs/Matchs'
 import ContextConnected from '../config/context/ConnectedContext'
 import FilterMatch from './filterMatch/FilterMatch'
-import Paginacion from '../config/paginacion/Paginacion'
+
 
 const MatchFeed = () => {
 

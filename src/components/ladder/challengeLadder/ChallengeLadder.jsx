@@ -1,46 +1,49 @@
 import React , {useState , useContext} from 'react'
-import NavLadder from "../componentsLadders/navLadder/NavLadder"
-import "./friendsLadder.css"
+import "./challengeLadder.css"
 import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
+import NavChallenge from './navChallenge/NavChallenge'
+import TableChallenge from './tableChalllenge/TableChallenge'
 
-const FriendsLadder = () => {
 
-  const [Matches , setMatches] = useState(true)
-  const [myRecord , setMyRecord] = useState(false)
-  const [ranking , setRanking] = useState(false)
+const ChallengeLadder = () => {
+
+  const [publicRooms , setPublicRooms] = useState(true)
+  const [myRooms , setMyRooms] = useState(false)
+  const [history , setHistory] = useState(false)
   const Connected = useContext(ContextConnected)
+
 
   return (
         <div className="friendsLadder"> 
-            <NavLadder 
+            <NavChallenge 
                 ladder="Challenge Room"
-                setMyRecord={setMyRecord}
-                setMatches={setMatches}
-                setRanking={setRanking}
-            />
+                setMyRooms={setMyRooms}
+                setPublicRooms={setPublicRooms}
+                setHistory={setHistory}
+              />
+
             <div className="container_friendsLadder">
               
               <div className="blur_boost"></div>
                 {
-                  Matches ? 
-                  /*   <Predictions/> */
-                  <img className='candado' src={candado} alt="candado" />
+                  publicRooms ? 
+                    <img className='candado' src={candado} alt="candado" />
                   :
                   null
                 }
 
                 {
-                  myRecord ? 
-                    /* <MyPredictions/> */
+                  myRooms ? 
+            
                     <img className='candado' src={candado} alt="candado" />
                   :
                   null
                 }
                 
                 {
-                  ranking ? 
-                    /* <Ranking/> */
+                  history ? 
+             
                     <img className='candado' src={candado} alt="candado" />
                   :
                   null
@@ -50,4 +53,4 @@ const FriendsLadder = () => {
   )
 }
 
-export default FriendsLadder
+export default ChallengeLadder
