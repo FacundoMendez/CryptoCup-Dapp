@@ -2,16 +2,19 @@ import React, { Suspense , useContext, useState, useEffect} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import ContextConnected from '../../config/context/ConnectedContext'
 import { NavLink } from 'react-router-dom'
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "./ladderHome.css"
 import '@splidejs/splide/css/sea-green';
-import basicImg from "./src/basic.jpg"
-import boostImg from "./src/boost.jpg"
-import challengeImg from "./src/challenge.jpg"
+
+import basicImg from "./src/basicCandado.jpg"
+import boostImg from "./src/boostCandado.jpg"
+import challengeImg from "./src/challengeCandado.jpg"
+
 import airdropImg from "./src/airdrop.jpg"
-import cryptoBallImg from "./src/cryptoBall.jpeg"
+import cryptoBallImg from "./src/ballCandado.jpg"
+
 import candado from "../../config/src/candado.png"
+
 import PopupError from '../../config/popupsErrors/PopupError';
 import ladderHomeEffect from './ladderHomeEffect';
 import Preload from "../../config/preload/Preload"

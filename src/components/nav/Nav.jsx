@@ -109,7 +109,6 @@ const Nav = () => {
           </button>
           <ul className='listNav'>
  
-
               <NavLink to="/"> 
                 <li className='nav_list_links'> 
                   <img className='logoNav' src={logoCC} alt="LogoCC" /> 
@@ -135,13 +134,11 @@ const Nav = () => {
               <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Marketplace </li> 
               </NavLink> 
-
           </ul>
 
           { Connected.userLogginActive ?    
             <NavLink to="/profileUser" className="user_flag"> 
                  <img className='pais_profile_img' src={paisesJson[Connected.userData.flag].img} alt="user flag" />  
-
             </NavLink> 
               
           :
