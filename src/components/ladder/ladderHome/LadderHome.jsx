@@ -9,6 +9,7 @@ import '@splidejs/splide/css/sea-green';
 import basicImg from "./src/basic.jpg"
 import boostImg from "./src/boost.jpg"
 import challengeImg from "./src/challenge.jpg"
+import airdropImg from "./src/airdrop.jpg"
 import cryptoBallImg from "./src/cryptoBall.jpeg"
 import candado from "../../config/src/candado.png"
 import PopupError from '../../config/popupsErrors/PopupError';
@@ -49,6 +50,7 @@ const LadderHome = () => {
     omitEnd:true,
     padding:"0rem",
     gap: "2.5em",
+    speed: 1500,
     breakpoints: {
       1170: {
         perPage: 3,
@@ -74,25 +76,41 @@ const LadderHome = () => {
                 <Preload />
                 <div className="slider_cards">
                     <Splide aria-label="ladders" options={ options } >
+                                          
+                          <SplideSlide className='box_splide airdrop '>
+                                {Connected.userLogginActive ? 
+                                    <NavLink to="/airdrop">
+                                        <img  src={airdropImg} alt="Airdrop Slider "/>
+                                    </NavLink>
+                                  :
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img  src={airdropImg} alt="Airdrop Slider" />
+                                      </div>
+                                }
+                            </SplideSlide>
                     
                             <SplideSlide className='box_splide '>
                                 {Connected.userLogginActive ? 
-                                    <NavLink to="/basicLadder">
+                                /*     <NavLink to="/basicLadder"> */
+                                      
                                         <img  src={basicImg} alt="Basic ladder Slider "/>
-                                    </NavLink>
+                                        
+                             /*        </NavLink> */
+                             
                                   :
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img  src={basicImg} alt="Basic ladder Slider " />
                                       </div>
                                 }
+
+
                             </SplideSlide>
 
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                      <NavLink to="/boostLadder">
-                                        
+                                    /*   <NavLink to="/boostLadder"> */
                                           <img src={boostImg} alt="Boost ladder Slider "/>
-                                      </NavLink>
+                              /*         </NavLink> */
                                     :
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={boostImg} alt="Boost ladder Slider " />
@@ -102,9 +120,9 @@ const LadderHome = () => {
                         
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                      <NavLink to="/challengeLadder">
+                                  /*     <NavLink to="/challengeLadder"> */
                                           <img src={challengeImg} alt="Challenge ladder Slider " />
-                                      </NavLink>
+                              /*         </NavLink> */
                                     :
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={challengeImg} alt="Challenge ladder Slider " />
@@ -114,9 +132,9 @@ const LadderHome = () => {
 
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                      <NavLink to="/cryptoBall">
+                                     /*  <NavLink to="/cryptoBall"> */
                                           <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />
-                                      </NavLink>
+                                      /* </NavLink> */
                                     :
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />

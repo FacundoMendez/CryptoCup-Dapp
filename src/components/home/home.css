@@ -152,8 +152,15 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 } 
+
+.containerDapp_cards-miniGames{
+    background-image: url("./src/AirdropCard.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .containerDapp_cards-boost{
     background-image: url("./src/CardDappBoostLadder.jpg");
     background-position: center;
@@ -184,14 +191,7 @@
     background-color: rgba(0, 0, 0, 0.993);
 
 }
-.containerDapp_cards-miniGames{
-    background-image: url("../config/src/candado.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.993);
 
-}
 
 .cardMain::before{
     height: 22.5rem;

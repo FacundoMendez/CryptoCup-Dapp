@@ -19,7 +19,7 @@
     opacity: .8 !important;
 }
 
-.box_splide{
+.airdrop{
     position: relative;
     text-align: center;
     border-radius: 15px !important;
@@ -41,6 +41,9 @@
     cursor: pointer;
     filter: brightness(105%) contrast(98%) ; 
 }
+
+
+
 
 .splide__arrow--prev, .splide__arrow--next , .splide__pagination__page{
     filter: hue-rotate(80deg) drop-shadow( 0 0 2px rgba(139, 89, 255, 0.658));
