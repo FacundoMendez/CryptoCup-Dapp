@@ -4,8 +4,6 @@ import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
 import NavChallenge from './navChallenge/NavChallenge'
 import TableChallenge from './tableChalllenge/TableChallenge'
-import Preload from '../../config/preload/Preload'
-
 
 
 const ChallengeLadder = () => {
@@ -18,7 +16,6 @@ const ChallengeLadder = () => {
 
   return (
         <div className="friendsLadder"> 
-          <Preload/>
             <NavChallenge 
                 ladder="Challenge Room"
                 setMyRooms={setMyRooms}
@@ -31,7 +28,7 @@ const ChallengeLadder = () => {
               <div className="blur_boost"></div>
                 {
                   publicRooms ? 
-                    <TableChallenge/>
+                    <img className='candado' src={candado} alt="candado" />
                   :
                   null
                 }
