@@ -126,28 +126,30 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
     
      {/*  hacer form con submit y values */}
         <form className="box_select_prediction">
-          <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
-              setActivePrediction(1)
-              colorSetTeam1()
-              setPredictionChoose(document.getElementById(`left_${nameTeam1}`).value)
-            }}>
-            <button type="button" value={nameTeam1} readOnly id={"left_" + nameTeam1}>{nameTeam1}</button>
+          <div className="select_prediciton">
+            <div className="left_pred" id='team1_win_basic' style={{backgroundColor : colorTeam1, color: colorTeam1_text }} onClick={() => {
+                setActivePrediction(1)
+                colorSetTeam1()
+                setPredictionChoose(document.getElementById(`left_${nameTeam1}`).innerText)
+              }}>
+              <button type="button" value={nameTeam1} readOnly id={"left_" + nameTeam1}>{nameTeam1}</button>
+            </div>
+            <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
+                setActivePrediction(2)
+                colorSetEmpate()
+                setPredictionChoose("Tie")
+              }}>
+              <button type="button" value="Tie" id='tie_prediction' readOnly className='tie_pred'>Tie</button>
+            </div>
+            <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
+                setActivePrediction(3)
+                colorSetTeam2()
+                setPredictionChoose(document.getElementById(`right_${nameTeam2}`).innerText)
+              }}>
+              <button type="button" value={nameTeam2} readOnly id={'right_' + nameTeam2}>{nameTeam2} </button>
+            </div>
           </div>
-          <div className="center_pred" id="empate_basic" style={{backgroundColor : colorEmpate , color: colorEmpate_text }} onClick={() => {
-              setActivePrediction(2)
-              colorSetEmpate()
-              setPredictionChoose("tie")
-            }}>
-            <button type="button" value="tie" id='tie_prediction' readOnly className='tie_pred'>Tie</button>
-          </div>
-          <div className="right_pred" id='team2_win_basic' style={{backgroundColor : colorTeam2 , color: colorTeam2_text }} onClick={() => {
-              setActivePrediction(3)
-              colorSetTeam2()
-              setPredictionChoose(document.getElementById(`right_${nameTeam2}`).value)
-            }}>
-            <button type="button" value={nameTeam2} readOnly id={'right_' + nameTeam2}>{nameTeam2} </button>
-          </div>
-        
+          
 
         { /* si no hay prediccion hecha muestra el boton en gris */
           activePrediciton === undefined ?

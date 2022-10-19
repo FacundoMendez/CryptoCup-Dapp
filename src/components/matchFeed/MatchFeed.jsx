@@ -47,7 +47,7 @@ const MatchFeed = () => {
 
   return (
     <Suspense fallback={<Spinner/>}>
-
+      
         <div className="matchFeed">
           <div className="nav_matchFeed">
             <h2>Match Feed</h2>

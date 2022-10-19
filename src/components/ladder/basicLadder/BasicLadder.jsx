@@ -8,6 +8,7 @@ import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
 import MyPredictions from './MyPredictions/MyPredictions'
+import Preload from '../../config/preload/Preload'
 
 
 const BasicLadder = () => {

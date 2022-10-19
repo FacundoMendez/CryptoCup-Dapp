@@ -1,0 +1,51 @@
+.preload{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0rem;
+    left: 0px;
+    z-index: 99999999 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(46, 46, 46, 0.219) 0%, rgba(11, 7, 15, 0.801) 60%);
+    background-color: rgba(140, 68, 255, 0.998);
+    visibility: visible;
+
+}
+
+/* clase que crea js para que se cierra */
+
+.cerrar{
+    opacity: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+
+
+.preload__img {
+    animation: sk-chase 1s infinite linear both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preload__img img{
+    width:18rem;
+    filter: contrast(105%) brightness(105%);
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        rotate: 0;
+    }
+    50% {
+        rotate: 360deg;
+
+    }
+    100% {
+        rotate: 0deg;
+
+    }
+}
