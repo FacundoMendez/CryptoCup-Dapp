@@ -20,7 +20,7 @@ const Nav = () => {
   useEffect(() => {
     /* console.log(cookies.get("gandalf")); */
     navFuncional()
-    userInited() //persistencia
+    /* userInited()  *///persistencia
   },[])
 
     const [chainIncorrecta , setChainIncorrecta] = useState(false)
