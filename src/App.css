@@ -11,6 +11,12 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     scroll-behavior: smooth;
     text-decoration: none;
+
+}
+
+html{
+  background: radial-gradient(circle, rgba(46, 46, 46, 0.219) 0%, rgba(11, 7, 15, 0.801) 60%);
+  background-color: rgba(140, 68, 255, 0.998);
 }
 
 ::-webkit-scrollbar {

@@ -13,6 +13,7 @@
     position: relative;
     width: 74vw;
     height: 10rem;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
@@ -74,22 +75,6 @@
     overflow-y:scroll ;
 }
 
-
-.blur_profileUser{
-    width: 73.6vw;
-    height: 75vh;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    border-radius: 15px;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(1rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
-}
 
 .profile_cabecera{
     width: 74vw;
@@ -189,12 +174,76 @@
         width: 90vw;
     }
 
+    .container_profileUser {
+        width: 90vw;
+    }
+
+    .profile_cabecera {
+        width: 90vw;
+        top: 11.7rem;
+    }
 }
 
 
 
 
+@media screen and (max-width: 700px) {
+    .container_profileUser {
+        width: 95vw;
+    }
 
+    .nav_profileUser img{
+        width: 6rem;
+        height: 6rem;
+    }
 
+    .nav_profileUser h2{
+       font-size: 2rem;
+    }
 
+    .nav_profileUser p{
+        font-size: 1rem;
+     }
 
+    .nav_profileUser {
+        padding: 0 2rem;
+    }
+
+    
+    .nav_profileUser {
+        width: 95vw;
+    }
+
+    .profile_cabecera {
+        width: 95vw;
+        top: 11.7rem;
+    }
+ 
+}
+
+@media screen and (max-width: 550px) {
+
+   
+}
+
+@media screen and (max-width: 410px) {
+
+     .nav_profileUser p{
+         font-size: .9rem;
+      }
+
+      .box_cabecera p{
+        font-size: 1.6rem;
+      }
+}
+
+@media screen and (max-width: 390px) {
+
+    .nav_profileUser p{
+        font-size: .8rem;
+     }
+
+     .box_cabecera p{
+        font-size: 1.5rem;
+      }
+}

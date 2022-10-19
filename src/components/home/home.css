@@ -430,6 +430,10 @@
   
   @media screen and (max-width: 824px) {
 
+    .container_live_social{
+        width: 95%;
+    }
+
     .containerDapp_title{
         width: 95%;
         height: 7rem;
