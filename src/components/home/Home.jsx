@@ -143,14 +143,10 @@ const Home = () => {
             { Connected.userLogginActive ?    
 
              /*  <NavLink to="/Marketplace" > */
-                <div className="containerDapp_cards-marketplace cardMain" >
-                  <h2>MarketPlace</h2>
-                </div>
+                <div className="containerDapp_cards-marketplace cardMain" ></div>
             /*   </NavLink> */
             :
-              <div className="containerDapp_cards-marketplace cardMain " onClick={() => setConnectedPopup(true) }>
-                <h2>Marketplace</h2>
-              </div>
+              <div className="containerDapp_cards-marketplace cardMain " onClick={() => setConnectedPopup(true) }></div>
             }
 
 
