@@ -13,7 +13,6 @@ import challengeImg from "./src/challengeCandado.jpg"
 import airdropImg from "./src/airdrop.jpg"
 import cryptoBallImg from "./src/ballCandado.jpg"
 
-import candado from "../../config/src/candado.png"
 
 import PopupError from '../../config/popupsErrors/PopupError';
 import ladderHomeEffect from './ladderHomeEffect';

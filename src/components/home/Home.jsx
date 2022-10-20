@@ -11,6 +11,7 @@ import "./home.css"
 import ContextConnected from '../config/context/ConnectedContext';
 import PopupError from '../config/popupsErrors/PopupError';
 import AirdropCard from "./src/AirdropCard.jpg"
+import VanillaTilt from 'vanilla-tilt';
 
 const LiveMatchesHome = lazy(() => import ('./liveMatchesHome/LiveMatchesHome'))
 const SliderBanner = lazy(() => import ('./slider/SliderBanner'))
@@ -32,6 +33,15 @@ const Home = () => {
         setConnectedPopup(false)
       }, 6000);
     }
+
+    VanillaTilt.init(document.querySelectorAll(".cardMain"), {
+      max: 3,
+      speed: 1100,
+      perspective:600,
+      glare: true,
+      "max-glare": 0.3,
+  });
+  
 
   },[connectedPopup])
 
@@ -65,7 +75,7 @@ const Home = () => {
 
         
         <div className="containerDapp_title">
-          <p>OUR LADDERS</p>
+          <p>ALL SECTIONS</p>
           <div className="arrowsHome">
             <div className="arrowLeft_home"><FontAwesomeIcon icon={faAngleLeft} onClick={() => setArrows(1)} /></div>
             <div className="arrowRight_home"><FontAwesomeIcon icon={faAngleRight} onClick={() => setArrows(2)}/></div>
@@ -74,6 +84,15 @@ const Home = () => {
     
           {arrows === 1 ? 
             <div className="containerDapp_cards">
+
+              { Connected.userLogginActive ?    
+
+                <NavLink to="/airdrop" >
+                  <div className="containerDapp_cards-miniGames cardMain " ></div>
+                </NavLink> 
+              :
+                <div className="containerDapp_cards-miniGames cardMain" onClick={() => setConnectedPopup(true) }></div>
+              }
               
               { Connected.userLogginActive ? 
                /*  <NavLink to="/basicLadder" > */
@@ -91,14 +110,7 @@ const Home = () => {
                 <div className="containerDapp_cards-boost cardMain" onClick={() => setConnectedPopup(true) }></div>
               }
 
-              { Connected.userLogginActive ?    
 
-              <NavLink to="/airdrop" >
-                <div className="containerDapp_cards-miniGames cardMain " ></div>
-              </NavLink> 
-              :
-              <div className="containerDapp_cards-miniGames cardMain" onClick={() => setConnectedPopup(true) }></div>
-              }
 
      
             </div>

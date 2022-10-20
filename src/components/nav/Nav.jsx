@@ -119,12 +119,12 @@ const Nav = () => {
                 <li className='nav_list_links'> Home</li> 
               </NavLink> 
 
-              <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                <li className='nav_list_links'> Match Feed</li> 
-              </NavLink> 
-
               <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                  <li className='nav_list_links'>Ladders</li> 
+              </NavLink> 
+
+              <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+                <li className='nav_list_links'> Match Feed</li> 
               </NavLink> 
            
               <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
