@@ -19,7 +19,7 @@
     opacity: .8 !important;
 }
 
-.box_splide{
+.airdrop{
     position: relative;
     text-align: center;
     border-radius: 15px !important;
@@ -33,6 +33,17 @@
     overflow: hidden;
 }
 
+.box_splide{
+    position: relative;
+    text-align: center;
+    border-radius: 15px !important;
+    z-index: 1000;
+    padding: .2rem;
+    border: 1px solid #b26aff3b;
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    overflow: hidden;
+}
+
 .box_splide img{
     border-radius: 15px;
     width: 100%;
@@ -40,7 +51,11 @@
     object-fit: contain;
     cursor: pointer;
     filter: brightness(105%) contrast(98%) ; 
+    overflow: hidden;
 }
+
+
+
 
 .splide__arrow--prev, .splide__arrow--next , .splide__pagination__page{
     filter: hue-rotate(80deg) drop-shadow( 0 0 2px rgba(139, 89, 255, 0.658));

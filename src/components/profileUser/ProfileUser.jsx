@@ -74,7 +74,6 @@ const ProfileUser = () => {
 
           <div className="container_profileUser">
             
-            <div className="blur_profileUser"></div>
 
             {ticketBasic ? 
 

@@ -109,7 +109,6 @@ const Nav = () => {
           </button>
           <ul className='listNav'>
  
-
               <NavLink to="/"> 
                 <li className='nav_list_links'> 
                   <img className='logoNav' src={logoCC} alt="LogoCC" /> 
@@ -120,12 +119,12 @@ const Nav = () => {
                 <li className='nav_list_links'> Home</li> 
               </NavLink> 
 
-              <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
-                <li className='nav_list_links'> Match Feed</li> 
-              </NavLink> 
-
               <NavLink to="/ladder" className="link_nav_text"  style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                  <li className='nav_list_links'>Ladders</li> 
+              </NavLink> 
+
+              <NavLink to="/matchFeed" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
+                <li className='nav_list_links'> Match Feed</li> 
               </NavLink> 
            
               <NavLink to="/staking" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}> 
@@ -135,13 +134,11 @@ const Nav = () => {
               <NavLink to="/marketplace" className="link_nav_text" style={({ isActive }) => ({ color: isActive ? '#d6b0ff' : 'white' })}>
                 <li className='nav_list_links'> Marketplace </li> 
               </NavLink> 
-
           </ul>
 
           { Connected.userLogginActive ?    
             <NavLink to="/profileUser" className="user_flag"> 
                  <img className='pais_profile_img' src={paisesJson[Connected.userData.flag].img} alt="user flag" />  
-
             </NavLink> 
               
           :

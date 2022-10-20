@@ -2,15 +2,18 @@ import React, { Suspense , useContext, useState, useEffect} from 'react'
 import Spinner from '../../config/spinner/Spinner'
 import ContextConnected from '../../config/context/ConnectedContext'
 import { NavLink } from 'react-router-dom'
-
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "./ladderHome.css"
 import '@splidejs/splide/css/sea-green';
-import basicImg from "./src/basic.jpg"
-import boostImg from "./src/boost.jpg"
-import challengeImg from "./src/challenge.jpg"
-import cryptoBallImg from "./src/cryptoBall.jpeg"
-import candado from "../../config/src/candado.png"
+
+import basicImg from "./src/basicCandado.jpg"
+import boostImg from "./src/boostCandado.jpg"
+import challengeImg from "./src/challengeCandado.jpg"
+
+import airdropImg from "./src/airdrop.jpg"
+import cryptoBallImg from "./src/ballCandado.jpg"
+
+
 import PopupError from '../../config/popupsErrors/PopupError';
 import ladderHomeEffect from './ladderHomeEffect';
 import Preload from "../../config/preload/Preload"
@@ -39,7 +42,7 @@ const LadderHome = () => {
     perPage: 3,
     perMove: 1,
     cover: true,
-    type: "loop",
+/*     type: "loop", */
     fixedHeight:true,
     preloadPages:4,
     resetProgress:true,
@@ -49,6 +52,7 @@ const LadderHome = () => {
     omitEnd:true,
     padding:"0rem",
     gap: "2.5em",
+    speed: 1500,
     breakpoints: {
       1170: {
         perPage: 3,
@@ -74,84 +78,75 @@ const LadderHome = () => {
                 <Preload />
                 <div className="slider_cards">
                     <Splide aria-label="ladders" options={ options } >
+                                          
+                          <SplideSlide className='box_splide airdrop '>
+                                {Connected.userLogginActive ? 
+                                    <NavLink to="/airdrop">
+                                        <img  src={airdropImg} alt="Airdrop Slider "/>
+                                    </NavLink>
+                                  :
+                                      <div onClick={() => setConnectedPopup(true) }>
+                                        <img  src={airdropImg} alt="Airdrop Slider" />
+                                      </div>
+                                }
+                            </SplideSlide>
                     
-                        <Suspense fallback={<Spinner/>}>
                             <SplideSlide className='box_splide '>
                                 {Connected.userLogginActive ? 
-                                  <Suspense fallback={<Spinner/>}>
-                                    <NavLink to="/basicLadder">
+                                /*     <NavLink to="/basicLadder"> */
+                                      
                                         <img  src={basicImg} alt="Basic ladder Slider "/>
-                                    </NavLink>
-                                  </Suspense>
+                                        
+                             /*        </NavLink> */
+                             
                                   :
-                                    <Suspense fallback={<Spinner/>}>
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img  src={basicImg} alt="Basic ladder Slider " />
                                       </div>
-                                    </Suspense>
                                 }
-                            </SplideSlide>
-                        </Suspense>
 
-                        <Suspense fallback={<Spinner/>}>
+
+                            </SplideSlide>
+
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                   <Suspense fallback={<Spinner/>}>
-                                      <NavLink to="/boostLadder">
-                                        
+                                    /*   <NavLink to="/boostLadder"> */
                                           <img src={boostImg} alt="Boost ladder Slider "/>
-                                      </NavLink>
-                                    </Suspense> 
+                              /*         </NavLink> */
                                     :
-                                    <Suspense fallback={<Spinner/>}>
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={boostImg} alt="Boost ladder Slider " />
                                       </div>
-                                    </Suspense>
                                   }
                             </SplideSlide>
-                        </Suspense>
                         
-                        <Suspense fallback={<Spinner/>}>
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                    <Suspense fallback={<Spinner/>}>
-                                      <NavLink to="/challengeLadder">
+                                  /*     <NavLink to="/challengeLadder"> */
                                           <img src={challengeImg} alt="Challenge ladder Slider " />
-                                      </NavLink>
-                                    </Suspense>
+                              /*         </NavLink> */
                                     :
-                                    <Suspense fallback={<Spinner/>}>
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={challengeImg} alt="Challenge ladder Slider " />
                                       </div>
-                                    </Suspense>
                                   }
                             </SplideSlide>
-                        </Suspense>
 
-                        <Suspense fallback={<Spinner/>}>
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                    <Suspense fallback={<Spinner/>}>
-                                      <NavLink to="/cryptoBall">
+                                     /*  <NavLink to="/cryptoBall"> */
                                           <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />
-                                      </NavLink>
-                                    </Suspense>
+                                      /* </NavLink> */
                                     :
-                                    <Suspense fallback={<Spinner/>}>
                                       <div onClick={() => setConnectedPopup(true) }>
                                         <img src={cryptoBallImg} alt="Crypto Ball ladder Slider " />
                                       </div>
-                                    </Suspense>
                                   }
                             </SplideSlide>
-                        </Suspense>
 
                     </Splide>
                 </div>
             </div>
-
     </>
     
   )

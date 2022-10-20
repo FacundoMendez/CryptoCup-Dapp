@@ -140,33 +140,68 @@
     background: #160D1F;
     display: flex;
     justify-content: center;
-    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.829);
+    box-shadow: .7rem 1rem  1rem rgba(0, 0, 0, 0.877);
     position: relative;
     cursor: pointer;
+    overflow: hidden;
     transition: all .2s ease-in-out;
     filter: drop-shadow(0 0 10px rgba(154, 120, 248, 0.534));
 }
 
 .containerDapp_cards-basic{
-    background-image: url("./src/CardDappBasicLadder.jpg");
+    background-image: url("./src/basicCandado.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    filter: brightness(180%);
+    
 } 
+
+.containerDapp_cards-miniGames{
+/*     background-image: url("./src/AirdropCard.jpg");
+    background-position: center;
+    background-size: 98% 95%;
+    border-radius: 10px;
+    background-repeat: no-repeat; */
+    padding: .5rem;
+    background-image: url("./src/recuardoCard.gif");
+    background-size: 105% 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    height: 22.5rem;
+    width: 23.8vw;
+}
+
+.containerDapp_cards-miniGames::after{
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: 96%;
+    top: 0;
+    z-index: 99999 !important;
+    background-image: url("./src/AirdropCard.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    background-repeat: no-repeat; 
+    margin: .5rem;
+}
+
 .containerDapp_cards-boost{
-    background-image: url("./src/CardDappBoostLadder.jpg");
+    background-image: url("./src/boostCandado.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: brightness(180%);
+
 
 } 
 .containerDapp_cards-friends{
-    background-image: url("./src/ChallengeRoom.jpg");
+    background-image: url("./src/challengeCandado.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    filter: brightness(180%);
 } 
 .containerDapp_cards-staking{
     background-image: url("../config/src/candado.png");
@@ -184,14 +219,7 @@
     background-color: rgba(0, 0, 0, 0.993);
 
 }
-.containerDapp_cards-miniGames{
-    background-image: url("../config/src/candado.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.993);
 
-}
 
 .cardMain::before{
     height: 22.5rem;
@@ -429,6 +457,10 @@
   
   
   @media screen and (max-width: 824px) {
+
+    .container_live_social{
+        width: 95%;
+    }
 
     .containerDapp_title{
         width: 95%;
