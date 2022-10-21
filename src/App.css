@@ -16,7 +16,7 @@
 
 html{
   background: radial-gradient(circle, rgba(46, 46, 46, 0.219) 0%, rgba(11, 7, 15, 0.801) 60%);
-  background-color: rgba(140, 68, 255, 0.998);
+  background-color: rgba(46, 21, 87, 0.998);
 }
 
 ::-webkit-scrollbar {
@@ -69,7 +69,6 @@ html {
   user-select: none;
   background-image: url("./components/config/src/backMatch7.png");
   background-size: cover;
-  background-attachment: fixed;
   filter: contrast(113%);
 }
 
