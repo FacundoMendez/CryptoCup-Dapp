@@ -13,6 +13,13 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
     },[])
 
 
+    //Busqueda status 
+    const setMatchLives = async () => {
+        console.log("apretao");
+        const res = await api.get('/matches/getLiveMatches')
+        setMatchs(res.data)
+        console.log(res.data); 
+    }
 
 
     /* Busqueda Fecha desktop */  
@@ -120,7 +127,7 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
                         <label className='lab_filter' htmlFor="filter_startIn">Start In</label>
                     </p>
                     <p>
-                        <input type="checkbox" id="filter_vivo"  />
+                        <input type="checkbox" id="filter_vivo"  /* onClick={setMatchLives} *//>
                         <label className='lab_filter' htmlFor="filter_vivo">LIVE</label>
                     </p>
                     <p>

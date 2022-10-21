@@ -32,7 +32,7 @@ function App() {
   const [signer,setSigner]=useState(undefined)
 
   const [signature, setSignature] = useState(undefined)
-  const [paisFlag, setPaisFlag] = useState("Alemania")
+  const [paisFlag, setPaisFlag] = useState("germany")
 
   const [userData, setUserData] = useState(undefined)
 

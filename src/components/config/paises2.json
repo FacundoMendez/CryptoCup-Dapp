@@ -1,309 +1,304 @@
 {
     
-    "Alemania" : {
+    "germany" : {
         "name": "Alemania",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Alemania_rzxcos.jpg",
         "num":0
     },
     
-    "Argentina" :{
+    "argentina" :{
         "name": "Argentina",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Argentina_ezc0gj.jpg",
         "num":1
     },
     
-    "Saudi Arabia" :{
+    "saudi arabia" :{
         "name": "Arabia Saudita",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Arabia_Saudita_nhnasf.jpg ",
         "num":2
     },
     
-    "Australia" :{
+    "australia" :{
         "name": "Australia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854886/CryptocupQatar/banderas/Australia_qqh0wi.jpg",
         "num":3
 
     },
     
-    "Brazil" :{
+    "brazil" :{
         "name": "Brasil",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Brasil_fcgm3j.jpg  ",
         "num":4
     },
     
-    "Belgica" :{
+    "belgium" :{
         "name": "Belgica",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/B%C3%A9lgica_af2xbu.jpg ",
         "num":5
     },
     
-    "Croacia" :{
+    "croatia" :{
         "name": "Croacia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Croacia_cm74vn.jpg",
         "num":6
     },
     
-    "South Korea" :{
+    "south korea" :{
         "name": "Corea del Sur",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Corea_jcwos0.jpg ",
         "num":7
     },
     
-    "Canada" :{
+    "canada" :{
         "name": "Canadá",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Canad%C3%A1_ar86yj.jpg ",
         "num":8
     },
     
-    "Cameroon" :{
+    "cameroon" :{
         "name": "Camerún",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/Camer%C3%BAn_bibspu.jpg ",
         "num":9
     },
     
-    "Costa Rica" :{
+    "costa rica" :{
         "name": "Costa Rica",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854887/CryptocupQatar/banderas/CostaRica_tz1y0a.jpg ",
         "num":10
     },
     
-    "Dinamarca" :{
+    "denmark" :{
         "name": "Dinamarca",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Dinamarca_btsvv2.jpg ",
         "num":11
     },
     
-    "Spain" :{
+    "spain" :{
         "name": "España",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Espa%C3%B1a_fpo5cq.jpg ",
         "num":12
     },
     
-    "United States" :{
+    "united states" :{
         "name": "Estados Unidos",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/EEUU_p2gwwe.jpg ",
         "num":13
     },
     
-    "Ecuador" :{
+    "ecuador" :{
         "name": "Ecuador",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Ecuador_q551am.jpg",
         "num":14
     },
     
-    "Francia" :{
+    "france" :{
         "name": "Francia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Francia_zpgspq.jpg ",
         "num":15
     },
     
-    "Ghana" :{
+    "ghana" :{
         "name": "Ghana",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Ghana_cab9sd.jpg ",
         "num":16
     },
     
-    "Gales" :{
+    "wales" :{
         "name": "Gales",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Gales_csjv7y.jpg",
         "num":17
     },
     
-    "Holanda" :{
+    "netherlands" :{
         "name": "Holanda",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Holanda_nfnjqk.jpg ",
         "num":18
     },
     
-    "Inglaterra" :{
+    "england" :{
         "name": "Inglaterra",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854888/CryptocupQatar/banderas/Inglaterra_zplsb7.jpg ",
         "num":19
     },
     
-    "Iran" :{
+    "iran" :{
         "name": "Irán",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Ir%C3%A1n_nxu0pt.jpg",
         "num":20
     },
     
-    "Japan" :{
+    "japan" :{
         "name": "Japón",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Jap%C3%B3n_cjfe9x.jpg ",
         "num":21
     },
     
-    "Marruecos" :{
+    "morocco" :{
         "name": "Marruecos",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Marruecos_d5rsly.jpg",
         "num":22
     },
     
-    "Mexico" :{
+    "mexico" :{
         "name": "Mexico",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/M%C3%A9xico_oswjz2.jpg  ",
         "num":23
     },
     
-    "Portugal" :{
+    "portugal" :{
         "name": "Portugal",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Portugal_o61fcj.jpg ",
         "num":24
     },
     
-    "Polonia" :{
+    "poland" :{
         "name": "Polonia",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Polonia_ldolpc.jpg ",
         "num":25
     },
     
-    "Qatar" :{
+    "qatar" :{
         "name": "Qatar",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Qatar_emccgo.jpg ",
         "num":26
     },
-    "Switzerland" :{
+    "switzerland" :{
         "name": "Suiza",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Suiza_hhlfet.jpg",
         "num":28
     },
     
-    "Senegal" :{
+    "senegal" :{
         "name": "Senegal",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854889/CryptocupQatar/banderas/Senegal_aycies.jpg ",
         "num":29
     },
     
-    "Uruguay" :{
+    "uruguay" :{
         "name": "Uruguay",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Uruguay_bu2mus.jpg ",
         "num":30
     },
     
-    "Tunisia" :{
+    "tunisia" :{
         "name": "Túnez",
         "img": "https://res.cloudinary.com/dvrxw8fbg/image/upload/v1663854890/CryptocupQatar/banderas/Tunez_nhofmo.jpg  ",
         "num":31
     },
-    "Jamaica" :{
+    "jamaica" :{
         "name": "Jamaica",
         "img": "https://static4.depositphotos.com/1011936/341/i/600/depositphotos_3417601-stock-photo-jamaican-flag-in-the-wind.jpg",
         "num":31
     },
-    "Chile" :{
+    "chile" :{
         "name": "Chile",
         "img": "https://media.istockphoto.com/photos/waving-chile-flag-picture-id486201129?k=20&m=486201129&s=170667a&w=0&h=LY-zDEi7jq8y2bYIShs9k6NgZJvN4dfLNU6fyvxymPs=",
         "num":31
     },
-    "Czech Republic" :{
+    "czech republic" :{
         "name": "Czech Republic",
         "img": "https://c4.wallpaperflare.com/wallpaper/751/787/664/bandera-checa-republica-wallpaper-preview.jpg",
         "num":31
     },
-    "Norway" :{
+    "norway" :{
         "name": "Norway",
         "img": "https://image.winudf.com/v2/image1/Y29tLmhkZmxhZ3Mubm9yd2F5LndhbGxwYXBlci5pbWFnZXNfc2NyZWVuXzVfMTYxNzk5NzQxOV8wMTE/screen-9.jpg?fakeurl=1&type=.webp",
         "num":31
     },
-    "Serbia" :{
+    "serbia" :{
         "name": "Serbia",
         "img": "https://t3.ftcdn.net/jpg/05/28/41/54/360_F_528415456_9FemVfuGSGdO73QCmMAHCh6TU4SYR4jQ.jpg",
         "num":31
     },
-    "Paraguay" :{
+    "paraguay" :{
         "name": "Paraguay",
         "img": "https://ak.picdn.net/shutterstock/videos/1084839430/thumb/1.jpg?ip=x480",
         "num":31
     },
-    "Morocco" :{
-        "name": "Morocco",
-        "img": "https://wallpaperaccess.com/full/3840659.jpg",
-        "num":31
-    },
-    "Peru" :{
+    "peru" :{
         "name": "Peru",
         "img": "https://travel.mqcdn.com/mapquest/travel/wp-content/uploads/2021/01/peru-flag-with-coat-of-arms-722x480.jpg",
         "num":31
     },
-    "El Salvador" :{
+    "el salvador" :{
         "name": "El Salvador",
         "img": "https://i.pinimg.com/originals/be/97/50/be9750020891295b8e45b9a6a936a28e.jpg",
         "num":31
     },
-    "Colombia" :{
+    "colombia" :{
         "name": "Colombia",
         "img": "https://media.istockphoto.com/photos/colombias-flag-picture-id508515841?k=20&m=508515841&s=612x612&w=0&h=fQ7fexfVO7hp2nmRUmvJcv6fm37aC0UaYnDWkbc5x_o=",
         "num":31
     },
-    "Milan" : {
+    "milan" : {
         "name" : "Milan" , 
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_186/v1665458706/CryptocupQatar/Equipos%20Champions/Milan_bv6ygz.png"
     },
-    "Benfica" : {
+    "benfica" : {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_169,q_auto:eco,w_300/v1665458704/CryptocupQatar/Equipos%20Champions/Benfica_heic5m.png"
     },
-    "Real Madrid" : {
+    "real madrid" : {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_214/v1665458706/CryptocupQatar/Equipos%20Champions/RealMadrid_bhinq5.png"
     },
-    "Shaktar" : {
+    "shaktar" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_189,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Shakthar_qxgtjq.png"
     },
-    "Maccabi Haifa" : {
+    "maccabi haifa" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_289,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Maccabi_Haifa_b5yrka.png"
     },
-    "Napoli" : {
+    "napoli" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Napoli_erxyq4.png"
     },
-    "Dortmund" : {
+    "dortmund" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Dortmund_pffpkx.png"
     },
-    "Kobenhavn" : {
+    "kobenhavn" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_299/v1665458705/CryptocupQatar/Equipos%20Champions/Kobenhavn_v5ghgj.png"
     },
-    "Manchester City" : {
+    "manchester city" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/ManchesterCity_tvlpvm.png"
     },
-    "Liverpool" : {
+    "liverpool" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_222/v1665458705/CryptocupQatar/Equipos%20Champions/Livelpool_kakgi0.png"
     },
-    "Brujas" : {
+    "brugge" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/ClubBrujas_io2mef.png"
     },
-    "Juventus" : {
+    "juventus" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_150/v1665458705/CryptocupQatar/Equipos%20Champions/Juventus_bq8seb.png"
     },
-    "Inter" : {
+    "inter" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/InterMilan_jffvrq.png"
     },
-    "Bayern" : {
+    "bayern" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/Bayern_dgpgdu.png"
     },
-    "Chelsea": {
+    "chelsea": {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665458705/CryptocupQatar/Equipos%20Champions/Chelsea_rxbcg6.png"
     },
-    "Ajax": {
+    "ajax": {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_298/v1665458705/CryptocupQatar/Equipos%20Champions/Ajax_djaaqc.png"
     },
-    "Barcelona": {
+    "barcelona": {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_296/v1665458704/CryptocupQatar/Equipos%20Champions/Barcelona_ykeggx.png"
     },
-    "Atletico Madrid": {
+    "atletico madrid": {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458704/CryptocupQatar/Equipos%20Champions/AtleticoMadrid_zbdpua.png"
     },
-    "Viktoria Plezñ" : {
+    "viktoria plezñ" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_212/v1665458706/CryptocupQatar/Equipos%20Champions/Viktoria_Plzen_na5dkl.png"
     },
-    "Sevilla" : {
+    "sevilla" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Sevilla_emlgz9.png"
     },
-    "Rangers" : {
+    "rangers" : {
         "img" : "https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_188,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/Rangers_ggmkie.png"
     },
     "MILAN" : {
         "name" : "Milan" , 
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_186/v1665458706/CryptocupQatar/Equipos%20Champions/Milan_bv6ygz.png"
     },
-    "PSG" : {
+    "psg" : {
         "img" :"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_296,q_auto:eco,w_300/v1665458706/CryptocupQatar/Equipos%20Champions/PSG_icy6lg.png"
     },
     "BENFICA" : {
@@ -369,7 +364,7 @@
     "": {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_512,q_auto:eco,w_512/v1665517266/CryptocupQatar/banderas/noResult_eip4tg.webp"
     },
-    "Tie" : {
+    "tie" : {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665516674/CryptocupQatar/banderas/TIE_qph12h.png"
     }
 }
