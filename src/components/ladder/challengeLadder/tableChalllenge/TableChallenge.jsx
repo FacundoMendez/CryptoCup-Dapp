@@ -116,9 +116,12 @@ const TableChallenge = () => {
                                         {/* {cell.render("Cell")} */}
                                         {row.cells.map((cell) => {
                                            return <RowRoom 
-                                                      key={cell.row.original }
+                                                      id={cell.row.id}
                                                       roomOcupada={roomOcupada}
                                                       setRoomOcupada={setRoomOcupada}
+                                                      flagTeam1= "{}"
+                                                      flagTeam2= "{}"
+                                                      tokens= "{}"
                                                     />   
                                         })}
                                     </td>

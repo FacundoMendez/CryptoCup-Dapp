@@ -204,12 +204,11 @@
     filter: brightness(180%);
 } 
 .containerDapp_cards-staking{
-    background-image: url("../config/src/candado.png");
+    background-image: url("./src/stakingCandado.jpeg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.993);
-
+    filter: brightness(180%);
 }  
 .containerDapp_cards-marketplace {
     background-image: url("./src/marketCandado.jpeg");

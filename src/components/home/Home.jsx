@@ -130,14 +130,10 @@ const Home = () => {
 
             { Connected.userLogginActive ?    
                 /* <NavLink to="/Staking" > */
-                   <div className="containerDapp_cards-staking cardMain " >
-                     <h2>Staking</h2>
-                   </div>
+                   <div className="containerDapp_cards-staking cardMain " ></div>
                /*  </NavLink> */
             :
-              <div className="containerDapp_cards-staking cardMain " onClick={() => setConnectedPopup(true) }>
-                <h2>Staking</h2>
-              </div>
+              <div className="containerDapp_cards-staking cardMain " onClick={() => setConnectedPopup(true) }></div>
             }
 
             { Connected.userLogginActive ?    

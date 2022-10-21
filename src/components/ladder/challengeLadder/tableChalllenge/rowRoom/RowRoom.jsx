@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import "./rowRoom.css"
 import paisesPrueba from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
+import { NavLink } from 'react-router-dom'
 
-const RowRoom = ({roomOcupada, setRoomOcupada}) => {
+const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tokens}) => {
 
+    console.log(id)
 
   return (
     <div className='rowRoom'>
@@ -39,7 +41,9 @@ const RowRoom = ({roomOcupada, setRoomOcupada}) => {
             </button>
         :
             <button className='challenge room_data'>
-                CHALLENGE
+                <NavLink to={`/challengeLadder/${id}`} >
+                    <p>CHALLENGE</p>
+                </NavLink>
             </button>
         }
 

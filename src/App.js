@@ -13,6 +13,7 @@ import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
 import ContextConnected from './components/config/context/ConnectedContext';
 import LadderHome from './components/ladder/ladderHome/LadderHome';
+import DetailChallenge from './components/ladder/challengeLadder/detalladaChallenge/DetailChallenge';
 
 const Home = lazy(() => import ('./components/home/Home'))
 const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
@@ -69,7 +70,9 @@ function App() {
                 <Route exact path="/airdrop" element={<Airdrop/>}/>
                 <Route exact path="/basicLadder" element={<BasicLadder/>}/>
                 <Route exact path="/boostLadder" element={<BoostLadder/>}/>
+
                 <Route exact path="/challengeLadder" element={<ChallengeLadder/>}/>
+                <Route exact path="/challengeLadder/:roomId" element={<DetailChallenge/>}/>
 
                 <Route exact path="/staking" element={<Staking />} />
                 <Route exact path="/marketplace" element={<Marketplace />} />
