@@ -113,16 +113,16 @@ const TableChallenge = () => {
                             {row.cells.map((cell) => {
                                 return ( 
                                     <td className='row-map' {...cell.getCellProps()}>
-                                        {/* {cell.render("Cell")} */}
-                                        {row.cells.map((cell) => {
-                                           return <RowRoom 
-                                                      id={cell.row.id}
-                                                      roomOcupada={roomOcupada}
-                                                      setRoomOcupada={setRoomOcupada}
-                                                      flagTeam1= "{}"
-                                                      flagTeam2= "{}"
-                                                      tokens= "{}"
-                                                    />   
+                                        {
+                                          row.cells.map((cell,index) => {
+                                            return <RowRoom key={index}
+                                                        id={cell.row.id}
+                                                        roomOcupada={roomOcupada}
+                                                        setRoomOcupada={setRoomOcupada}
+                                                        flagTeam1= "{}"
+                                                        flagTeam2= "{}"
+                                                        tokens= "{}"
+                                                      />   
                                         })}
                                     </td>
                                 )

@@ -28,7 +28,7 @@ const ChallengeLadder = () => {
               <div className="blur_boost"></div>
                 {
                   publicRooms ? 
-                    <TableChallenge  />
+                    <img className='candado' src={candado} alt="candado" />
                   :
                   null
                 }

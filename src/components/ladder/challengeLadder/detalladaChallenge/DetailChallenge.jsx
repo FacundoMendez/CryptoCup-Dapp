@@ -1,15 +1,99 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React , {Suspense , useContext} from 'react'
+import { NavLink, useParams } from 'react-router-dom'
+import Spinner from '../../../config/spinner/Spinner'
+import "./detailChallenge.css"
+import api from '../../../../api'
+import ContextConnected from '../../../config/context/ConnectedContext'
+import vsChallenge from "../../../config/src/vs2.png"
+import tokenImg from "../../../nav_inventario/src/tokenNav.png"
+import silueta from "../../../config/src/user.png"
+import silueta2 from "../../../config/src/user2.png"
+import paises from "../../../config/paises2.json"
+import arrow from "../../../config/src/arrow.png"
+import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
 
 const DetailChallenge = () => {
-    let roomId = useParams()
-    console.log(roomId)
-  return (
-    <div>
-        
-        <p>id Usuario: <p>{roomId}</p></p>
+    let {roomId} = useParams()   /* de aca se obtiene el id de la room  */
 
-    </div>
+    const Connected = useContext(ContextConnected)
+
+  return (
+        
+    <Suspense fallback={<Spinner/>}>
+    
+        <div className="detailChallenge">
+            <div className="nav_detail">
+                <h2>ID ROOM :  #{roomId} </h2>
+            </div>
+            
+
+            <div className="container_box_table_detail">
+
+                <div className="box_arrow_detail">
+                    <NavLink to="/challengeLadder"> 
+                        <img src={arrow} alt="arrow" />
+                    </NavLink>
+                </div>
+
+                <div className="nav_match_challenge">
+                    <div className="team1_nav_challenge">
+                        <img src={paises.BARCELONA.img} alt="flag team 1" />
+                    </div>
+
+                    <div className="box_results_match_challenge">
+                        <div className="team1_nav_result_challenge">0</div>
+                        <img className='vsChallenge' src={vsChallenge} alt="vs" />
+                        <div className="team2_nav_result_challenge">0</div>
+                    </div>
+
+                    <div className="team2_nav_challenge">
+                        <img src={paises['REAL MADRID'].img} alt="flag team 2" />
+                    </div>
+                </div>
+
+                <TimerChallengeInit/>
+
+                <div className="box_user_detail_challenge">
+                    <div className="owner_select">
+                        <h2>{Connected.userData.username} Selection</h2>
+                        <div className="flaw_owner_select">    
+                            <img src={paises.BARCELONA.img} alt="flag team 1" />
+                        </div>
+
+                        <img className='siluetaUser' src={silueta} alt="silueta" />
+                    </div>
+
+
+
+                    <div className="vs_detail">
+                     <div className="container_tokens_detail">
+                        <div className="tokens_challenge_detail">
+                            <div className="box_tokens_detail">
+                                <img src={tokenImg} alt="token img" />
+                                <p>0</p> 
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div className="guest_select">
+                        <h2>My Selection</h2>
+                        <div className="flaw_guest_select">
+                            {/* <img src="" alt="" /> */}
+                        </div>
+                        <img className='siluetaUser2' src={silueta2} alt="silueta" />
+                    </div>
+                </div>
+
+ 
+                <button className='button_challengeRoom_acept'>
+                    Accept Challenge
+                </button>
+            </div>
+ 
+        </div>
+    </Suspense>
+
   )
 }
 

@@ -4,9 +4,8 @@ import paisesPrueba from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 import { NavLink } from 'react-router-dom'
 
-const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tokens}) => {
+const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tokens }) => {
 
-    console.log(id)
 
   return (
     <div className='rowRoom'>
@@ -16,17 +15,17 @@ const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tok
 
         <div className="MatchRoom ">
             <div className="team1_romFlag "> 
-                <img src={paisesPrueba.Argentina.img} alt="flag1 room" />
+                {/* <img src={paisesPrueba.argentina.img} alt="flag1 room" /> */}
             </div>
             <div className="result_rom"> VS </div>
             <div className="team2_romFlag ">
-                <img src={paisesPrueba.Alemania.img} alt="flag1 room" />
+                {/* <img src={paisesPrueba.alemania.img} alt="flag1 room" /> */}
             </div>
         </div>
 
         <div className="ownerRoom room_data">
             <div className="owner_room_flag"> 
-                <img src={paisesPrueba.Argentina.img} alt="flag1 room" />
+                {/* <img src={paisesPrueba.argentina.img} alt="flag1 room" /> */}
             </div>
         </div>
 
@@ -40,11 +39,12 @@ const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tok
                 full room
             </button>
         :
-            <button className='challenge room_data'>
-                <NavLink to={`/challengeLadder/${id}`} >
-                    <p>CHALLENGE</p>
-                </NavLink>
-            </button>
+            <NavLink to={`/challengeLadder/${id}`} >
+                <button className='challenge room_data'>
+                        <p>CHALLENGE</p>
+                </button>
+            </NavLink>
+
         }
 
       

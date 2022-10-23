@@ -59,6 +59,20 @@
     background: rgb(39,25,78);
     background: radial-gradient(circle, rgba(108, 50, 243, 0.315) 0%, rgba(20, 11, 44, 0.692) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.table::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 103%;
+    height: 3rem;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(106, 76, 155) 0%, rgba(24, 16, 49, 0.993) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
 
@@ -71,6 +85,8 @@
     border-radius: 5px;
     overflow-y: scroll;
     box-shadow: rgba(166, 128, 255, 0.096) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.116) -3px -3px 6px 1px inset;
+    padding-bottom: 5rem;
+
 }
 
 .table_cabecera{
@@ -125,6 +141,7 @@
     overflow: hidden;
     background-color: #cbb1fa3b;
     box-shadow: rgba(166, 128, 255, 0.336) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.301) -3px -3px 6px 1px inset;
+
 }
 
 

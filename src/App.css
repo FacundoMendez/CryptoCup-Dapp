@@ -11,7 +11,6 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     scroll-behavior: smooth;
     text-decoration: none;
-
 }
 
 html{
@@ -69,7 +68,8 @@ html {
   user-select: none;
   background-image: url("./components/config/src/backMatch7.png");
   background-size: cover;
-  filter: contrast(113%);
+  background-attachment: fixed;
+  filter: contrast(110%);
 }
 
 
