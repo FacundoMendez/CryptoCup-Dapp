@@ -16,9 +16,20 @@
 }
 
 .finished_matchFeed{
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 1px;
+    position: relative;
+    top: .5rem;
 }
+
+
+.dateMatchFeed{
+    position: relative;
+    top: 1rem;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
 
 .time_matchFeed{
     display: flex;

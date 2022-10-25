@@ -20,7 +20,6 @@ const MyPredictions = () => {
     const res = await api.post('/predictions/getPredictionsHistory', {
       address: Connected.account[0]
     })
-    console.log(res.data);
     setPredictionsHistory(res.data)
     setLoading(false) 
   }
@@ -56,8 +55,6 @@ const MyPredictions = () => {
           {
 
            predictionsHistory.map( (item , index ) => {      
-            let date = new Date (item.relatedGame[0].startDate).getMonth()
-            console.log(date);/* <-  paginacion */
               return  <div key={index} className={
                 item.relatedGame[0].result === "" ? 
                    "myPrediction " 

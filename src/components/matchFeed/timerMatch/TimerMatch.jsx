@@ -50,8 +50,9 @@ const TimerMatch = ({timer, finishDate}) => {
         {
             statusTimer==="finished" ?
             
-            <div className="reloj">
+            <div className="reloj finish">
                 <h2 className='finished_matchFeed'>Finished</h2>
+                <div className="dateMatchFeed"> --/--/2022</div>
             </div>
                 :
             statusTimer==="startIn" ?
