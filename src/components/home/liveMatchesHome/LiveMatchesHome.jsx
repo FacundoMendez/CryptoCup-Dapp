@@ -42,9 +42,9 @@ const LiveMatchesHome = () => {
                                 </div>
                             </div>
                             <div className="boxResut_live">
-                                <div className="result_team1_live">{item.scoreTeam1}</div>
+                         {/*        <div className="result_team1_live">{item.scoreTeam1}</div> */}
                                 <p>-</p>
-                                <div className="result_team2_live">{item.scoreTeam2}</div>
+             {/*                    <div className="result_team2_live">{item.scoreTeam2}</div> */}
                             </div>
                             <div className="team2_live">
                                 <div className="flag_team2_live">

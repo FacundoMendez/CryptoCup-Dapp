@@ -42,10 +42,7 @@
     align-items: center;
     gap: 1rem;
     padding: 0 0rem;
-
 }
-  
-
 
 .nav_challengeRoom h2{
     color: white;
@@ -157,13 +154,341 @@
 }
 
 
+.box_filter_match{
+    position: fixed;
+    width: 35rem;
+    height: 9rem;
+    z-index: 9999;
+    top: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all .5 ease;
+    background: radial-gradient(circle, rgb(101, 68, 179) 0%, rgb(39, 27, 70) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.box_filter_match_active{
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.box_id_match_challenge{
+    width: 100%;
+    height: 9rem;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    border-radius: 10px;
+    border-top: none;
+}
+
+.id_match{
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    border-radius: 15px;
+    height: 6rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+
+}
+
+
+
+.box_input_nav input{
+    width: 22rem;
+    height: 6rem;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    background: rgb(47, 26, 75);
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 10px;
+    z-index: 90;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+}
+
+.box_input_nav input::placeholder{
+    color: rgba(185, 185, 185, 0.76);
+    left: 4rem;
+    font-size: 1.8rem;
+}
+
+
+/* create room */
+
+
+.box_create_room_challenge{
+    position: fixed;
+    width: 35rem;
+    height: 40rem;
+    z-index: 9999;
+    top: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+    border-radius: 15px;
+    background: radial-gradient(circle, rgb(101, 68, 179) 0%, rgb(39, 27, 70) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+/*     visibility: hidden;
+    opacity: 0; */
+    transition: all .3s ease;
+    padding: 0 1rem;
+}
+
+
+/* filter matchs */
+
+.filterPartidos{
+    width: 99%;
+    height: 7rem;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    padding: 0 2rem;
+    cursor: pointer;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    transition: all .3s ease;
+}
+
+.box_elegir_partido_challenge{
+    width: 99%;
+    height: 16rem;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5 ease;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: none !important;
+    opacity: 0;
+    display: flex;
+    transition: all .5 ease;
+    overflow-y: scroll;
+}
+
+.box_elegir_partido_challenge_active{
+    display: flex !important;
+    opacity: 1;
+    transition: all .5 ease;
+}
+
+
+
+
+.formPartidos_challenge{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.formPartidos_challenge p{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lab_challenge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* select team */
+
+
+.filterPartidos{
+    width: 99%;
+    height: 7rem;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    padding: 0 2rem;
+    cursor: pointer;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    transition: all .3s ease;
+}
+
+.box_elegir_partido_challenge{
+    width: 99%;
+    height: 16rem;
+    border-radius: 10px;
+    position: relative;
+    transition: all .5 ease;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    display: none !important;
+    opacity: 0;
+    display: flex;
+    transition: all .5 ease;
+    overflow-y: scroll;
+}
+
+.box_elegir_partido_challenge_active{
+    display: flex !important;
+    opacity: 1;
+    transition: all .5 ease;
+}
+
+
+
+
+.formPartidos_challenge{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.formPartidos_challenge p{
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lab_challenge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* cant tokens */
+
+.box_toknes_match_challenge{
+    width: 100%;
+    height: 7rem;
+    position: relative;
+    top: 0%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%);
+    box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+   
+}
+
+.tokens_match{
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    border-radius: 15px;
+    height: 5rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: rgb(47, 26, 75);
+}
+
+.tokens_match img {
+    width: 5rem;
+}
+
+
+.box_input_nav_tokens input{
+    width: 22rem;
+    height: 5rem;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border: 2px ridge rgba(161, 111, 255, 0.699);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    background: rgb(47, 26, 75);
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 10px;
+    z-index: 90;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+}
+
+.box_input_nav_tokens input::placeholder{
+    color: rgba(185, 185, 185, 0.76);
+    left: 4rem;
+    font-size: 1.8rem;
+}
+
+
 
 @media screen and (max-width:1440px) {
 
+    .container_navChallenge {
+        position: relative;
+        width: 95vw;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
     .nav_challengeRoom{
-        width: 90vw;
-        height: 6rem;
+        width: 95vw;
         padding: 0 3rem;
+    }
+
+    .container_friendsLadder {
+        width: 95vw;
     }
     
     .nav_challengeRoom h2{
@@ -181,6 +506,20 @@
     .links_challengeRoom li:after {
         bottom: -1.8rem;
     }
+
+    .container_createRoom{
+        width: 18rem;
+        padding: 0 1rem;
+
+    }
+
+    .containerFilter_match{
+        width: 20rem;
+        padding: 0 2rem;
+        font-size: 1.2rem;
+    }
+ 
+
       
 }
 
@@ -188,9 +527,14 @@
 
     .nav_challengeRoom{
         width: 90vw;
-        height: 5rem;
         padding: 0 2rem;
     }
+
+    .containerFilter_match p{
+        display: none;
+    }
+
+ 
     
     .nav_challengeRoom h2{
         font-size: 2.5rem;
@@ -228,7 +572,7 @@
         position: fixed;
         left: 5vw;
         top: 15.6rem;
-        height: 16.5rem;
+        top: 18rem;
         padding: 1.3rem 0;
         visibility: hidden;
         opacity: 0;
@@ -272,12 +616,7 @@
         width: 100%;
         padding: 1rem ;
         border-radius: 5px;
-        border: 2px solid rgba(219, 192, 255, 0.062);
         border-left: none;
-        border-right: none;
-        background: radial-gradient(circle, rgba(254, 254, 255, 0.116) 0%, rgba(20, 11, 44, 0.733) 60%);
-        background-color: rgb(91, 44, 168);
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
         text-shadow: 0 0 .2rem black;
     }
 
@@ -287,7 +626,24 @@
         transition: all .3s ease-in-out;
         text-shadow: 0 0 .1rem black;
     }
+
+    .container_createRoom{
+        width: 18rem;
+        padding: 0 ;
+
+    }
+
+    .containerFilter_match{
+        width: 15rem;
+        padding: 0 ;
+    }
  
+
+    .container_createRoom p{
+        font-size: 1.2rem;
+    }
+
+
 }
 
 
@@ -296,27 +652,66 @@
         width: 90vw;
     }
 
-
+    .box_create_sala {
+        width: 17rem ;
+    }
+    .nav_challengeRoom h2 {
+        font-size: 1.3rem;
+    }
+ 
 }
 
 @media screen and (max-width:480px) {
 
     .nav_challengeRoom{
         width: 98vw;
-        height: 6rem;
-        margin-top: 2rem;
     }
 
-    .links_movile _challengeRoomli{
+    .links_movile_challengeRoomli{
         font-size: 1.6rem;  
     }
-    .nav_challengeRoom h2{
-        font-size: 2rem;
-    }
+
 
     .box_links_movile_challengeRoom{
         width: 98vw;
         left: .9vw;
         height: 16.5rem;
     }
+
+    .container_navChallenge {
+        width: 98vw;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+
+    .nav_challengeRoom{
+        width: 98vw;
+    }
+
+    .links_movile_challengeRoomli{
+        font-size: 1.6rem;  
+    }
+
+
+    .box_links_movile_challengeRoom{
+        width: 98vw;
+        left: .9vw;
+        height: 16.5rem;
+    }
+
+    .container_navChallenge {
+        width: 98vw;
+    }
+
+    .nav_challengeRoom h2 {
+        font-size: 1.1rem;
+    }
+
+    .container_friendsLadder {
+        width: 98vw;
+    }
+ 
 }

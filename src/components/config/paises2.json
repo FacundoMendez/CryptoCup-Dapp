@@ -365,6 +365,12 @@
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_512,q_auto:eco,w_512/v1665517266/CryptocupQatar/banderas/noResult_eip4tg.webp"
     },
     "tie" : {
-        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_300,q_auto:eco,w_300/v1665516674/CryptocupQatar/banderas/TIE_qph12h.png"
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
+    },
+    "WORLDCUP" : {
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
+    },
+    "CHAMPIONSLEAGUE" : {
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
     }
 }

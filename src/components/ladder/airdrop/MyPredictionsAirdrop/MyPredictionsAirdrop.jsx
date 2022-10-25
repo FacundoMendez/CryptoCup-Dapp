@@ -1,5 +1,5 @@
 import React , {useState , useContext , useEffect} from 'react'
-import "./myPredictions.css"
+import "./myPredictionsAirdrop.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
@@ -55,7 +55,7 @@ const MyPredictions = () => {
 
 
           {
-           predictionsHistory.map( (item , index ) => {        /* <-  paginacion */
+           predictionsHistory.map( (item , index ) => {   
               return  <div key={index} className={
                 item.relatedGame[0].result === "" ? 
                    "myPrediction " 
@@ -66,21 +66,22 @@ const MyPredictions = () => {
                 }>
 
               <div className="date_match">
-                <p> -/-/-   </p>
-                <p>{item.relatedGame[0].team1} &nbsp; vs &nbsp; {item.relatedGame[0].team2} </p>
+                <p>{item.relatedGame[0].team1} </p>
+                <p className='vs_myPred'>vs</p>
+                <p>{item.relatedGame[0].team2}</p>
               </div>
 
             <div className="box_match_mypred">
                 <div className="mySelection">
 
                   <div className="flag_mySelection_mypred">
-                    <p>My choice</p>
                     <img className='imgSelected' src={paisesJson[item.prediction].img} alt="bandera team 1" />   {/* bandera equipo select */}
+                    <p>My choice</p>
                   </div>
   
                   <div className="flag_result_mypred">  
-                    <p>Result</p>
                     <img src={paisesJson[item.relatedGame[0].result].img} alt="bandera team 1" />  {/* bandera resultado */}
+                    <p>Result</p>
                   </div>
   
                 </div>
@@ -90,19 +91,19 @@ const MyPredictions = () => {
               (item.relatedGame[0].result === "") ? 
     
                 <div className="result_mypred ">
-                  <p></p>
+                  <span className="loader"></span>
                 </div>
 
               : item.relatedGame[0].result == item.prediction ?
 
                 <div className="result_mypred resut_win">
-                  <p>WIN</p>
+                  <p className='winResult'>WIN</p>
                 </div>
 
               :
 
               <div className="result_mypred resutl_lose">
-                <p>LOSE</p>
+                <p className='loseWin'>LOSE</p>
               </div>
   
             }

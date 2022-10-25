@@ -55,6 +55,7 @@ const MatchFeed = () => {
           </div>
 
         <div className="container_box_table">
+
             <FilterMatch 
                 getMatchs = {getMatchs}
                 setMatchs = {setMatchs} 
@@ -63,6 +64,8 @@ const MatchFeed = () => {
               />
 
             <div className="table">
+        <div className="popup_create_rom"></div>
+
               <div className="table_cabecera">
                 <ul>
                   <li className='game_cabecera'>GAME</li>

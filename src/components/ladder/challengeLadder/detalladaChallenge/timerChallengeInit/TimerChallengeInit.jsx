@@ -55,7 +55,7 @@ const TimerChallengeInit = ({timer, finishDate}) => {
                 </div>
    
             </div>
-            <div class="labels">
+            <div className="labels">
                 <li>Days</li>
                 <li>Hours</li>
                 <li>Mins</li>

@@ -5,6 +5,9 @@ import Spinner from '../../../config/spinner/Spinner'
 import navLadderActive from '../../componentsLadders/navLadder/navLadderActive'
 import "./navChallenge.css"
 import busquedaImg from "../../../config/src/busqueda.png"
+import navChallengeFuncional from './navChallengeFuncional'
+import paisesJson from "../../../config/paises2.json"
+import tokenImg from "../../../nav_inventario/src/tokenNav.png"
 
 const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
@@ -31,6 +34,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
     useEffect(() => {
         colorPred()
+        navChallengeFuncional()
     },[])
 
     
@@ -110,20 +114,87 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                 <div className="containerFilter_match">
                     <img className='busqueda_match' src={busquedaImg} alt="busqueda icono" />
                     <p>Find Match</p>
-                    <div className="box_id_match">
-                        <div className="id_match">
-                            <p>#</p>
-                        </div>
-                        <div className="box_input_nav">
-                            <input type="text" />
+
+                    <div className="box_filter_match">
+                        <div className="box_id_match_challenge">
+                            <div className="id_match">
+                                <p>#</p>
+                            </div>
+                            <div className="box_input_nav">
+                                <input type="number" placeholder='ID ROOM'/>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="container_createRoom">
                     <p>Create Room</p>
+
+                    <div className="box_create_room_challenge">
+
+
+                                        {/* select match */}
+
+
+                        <div className="filterPartidos filter_match_challenge"> 
+                            Select a match
+                            <div className="triangleFilter triangleFilter1"></div>
+                        </div>
+                        <div className="box_elegir_partido_challenge">
+                            <form className='formPartidos_challenge' action="POST" >
+
+                                {/* mapear esto para cada partido disponible */}
+                                <p>
+                                    <input type="checkbox" id="match_create_room" required />  {/* pasarle un id a cada partido */}
+                                    <label className='lab_challenge' htmlFor="match_create_room"> {/* htmlFor -> ponerle el mismo id de arriba */}
+                                        {paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}
+                                    </label>
+                                </p>
+                           
+                            </form>
+                        </div>
+
+
+                                        {/* select equipo */}
+
+
+                        <div className="filterPartidos filter_Select_challenge"> 
+                            Select a Team
+                            <div className="triangleFilter triangleFilter1"></div>
+                        </div>
+                        <div className="box_elegir_partido_challenge">
+                            <form className='formPartidos_challenge' action="POST" >
+
+                                {/* mapear esto para cada partido disponible */}
+                                <p>
+                                    <input type="checkbox" id="match_create_room" required />  {/* pasarle un id a cada partido */}
+                                    <label className='lab_challenge' htmlFor="match_create_room"> {/* htmlFor -> ponerle el mismo id de arriba */}
+                                        {paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}
+                                    </label>
+                                </p>
+                           
+                            </form>
+                        </div>
+
+
+
+                                     {/* select cant tokens */}
+
+
+                        <div className="box_toknes_match_challenge">
+                            <div className="tokens_match">
+                                <img src={tokenImg} alt="token" />
+                            </div>
+                            <div className="box_input_nav_tokens">
+                                <input type="number" placeholder='Tokens' min={10} required/>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
+          
         </div>
     </Suspense>
   )

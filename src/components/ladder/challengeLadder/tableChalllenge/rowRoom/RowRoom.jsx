@@ -15,17 +15,17 @@ const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tok
 
         <div className="MatchRoom ">
             <div className="team1_romFlag "> 
-                {/* <img src={paisesPrueba.argentina.img} alt="flag1 room" /> */}
+                <img src={paisesPrueba.argentina.img} alt="team1 room" />
             </div>
             <div className="result_rom"> VS </div>
             <div className="team2_romFlag ">
-                {/* <img src={paisesPrueba.alemania.img} alt="flag1 room" /> */}
+                <img src={paisesPrueba.france.img} alt="flag2 room" />
             </div>
         </div>
 
         <div className="ownerRoom room_data">
             <div className="owner_room_flag"> 
-                {/* <img src={paisesPrueba.argentina.img} alt="flag1 room" /> */}
+                <img src={paisesPrueba.argentina.img} alt="flag1 room" />
             </div>
         </div>
 

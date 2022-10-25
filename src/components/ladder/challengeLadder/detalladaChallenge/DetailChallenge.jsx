@@ -12,12 +12,18 @@ import paises from "../../../config/paises2.json"
 import arrow from "../../../config/src/arrow.png"
 import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
 
+
 const DetailChallenge = () => {
     let {roomId} = useParams()   /* de aca se obtiene el id de la room  */
 
     const Connected = useContext(ContextConnected)
 
-  return (
+
+return (
+
+    <>
+    {
+      Connected.userLogginActive ? 
         
     <Suspense fallback={<Spinner/>}>
     
@@ -66,14 +72,14 @@ const DetailChallenge = () => {
 
 
                     <div className="vs_detail">
-                     <div className="container_tokens_detail">
-                        <div className="tokens_challenge_detail">
-                            <div className="box_tokens_detail">
-                                <img src={tokenImg} alt="token img" />
-                                <p>0</p> 
+                        <div className="container_tokens_detail">
+                            <div className="tokens_challenge_detail">
+                                <div className="box_tokens_detail">
+                                    <img src={tokenImg} alt="token img" />
+                                    <p>0</p> 
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                     <div className="guest_select">
@@ -93,7 +99,10 @@ const DetailChallenge = () => {
  
         </div>
     </Suspense>
-
+        : 
+        window.location.href = "/"
+      }
+    </>
   )
 }
 

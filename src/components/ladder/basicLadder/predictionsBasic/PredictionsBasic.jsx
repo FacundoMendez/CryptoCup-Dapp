@@ -33,9 +33,14 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
       setColorTeam1('#32059bb6')
       setColorEmpate('#32059bb6')
       setColorTeam2('#32059bb6')
-      setColorTeam1_text("white")
-      setColorEmpate_text("white")
-      setColorTeam2_text("white")
+
+
+
+
+
+      setColorTeam1_text("#e4e4e4")
+      setColorEmpate_text("#e4e4e4")
+      setColorTeam2_text("#e4e4e4")
 
       getPredictionsAvailables()
 
@@ -62,6 +67,8 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
   const [colorTeam1, setColorTeam1] = useState()
   const [colorEmpate, setColorEmpate] = useState()
   const [colorTeam2 , setColorTeam2] = useState()
+
+
   const [colorTeam1_text, setColorTeam1_text] = useState()
   const [colorEmpate_text, setColorEmpate_text] = useState()
   const [colorTeam2_text , setColorTeam2_text] = useState()
@@ -70,27 +77,21 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
 
   const colorSetTeam1 = ( ) => {
       setColorTeam1('rgba(168, 255, 222, 0.925)')
-      setColorEmpate('#32059bb6')
-      setColorTeam2('#32059bb6')
-      setColorTeam1_text("black")
-      setColorEmpate_text("white")
-      setColorTeam2_text("white")
+      setColorEmpate('#e4e4e4')
+      setColorTeam2('#e4e4e4')
+
   }
   const colorSetEmpate = ( ) => {
-    setColorTeam1('#32059bb6')
+    setColorTeam1('#e4e4e4')
     setColorEmpate('rgba(168, 255, 222, 0.925)')
-    setColorTeam2('#32059bb6')
-    setColorTeam1_text("white")
-    setColorEmpate_text("black")
-    setColorTeam2_text("white")
+    setColorTeam2('#e4e4e4')
+
   }
   const colorSetTeam2 = ( ) => {
-    setColorTeam1('#32059bb6')
-    setColorEmpate('#32059bb6')
+    setColorTeam1('#e4e4e4')
+    setColorEmpate('#e4e4e4')
     setColorTeam2('rgba(168, 255, 222, 0.925)')
-    setColorTeam1_text("white")
-    setColorEmpate_text("white")
-    setColorTeam2_text("black")
+
   }
 
   return (

@@ -32,9 +32,6 @@ const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}
     //es lo mismo que la de arriba pero cambiandole el id => id_movile (agregarlo al onSubmit de la clase movile )
 
 
-
-
-
     /* busqueda TEAM desktop */
 
 

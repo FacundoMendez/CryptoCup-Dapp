@@ -24,11 +24,11 @@ const ChallengeLadder = () => {
               />
 
             <div className="container_friendsLadder">
-              
               <div className="blur_boost"></div>
                 {
                   publicRooms ? 
-                    <img className='candado' src={candado} alt="candado" />
+                  
+                  <TableChallenge/>
                   :
                   null
                 }

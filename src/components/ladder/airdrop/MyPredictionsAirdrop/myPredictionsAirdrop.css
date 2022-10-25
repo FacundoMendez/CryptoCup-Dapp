@@ -1,0 +1,315 @@
+.container_myPrediction{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap: .5rem;
+    margin-top: .2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+.container_myPrediction{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap: .5rem;
+    margin-top: .2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* my predictions */
+
+
+.box_myPrediction{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    padding: 3.2rem 15.5rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.myPrediction{
+    width: 46.5rem;
+    height: 30rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0rem 4rem;
+    margin-bottom: 3.5rem;
+    padding: .8rem;
+    box-shadow: rgba(166, 128, 255, 0.404) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.404) -3px -3px 6px 1px inset ,rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: rgba(84, 49, 150, 0.226);
+}
+
+
+/* header card */
+
+.date_match{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    border-bottom: 3.7px ridge rgba(206, 206, 206, 0.637);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+
+
+/* main card */
+
+.box_match_mypred{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.mySelection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+
+
+
+.flag_mySelection_mypred , .flag_result_mypred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    height: 15rem;
+    background-color: rgba(250, 250, 250, 0.030);
+    border-radius: 10px;
+}
+
+
+.flag_mySelection_mypred img, .flag_result_mypred img{   
+    width: 10rem;
+    height: 10rem;
+    filter: contrast(110%) brightness(110%);
+    object-fit: contain;
+}
+
+
+.loader, .loader:before, .loader:after {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    animation-fill-mode: both;
+    animation: bblFadInOut 1.8s infinite ease-in-out;
+  }
+  .loader {
+    color: rgb(207, 182, 253);
+    font-size: 5px;
+    position: relative;
+    text-indent: -9999em;
+    animation-delay: -0.16s;
+    top: -1rem;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  .loader:before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  
+  @keyframes bblFadInOut {
+    0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+    40% { box-shadow: 0 2.5em 0 0 }
+  }
+      
+
+/* botom card */
+
+
+.result_mypred{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3.7px ridge rgba(206, 206, 206, 0.637);
+    flex-direction: column;
+    gap: 1rem;
+/*     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+
+}
+
+.result_mypred {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.884);
+}
+
+.winResult{
+    color: rgb(181, 255, 212);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.loseWin{
+    color: rgb(255, 181, 181);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+.date_match{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.date_match p{
+    width: 50%;
+}
+
+.vs_myPred{
+    width: 10% !important;
+    font-size: 3rem;
+}
+
+
+@media screen and (max-width:1440px) {
+  
+    .box_myPrediction{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 15px;
+        top: 0;
+        left: 0;
+        padding: 3.2rem 0rem;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        row-gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+
+    
+}
+
+
+@media screen and (max-width:440px) {
+  
+    .myPrediction{
+        width: 35.5rem;
+        height: 30rem;
+    }
+    
+
+    .flag_mySelection_mypred , .flag_result_mypred{
+        
+        width: 12rem;
+        height: 12rem;
+       
+    }
+
+    .flag_mySelection_mypred p, .flag_result_mypred p{
+        font-size: 1.6rem;
+    }
+    
+    .flag_mySelection_mypred img, .flag_result_mypred img{   
+        width: 8rem;
+        height: 8rem;
+        filter: contrast(110%) brightness(110%);
+        object-fit: contain;
+    }
+    
+    .vs_myPred{
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+@media screen and (max-width:350px) {
+  
+    .myPrediction{
+        width: 30rem;
+        height: 30rem;
+    }
+    
+
+    .flag_mySelection_mypred , .flag_result_mypred{
+        
+        width: 12rem;
+        height: 12rem;
+       
+    }
+
+    .flag_mySelection_mypred p, .flag_result_mypred p{
+        font-size: 1.6rem;
+    }
+    
+    .flag_mySelection_mypred img, .flag_result_mypred img{   
+        width: 8rem;
+        height: 8rem;
+        filter: contrast(110%) brightness(110%);
+        object-fit: contain;
+    }
+
+    .vs_myPred{
+        font-size: 1.5rem;
+    }
+    
+}

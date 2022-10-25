@@ -5,9 +5,9 @@ import api from '../../../api'
 import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
-import Predictions from './predictionsBasic/PredictionsBasic'
+import Predictions from './predictionsAirdrop/PredictionsAirdrop'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
-import MyPredictions from './MyPredictions/MyPredictions'
+import MyPredictions from './MyPredictionsAirdrop/MyPredictionsAirdrop'
 
 
 const Airdrop = () => {
@@ -54,14 +54,12 @@ const Airdrop = () => {
           
           <div className="container_basicLadder">
   
-            <div className="box_predictions">
+            <div className="box_predictions_airdrop">
   
               <div className='spin' >
                 {loading ? <Spinner/> : null}
               </div>
           
-  
-  
   
               {/* matches */}
               
@@ -72,6 +70,7 @@ const Airdrop = () => {
                       return <Predictions key={index}
                         id={item._id}
                         timer={item.startDate}
+                        finishDate={item.finishDate}
                         round={item.round}
                         nameTeam1={item.team1}
                         nameTeam2={item.team2}
