@@ -251,8 +251,8 @@
     border-radius: 15px;
     background: radial-gradient(circle, rgb(101, 68, 179) 0%, rgb(39, 27, 70) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-/*     visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
     transition: all .3s ease;
     padding: 0 1rem;
 }

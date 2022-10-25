@@ -55,7 +55,6 @@ const MyPredictions = () => {
 
           {
 
-
            predictionsHistory.map( (item , index ) => {      
             let date = new Date (item.relatedGame[0].startDate).getMonth()
             console.log(date);/* <-  paginacion */
@@ -67,6 +66,11 @@ const MyPredictions = () => {
                    :
                    "myPrediction predictionLose"
                 }>
+
+
+
+              <p className='fecha_MyRecord'> --/ -- /2022 </p>   {/* <<<--- fecha */}
+
 
               <div className="date_match">
 

@@ -11,6 +11,8 @@
     width: 21rem;
     text-transform: uppercase;
     margin-top: 0;
+    position: relative;
+    left: -3rem ; 
 }
 
 .finished_matchFeed{

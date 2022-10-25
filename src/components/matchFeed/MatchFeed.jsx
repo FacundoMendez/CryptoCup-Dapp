@@ -69,9 +69,9 @@ const MatchFeed = () => {
               <div className="table_cabecera">
                 <ul>
                   <li className='game_cabecera'>GAME</li>
-                  <li>TEAM 1</li>
+                  <li>TEAM </li>
                   <li className='vs_cabecera'>VS</li>
-                  <li>TEAM 2</li>
+                  <li>TEAM </li>
                   <li className='status_cabecera'>STATUS</li>
                 </ul>
               </div>

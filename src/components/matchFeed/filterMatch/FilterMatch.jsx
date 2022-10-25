@@ -9,7 +9,7 @@ import api from '../../../api'
 const FilterMatch = ({filterBusqueda, setFilterBusqueda , setMatchs , getMatchs}) => {
 
     useEffect(() => {
-        filterMatchFucional()
+    /*     filterMatchFucional() */
     },[])
 
 

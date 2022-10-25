@@ -28,7 +28,8 @@ const ChallengeLadder = () => {
                 {
                   publicRooms ? 
                   
-                  <TableChallenge/>
+                  <img className='candado' src={candado} alt="candado" />
+                  
                   :
                   null
                 }
