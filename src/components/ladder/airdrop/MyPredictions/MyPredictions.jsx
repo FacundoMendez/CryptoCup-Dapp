@@ -44,7 +44,6 @@ const MyPredictions = () => {
   
     /* ------------ */
 
-  
   return (
     <div className="container_myPrediction">
 
@@ -55,7 +54,9 @@ const MyPredictions = () => {
 
 
           {
-           predictionsHistory.map( (item , index ) => {        /* <-  paginacion */
+           predictionsHistory.map( (item , index ) => {      
+              let date = new Date (item.relatedGame[0].startDate).getMonth()
+              console.log(date); /* <-  paginacion */
               return  <div key={index} className={
                 item.relatedGame[0].result === "" ? 
                    "myPrediction " 
@@ -66,8 +67,8 @@ const MyPredictions = () => {
                 }>
 
               <div className="date_match">
-                <p> -/-/-   </p>
-                <p>{item.relatedGame[0].team1} &nbsp; vs &nbsp; {item.relatedGame[0].team2} </p>
+                <p> {item.relatedGame[0].startDate} </p> 
+                <p>{paisesJson[item.relatedGame[0].team1].name} &nbsp; vs &nbsp; {paisesJson[item.relatedGame[0].team2].name} </p>
               </div>
 
             <div className="box_match_mypred">
