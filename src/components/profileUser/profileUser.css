@@ -174,14 +174,25 @@
         width: 90vw;
     }
 
+    .nav_profileUser h2{
+        font-size: 1.9rem;
+    }
+
     .container_profileUser {
         width: 90vw;
+        height: 65vh;
     }
 
     .profile_cabecera {
         width: 90vw;
-        top: 11.7rem;
+        top: 12rem;
     }
+
+        
+    .box_cabecera{
+        font-size: 1.5rem;
+    }
+
 }
 
 

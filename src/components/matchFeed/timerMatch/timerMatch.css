@@ -45,7 +45,6 @@
     text-shadow: 0 0 .2rem rgba(0, 0, 0, 0.425);
     margin:0 .3rem;
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-
 }
 
 .startIn_text{
@@ -69,14 +68,19 @@
     }
     
     .reloj p{
-        padding: .8rem .5rem;
+        padding: .1rem .5rem;
     }
     
     .reloj span{
         padding: 0 .5rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
+    .startIn_text{
+        background-color: transparent;
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
 
 }
 
