@@ -216,6 +216,12 @@
 
 @media screen and (max-width:1440px) {
 
+    .table::after{
+        width: 103%;
+        height: 2rem;
+    }
+    
+
     .nav_matchFeed {
         width: 90vw;
         height: 7rem;
@@ -239,7 +245,7 @@
 
     .table_games {
         width: 88.7vw;
-        height: 7rem;
+        height: 8.5rem;
     }
 
     .table {

@@ -84,7 +84,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     -webkit-background-clip: text;
     background-clip: text;
     font-family: qatarHeavy;
@@ -260,8 +259,31 @@
         flex-wrap: wrap;
     }
     
+    .date_match p{
+        font-size: 1.4rem;
+    }
 
+    .myPrediction{
+        width: 40.5rem;
+        height: 30rem;
+    }
+
+
+    .flag_mySelection_mypred , .flag_result_mypred{
+        gap: 1rem;
+        padding: 1rem;
+        width: 15rem;
+        height: 15rem;
+    }
     
+    
+    .flag_mySelection_mypred img, .flag_result_mypred img{   
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    
+
 }
 
 
