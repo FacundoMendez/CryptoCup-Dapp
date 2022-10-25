@@ -312,13 +312,13 @@
     }
 
     .time_prediction {
-        width: 8rem;
+        width: 10rem;
         height: 3.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 0rem;
+        left: 1rem;
     }
 
     .time_prediction strong{

@@ -34,9 +34,9 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
        //Que aparezca con color de que se hizo correctamente
        //DESAPARECER LA PREDICCIÓN CONFIRMADA
        setActivePrediction()
-       setColorTeam1('#32059bb6')
-       setColorEmpate('#32059bb6')
-       setColorTeam2('#32059bb6')
+       setColorTeam1('transparent')
+       setColorEmpate('transparent')
+       setColorTeam2('transparent')
        setColorTeam1_text("white")
        setColorEmpate_text("white")
        setColorTeam2_text("white")
@@ -112,23 +112,23 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
  
    const colorSetTeam1 = ( ) => {
        setColorTeam1('rgba(168, 255, 222, 0.925)')
-       setColorEmpate('')
-       setColorTeam2('')
+       setColorEmpate('transparent')
+       setColorTeam2('transparent')
        setColorTeam1_text("black")
        setColorEmpate_text("white")
        setColorTeam2_text("white")
    }
    const colorSetEmpate = ( ) => {
-     setColorTeam1('')
+     setColorTeam1('transparent')
      setColorEmpate('rgba(168, 255, 222, 0.925)')
-     setColorTeam2('')
+     setColorTeam2('transparent')
      setColorTeam1_text("white")
      setColorEmpate_text("black")
      setColorTeam2_text("white")
    }
    const colorSetTeam2 = ( ) => {
-     setColorTeam1('')
-     setColorEmpate('')
+     setColorTeam1('transparent')
+     setColorEmpate('transparent')
      setColorTeam2('rgba(168, 255, 222, 0.925)')
      setColorTeam1_text("white")
      setColorEmpate_text("white")
