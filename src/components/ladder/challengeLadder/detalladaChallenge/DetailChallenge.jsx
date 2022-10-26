@@ -11,6 +11,7 @@ import silueta2 from "../../../config/src/user2.png"
 import paises from "../../../config/paises2.json"
 import arrow from "../../../config/src/arrow.png"
 import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
+import campo from "./campo.png"
 
 
 const DetailChallenge = () => {
@@ -43,17 +44,17 @@ return (
 
                 <div className="nav_match_challenge">
                     <div className="team1_nav_challenge">
-                        <img src={paises.BARCELONA.img} alt="flag team 1" />
+                        <img src={paises.bayern.img} alt="flag team 1" />
                     </div>
 
                     <div className="box_results_match_challenge">
                         <div className="team1_nav_result_challenge">0</div>
-                        <img className='vsChallenge' src={vsChallenge} alt="vs" />
+                        <p className='vs'>VS</p>
                         <div className="team2_nav_result_challenge">0</div>
                     </div>
 
                     <div className="team2_nav_challenge">
-                        <img src={paises['REAL MADRID'].img} alt="flag team 2" />
+                        <img src={paises.roma.img} alt="flag team 2" />
                     </div>
                 </div>
 
@@ -63,7 +64,7 @@ return (
                     <div className="owner_select">
                         <h2>{Connected.userData.username} Selection</h2>
                         <div className="flaw_owner_select">    
-                            <img src={paises.BARCELONA.img} alt="flag team 1" />
+                            <img src={paises.roma.img}alt="flag team 1" />
                         </div>
 
                         <img className='siluetaUser' src={silueta} alt="silueta" />
@@ -95,8 +96,11 @@ return (
                 <button className='button_challengeRoom_acept'>
                     Accept Challenge
                 </button>
+
+                <img className='campo' src={campo} alt="campo" />
+
             </div>
- 
+
         </div>
     </Suspense>
         : 

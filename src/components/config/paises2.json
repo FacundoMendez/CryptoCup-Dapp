@@ -320,82 +320,77 @@
     },
     "manchester united": {
         "name":"Manchester United",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/Manchester-United-Logo_jnpsdo.png"
     },
     "sheriff":{
         "name":"Sheriff",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663328/CryptocupQatar/banderas%20ligas/EuropaLeague/Sheriff_bl6oim.png"
     },
     "psv":{
         "name":"PSV",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/PSV_hjl9su.png"
     },
     "arsenal":{
         "name":"Arsenal",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/Arsenal_a0ktah.png"
     },
     "leicester city":{
         "name":"Leicester City",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663328/CryptocupQatar/banderas%20ligas/PremierLogo/LeicesterCity_vgqi4a.png"
     },
     "leeds":{
         "name":"Leeds",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663328/CryptocupQatar/banderas%20ligas/PremierLogo/LeedsLogo_bwnipa.png"
     },
     "brighton":{
         "name":"Brighton",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663328/CryptocupQatar/banderas%20ligas/PremierLogo/Brighton_gvfqbl.png"
     },
     "torino":{
         "name":"Torino",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663328/CryptocupQatar/banderas%20ligas/SerieAItalia/Torino_srq4st.png"
     },
     "porto":{
         "name":"Porto",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663326/CryptocupQatar/banderas%20ligas/ChampionsLeague/Porto_avrpjr.png"
     },
     "celtic":{
         "name":"Celtic",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663325/CryptocupQatar/banderas%20ligas/ChampionsLeague/CelticFC_lokvlf.png"
     },
     "real sociedad":{
         "name":"Real Sociedad",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/RealSociedad_yt18zr.png"
     },
     "feyenoord":{
         "name":"Feyenoord",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/Feyenoord_kl1rkp.png"
     },
     "lazio":{
         "name":"Lazio",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/Lazio_aeo4f5.png"
     },
     "zurich":{
         "name":"Zurich",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/EuropaLeague/Zurich_umuegx.png"
     },
     "almeria":{
         "name":"Almeria",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666663327/CryptocupQatar/banderas%20ligas/LaLigaEspa%C3%B1a/Almeria_nrghpx.png"
     },
     "hertha berlin":{
         "name":"Hertha Berlin",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666713095/CryptocupQatar/banderas%20ligas/SerieAItalia/hertha_berlin_hx17qh.png"
     },
     "roma":{
         "name":"Roma",
-        "img":""
+        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/v1666713092/CryptocupQatar/banderas%20ligas/SerieAItalia/roma_d7p3aq.png"
     },    
     "": {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_512,q_auto:eco,w_512/v1665517266/CryptocupQatar/banderas/noResult_eip4tg.webp"
     },
     "tie" : {
         "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
-    },
-    "WORLDCUP" : {
-        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
-    },
-    "CHAMPIONSLEAGUE" : {
-        "img":"https://res.cloudinary.com/dvrxw8fbg/image/upload/c_scale,h_450,q_auto:eco,w_800/v1666578264/CryptocupQatar/banderas/Empate_crky6r.png"
     }
+
 }

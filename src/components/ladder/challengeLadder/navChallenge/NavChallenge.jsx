@@ -8,6 +8,7 @@ import busquedaImg from "../../../config/src/busqueda.png"
 import navChallengeFuncional from './navChallengeFuncional'
 import paisesJson from "../../../config/paises2.json"
 import tokenImg from "../../../nav_inventario/src/tokenNav.png"
+import createRoomFunctional from './createRoomFunctional'
 
 const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
@@ -35,9 +36,34 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
     useEffect(() => {
         colorPred()
         navChallengeFuncional()
+        createRoomFunctional()
+
     },[])
 
-    
+
+    const [selectMatch , setSelectMatch] = useState(false)
+    const [selectTeam , setSelectTeam] = useState(false)
+    const [amountTokens , setAmountTokens] = useState(false)
+
+    const amountTokenss= e => {
+
+        if(e.target.value >= 10){
+            setAmountTokens(true)
+            console.log(amountTokens)
+        }else{
+            setAmountTokens(false)
+        }
+
+
+        if(e.target.value.length > 6){
+            e.target.value = e.target.value.slice(0,6);
+        }
+
+
+
+    }
+
+
   return (
     <Suspense fallback={<Spinner/>}>
         <div className="container_navChallenge">
@@ -53,7 +79,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             } }>
                             Public Rooms
                         </li>
-                        <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+{/*                         <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                 ColorMyRecord()
                                 setMyRooms(true)
                                 setPublicRooms(false) 
@@ -68,7 +94,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                                 setHistory(true) 
                             }}>
                             History
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="container_links_movile_challengeRoom">
@@ -87,7 +113,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                                     } }> 
                                     Public Rooms
                                 </li>
-                                <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+{/*                                 <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                     setMyRooms(true)
                                     setPublicRooms(false) 
                                     setHistory(false) 
@@ -102,7 +128,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                                     colorRank()
                                     }}>
                                     History
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                 
@@ -111,6 +137,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
              
             </div>
             <div className="box_create_sala">
+                <div className="container_find_click"></div>
                 <div className="containerFilter_match">
                     <img className='busqueda_match' src={busquedaImg} alt="busqueda icono" />
                     <p>Find Match</p>
@@ -127,14 +154,13 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                     </div>
                 </div>
 
+                <div className="container_room_click"></div>
                 <div className="container_createRoom">
                     <p>Create Room</p>
 
                     <div className="box_create_room_challenge">
 
-
                                         {/* select match */}
-
 
                         <div className="filterPartidos filter_match_challenge"> 
                             Select a match
@@ -143,17 +169,17 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                         <div className="box_elegir_partido_challenge">
                             <form className='formPartidos_challenge' action="POST" >
 
-                                {/* mapear esto para cada partido disponible */}
-                                <p>
-                                    <input type="checkbox" id="match_create_room" required />  {/* pasarle un id a cada partido */}
-                                    <label className='lab_challenge' htmlFor="match_create_room"> {/* htmlFor -> ponerle el mismo id de arriba */}
-                                        {paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}
+                                <div className="containerRadio_check">
+
+                                    <label className='label_match_challenge'>
+                                        <input type="radio" name="radio" value="match_create_room"   onClick={() => setSelectMatch(true)}/>
+                                        <span>{paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}</span>
                                     </label>
-                                </p>
+
+                                </div>
                            
                             </form>
                         </div>
-
 
                                         {/* select equipo */}
 
@@ -162,34 +188,57 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             Select a Team
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
-                        <div className="box_elegir_partido_challenge">
-                            <form className='formPartidos_challenge' action="POST" >
+                        <div className="box_elegir_team_challenge" >
+                            <form className='formTeams_challenge' action="POST" >
+                          
+                                <div className="containerRadio_check">
 
-                                {/* mapear esto para cada partido disponible */}
-                                <p>
-                                    <input type="checkbox" id="match_create_room" required />  {/* pasarle un id a cada partido */}
-                                    <label className='lab_challenge' htmlFor="match_create_room"> {/* htmlFor -> ponerle el mismo id de arriba */}
-                                        {paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}
-                                    </label>
-                                </p>
-                           
+                                        <label className='label_match_challenge'>
+                                            <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(true)} />
+                                            <span>{paisesJson.brazil.name}</span>
+                                        </label>
+                                        <label className='label_match_challenge'>
+                                            <input type="radio" name="radio" value="tie_select"   onClick={() => setSelectTeam(true)} />
+                                            <span>TIE</span>
+                                        </label>
+                                        <label className='label_match_challenge'>
+                                            <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(true)} />
+                                            <span>{paisesJson.argentina.name} </span>
+                                        </label>
+                                </div>
                             </form>
                         </div>
 
-
-
                                      {/* select cant tokens */}
-
 
                         <div className="box_toknes_match_challenge">
                             <div className="tokens_match">
                                 <img src={tokenImg} alt="token" />
                             </div>
                             <div className="box_input_nav_tokens">
-                                <input type="number" placeholder='Tokens' min={10} required/>
+                                <input className='input_token' type="number" placeholder='Tokens (Min - 10)' min={10} maxLength={6} required onChange={amountTokenss} />
                             </div>
                         </div>
 
+
+                        <form action="POST">
+
+                            {
+                                selectMatch && selectTeam && amountTokens ?
+
+                                    <button className='button_createRoom' style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%)"}}>
+                                        Create Room
+                                    </button>
+                                         
+                                :
+                                    <div className='button_createRoom' style={{ cursor:"default" , background:"rgba(248, 245, 255, 0.322)" , color:"rgba(185, 185, 185, 0.76)"}}>
+                                          Create Room
+                                    </div>
+                            }
+
+
+
+                        </form>
                     </div>
                 </div>
             </div>
