@@ -13,23 +13,23 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
     console.log(Connected.account[0]);
     console.log(opponentAddress);
     console.log(Connected.account[0]==opponentAddress);
+    console.log(Connected.account[0]==ownerAddress);
     const renderButton = () => {
-        if ( status==="open" ) {
-            return  <NavLink to={`/challengeLadder/${id}`} >
-                        <button className='challenge room_data'>
-                                <p>CHALLENGE</p>
-                        </button>
-                    </NavLink>
-        }
-            //Si el oponente u owner es el usuario conectado muestra view
-        else if ( opponentAddress===Connected.account[0] || ownerAddress===Connected.account[0]) {
+              //Si el oponente u owner es el usuario conectado muestra view
+        if ( opponentAddress===Connected.account[0] || ownerAddress===Connected.account[0]) {
             return  <NavLink to={`/challengeLadder/${id}`} >
                         <button className='room_data room_myRoom'>
                             <p>VIEW</p>
                         </button>
                     </NavLink>
         } 
-            
+        else if ( status==="open" ) {
+            return  <NavLink to={`/challengeLadder/${id}`} >
+                        <button className='challenge room_data'>
+                                <p>CHALLENGE</p>
+                        </button>
+                    </NavLink>
+        } 
         else if (status==="close") {
             return   <button className='room_data room_full'>
                         <p>FULL</p>

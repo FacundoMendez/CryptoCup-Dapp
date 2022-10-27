@@ -28,7 +28,6 @@ const DetailChallenge = () => {
        },[]);
 
     const getRoomDetails = async () => {
-        console.log("ola");
         const room = await api.get(`/challenge/getRoom/${roomId}`)
         console.log(room.data);
         setRoomDetails(room.data); 
@@ -83,7 +82,7 @@ const DetailChallenge = () => {
     }
 
     async function joinRoom() {
-        console.log(opponentSelection);
+       try {
         const join = await api.post('/challenge/joinRoom' , {
             address : Connected.account[0] , 
             challengeId : roomId , 
@@ -91,7 +90,12 @@ const DetailChallenge = () => {
             signature : Connected.signature , 
             opponentSelection : opponentSelection
         })
-        console.log(join.data);
+        if (join.status==200) {
+            alert(join.data)
+        } 
+       } catch (error) {
+        alert(error.response.data)
+       }
     }
 
 
@@ -182,7 +186,7 @@ return (
 
                             <div className="guest_select">
                                 <h2>{roomDetails[0].opponentUsername} Selection</h2>
-                                <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
+                                <div className="flaw_guest_select" >
                                     <img src={paises[roomDetails[0].opponentSelection].img} alt="" /> 
                                 </div>
                                 <img className='siluetaUser2' src={silueta2} alt="silueta" />
@@ -222,7 +226,7 @@ return (
 
                 <img className='campo' src={campo} alt="campo" />
 
-                {selectOption ? 
+                {selectOption && roomDetails[0].ownerAddress != Connected.account[0] && roomDetails[0].opponentAddress != Connected.account[0]? 
 
                     <div className="container_select_option" >
                         <div className="box_options_user">

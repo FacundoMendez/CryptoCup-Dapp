@@ -83,16 +83,24 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
     }
 
     const createRoom = async () => {
-        if ( selectMatch && selectTeam && amountTokens) {
-            await api.post('/challenge/createRoom' , {
-                ownerAddress: Connected.account[0] ,
-                address : Connected.account[0] ,
-                signature : Connected.signature,
-                tokensRoom : amountTokens ,
-                matchId : selectMatch._id , 
-                ownerSelection : selectTeam
-            })
+        try {
+            if ( selectMatch && selectTeam && amountTokens) {
+                const roomCreated = await api.post('/challenge/createRoom' , {
+                    ownerAddress: Connected.account[0] ,
+                    address : Connected.account[0] ,
+                    signature : Connected.signature,
+                    tokensRoom : amountTokens ,
+                    matchId : selectMatch._id , 
+                    ownerSelection : selectTeam
+                })
+                if (roomCreated.status==200) {
+                    alert(roomCreated.data)
+                } 
+            }
+        } catch (error) {
+            alert(error.response.data)
         }
+
     }
 
 
