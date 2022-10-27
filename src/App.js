@@ -36,6 +36,9 @@ function App() {
 
   const [userData, setUserData] = useState(undefined)
 
+  const [basicTicketsInv, setBasicTicketsInv] = useState(undefined)
+  const [boostTicketsInv, setBoostTicketsInv] = useState(undefined)
+
   return (
     <ContextConnected.Provider value={{
       userLogginActive, 
@@ -55,7 +58,11 @@ function App() {
       userData,
       setUserData,
       setConfirmedPrediction,
-      confirmedPrediction
+      confirmedPrediction,
+      basicTicketsInv,
+      setBasicTicketsInv,
+      boostTicketsInv,
+      setBoostTicketsInv
       }}>
       <BrowserRouter>
           <Suspense fallback={<Spinner/>}>

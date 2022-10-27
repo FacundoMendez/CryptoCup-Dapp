@@ -14,6 +14,7 @@ import PopupError from '../config/popupsErrors/PopupError'
 import userImg from "./src/profile.png"
 import api from '../../api'
 import Cookies from 'universal-cookie/cjs/Cookies'
+import { contractAddress, erc721Abi } from '../config/contract/config'
 
 const Nav = () => {
 
@@ -62,6 +63,8 @@ const Nav = () => {
         Connected.setAccount([address])
         Connected.setActiveLogin(false);
         Connected.setSignature(signature);
+
+
        
      }
      console.log(res.data);
@@ -78,6 +81,19 @@ const Nav = () => {
 
       //Obtenemos mensaje a firmar por metamask
   const getMessage = async (_provider, _account, _signer) => {
+    // get all nfts from the contract, loop them, and get the user nfts.
+    // create contract instance.
+    const contract = new ethers.Contract(contractAddress, erc721Abi, _signer);
+    
+    const basicUserNfts = await contract.getBasicTicketsInv(_account[0]);
+    const boostUserNfts = await contract.getBoostTicketsInv(_account[0]);
+    
+    console.log(basicUserNfts);
+    console.log(boostUserNfts);
+
+    Connected.setBasicTicketsInv(basicUserNfts);
+    Connected.setBoostTicketsInv(boostUserNfts);
+
     const currBlock = await _provider.getBlockNumber();
     const { timestamp } = await _provider.getBlock(currBlock);
     const message = timestamp - (timestamp % 86400);
@@ -96,6 +112,7 @@ const Nav = () => {
       Connected.setActiveLogin(false);
       Connected.setUserLoginActive(true);
     }
+
   }
   
 
