@@ -1,11 +1,42 @@
-import React, {useState} from 'react'
+import React, {useState , useContext} from 'react'
 import "./rowRoom.css"
 import paisesJson from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 import { NavLink } from 'react-router-dom'
+import ContextConnected from '../../../../config/context/ConnectedContext'
 
-const RowRoom = ({ id , ownerUsername ,flagTeam1 , flagTeam2 ,ownerSelect , tokens }) => {
 
+const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,flagTeam1 , flagTeam2 ,ownerSelect , tokens }) => {
+
+
+    const Connected = useContext(ContextConnected)
+    console.log(Connected.account[0]);
+    console.log(opponentAddress);
+    console.log(Connected.account[0]==opponentAddress);
+    const renderButton = () => {
+        if ( status==="open" ) {
+            return  <NavLink to={`/challengeLadder/${id}`} >
+                        <button className='challenge room_data'>
+                                <p>CHALLENGE</p>
+                        </button>
+                    </NavLink>
+        }
+            //Si el oponente u owner es el usuario conectado muestra view
+        else if ( opponentAddress===Connected.account[0] || ownerAddress===Connected.account[0]) {
+            return  <NavLink to={`/challengeLadder/${id}`} >
+                        <button className='room_data room_myRoom'>
+                            <p>VIEW</p>
+                        </button>
+                    </NavLink>
+        } 
+            
+        else if (status==="close") {
+            return   <button className='room_data room_full'>
+                        <p>FULL</p>
+                    </button>
+        } 
+      
+    }
 
   return (
     <div className='rowRoom'>
@@ -34,12 +65,12 @@ const RowRoom = ({ id , ownerUsername ,flagTeam1 , flagTeam2 ,ownerSelect , toke
             <p>{tokens}</p>
         </div>
 
+        {
+            renderButton()
+          
+        }
 
-            <NavLink to={`/challengeLadder/${id}`} >
-                <button className='challenge room_data'>
-                        <p>CHALLENGE</p>
-                </button>
-            </NavLink>
+           
 
 
       

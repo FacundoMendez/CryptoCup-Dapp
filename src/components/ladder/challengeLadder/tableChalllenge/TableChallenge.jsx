@@ -51,7 +51,10 @@ const TableChallenge = () => {
 
                           return <RowRoom key={index}
                                       id={item._id}
+                                      status = {item.status}
                                       ownerUsername={item.ownerUsername}
+                                      ownerAddress = {item.ownerAddress}
+                                      opponentAddress = {item.opponentAddress}
                                       flagTeam1=  {item.relatedMatch[0].team1}
                                       flagTeam2=  {item.relatedMatch[0].team2} 
                                       ownerSelect = {item.ownerSelection}

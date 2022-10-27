@@ -15,7 +15,7 @@ import campo from "./campo2.jpg"
 
 
 const DetailChallenge = () => {
-    let {roomId} = useParams()   /* de aca se obtiene el id de la room  */
+    const {roomId} = useParams()   /* de aca se obtiene el id de la room  */
 
     const Connected = useContext(ContextConnected)
 
@@ -41,11 +41,11 @@ const DetailChallenge = () => {
         if (roomDetails[0].relatedMatch[0].team1 != ownerSelection && roomDetails[0].relatedMatch[0].team2 != ownerSelection) {
             return <div className='options'>
                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room"  />
+                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                             <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
                         </label>
                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room"  />
+                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                             <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
                         </label>
                     </div>
@@ -54,34 +54,47 @@ const DetailChallenge = () => {
         else if (roomDetails[0].relatedMatch[0].team1 != ownerSelection && ownerSelection != "tie") {
             return <div className='options'>
                          <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room"  />
+                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                             <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
                         </label>
                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room"  />
+                            <input type="radio" name="radio" value="tie" onClick={e => setOpponentOption(e.target.value)} />
                             <span>Tie</span>
                         </label>
                     </div>
         }
             //Si el owner eligió team 1
          else if (roomDetails[0].relatedMatch[0].team2 != ownerSelection && ownerSelection != "tie") {
-            return <div className='options'>
+            return <form className='options'>
                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room" onClick={setOpponentOption(roomDetails[0].relatedMatch[0].team2)} />
+                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team2} onClick={e => setOpponentOption(e.target.value)}/>
                             <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
                         </label>
                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="match_create_room"  />
+                            <input type="radio" name="radio" value="tie" onClick={ e => setOpponentOption(e.target.value)} />
                             <span>Tie</span>
                         </label>
-                    </div>
+                    </form>
         }
     }
 
     function setOpponentOption (option) {
         setSelectOption(false) 
-        setOpponentSelection(option)
+        setOpponentSelection(option) 
     }
+
+    async function joinRoom() {
+        const join = await api.post('/challenge/joinRoom' , {
+            address : Connected.account[0] , 
+            challengeId : roomId , 
+            opponentAddress : Connected.account[0] ,
+            signature : Connected.signature , 
+            opponentSelection : opponentSelection
+        })
+        console.log(join.data);
+    }
+
+
 return (
 
     <>
@@ -190,9 +203,16 @@ return (
                 </div> 
 
  
-                <button className='button_challengeRoom_acept'>
-                   <p>Join Challenge</p>
-                </button>
+              {
+                roomDetails[0].ownerAddress == Connected.account[0] || roomDetails[0].opponentAddress ?
+                    <button className='button_challengeRoom_acept'> 
+                        <p>. . .</p> 
+                    </button> :
+                    <button className='button_challengeRoom_acept' onClick={joinRoom}> 
+                        <p>Join Challenge</p> 
+                    </button>
+
+              }
 
                 <img className='campo' src={campo} alt="campo" />
 

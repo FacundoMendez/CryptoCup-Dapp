@@ -122,9 +122,9 @@ const LadderHome = () => {
                         
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
-                                     /*  <NavLink to="/challengeLadder"> */
+                                      <NavLink to="/challengeLadder"> 
                                           <img src={challengeImg} alt="Challenge ladder Slider " />
-                                       /* </NavLink>  */
+                                       </NavLink>  
                                 
                                     :
                                       <div onClick={() => setConnectedPopup(true) }>
