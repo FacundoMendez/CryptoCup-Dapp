@@ -1,10 +1,9 @@
-import React , {Suspense , useContext} from 'react'
+import React , {Suspense , useContext, useState} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Spinner from '../../../config/spinner/Spinner'
 import "./detailChallenge.css"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
-import vsChallenge from "../../../config/src/vs2.png"
 import tokenImg from "../../../nav_inventario/src/tokenNav.png"
 import silueta from "../../../config/src/user.png"
 import silueta2 from "../../../config/src/user2.png"
@@ -19,6 +18,7 @@ const DetailChallenge = () => {
 
     const Connected = useContext(ContextConnected)
 
+    const [selectOption , setSelectOption] = useState(false)
 
 return (
 
@@ -90,7 +90,7 @@ return (
                             <div className="tokens_challenge_detail">
                                 <div className="box_tokens_detail">
                                     <img src={tokenImg} alt="token img" />
-                                    <p>10</p> 
+                                    <p>100</p> 
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ return (
 
                     <div className="guest_select">
                         <h2>My Selection</h2>
-                        <div className="flaw_guest_select">
+                        <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
                             {/* <img src="" alt="" /> */}
                         </div>
                         <img className='siluetaUser2' src={silueta2} alt="silueta" />
@@ -112,7 +112,25 @@ return (
 
                 <img className='campo' src={campo} alt="campo" />
 
+                {selectOption ? 
+
+                    <div className="container_select_option" >
+                        <div className="box_options_user">
+                            <div className="exit_option_user" onClick={() => setSelectOption(false) }> 
+                                x
+                            </div>
+                        </div>
+                    </div>
+
+                    :
+                    null
+                }
+
+
             </div>
+
+
+
 
         </div>
     </Suspense>

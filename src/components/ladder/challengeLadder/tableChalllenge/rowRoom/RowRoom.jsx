@@ -4,7 +4,7 @@ import paisesPrueba from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 import { NavLink } from 'react-router-dom'
 
-const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tokens }) => {
+const RowRoom = ({ id , flagTeam1 , flagTeam2 , tokens }) => {
 
 
   return (
@@ -34,18 +34,13 @@ const RowRoom = ({roomOcupada, setRoomOcupada , id , flagTeam1 , flagTeam2 , tok
             <p>0</p>
         </div>
 
-        {roomOcupada ? 
-            <button className='challenge room_data' style={{background: "gray" , cursor:"auto"}}>
-                full room
-            </button>
-        :
+
             <NavLink to={`/challengeLadder/${id}`} >
                 <button className='challenge room_data'>
                         <p>CHALLENGE</p>
                 </button>
             </NavLink>
 
-        }
 
       
     </div>

@@ -59,8 +59,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     -webkit-text-stroke-width: .6px;
-    -webkit-text-stroke-color:  rgba(215, 173, 255, 0.274);
-    -webkit-text-fill-color: rgba(2, 1, 1, 0.096);
+    -webkit-text-stroke-color:  rgba(215, 173, 255, 0.089);
+    -webkit-text-fill-color: rgba(2, 1, 1, 0.027);
     font-family: qatarHeavy;
     position: absolute;
     top: 50%;
@@ -68,6 +68,7 @@
     transform: translate(-50% , -50%);
     text-transform: uppercase;
 }
+
 .alertNoPredictions {
     width: 70%;
     height: 30px;
