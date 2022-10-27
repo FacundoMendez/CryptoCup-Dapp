@@ -27,14 +27,14 @@ const NavInventario = () => {
             <div className="tickets_navHorizontal-Basic">
                 <img className='ticketNavBasic' src={ticketBasic} alt="Nav Tickets basc" />
                 <div className="tickets_navHorizontal-Basic-cant">
-                    <p>{Connected.basicTicketsInv}</p>
+                    <p>{Connected.basicTicketsInv.length}</p>
                 </div>
             </div>
             
             <div className="tickets_navHorizontal-Boost">
                 <img src={ticketBoost} alt="Nav Tickets" />
                 <div className="tickets_navHorizontal-Boost-cant">
-                <p>{Connected.boostTicketsInv}</p>
+                <p>{Connected.boostTicketsInv.length}</p>
                 </div>
             </div>
 
