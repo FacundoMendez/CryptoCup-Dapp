@@ -32,7 +32,6 @@ const DetailChallenge = () => {
         const room = await api.get(`/challenge/getRoom/${roomId}`)
         console.log(room.data);
         setRoomDetails(room.data); 
-       /*  setMatchDetails(room.data[0].relatedMatch) */
     }
     
     function getOpponentOptions () {
@@ -84,6 +83,7 @@ const DetailChallenge = () => {
     }
 
     async function joinRoom() {
+        console.log(opponentSelection);
         const join = await api.post('/challenge/joinRoom' , {
             address : Connected.account[0] , 
             challengeId : roomId , 
