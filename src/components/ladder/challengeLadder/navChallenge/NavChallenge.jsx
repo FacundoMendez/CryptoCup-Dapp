@@ -11,6 +11,7 @@ import tokenImg from "../../../nav_inventario/src/tokenNav.png"
 import createRoomFunctional from './createRoomFunctional'
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
+import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
 const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
@@ -91,8 +92,13 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
 
   return (
+    <>
+{/*     {Connected.confirmedPrediction === true  ? <PopupChallenge /> : null}
+    {Connected.confirmedPrediction === false ? <PopupChallenge /> : null}
+         */}
     <Suspense fallback={<Spinner/>}>
         <div className="container_navChallenge">
+            <PopupChallenge/>
             <div className="nav_challengeRoom">
                 <h2>{ladder}</h2>
                 <div className="links_challengeRoom">
@@ -201,7 +207,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
                                                     <label className='label_match_challenge'>
                                                         <input type="radio" name="radio" value="match_create_room"   onClick={() =>  setSelectMatch(item)}/>
-                                                        <span>{paisesJson[item.team1].name} &nbsp; vs &nbsp; {paisesJson[item.team2].name}</span>
+                                                        <span className='span_select_part'>{paisesJson[item.team1].name} &nbsp; vs &nbsp; {paisesJson[item.team2].name}</span>
                                                     </label>
     
                                                 </div>
@@ -227,15 +233,15 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
                                            <label className='label_match_challenge'>
                                                 <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(selectMatch.team1)} />
-                                                <span>{paisesJson[selectMatch.team1].name}</span>
+                                                <span className='span_select_part_2'>{paisesJson[selectMatch.team1].name}</span>
                                             </label>
                                             <label className='label_match_challenge'>
                                                 <input type="radio" name="radio" value="tie_select"   onClick={() => setSelectTeam("tie")} />
-                                                <span>TIE</span>
+                                                <span className='span_select_part_2'>TIE</span>
                                             </label>
                                             <label className='label_match_challenge'>
                                                 <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(selectMatch.team2)} />
-                                                <span>{paisesJson[selectMatch.team2].name} </span>
+                                                <span className='span_select_part_2'>{paisesJson[selectMatch.team2].name} </span>
                                             </label>
                                     </div>
                                 </form> :
@@ -261,7 +267,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             {
                                 selectMatch && selectTeam && amountTokens ?
 
-                                    <button className='button_createRoom' onClick={createRoom} style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%)"}}>
+                                    <button className='button_createRoom activeButtonCreateRoom' onClick={createRoom} style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%)"}}>
                                         Create Room
                                     </button>
                                          
@@ -278,6 +284,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
           
         </div>
     </Suspense>
+    </>
   )
 }
 

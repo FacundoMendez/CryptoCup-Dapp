@@ -31,8 +31,15 @@
 .owner{
     width: 20rem;
     margin-left: 12rem;
+    left: -2rem;
+    position: relative;
 }
 
 .match_room{
     margin-left: 5rem;
+}
+
+.roomM{
+    position: relative;
+    left: -2rem;
 }

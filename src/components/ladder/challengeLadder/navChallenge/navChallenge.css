@@ -276,6 +276,7 @@
     opacity: 0;
     transition: all .3s ease;
     padding:2rem 1rem;
+
 }
 
 .box_create_room_challenge_active{
@@ -290,7 +291,6 @@
 
 .box_elegir_partido_challenge , .box_elegir_team_challenge{
     width: 99%;
-    height: 16rem;
     border-radius: 10px;
     position: relative;
     transition: all .5 ease;
@@ -301,6 +301,7 @@
     display: flex;
     transition: all .5 ease;
     overflow-y: scroll;
+
 }
 
 .box_elegir_partido_challenge_active , .box_elegir_team_challenge_active{
@@ -308,6 +309,7 @@
     opacity: 1;
     top: -1rem;
     transition: all .5 ease;
+
 }
 
 
@@ -334,8 +336,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
+
+.span_select_part{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 2rem;
+}
+
+.span_select_part_2{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    margin: .5rem 0;
+    gap: 2rem;
+}
 
 
 /* select team */
@@ -365,7 +383,6 @@
     font-weight: 500;
     position: relative;
     overflow: hidden;
-    margin-bottom: 1rem;
   }
 
 
@@ -377,9 +394,10 @@
   .label_match_challenge input:checked + span {
     background-color: #d6d6e5;
     color: black;
-  }
+}
   .label_match_challenge input:checked + span:before {
     box-shadow: inset 0 0 0 0.4375em #00005c;
+
   }
   .label_match_challenge span {
     display: flex;
@@ -387,7 +405,6 @@
     padding: 0.375em 0.75em 0.375em 0.375em;
     border-radius: 99em;
     transition: 0.25s ease;
-    
   }
   .label_match_challenge span:hover {
     background-color: #d6d6e5;
@@ -404,6 +421,7 @@
     margin-right: 0.375em;
     transition: 0.25s ease;
     box-shadow: inset 0 0 0 0.125em #00005c;
+
   }
   
 

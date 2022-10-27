@@ -108,7 +108,7 @@ return (
 
         <div className="detailChallenge">
             <div className="nav_detail">
-                <h2>ID ROOM :  #{roomId} </h2>
+                <h2>ID ROOM :  #{roomDetails[0].ownerUsername} </h2>
 
                 <div className="box_arrow_detail_nav">
                     <NavLink to="/challengeLadder_nav"> 
@@ -130,20 +130,20 @@ return (
                     </div>
 
            
-                              <div  className="nav_match_challenge">
-                                        <div className="team1_nav_challenge">
-                                            <img src={paises[roomDetails[0].relatedMatch[0].team1].img} alt="flag team 1" />
-                                        </div>
-                    
-                                        <div className="box_results_match_challenge">
-                    
-                                            <p className='vs'>VS</p>
-                                        </div>
-                    
-                                        <div className="team2_nav_challenge">
-                                            <img src={paises[roomDetails[0].relatedMatch[0].team2].img} alt="flag team 2" />
-                                        </div>    
-                                    </div>    
+                     <div  className="nav_match_challenge">
+                        <div className="team1_nav_challenge">
+                            <img src={paises[roomDetails[0].relatedMatch[0].team1].img} alt="flag team 1" />
+                        </div>
+            
+                        <div className="box_results_match_challenge">
+            
+                            <p className='vs'>VS</p>
+                        </div>
+            
+                        <div className="team2_nav_challenge">
+                            <img src={paises[roomDetails[0].relatedMatch[0].team2].img} alt="flag team 2" />
+                        </div>    
+                    </div>    
                  
                      
 
@@ -178,26 +178,32 @@ return (
 
 
                     {
-                            roomDetails[0].opponentUsername ?
-                                <div className="guest_select">
-                                    <h2>{roomDetails[0].opponentUsername} Selection</h2>
-                                    <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
-                                        <img src={paises[roomDetails[0].opponentSelection].img} alt="" /> 
-                                    </div>
-                                    <img className='siluetaUser2' src={silueta2} alt="silueta" />
-                                </div> :
-                                <div className="guest_select">
-                                    <h2>{roomDetails[0].opponentUsername} Select</h2>
-                                    <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
-                                        {
-                                            opponentSelection ?
-                                                <img src={paises[opponentSelection].img} alt="" />  :
-                                                null
-                                        }
-                                        
-                                    </div>
-                                    <img className='siluetaUser2' src={silueta2} alt="silueta" />
+                        roomDetails[0].opponentUsername ?
+
+                            <div className="guest_select">
+                                <h2>{roomDetails[0].opponentUsername} Selection</h2>
+                                <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
+                                    <img src={paises[roomDetails[0].opponentSelection].img} alt="" /> 
                                 </div>
+                                <img className='siluetaUser2' src={silueta2} alt="silueta" />
+                            </div> 
+                            
+                        :
+
+                            <div className="guest_select">
+                                <h2>{roomDetails[0].opponentUsername} Select</h2>
+                                <div className="flaw_guest_select" onClick={() => setSelectOption(true)}>
+                                    {
+                                        opponentSelection ?
+
+                                            <img src={paises[opponentSelection].img} alt="my selection flag" />  
+                                            :
+                                            null
+                                    }
+                                    
+                                </div>
+                                <img className='siluetaUser2' src={silueta2} alt="silueta" />
+                            </div>
                     }
                     
                 </div> 

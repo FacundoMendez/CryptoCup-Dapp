@@ -3,6 +3,7 @@ import api from '../../../../api';
 import CabeceraRoom from './cabeceraRoom/CabeceraRoom';
 import RowRoom from './rowRoom/RowRoom';
 import "./tableChallenge.css"
+import Spinner from '../../../config/spinner/Spinner';
 
 
 
@@ -25,13 +26,16 @@ const TableChallenge = () => {
         }
         
       }
-      console.log(challengeRoom.length);
 
 
   return (
     <>
 
     <div className="container_tableChallenge">
+      <div className='spin' >
+              {loading ? <Spinner/> : null}
+       </div>
+        
       {challengeRoom.length > 0  ?
   
         <table className='table_rows'>               
