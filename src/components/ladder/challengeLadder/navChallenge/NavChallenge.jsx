@@ -48,6 +48,11 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
     const [selectMatch , setSelectMatch] = useState(false)
     const [selectTeam , setSelectTeam] = useState(false)
     const [amountTokens , setAmountTokens] = useState(false)
+
+
+    const [salaCreada , setSalaCreada] = useState()
+    const [salaNoCreada , setSalaNoCreada] = useState()
+    const [tokensBalanceUser , setTokensBalanceUser] = useState()
     
 
     //Trae partidos disponibles p crear
@@ -93,9 +98,27 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
   return (
     <>
-{/*     {Connected.confirmedPrediction === true  ? <PopupChallenge /> : null}
-    {Connected.confirmedPrediction === false ? <PopupChallenge /> : null}
-         */}
+    { salaCreada ? 
+        <PopupChallenge 
+            salaCreada={salaCreada} 
+        /> 
+    : 
+    salaNoCreada ? 
+
+        <PopupChallenge 
+            salaNoCreada={salaNoCreada} 
+        /> 
+    :
+    tokensBalanceUser ?
+        <PopupChallenge 
+            tokensBalanceUser={tokensBalanceUser} 
+        /> 
+    :
+        null
+        
+    }
+
+        
     <Suspense fallback={<Spinner/>}>
         <div className="container_navChallenge">
             <PopupChallenge/>
@@ -264,18 +287,10 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
             
 
-                            {
-                                selectMatch && selectTeam && amountTokens ?
-
-                                    <button className='button_createRoom activeButtonCreateRoom' onClick={createRoom} style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%)"}}>
-                                        Create Room
-                                    </button>
-                                         
-                                :
-                                    <div className='button_createRoom' style={{ cursor:"default" , background:"rgba(248, 245, 255, 0.322)" , color:"rgba(185, 185, 185, 0.76)"}}>
-                                          Create Room
-                                    </div>
-                            }
+                    <button className='button_createRoom activeButtonCreateRoom' onClick={createRoom} style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.30%, rgba(42, 26, 85, 0.685) 60%)"}}>
+                        Create Room
+                    </button>
+    
 
                     </div>
                 </div>
