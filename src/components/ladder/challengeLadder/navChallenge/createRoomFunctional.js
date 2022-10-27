@@ -66,7 +66,9 @@ const createRoomFunctional = () => {
      const buttonCreateRoom = document.querySelector(".button_createRoom")
 
      buttonCreateRoom.addEventListener("click" , function(){
-        box_create_room_challenge.classList.toggle("box_create_room_challenge_active")
+        setTimeout(() => {
+            box_create_room_challenge.classList.remove("box_create_room_challenge_active")
+        }, 1000);
     })
 
 
