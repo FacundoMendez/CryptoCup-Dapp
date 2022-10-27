@@ -11,12 +11,13 @@
 .campo{
     width: 100%;
     height: 100%;
+    z-index: 0;
+    padding: 0 .2rem;
     position: absolute;
-    object-fit: contain;
-    bottom: -3rem;
-    z-index: 1;
-    padding: 0 .5rem;
+    filter: contrast(115%) brightness(110%) hue-rotate(8deg);
 }
+
+
 
 
 .nav_detail{
@@ -32,7 +33,7 @@
     background: radial-gradient(circle, rgba(254, 254, 255, 0.219) 0%, rgba(17, 9, 37, 0.795) 60%);
     background-color: rgb(91, 44, 168);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
-    
+    z-index: 10;
 }
 
 .nav_detail h2{
@@ -40,28 +41,13 @@
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    background: linear-gradient(to bottom, #cfc09f 22%, #ffc157 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #ffc041 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
-.box_arrow_detail{
-    position: absolute;
-    left: 5rem;
-    top: 4rem;
-    cursor: pointer;
-    z-index: 10;
-
-}
-
-.box_arrow_detail img{
-    width: 6rem;
-    filter: hue-rotate(20deg) contrast(120%) drop-shadow( 0 0 10px rgba(108, 67, 146, 0.904)) ;
-    transition: all .4s ease;
-}
-
-.box_arrow_detail img:hover{
-    filter: hue-rotate(20deg) contrast(120%) drop-shadow( 0 0 20px rgba(108, 67, 146, 0.904)) ;
-    transition: all .4s ease;
-}
 
 
 /* table */
@@ -82,7 +68,7 @@
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
-
+    z-index: 10;
 }
 
 .container_box_table_detail::after{
@@ -97,12 +83,31 @@
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
+.box_arrow_detail_nav{
+    display: none;
+}
 
 /* nav detail */
 
+
+
+.container_nav_challenge{
+    position: relative;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    gap: 4rem;
+    top: -4rem;
+}
+
+
+
 .nav_match_challenge{
     position: relative;
-    width: 55%;
+    width: 70rem;
     height: 8rem;
     border-radius: 15px;
     background: rgb(66, 42, 134);
@@ -112,9 +117,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
-    margin-top: -4rem;
     color: white;
+    z-index: 10;
 }
 
 .box_results_match_challenge{
@@ -132,11 +136,29 @@
     filter: drop-shadow( 0 0 10px rgba(0, 0, 0, 0.918));
     z-index: 100;
     border-radius: 10px;
-
     font-size: 4rem;
     letter-spacing: 1px;
     font-family: qatarHeavy;
 }
+
+.box_arrow_detail{
+    width: 18%;
+    padding-left: 5rem;
+    z-index: 10;
+}
+
+.box_arrow_detail img{
+    width: 6rem;
+    filter: hue-rotate(174deg) contrast(120%) drop-shadow( 0 0 10px rgba(108, 67, 146, 0.904)) ;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.box_arrow_detail img:hover{
+    filter: hue-rotate(170deg) contrast(120%) drop-shadow( 0 0 20px rgba(173, 132, 43, 0.904)) ;
+    transition: all .4s ease;
+}
+
 
 
 .vs{
@@ -146,8 +168,13 @@
     font-family: qatarHeavy;
     top: .2rem;
     padding: 0 1rem;
-    filter: hue-rotate(280deg) drop-shadow( 0 0 10px rgba(116, 61, 189, 0.712)) contrast(110%) brightness(110%);
+    filter:drop-shadow( 0 0 10px rgba(116, 61, 189, 0.712)) contrast(110%) brightness(110%);
     position: relative;
+    background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #9c7527 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 9rem;
 }
 
 
@@ -170,18 +197,18 @@
 
 /* user detail */
 
-.siluetaUser{
+.siluetaUser {
     position: absolute;
-    width: 23rem;
-    left: -3rem;
-    filter: drop-shadow( -1px -2.5px 3px rgba(194, 141, 255, 0.377));
+    width: 20rem;
+    left: 0rem;
+    filter: drop-shadow( -1px -2.5px 13px rgba(194, 141, 255, 0.87));
 }
 
 .siluetaUser2{
     position: absolute;
-    width: 23rem;
-    right: -3rem;
-    filter: drop-shadow( 1px -2.5px 3px rgba(194, 141, 255, 0.377));
+    width: 20rem;
+    right: 0rem;
+    filter: drop-shadow( 1px -2.5px 13px rgba(194, 141, 255, 0.719));
 }
 
 
@@ -193,7 +220,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -.5rem;
+    top: -2rem;
+    z-index: 10;
+
 }
 
 .owner_select, .guest_select{
@@ -206,12 +235,18 @@
     gap: 1rem;
     color: white;
     text-transform: uppercase;
+
+
 }
 
 .owner_select h2, .guest_select h2{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: gilron;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
+    background: linear-gradient(to bottom, #cfc09f 22%, #ffc157 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #ffc041 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .flaw_owner_select , .flaw_guest_select{
@@ -230,19 +265,14 @@
 
 }
 
-.flaw_owner_select img{
+.flaw_owner_select img ,.flaw_guest_select img{
     object-fit: contain;
     width: 13rem;
     height: 13rem;
     filter: drop-shadow( 0 0 10px rgba(177, 132, 236, 0.514)) contrast(110%);
 }
 
-.flaw_guest_select img{
-    object-fit: contain;
-    width: 16rem;
-    height: 16rem;
-    filter: drop-shadow( 0 0 10px rgba(177, 132, 236, 0.514)) contrast(110%);
-}
+
 
 .flaw_guest_select{
     cursor: pointer;
@@ -253,7 +283,7 @@
 /* vs contador / tokens */
 
 .vs_detail{
-    width:20rem;
+    width:15rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,12 +293,6 @@
     top: 1rem;
 }
 
-.vs_detail img{
-    object-fit: contain;
-    position: absolute;
-    width: 20rem;
-    height: 20rem;
-}
 
 
 
@@ -296,8 +320,10 @@
     align-items: center;
     flex-direction: column;
     color: white;
-    left: -.5rem;
     text-transform: uppercase;
+    border: 2px ridge rgba(224, 207, 255, 0.445);
+    background-color: rgba(40, 6, 73, 0.5);
+    box-shadow: rgba(228, 216, 255, 0.226) 3px 3px 6px 0px inset, rgba(217, 203, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
 .tokens_challenge_detail p{
@@ -306,18 +332,21 @@
 
 
 .box_tokens_detail{
-    width: 30rem;
     padding: 2rem;
     position: relative;
-    height: 5rem;
+    height: 8rem;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0rem;
+    gap: rem;
     color: white;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-family: qatarHeavy;
+    background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .box_tokens_detail p{
@@ -339,20 +368,419 @@
     font-size: 2rem;
     bottom: 0rem;
     color: white;
-    text-transform: uppercase;
-    font-family: qatar;
+
     outline: none;
     cursor: pointer;
     border: 2px ridge rgba(182, 127, 255, 0.897);
-    background: radial-gradient(circle, rgba(108, 50, 243, 0.493) 0%, rgba(20, 11, 44, 0.822) 60%);
+    background: radial-gradient(circle, rgba(57, 24, 136, 0.884) 0%, rgba(20, 11, 44, 0.897) 60%);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
     transition: all .3s ease;
     filter: drop-shadow( 0 0 10px rgba(135, 52, 243, 0.548));
     z-index: 10;
     bottom: -3rem;
+
+}
+
+.button_challengeRoom_acept p{
+    background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #9c7527 78%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-family: qatar;
+    font-size: 2.7rem;
+
 }
 
 .button_challengeRoom_acept:hover{
     filter: drop-shadow( 0 0 10px rgba(146, 65, 253, 0.747));
     transition: all .3s ease;
+}
+
+
+
+
+
+
+@media screen and (max-width:1500px) {
+    
+    .container_nav_challenge{
+        gap: 2rem;
+    }
+    
+
+    .nav_detail{
+        position: relative;
+        width: 89vw;
+        height: 9rem;
+    }
+    
+    
+    /* table */
+    
+    .container_box_table_detail{
+        width: 89vw;
+        height: 76.5vh;
+    }
+
+    .nav_match_challenge{
+        width: 76rem;
+        height: 6.5rem;
+        gap: 0rem;
+    }
+
+    .box_results_match_challenge {
+        gap: 3rem;
+        height: 8.3rem;
+        font-size: 3rem;
+    }
+
+
+    .team1_nav_challenge img , .team2_nav_challenge img{
+        width: 9.7rem;
+        height: 9.7rem;
+    }
+
+
+        
+    .owner_select h2, .guest_select h2{
+        font-size: 1.5rem;
+    }
+
+    .flaw_owner_select , .flaw_guest_select{
+        border-radius: 15px;
+        width: 17rem;
+        height: 17rem;
+        padding: 2rem 0;
+    }
+
+
+    .siluetaUser {
+        position: absolute;
+        width: 18rem;
+        left: -5rem;
+    }
+    
+    .siluetaUser2{
+        position: absolute;
+        width: 18rem;
+        right: -5rem;
+    }
+    
+}
+
+@media screen and (max-width:1100px) {
+    .siluetaUser {
+        position: absolute;
+        width: 18rem;
+        left: -8rem;
+    }
+    
+    .siluetaUser2{
+        position: absolute;
+        width: 18rem;
+        right: -8rem;
+    }
+
+        
+    .owner_select h2, .guest_select h2{
+        font-size: 1.5rem;
+    }
+
+    .flaw_owner_select , .flaw_guest_select{
+        border-radius: 15px;
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0;
+    }
+
+    .box_tokens_detail{
+        font-size: 3rem;
+        height: 6rem;
+    }
+
+    .box_tokens_detail img {
+        width: 7.5rem;
+        position: relative;
+    }
+
+}
+
+
+@media screen and (max-width:1000px) {
+    .box_arrow_detail{
+        width: 10%;
+        padding-left: 1rem;
+        z-index: 10;
+        top: 10.5rem;
+        left: 0;
+        position: absolute;
+        display: none;
+    }
+
+
+    .box_arrow_detail_nav{
+        width: 10%;
+        padding-left: 1rem;
+        z-index: 10;
+        position: relative;
+        display: flex;
+    }
+
+    .box_arrow_detail_nav img{
+        width: 5rem;
+        filter: hue-rotate(174deg) contrast(120%) drop-shadow( 0 0 10px rgba(108, 67, 146, 0.904)) ;
+        transition: all .4s ease;
+        cursor: pointer;
+    }
+
+    .nav_detail{
+        flex-direction: row-reverse;
+    }
+
+    .nav_detail h2{
+        font-size: 2.5rem;
+    }
+
+    
+
+    .nav_match_challenge{
+        width: 60rem;
+        height: 6rem;
+    }
+
+    .box_results_match_challenge{
+        gap: 3rem;
+        width: 28rem;
+        height: 7.3rem;
+        font-size: 3rem;
+    }
+
+    .box_tokens_detail img {
+        width: 6.5rem;
+        position: relative;
+    }
+    .vs{
+        font-size: 5rem;
+        top: .2rem;
+        padding: 0 1rem;
+        line-height: 9rem;
+    }
+
+
+    .team1_nav_challenge, .team2_nav_challenge{
+        width: 13rem;
+        height: 11rem;
+        margin-top: 0rem;
+    }
+
+    .team1_nav_challenge img , .team2_nav_challenge img{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+
+    
+    .nav_detail{
+        width: 95vw;
+    }
+    
+    
+    /* table */
+    
+    .container_box_table_detail{
+        width: 95vw;
+    }
+
+ 
+
+    .nav_match_challenge{
+        width: 42rem;
+        height: 6rem;
+        gap: 0rem;
+    }
+
+    .box_results_match_challenge {
+        gap: 1rem;
+        width: 20rem;
+        height: 7.3rem;
+        font-size: 3rem;
+    }
+
+    .team1_nav_challenge img , .team2_nav_challenge img{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .vs {
+        font-size: 3.5rem;
+        top: 0.2rem;
+    }
+    
+
+    .siluetaUser {
+        display: none;
+    }
+    
+    .siluetaUser2{
+        display: none;
+    }
+
+    .owner_select, .guest_select {
+        width: 20rem;
+        padding: 1rem;
+        top: 5rem;
+    }
+
+        
+    .owner_select h2, .guest_select h2{
+        font-size: 1.1rem;
+    }
+
+    .flaw_owner_select , .flaw_guest_select{
+        border-radius: 15px;
+        width: 15rem;
+        height: 15rem;
+        padding: 2rem 0;
+    }
+
+    .container_tokens_detail{
+        font-size: 2.5rem;
+        position: absolute;
+        top: -21.5rem;
+    }
+
+    .box_tokens_detail {
+        font-size: 3rem;
+        height: 6rem;
+        width: 15rem;
+    }
+
+    .box_tokens_detail img {
+        width: 6.5rem;
+        position: relative;
+    }
+
+
+    .campo {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        padding: 0 0.2rem;
+        object-fit: cover;
+        position: absolute;
+        filter: contrast(115%) brightness(110%) hue-rotate(8deg);
+    }
+
+    .button_challengeRoom_acept{
+        width: 30rem;
+        bottom: 0;
+        margin-bottom: 3rem;
+    }
+
+    .button_challengeRoom_acept p {
+        font-size: 2.1rem;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .nav_match_challenge{
+        width: 36rem;
+        height: 6rem;
+        gap: 0rem;
+    }
+
+    .box_results_match_challenge {
+        gap: .5rem;
+        width: 15rem;
+        height: 7.3rem;
+        font-size: 2.5rem;
+    }
+
+    .team1_nav_challenge img , .team2_nav_challenge img{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .vs {
+        font-size: 2.5rem;
+        top: 0.2rem;
+    }
+
+
+    .nav_detail h2{
+        font-size: 2.2rem;
+    }
+
+    .box_arrow_detail_nav{
+        padding: 0;
+    }
+
+    .box_arrow_detail_nav img{
+        width: 4rem;
+        left: 0;
+        margin-left: -2rem;
+    }
+    .flaw_owner_select , .flaw_guest_select{
+        width: 13rem;
+        height: 13rem;
+        padding: 2rem 0;
+    }
+}
+
+
+
+@media screen and (max-width:420px) {
+    .nav_match_challenge{
+        width: 30rem;
+    }
+
+    .box_results_match_challenge {
+        gap: 0rem;
+        width: 14rem;
+        height: 7.3rem;
+        font-size: 2rem;
+    }
+
+    .team1_nav_challenge img , .team2_nav_challenge img{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .vs {
+        font-size: 2rem;
+        top: 0.2rem;
+    }
+
+
+    .nav_detail h2{
+        font-size: 2.2rem;
+    }
+
+    .box_arrow_detail_nav{
+        padding: 0;
+    }
+
+    .box_arrow_detail_nav img{
+        width: 4rem;
+        left: 0;
+        margin-left: -2rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:340px) {
+    .nav_match_challenge{
+        width: 28rem;
+    }
+
+
+
 }

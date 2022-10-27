@@ -11,7 +11,7 @@ import silueta2 from "../../../config/src/user2.png"
 import paises from "../../../config/paises2.json"
 import arrow from "../../../config/src/arrow.png"
 import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
-import campo from "./campo.png"
+import campo from "./campo2.jpg"
 
 
 const DetailChallenge = () => {
@@ -31,34 +31,46 @@ return (
         <div className="detailChallenge">
             <div className="nav_detail">
                 <h2>ID ROOM :  #{roomId} </h2>
+
+                <div className="box_arrow_detail_nav">
+                    <NavLink to="/challengeLadder_nav"> 
+                        <img src={arrow} alt="arrow" />
+                    </NavLink>
+                </div>
+
             </div>
             
 
             <div className="container_box_table_detail">
 
-                <div className="box_arrow_detail">
-                    <NavLink to="/challengeLadder"> 
-                        <img src={arrow} alt="arrow" />
-                    </NavLink>
+                <div className="container_nav_challenge">
+
+                    <div className="box_arrow_detail">
+                        <NavLink to="/challengeLadder"> 
+                            <img src={arrow} alt="arrow" />
+                        </NavLink>
+                    </div>
+
+                    <div className="nav_match_challenge">
+                        <div className="team1_nav_challenge">
+                            <img src={paises.bayern.img} alt="flag team 1" />
+                        </div>
+
+                        <div className="box_results_match_challenge">
+                            <div className="team1_nav_result_challenge">0</div>
+                            <p className='vs'>VS</p>
+                            <div className="team2_nav_result_challenge">0</div>
+                        </div>
+
+                        <div className="team2_nav_challenge">
+                            <img src={paises.roma.img} alt="flag team 2" />
+                        </div>
+                    </div>
+
+                    <TimerChallengeInit/>
                 </div>
+                
 
-                <div className="nav_match_challenge">
-                    <div className="team1_nav_challenge">
-                        <img src={paises.bayern.img} alt="flag team 1" />
-                    </div>
-
-                    <div className="box_results_match_challenge">
-                        <div className="team1_nav_result_challenge">0</div>
-                        <p className='vs'>VS</p>
-                        <div className="team2_nav_result_challenge">0</div>
-                    </div>
-
-                    <div className="team2_nav_challenge">
-                        <img src={paises.roma.img} alt="flag team 2" />
-                    </div>
-                </div>
-
-                <TimerChallengeInit/>
 
                 <div className="box_user_detail_challenge">
                     <div className="owner_select">
@@ -68,6 +80,7 @@ return (
                         </div>
 
                         <img className='siluetaUser' src={silueta} alt="silueta" />
+                        
                     </div>
 
 
@@ -77,7 +90,7 @@ return (
                             <div className="tokens_challenge_detail">
                                 <div className="box_tokens_detail">
                                     <img src={tokenImg} alt="token img" />
-                                    <p>0</p> 
+                                    <p>10</p> 
                                 </div>
                             </div>
                         </div>
@@ -94,7 +107,7 @@ return (
 
  
                 <button className='button_challengeRoom_acept'>
-                    Accept Challenge
+                   <p>Accept Challenge</p>
                 </button>
 
                 <img className='campo' src={campo} alt="campo" />
