@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 2rem .5rem ;
+    padding: 1rem .5rem ;
     border: 2px solid gray;
     border-radius: 15px;
 }
@@ -23,6 +23,8 @@
 
 .MatchRoom img , .ownerRoom img{
     width: 6.5rem;
+    height: 6.5rem;
+    object-fit: contain;
     border-radius: 5px;
 }
 
@@ -57,10 +59,17 @@
 }
 
 .amount_room img{
-    width: 5rem;
+    width: 6rem;
+    object-fit: contain;
     filter: contrast(105%) brightness(105%);
 }
 
 .team1_romFlag , .team2_romFlag{
     width: 10rem;
+}
+
+.RoomId{
+    position: relative;
+    left: 2rem;
+    letter-spacing: 1px;
 }
