@@ -63,6 +63,7 @@ const TableChallenge = () => {
                                       flagTeam2=  {item.relatedMatch[0].team2} 
                                       ownerSelect = {item.ownerSelection}
                                       tokens= {item.tokensRoom}
+                                      getData={getData}
                                     />   
                       })}
                     </td> 

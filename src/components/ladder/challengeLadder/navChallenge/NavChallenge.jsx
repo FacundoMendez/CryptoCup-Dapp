@@ -13,7 +13,7 @@ import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
 import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
-const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
+const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }) => {
 
     const [colorP, setColorP] = useState("#bebdff")
     const [colorM, setColorM] = useState("white")
@@ -41,6 +41,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
         getComingMatches()
         navChallengeFuncional()
         createRoomFunctional()
+        
+        createRoom()
 
     },[])
 
@@ -51,9 +53,9 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
 
     const [salaCreada , setSalaCreada] = useState()
-    const [salaNoCreada , setSalaNoCreada] = useState()
-    const [tokensBalanceUser , setTokensBalanceUser] = useState()
+    const [messajePopup , setMessajePopup] = useState()
     
+    console.log(messajePopup)
 
     //Trae partidos disponibles p crear
     const getComingMatches = async () => {
@@ -93,39 +95,57 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                     matchId : selectMatch._id , 
                     ownerSelection : selectTeam
                 })
+
+
+
                 if (roomCreated.status==200) {
-                    alert(roomCreated.data)
+                /*     alert(roomCreated.data) */
+
+           /*          getData() */
+
+                    setMessajePopup(roomCreated.data)
+                    setSalaCreada(true)
+                    setTimeout(() => {
+                        setMessajePopup("")
+                        setSalaCreada()
+                    }, 6000);
                 } 
             }
         } catch (error) {
-            alert(error.response.data)
+            /* alert(error.response.data) */
+
+            setMessajePopup(error.response.data)
+            setSalaCreada(false)
+            setTimeout(() => {
+                setMessajePopup("")
+                setSalaCreada()
+            }, 6000);
+
         }
 
     }
+
+
 
 
   return (
     <>
 
     
-    { salaCreada ? 
+    { salaCreada === true? 
         <PopupChallenge 
             salaCreada={salaCreada} 
+            messajePopup={messajePopup}
         /> 
-    : 
-    salaNoCreada ? 
+    : salaCreada === false?
 
         <PopupChallenge 
-            salaNoCreada={salaNoCreada} 
+            salaCreada={salaCreada} 
+            messajePopup={messajePopup}
         /> 
     :
-    tokensBalanceUser ?
-        <PopupChallenge 
-            tokensBalanceUser={tokensBalanceUser} 
-        /> 
-    :
-        null
-        
+    null
+
     }
 
         

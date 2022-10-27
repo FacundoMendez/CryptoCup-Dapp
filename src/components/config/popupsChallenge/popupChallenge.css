@@ -1,6 +1,5 @@
 
 .popupConfirmed_challenge{
-    width: 38rem;
     height: 4.5rem;
     border-radius: 10px;
     background-color: #5eda92c5;
@@ -12,8 +11,9 @@
     align-items: center;
     filter: drop-shadow(0 0 2px rgba(189, 255, 209, 0.623));
     text-transform: uppercase;
-    top:27rem;
+    top:21.5rem;
     right: 13.5%;
+    padding: 0 2rem;
     opacity: 0;
     transition: all 1s ease-in-out;
     animation: jittery 3s infinite;
@@ -35,7 +35,7 @@
 
 
 .popupRejected_challenge{
-    width: 35rem;
+    padding: 0 2rem;
     height: 4.5rem;
     border-radius: 10px;
     background-color: #da5e5ec5;
@@ -47,7 +47,7 @@
     align-items: center;
     filter: drop-shadow(0 0 2px rgba(255, 189, 189, 0.623));
     text-transform: uppercase;
-    top:27rem;
+    top:21.5rem;
     right: 15%;
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -62,7 +62,7 @@
     letter-spacing: 1px;
 }
 
-.popupRejected_active_challenge{
+.popupRejected_challenge_active{
     opacity: 1;
     transition: all 1s ease-in-out;
     animation: jittery 3s infinite;

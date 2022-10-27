@@ -14,6 +14,9 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
     console.log(opponentAddress);
     console.log(Connected.account[0]==opponentAddress);
     console.log(Connected.account[0]==ownerAddress);
+
+    
+
     const renderButton = () => {
               //Si el oponente u owner es el usuario conectado muestra view
         if ( opponentAddress===Connected.account[0] || ownerAddress===Connected.account[0]) {
@@ -37,6 +40,8 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
         } 
       
     }
+
+
 
   return (
     <div className='rowRoom'>

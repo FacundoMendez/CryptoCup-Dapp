@@ -25,7 +25,12 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
       prediction: predictionChoose,
       signature: Connected.signature
     })  
+
+
     console.log(res.data);
+
+
+
     if (res.data === "Prediction Succesfully Created.") {
       //Que aparezca con color de que se hizo correctamente
       //DESAPARECER LA PREDICCIÓN CONFIRMADA
@@ -33,8 +38,6 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
       setColorTeam1('#32059bb6')
       setColorEmpate('#32059bb6')
       setColorTeam2('#32059bb6')
-
-
 
 
 

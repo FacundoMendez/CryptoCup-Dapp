@@ -2,9 +2,9 @@ import React, {useEffect} from 'react'
 import popupPredictionFuncional from './popupChallengeFuncional'
 import "./popupChallenge.css"
 
-const PopupChallenge = ({salaCreada, salaNoCreada ,tokensBalanceUser}) => {
+const PopupChallenge = ({salaCreada , messajePopup }) => {
   useEffect(() => {
-    popupPredictionFuncional(salaCreada, tokensBalanceUser , salaNoCreada)
+    popupPredictionFuncional(salaCreada )
   },[])
 
   
@@ -13,30 +13,17 @@ const PopupChallenge = ({salaCreada, salaNoCreada ,tokensBalanceUser}) => {
     { salaCreada ?   
 
         <div className="popupConfirmed_challenge">   {/* si la sala se creo correctamente */}
-            <p>Room Succesfully Created</p>
+            <p>{messajePopup}</p>
         </div>
 
-      :
-
-      salaNoCreada ?
+    : salaCreada === false?
 
         <div className="popupRejected_challenge">   {/* si la sala ya esta creada */}
-            <p>Room already made</p>
+            <p>{messajePopup}</p>
         </div>
-
-      :
-
-      tokensBalanceUser ?
-
-        <div className="popupRejected_challenge">   {/* si el usuario no tiene tokens */}
-            <p>No balance tokens</p>
-        </div>
-    
-    :
-
+   :
     null
-
-   } 
+        } 
     </>
   )
 }
