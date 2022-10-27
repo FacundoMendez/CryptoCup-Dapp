@@ -36,8 +36,8 @@ function App() {
 
   const [userData, setUserData] = useState(undefined)
 
-  const [basicTicketsInv, setBasicTicketsInv] = useState(undefined)
-  const [boostTicketsInv, setBoostTicketsInv] = useState(undefined)
+  const [basicTicketsInv, setBasicTicketsInv] = useState([])
+  const [boostTicketsInv, setBoostTicketsInv] = useState([])
 
   return (
     <ContextConnected.Provider value={{
