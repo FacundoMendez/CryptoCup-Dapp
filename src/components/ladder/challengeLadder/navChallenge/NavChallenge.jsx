@@ -106,6 +106,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
 
   return (
     <>
+
+    
     { salaCreada ? 
         <PopupChallenge 
             salaCreada={salaCreada} 
