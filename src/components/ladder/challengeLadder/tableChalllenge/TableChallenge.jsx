@@ -3,7 +3,7 @@ import api from '../../../../api';
 import CabeceraRoom from './cabeceraRoom/CabeceraRoom';
 import RowRoom from './rowRoom/RowRoom';
 import "./tableChallenge.css"
-import paisesJson from "../../../config/paises2.json"
+
 
 
 const TableChallenge = () => {
@@ -19,10 +19,11 @@ const TableChallenge = () => {
 
        const getData = async () => {
         const rooms = await api.get('/challenge/getRooms')
-        setChallengeRoom(rooms.data)
-        console.log(rooms.data);
-        setLoading(false)
-        /* setChallengeRoom(rooms.data) */
+        if (rooms.data != challengeRoom) {
+          setChallengeRoom(rooms.data)
+          setLoading(false)
+        }
+        
       }
       console.log(challengeRoom.length);
 
@@ -47,10 +48,13 @@ const TableChallenge = () => {
                     <td className='row-map'>
                         {
                         challengeRoom.map((item,index) => {
+
                           return <RowRoom key={index}
                                       id={item._id}
-                                      flagTeam1= {paisesJson[item.team1].img}
-                                      flagTeam2= {paisesJson[item.team2].img}
+                                      ownerUsername={item.ownerUsername}
+                                      flagTeam1=  {item.relatedMatch[0].team1}
+                                      flagTeam2=  {item.relatedMatch[0].team2} 
+                                      ownerSelect = {item.ownerSelection}
                                       tokens= {item.tokensRoom}
                                     />   
                       })}
