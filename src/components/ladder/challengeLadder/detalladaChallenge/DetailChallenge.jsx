@@ -11,7 +11,8 @@ import paises from "../../../config/paises2.json"
 import arrow from "../../../config/src/arrow.png"
 import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
 import campo from "./campo2.jpg"
-
+import Preload from '../../../config/preload/Preload'
+import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
 
 const DetailChallenge = () => {
@@ -23,6 +24,10 @@ const DetailChallenge = () => {
     const [roomDetails , setRoomDetails] =useState([])
     const [opponentSelection , setOpponentSelection] = useState()
 
+    const [salaCreada , setSalaCreada] = useState()
+    const [messajePopup , setMessajePopup] = useState()
+    
+
     useEffect(() => {
         getRoomDetails()
        },[]);
@@ -33,48 +38,6 @@ const DetailChallenge = () => {
         setRoomDetails(room.data); 
     }
     
-    function getOpponentOptions () {
-        const ownerSelection = roomDetails[0].ownerSelection
-            //Si el owner eligió empate
-        if (roomDetails[0].relatedMatch[0].team1 != ownerSelection && roomDetails[0].relatedMatch[0].team2 != ownerSelection) {
-            return <div className='options'>
-                        <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
-                            <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
-                        </label>
-                        <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
-                            <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
-                        </label>
-                    </div>
-        } 
-            //Si el owner eligió team 2
-        else if (roomDetails[0].relatedMatch[0].team1 != ownerSelection && ownerSelection != "tie") {
-            return <div className='options'>
-                         <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
-                            <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
-                        </label>
-                        <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="tie" onClick={e => setOpponentOption(e.target.value)} />
-                            <span>Tie</span>
-                        </label>
-                    </div>
-        }
-            //Si el owner eligió team 1
-         else if (roomDetails[0].relatedMatch[0].team2 != ownerSelection && ownerSelection != "tie") {
-            return <form className='options'>
-                        <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team2} onClick={e => setOpponentOption(e.target.value)}/>
-                            <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
-                        </label>
-                        <label className='label_match_challenge'>
-                            <input type="radio" name="radio" value="tie" onClick={ e => setOpponentOption(e.target.value)} />
-                            <span>Tie</span>
-                        </label>
-                    </form>
-        }
-    }
 
     function setOpponentOption (option) {
         setSelectOption(false) 
@@ -91,10 +54,23 @@ const DetailChallenge = () => {
             opponentSelection : opponentSelection
         })
         if (join.status==200) {
-            alert(join.data)
+
+            setMessajePopup(join.data)
+            setSalaCreada(true)
+            setTimeout(() => {
+                setMessajePopup("")
+                setSalaCreada()
+            }, 6000);
         } 
        } catch (error) {
-        alert(error.response.data)
+
+        setMessajePopup(error.response.data)
+        setSalaCreada(false)
+        setTimeout(() => {
+            setMessajePopup("")
+            setSalaCreada()
+        }, 6000);
+
        }
     }
 
@@ -102,6 +78,24 @@ const DetailChallenge = () => {
 return (
 
     <>
+
+
+    { salaCreada === true? 
+            <PopupChallenge 
+                salaCreada={salaCreada} 
+                messajePopup={messajePopup}
+            /> 
+        : salaCreada === false?
+
+            <PopupChallenge 
+                salaCreada={salaCreada} 
+                messajePopup={messajePopup}
+            /> 
+        :
+        null
+
+    }
+
     {/* {
       Connected.userLogginActive ?  */}
         
@@ -109,8 +103,8 @@ return (
     {
         roomDetails[0] ? /* verifica que no sea undefined sino tiraba error no se xq */
 
-
         <div className="detailChallenge">
+            <Preload/>
             <div className="nav_detail">
                 <h2>ID ROOM :  #{roomDetails[0].ownerUsername} </h2>
 
@@ -235,7 +229,50 @@ return (
                             </div>
                             
                                 {
-                                    getOpponentOptions()
+                                  roomDetails[0].relatedMatch[0].team1 != roomDetails[0].ownerSelection && roomDetails[0].relatedMatch[0].team2 != roomDetails[0].ownerSelection ?
+
+                                        <div className='options'>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
+                                                <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
+                                            </label>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
+                                                <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
+                                            </label>
+                                        </div>
+
+                                  : roomDetails[0].relatedMatch[0].team1 != roomDetails[0].ownerSelection && roomDetails[0].ownerSelection != "tie" ?
+
+                                        <div className='options'>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
+                                                <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
+                                            </label>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value="tie" onClick={e => setOpponentOption(e.target.value)} />
+                                                <span>Tie</span>
+                                            </label>
+                                        </div>
+
+                                  :
+
+                                  roomDetails[0].relatedMatch[0].team2 != roomDetails[0].ownerSelection && roomDetails[0].ownerSelection != "tie" ?
+
+                                        <form className='options'>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team2} onClick={e => setOpponentOption(e.target.value)}/>
+                                                <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
+                                            </label>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value="tie" onClick={ e => setOpponentOption(e.target.value)} />
+                                                <span>Tie</span>
+                                            </label>
+                                        </form>
+
+                                    :null
+
+                                  
                                 }
                     
                         </div>

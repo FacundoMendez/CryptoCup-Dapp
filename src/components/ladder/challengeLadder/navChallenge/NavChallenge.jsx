@@ -41,8 +41,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
         getComingMatches()
         navChallengeFuncional()
         createRoomFunctional()
-        
-        createRoom()
 
     },[])
 
@@ -55,7 +53,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
     const [salaCreada , setSalaCreada] = useState()
     const [messajePopup , setMessajePopup] = useState()
     
-    console.log(messajePopup)
 
     //Trae partidos disponibles p crear
     const getComingMatches = async () => {
@@ -101,7 +98,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                 if (roomCreated.status==200) {
                 /*     alert(roomCreated.data) */
 
-           /*          getData() */
+                    getData()
 
                     setMessajePopup(roomCreated.data)
                     setSalaCreada(true)

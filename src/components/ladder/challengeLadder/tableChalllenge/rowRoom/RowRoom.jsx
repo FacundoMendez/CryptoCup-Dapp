@@ -1,21 +1,22 @@
-import React, {useState , useContext} from 'react'
+import React, {useState , useContext , Suspense} from 'react'
 import "./rowRoom.css"
 import paisesJson from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 import { NavLink } from 'react-router-dom'
 import ContextConnected from '../../../../config/context/ConnectedContext'
+import Spinner from '../../../../config/spinner/Spinner'
 
 
 const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,flagTeam1 , flagTeam2 ,ownerSelect , tokens }) => {
 
 
     const Connected = useContext(ContextConnected)
-    console.log(Connected.account[0]);
+/*     console.log(Connected.account[0]);
     console.log(opponentAddress);
     console.log(Connected.account[0]==opponentAddress);
     console.log(Connected.account[0]==ownerAddress);
+ */
 
-    
 
     const renderButton = () => {
               //Si el oponente u owner es el usuario conectado muestra view
@@ -44,42 +45,40 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
 
 
   return (
-    <div className='rowRoom'>
-        <div className="RoomId room_data">
-            <p>{ownerUsername}'s Room</p>
-        </div>
-
-        <div className="MatchRoom ">
-            <div className="team1_romFlag "> 
-                <img src={paisesJson[flagTeam1].img} alt="team1 room" />
+    <Suspense fallback={Spinner}>
+        <div className='rowRoom'>
+            <div className="RoomId room_data">
+                <p>{ownerUsername}'s Room</p>
             </div>
-            <div className="result_rom"> VS </div>
-            <div className="team2_romFlag ">
-                <img src={paisesJson[flagTeam2].img} alt="flag2 room" />
+
+            <div className="MatchRoom ">
+                <div className="team1_romFlag "> 
+                    <img src={paisesJson[flagTeam1].img} alt="team1 room" />
+                </div>
+                <div className="result_rom"> VS </div>
+                <div className="team2_romFlag ">
+                    <img src={paisesJson[flagTeam2].img} alt="flag2 room" />
+                </div>
             </div>
-        </div>
 
-        <div className="ownerRoom room_data">
-            <div className="owner_room_flag"> 
-                <img src={paisesJson[ownerSelect].img} alt="flag1 room" />
+            <div className="ownerRoom room_data">
+                <div className="owner_room_flag"> 
+                    <img src={paisesJson[ownerSelect].img} alt="flag1 room" />
+                </div>
             </div>
+
+            <div className="amount_room room_data">
+                <img src={imgToken} alt="token room" />
+                <p>{tokens}</p>
+            </div>
+
+            {
+                renderButton()
+            
+            }
+       
         </div>
-
-        <div className="amount_room room_data">
-            <img src={imgToken} alt="token room" />
-            <p>{tokens}</p>
-        </div>
-
-        {
-            renderButton()
-          
-        }
-
-           
-
-
-      
-    </div>
+    </Suspense>
   )
 }
 

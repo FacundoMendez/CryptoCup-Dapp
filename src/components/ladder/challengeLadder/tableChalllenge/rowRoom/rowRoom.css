@@ -33,11 +33,13 @@
     border-radius: 12px;
     box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
     background: radial-gradient(circle, rgba(185, 65, 255, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%);
-    background-color: rgba(68, 19, 146, 0.932);
+    background: linear-gradient(-25deg, #ad62cf, #921dff, #ad62cf);
     cursor: pointer;
     margin-right: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.281);
     text-transform: uppercase;
+    text-shadow: 0 0 1rem black;
+    transition: all .3s ease;
 }
 
 .room_full {
@@ -45,12 +47,19 @@
     border-radius: 12px;
     box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
    /* background: radial-gradient(circle, rgba(214, 116, 35, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%); */
-    background-color: rgba(224, 31, 31, 0.932);
-    cursor: pointer;
+     background: linear-gradient(-25deg, #a753c0, #ff5757, #a753c0);
     margin-right: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.281);
+    border: none;
     text-transform: uppercase;
+    text-shadow: 0 0 1rem black;
+    transition: all .3s ease;
 }
+
+.room_full:hover{
+    filter: drop-shadow( 0 0 5px rgba(255, 100, 100, 0.541));
+    transition: all .3s ease;
+}
+
 .room_data p{
     color: white;
     font-size: 1.8rem;
@@ -65,12 +74,21 @@
     border-radius: 12px;
     box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
    /* background: radial-gradient(circle, rgba(214, 116, 35, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%); */
-    background-color: rgba(104, 226, 33, 0.733);
+   background: linear-gradient(-25deg, #1c741c, #00dd76, #1c741c);
     cursor: pointer;
     margin-right: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.281);
     text-transform: uppercase;
+    text-shadow: 0 0 1rem black;
+    transition: all .3s ease;
 }
+
+
+.room_myRoom:hover{
+    filter: drop-shadow( 0 0 5px rgba(100, 255, 170, 0.541));
+    transition: all .3s ease;
+}
+
 
 .amount_room{
     display: flex;

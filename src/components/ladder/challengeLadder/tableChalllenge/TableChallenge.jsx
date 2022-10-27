@@ -23,6 +23,7 @@ const TableChallenge = () => {
         if (rooms.data != challengeRoom) {
           setChallengeRoom(rooms.data)
           setLoading(false)
+          console.log("funca")
         }
         
       }
