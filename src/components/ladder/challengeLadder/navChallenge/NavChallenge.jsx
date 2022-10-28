@@ -13,28 +13,23 @@ import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
 import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
-const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }) => {
+const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
 
     const [colorP, setColorP] = useState("#bebdff")
     const [colorM, setColorM] = useState("white")
-    const [colorR , setColorR] = useState("white")
+
     const [comingMatches , setComingMatches] = useState([])  // partidos disponibles p crear room
 
     const colorPred = ( ) => {
         setColorM('white')
         setColorP('#bebdff')
-        setColorR('white')
     }
+
     const ColorMyRecord= ( ) => {
         setColorM('#bebdff')
         setColorP('white')
-        setColorR('white')
     }
-    const colorRank = ( ) => {
-        setColorM('white')
-        setColorP('white')
-        setColorR('#bebdff')
-    }
+
 
     useEffect(() => {
         colorPred()
@@ -98,7 +93,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                 if (roomCreated.status==200) {
                 /*     alert(roomCreated.data) */
 
-                    getData()
 
                     setMessajePopup(roomCreated.data)
                     setSalaCreada(true)
@@ -157,26 +151,17 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                                 colorPred()
                                 setPublicRooms(true) 
                                 setMyRooms(false)
-                                setHistory(false)  
                             } }>
                             Public Rooms
                         </li>
-{/*                         <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                        <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                 ColorMyRecord()
                                 setMyRooms(true)
                                 setPublicRooms(false) 
-                                setHistory(false) 
                             }}>
                             My Rooms
                         </li>
-                        <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                colorRank()
-                                setMyRooms(false)
-                                setPublicRooms(false) 
-                                setHistory(true) 
-                            }}>
-                            History
-                        </li> */}
+
                     </ul>
                 </div>
                 <div className="container_links_movile_challengeRoom">
@@ -190,27 +175,18 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                                 <li className='link_nav_challengeRoom'   style={{color : colorP}}  onClick={() => {
                                     setMyRooms(true) 
                                     setPublicRooms(false)
-                                    setHistory(false)    
                                     colorPred()
                                     } }> 
                                     Public Rooms
                                 </li>
-{/*                                 <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                                <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                     setMyRooms(true)
                                     setPublicRooms(false) 
-                                    setHistory(false) 
                                     ColorMyRecord()
                                     } }>
                                     My Rooms
                                 </li>
-                                <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                    setMyRooms(false)
-                                    setPublicRooms(false) 
-                                    setHistory(true) 
-                                    colorRank()
-                                    }}>
-                                    History
-                                </li> */}
+
                             </ul>
                         </div>
                 

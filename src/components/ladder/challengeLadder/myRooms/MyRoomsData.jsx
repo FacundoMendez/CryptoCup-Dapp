@@ -1,32 +1,30 @@
 import React, {useState, useEffect} from 'react'
-import api from '../../../../api';
-import CabeceraRoom from './cabeceraRoom/CabeceraRoom';
-import RowRoom from './rowRoom/RowRoom';
-import "./tableChallenge.css"
-import Spinner from '../../../config/spinner/Spinner';
+import CabeceraRoom from '../tableChalllenge/cabeceraRoom/CabeceraRoom'
+import Spinner from '../../../config/spinner/Spinner'
+import api from '../../../../api'
+import RowMyRooms from './rowMyRooms/RowMyRooms'
 
 
-
-const TableChallenge = () => {
-
-      const [loading ,setLoading]=useState(true)
-      const [challengeRoom , setChallengeRoom]=useState([])
+const MyRoomsData = () => {
 
 
-      useEffect(() => {
-        getData()
-       },[]);
+    const [loading ,setLoading]=useState(true)
+    const [challengeRoom , setChallengeRoom]=useState([])
 
 
-       const getData = async () => {
-        const rooms = await api.get('/challenge/getRooms')
-        if (rooms.data != challengeRoom) {
-          setChallengeRoom(rooms.data)
-          setLoading(false)
-        }
-        
+    useEffect(() => {
+      getData()
+     },[]);
+
+
+     const getData = async () => {
+      const rooms = await api.get('/challenge/getRooms')
+      if (rooms.data != challengeRoom) {
+        setChallengeRoom(rooms.data)
+        setLoading(false)
       }
-
+      
+    }
 
   return (
     <>
@@ -53,7 +51,7 @@ const TableChallenge = () => {
                         {
                         challengeRoom.map((item,index) => {
 
-                          return <RowRoom key={index}
+                          return <RowMyRooms key={index}
                                       id={item._id}
                                       status = {item.status}
                                       ownerUsername={item.ownerUsername}
@@ -63,6 +61,7 @@ const TableChallenge = () => {
                                       flagTeam2=  {item.relatedMatch[0].team2} 
                                       ownerSelect = {item.ownerSelection}
                                       tokens= {item.tokensRoom}
+                                      getData={getData}
                                     />   
                       })}
                     </td> 
@@ -77,5 +76,4 @@ const TableChallenge = () => {
   )
 }
 
-export default TableChallenge
-      
+export default MyRoomsData

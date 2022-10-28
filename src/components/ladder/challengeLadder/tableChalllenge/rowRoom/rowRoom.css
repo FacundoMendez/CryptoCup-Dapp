@@ -26,6 +26,10 @@
     height: 6.5rem;
     object-fit: contain;
     border-radius: 5px;
+    border-radius: 15px;
+    filter: contrast(110%);
+    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.13);
+
 }
 
 .challenge{
@@ -97,6 +101,8 @@
     gap: .5rem;
     width: auto;
     padding: 0 1rem;
+    box-shadow: 0 0 1rem rgba(168, 130, 255, 0.918);
+    border-radius: 15px;
 }
 
 .amount_room img{
