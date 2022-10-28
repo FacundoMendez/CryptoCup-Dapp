@@ -37,7 +37,7 @@ const TableChallenge = () => {
        </div>
         
       {challengeRoom.length > 0  ?
-  
+
         <table className='table_rows'>               
             <thead>
               <tr>
@@ -50,7 +50,7 @@ const TableChallenge = () => {
             <tbody >
                 <tr >
                     <td className='row-map'>
-                        {
+                        {challengeRoom.length > 0  ?
                         challengeRoom.map((item,index) => {
 
                           return <RowRoom key={index}
@@ -64,7 +64,10 @@ const TableChallenge = () => {
                                       ownerSelect = {item.ownerSelection}
                                       tokens= {item.tokensRoom}
                                     />   
-                      })}
+                      })
+                    
+                      : null
+                    }
                     </td> 
                 </tr>  
             </tbody>

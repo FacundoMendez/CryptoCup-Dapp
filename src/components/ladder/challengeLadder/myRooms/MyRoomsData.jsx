@@ -48,7 +48,7 @@ const MyRoomsData = () => {
             <tbody >
                 <tr >
                     <td className='row-map'>
-                        {
+                        {challengeRoom.length > 0  ?
                         challengeRoom.map((item,index) => {
 
                           return <RowMyRooms key={index}
@@ -63,7 +63,9 @@ const MyRoomsData = () => {
                                       tokens= {item.tokensRoom}
                                       getData={getData}
                                     />   
-                      })}
+                      })
+                      : null
+                    }
                     </td> 
                 </tr>  
             </tbody>

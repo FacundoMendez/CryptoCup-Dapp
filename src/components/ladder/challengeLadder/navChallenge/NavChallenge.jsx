@@ -72,9 +72,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
             e.target.value = e.target.value.slice(0,6);
         }
 
-
-
     }
+
 
     const createRoom = async () => {
         try {
@@ -225,10 +224,11 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
                         <div className="box_elegir_partido_challenge">
+                        {comingMatches.length > 0  ? 
+
                             <form className='formPartidos_challenge' action="POST" >
 
-                                {
-                                    comingMatches.map( (item , index ) => {
+                                    {comingMatches.map( (item , index ) => {
                                         return <div key={index} className="containerRadio_check">
 
                                                     <label className='label_match_challenge'>
@@ -238,9 +238,12 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
     
                                                 </div>
                                     })
+
                                 }
                            
                             </form>
+                        :
+                            null}
                         </div>
 
                                         {/* select equipo */}

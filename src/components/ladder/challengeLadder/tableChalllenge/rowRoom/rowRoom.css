@@ -78,7 +78,7 @@
     border-radius: 12px;
     box-shadow: rgba(207, 187, 255, 0.226) 3px 3px 6px 0px inset, rgba(226, 216, 255, 0.103) -3px -3px 6px 1px inset;
    /* background: radial-gradient(circle, rgba(214, 116, 35, 0.863) 0%, rgba(107, 82, 175, 0.801) 90%); */
-   background: linear-gradient(-25deg, #1c741c, #00dd76, #1c741c);
+    background: linear-gradient(-25deg, #1c741c, #00dd76, #1c741c);
     cursor: pointer;
     margin-right: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.281);
