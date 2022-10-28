@@ -38,7 +38,7 @@ function App() {
 
   const [basicTicketsInv, setBasicTicketsInv] = useState([])
   const [boostTicketsInv, setBoostTicketsInv] = useState([])
-
+  console.log(basicTicketsInv)
   return (
     <ContextConnected.Provider value={{
       userLogginActive, 

@@ -209,11 +209,11 @@ return (
  
               {
                 roomDetails[0].ownerAddress == Connected.account[0] || roomDetails[0].opponentAddress ?
-                    <button className='button_challengeRoom_acept'> 
+                    <button className='button_challengeRoom_acept' style={{cursor:"default" }} > 
                         <p>. . .</p> 
                     </button> 
                     :
-                    <button className='button_challengeRoom_acept' onClick={joinRoom}> 
+                    <button className='button_challengeRoom_acept' onClick={joinRoom} > 
                         <p>Join Challenge</p> 
                     </button>
 

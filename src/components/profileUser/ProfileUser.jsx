@@ -22,8 +22,10 @@ const ProfileUser = () => {
 
   const [ticketBasic, setTicketBasic] = useState(true)
   const [ticketBoost, setTicketBoost] = useState()
+  const [arrayTicketBasic, setArrayTicketBasic] = useState([])
+  const [arrayTicketBoost, setArrayTicketBoost] = useState([])
 
-  
+
   const [colorBa, setColorBa] = useState("#bebdff")
   const [colorBo, setColorBo] = useState("#white")
 
@@ -37,7 +39,8 @@ const ProfileUser = () => {
     setColorBo('#bebdff')
   }
 
-
+  console.log(Connected.basicTicketsInv)
+  console.log(Connected.boostTicketsInv)
   return (
 
     <Suspense fallback={<Spinner /> }>    
@@ -78,21 +81,40 @@ const ProfileUser = () => {
             {ticketBasic ? 
 
               <div className="container_tickets_profile">
-                <div className="box_tickets_profileUser ">
-                    <div className="ticket_box">
-                        <img className='ticketImg' src={ticketBasicImg} alt="ticketBasic" />
-                        <p className='puntuacion_ticket'>#0</p>
-                    </div>
-                </div>
+                {
+                  Connected.basicTicketsInv.length > 0 ?
+                  Connected.basicTicketsInv.map((item, index)=> {
+                        return <div className="box_tickets_profileUser ">
+                          <div className="ticket_box">
+                              <img className='ticketImg' src={ticketBasicImg} alt="ticketBasic" />
+                              <p className='puntuacion_ticket'>#0</p>
+                          </div>
+                        </div>
+                    })
+                  : 
+                  
+                  Connected.basicTicketsInv.length <= 0  && ticketBasic ? <p className='noPredictions'> NO TICKETS BASIC </p> : null 
+
+                  
+                }
+                 
+                
               </div>
               :
               <div className="container_tickets_profile">
-              <div className="box_tickets_profileUser ">
-                  <div className="ticket_box">
-                    <img className='ticketImg' src={ticketBoostImg} alt="ticketBoost" />
-                    <p className='puntuacion_ticket'>#0</p>
-                  </div>
-              </div>
+                {
+                  Connected.basicTicketsInv.length > 0 ?
+                  Connected.basicTicketsInv.map((item, index)=> {
+                          return <div className="box_tickets_profileUser ">
+                            <div className="ticket_box">
+                              <img className='ticketImg' src={ticketBoostImg} alt="ticketBoost" />
+                              <p className='puntuacion_ticket'>#0</p>
+                            </div>
+                          </div>
+                      })
+                : 
+                Connected.basicTicketsInv.length <= 0  && !ticketBasic ? <p className='noPredictions'> NO TICKETS BOOST </p> : null 
+                }
               
           </div>
           }

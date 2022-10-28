@@ -6,6 +6,7 @@
     padding: 1rem .5rem ;
     border: 2px solid gray;
     border-radius: 15px;
+    height: 8.8rem;
 }
 
 .row-map{
@@ -25,7 +26,6 @@
     width: 6.5rem;
     height: 6.5rem;
     object-fit: contain;
-    border-radius: 5px;
     border-radius: 15px;
     filter: contrast(110%);
     box-shadow: 0 0 1rem rgba(168, 130, 255, 0.13);
