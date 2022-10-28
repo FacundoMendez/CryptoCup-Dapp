@@ -34,7 +34,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
     useEffect(() => {
         colorPred()
         getComingMatches()
-        navChallengeFuncional()
+/*         navChallengeFuncional() */
         createRoomFunctional()
 
     },[])
@@ -185,7 +185,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                                     } }>
                                     My Rooms
                                 </li>
-
                             </ul>
                         </div>
                 
@@ -194,7 +193,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
              
             </div>
             <div className="box_create_sala">
-                <div className="container_find_click"></div>
+              {/*   <div className="container_find_click"></div>
                 <div className="containerFilter_match">
                     <img className='busqueda_match' src={busquedaImg} alt="busqueda icono" />
                     <p>Find Match</p>
@@ -209,7 +208,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="container_room_click"></div>
                 <div className="container_createRoom">

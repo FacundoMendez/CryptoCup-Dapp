@@ -12,7 +12,7 @@
 .nav_challengeRoom{
     z-index: 9998;
     position: relative;
-    width: 60vw;
+    width: 90vw;
     height: 7rem;
     border-radius: 15px;
     border-bottom-left-radius: 0;
@@ -31,7 +31,6 @@
 .box_create_sala{
     z-index: 9998;
     position: relative;
-    width: 20vw;
     margin-top: 1rem;
     height: 7rem;
     border-radius: 15px;
@@ -555,7 +554,7 @@
     }
 
     .nav_challengeRoom{
-        width: 95vw;
+        width: 100vw;
         padding: 0 3rem;
     }
 
@@ -658,10 +657,9 @@
     }
 
     .box_links_movile_challengeRoom{
-        width: 90vw;
+        width: 94.5vw;
         position: fixed;
-        left: 5vw;
-        top: 15.6rem;
+        left: 2.5vw;
         top: 18rem;
         padding: 1.3rem 0;
         visibility: hidden;
@@ -672,12 +670,13 @@
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
-        background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
-        background-color: rgba(61, 15, 134, 0.932);
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.164) -3px -3px 6px 1px inset;
+        background: radial-gradient(circle, rgba(254, 254, 255, 0.192) 0%, rgba(47, 36, 78, 0.801) 60%);
+        background-color: rgba(25, 5, 56, 0.932);
+    
     }
 
-    .box_links_movile_active{
+    .box_links_movile_challengeRoom_active{
         visibility: visible;
         opacity: 1;
         transition: all .2s ease-in-out;
@@ -718,9 +717,8 @@
     }
 
     .container_createRoom{
-        width: 18rem;
+        width: 13rem;
         padding: 0 ;
-
     }
 
     .containerFilter_match{
@@ -757,6 +755,10 @@
 
     .container_room_click{
         width: 15.5vw;
+    }
+    .box_links_movile_challengeRoom{
+        width: 94.5vw;
+    
     }
 
 
@@ -808,6 +810,15 @@
         width: 15.5vw;
     }
 
+    .containerFilter_match {
+        width: 13rem;
+        padding: 0;
+    }
+
+    .container_createRoom{
+        width: 12rem;
+        padding: 0 ;
+    }
 
     .container_room_click{
         width: 17.5vw;

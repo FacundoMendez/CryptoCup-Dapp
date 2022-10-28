@@ -652,6 +652,7 @@
     
     .nav_detail{
         width: 95vw;
+
     }
     
     
@@ -667,6 +668,7 @@
         width: 42rem;
         height: 6rem;
         gap: 0rem;
+        margin-top: 2rem;
     }
 
     .box_results_match_challenge {
