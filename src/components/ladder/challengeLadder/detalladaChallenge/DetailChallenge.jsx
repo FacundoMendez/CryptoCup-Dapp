@@ -13,7 +13,7 @@ import TimerChallengeInit from './timerChallengeInit/TimerChallengeInit'
 import campo from "./campo2.jpg"
 import Preload from '../../../config/preload/Preload'
 import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
-
+import exit from "../../../nav/src/x.png"
 
 const DetailChallenge = () => {
     const {roomId} = useParams()   /* de aca se obtiene el id de la room  */
@@ -226,33 +226,37 @@ return (
                     <div className="container_select_option" >
                         <div className="box_options_user">
                             <div className="exit_option_user" onClick={() => setSelectOption(false) }> 
-                                x
+                                <img src={exit} alt="exit" />
                             </div>
                             
                                 {
                                   roomDetails[0].relatedMatch[0].team1 != roomDetails[0].ownerSelection && roomDetails[0].relatedMatch[0].team2 != roomDetails[0].ownerSelection ?
 
                                         <div className='options'>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                                                 <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
+                                                <img src={paises[roomDetails[0].relatedMatch[0].team1].img} alt="equipos para elegir" />
                                             </label>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                                                 <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
+                                                <img src={paises[roomDetails[0].relatedMatch[0].team2].img} alt="equipos para elegir" />
                                             </label>
                                         </div>
 
                                   : roomDetails[0].relatedMatch[0].team1 != roomDetails[0].ownerSelection && roomDetails[0].ownerSelection != "tie" ?
 
                                         <div className='options'>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team1} onClick={e => setOpponentOption(e.target.value)} />
                                                 <span>{paises[roomDetails[0].relatedMatch[0].team1].name}</span>
+                                                <img src={paises[roomDetails[0].relatedMatch[0].team1].img} alt="equipos para elegir" />
                                             </label>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value="tie" onClick={e => setOpponentOption(e.target.value)} />
                                                 <span>Tie</span>
+                                                <img src={paises.tie.img} alt="equipos para elegir" />
                                             </label>
                                         </div>
 
@@ -261,13 +265,15 @@ return (
                                   roomDetails[0].relatedMatch[0].team2 != roomDetails[0].ownerSelection && roomDetails[0].ownerSelection != "tie" ?
 
                                         <form className='options'>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value={roomDetails[0].relatedMatch[0].team2} onClick={e => setOpponentOption(e.target.value)}/>
                                                 <span>{paises[roomDetails[0].relatedMatch[0].team2].name}</span>
+                                                <img src={paises[roomDetails[0].relatedMatch[0].team2].img} alt="equipos para elegir" />
                                             </label>
-                                            <label className='label_match_challenge'>
+                                            <label className='box_img_label'>
                                                 <input type="radio" name="radio" value="tie" onClick={ e => setOpponentOption(e.target.value)} />
                                                 <span>Tie</span>
+                                                <img src={paises.tie.img} alt="equipos para elegir" />
                                             </label>
                                         </form>
 

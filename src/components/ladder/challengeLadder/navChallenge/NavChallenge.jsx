@@ -172,8 +172,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                         <div className="links_movile_challengeRoom">
                             <ul>
                                 <li className='link_nav_challengeRoom'   style={{color : colorP}}  onClick={() => {
-                                    setMyRooms(true) 
-                                    setPublicRooms(false)
+                                    setMyRooms(false) 
+                                    setPublicRooms(true)
                                     colorPred()
                                     } }> 
                                     Public Rooms

@@ -15,8 +15,6 @@
     width: 90vw;
     height: 7rem;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,6 +24,8 @@
     background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
     background-color: rgba(61, 15, 134, 0.932);
     margin-top: 0rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .box_create_sala{
@@ -34,13 +34,13 @@
     margin-top: 1rem;
     height: 7rem;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     padding: 0 0rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .nav_challengeRoom h2{
@@ -104,8 +104,6 @@
     height: 100%;
     border-radius: 15px;
     margin-top: -1rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.171);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
     background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 90%);
@@ -120,6 +118,8 @@
     letter-spacing: 1px;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 
@@ -785,8 +785,8 @@
 
 
     .box_links_movile_challengeRoom{
-        width: 98vw;
-        left: .9vw;
+        width: 94.5vw;
+        left: 2.5vw;
         height: 16.5rem;
     }
 
