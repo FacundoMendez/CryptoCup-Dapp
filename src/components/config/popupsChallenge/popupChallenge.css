@@ -1,0 +1,148 @@
+
+.popupConfirmed_challenge{
+    height: 4.5rem;
+    border-radius: 10px;
+    background-color: #5eda92c5;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 2px rgba(189, 255, 209, 0.623));
+    text-transform: uppercase;
+    top:21.5rem;
+    right: 13.5%;
+    padding: 0 2rem;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+    z-index: 9999;
+}
+
+.popupConfirmed_challenge p{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.719));
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.popupConfirmed_challenge_active{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+}
+
+
+.popupRejected_challenge{
+    padding: 0 2rem;
+    height: 4.5rem;
+    border-radius: 10px;
+    background-color: #da5e5ec5;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 2px rgba(255, 189, 189, 0.623));
+    text-transform: uppercase;
+    top:21.5rem;
+    right: 15%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+    z-index: 9999;
+}
+
+.popupRejected_challenge p{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.719));
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.popupRejected_challenge_active{
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    animation: jittery 3s infinite;
+}
+
+@media screen and (max-width:1440px) {
+        
+    .popupConfirmed_challenge{
+        width: 35rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 6%;
+        opacity:0;
+    }
+
+    .popupRejected_challenge{
+        width: 35rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 6%;
+        opacity: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width:800px) {
+        
+    .popupConfirmed_challenge{
+        width: 35rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 10%;
+        opacity:0;
+    }
+
+    .popupRejected_challenge{
+        width: 35rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 10%;
+        opacity: 0;
+    }
+
+}
+
+
+@media screen and (max-width:400px) {
+        
+    .popupConfirmed_challenge{
+        width: 33rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 4%;
+        opacity: 0;
+    }
+
+    .popupRejected_challenge{
+        width: 30rem;
+        height: 4.5rem;
+        top: 14rem;
+        right: 4%;
+        opacity: 0;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+        
+    .popupConfirmed_challenge{
+        width: 32rem;
+        height: 4.5rem;
+        text-transform: uppercase;
+        top: 14rem;
+        right: 3%;
+        opacity: 0;
+    }
+
+}

@@ -12,11 +12,9 @@
 .nav_challengeRoom{
     z-index: 9998;
     position: relative;
-    width: 60vw;
+    width: 90vw;
     height: 7rem;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,22 +24,23 @@
     background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
     background-color: rgba(61, 15, 134, 0.932);
     margin-top: 0rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .box_create_sala{
     z-index: 9998;
     position: relative;
-    width: 20vw;
     margin-top: 1rem;
     height: 7rem;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     padding: 0 0rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .nav_challengeRoom h2{
@@ -105,8 +104,6 @@
     height: 100%;
     border-radius: 15px;
     margin-top: -1rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.171);
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
     background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 90%);
@@ -121,6 +118,8 @@
     letter-spacing: 1px;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 
@@ -276,6 +275,7 @@
     opacity: 0;
     transition: all .3s ease;
     padding:2rem 1rem;
+
 }
 
 .box_create_room_challenge_active{
@@ -290,7 +290,6 @@
 
 .box_elegir_partido_challenge , .box_elegir_team_challenge{
     width: 99%;
-    height: 16rem;
     border-radius: 10px;
     position: relative;
     transition: all .5 ease;
@@ -301,6 +300,7 @@
     display: flex;
     transition: all .5 ease;
     overflow-y: scroll;
+
 }
 
 .box_elegir_partido_challenge_active , .box_elegir_team_challenge_active{
@@ -308,6 +308,7 @@
     opacity: 1;
     top: -1rem;
     transition: all .5 ease;
+
 }
 
 
@@ -334,8 +335,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
+
+.span_select_part{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    gap: 2rem;
+}
+
+.span_select_part_2{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    margin: .5rem 0;
+    gap: 2rem;
+}
 
 
 /* select team */
@@ -365,7 +382,6 @@
     font-weight: 500;
     position: relative;
     overflow: hidden;
-    margin-bottom: 1rem;
   }
 
 
@@ -377,9 +393,10 @@
   .label_match_challenge input:checked + span {
     background-color: #d6d6e5;
     color: black;
-  }
+}
   .label_match_challenge input:checked + span:before {
     box-shadow: inset 0 0 0 0.4375em #00005c;
+
   }
   .label_match_challenge span {
     display: flex;
@@ -387,7 +404,6 @@
     padding: 0.375em 0.75em 0.375em 0.375em;
     border-radius: 99em;
     transition: 0.25s ease;
-    
   }
   .label_match_challenge span:hover {
     background-color: #d6d6e5;
@@ -404,6 +420,7 @@
     margin-right: 0.375em;
     transition: 0.25s ease;
     box-shadow: inset 0 0 0 0.125em #00005c;
+
   }
   
 
@@ -537,7 +554,7 @@
     }
 
     .nav_challengeRoom{
-        width: 95vw;
+        width: 100vw;
         padding: 0 3rem;
     }
 
@@ -640,10 +657,9 @@
     }
 
     .box_links_movile_challengeRoom{
-        width: 90vw;
+        width: 94.5vw;
         position: fixed;
-        left: 5vw;
-        top: 15.6rem;
+        left: 2.5vw;
         top: 18rem;
         padding: 1.3rem 0;
         visibility: hidden;
@@ -654,12 +670,13 @@
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
-        background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
-        background-color: rgba(61, 15, 134, 0.932);
+        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.164) -3px -3px 6px 1px inset;
+        background: radial-gradient(circle, rgba(254, 254, 255, 0.192) 0%, rgba(47, 36, 78, 0.801) 60%);
+        background-color: rgba(25, 5, 56, 0.932);
+    
     }
 
-    .box_links_movile_active{
+    .box_links_movile_challengeRoom_active{
         visibility: visible;
         opacity: 1;
         transition: all .2s ease-in-out;
@@ -700,9 +717,8 @@
     }
 
     .container_createRoom{
-        width: 18rem;
+        width: 13rem;
         padding: 0 ;
-
     }
 
     .containerFilter_match{
@@ -740,6 +756,10 @@
     .container_room_click{
         width: 15.5vw;
     }
+    .box_links_movile_challengeRoom{
+        width: 94.5vw;
+    
+    }
 
 
 
@@ -765,8 +785,8 @@
 
 
     .box_links_movile_challengeRoom{
-        width: 98vw;
-        left: .9vw;
+        width: 94.5vw;
+        left: 2.5vw;
         height: 16.5rem;
     }
 
@@ -790,6 +810,15 @@
         width: 15.5vw;
     }
 
+    .containerFilter_match {
+        width: 13rem;
+        padding: 0;
+    }
+
+    .container_createRoom{
+        width: 12rem;
+        padding: 0 ;
+    }
 
     .container_room_click{
         width: 17.5vw;

@@ -34,7 +34,6 @@ const BasicLadder = () => {
         signature: Connected.signature
        })
        const predictionsArray=res.data
-       console.log(res.data);
        setPredictionCards(predictionsArray)
        setLoading(false) 
    }

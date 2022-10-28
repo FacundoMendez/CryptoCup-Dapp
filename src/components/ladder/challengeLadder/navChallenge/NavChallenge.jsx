@@ -1,4 +1,4 @@
-import React, {useState , useEffect, Suspense} from 'react'
+import React, {useState , useEffect, Suspense , useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Spinner from '../../../config/spinner/Spinner'
@@ -9,49 +9,62 @@ import navChallengeFuncional from './navChallengeFuncional'
 import paisesJson from "../../../config/paises2.json"
 import tokenImg from "../../../nav_inventario/src/tokenNav.png"
 import createRoomFunctional from './createRoomFunctional'
+import api from '../../../../api'
+import ContextConnected from '../../../config/context/ConnectedContext'
+import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
-const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
+const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
 
     const [colorP, setColorP] = useState("#bebdff")
     const [colorM, setColorM] = useState("white")
-    const [colorR , setColorR] = useState("white")
 
+    const [comingMatches , setComingMatches] = useState([])  // partidos disponibles p crear room
 
     const colorPred = ( ) => {
         setColorM('white')
         setColorP('#bebdff')
-        setColorR('white')
     }
+
     const ColorMyRecord= ( ) => {
         setColorM('#bebdff')
         setColorP('white')
-        setColorR('white')
     }
-    const colorRank = ( ) => {
-        setColorM('white')
-        setColorP('white')
-        setColorR('#bebdff')
-    }
+
 
     useEffect(() => {
         colorPred()
-        navChallengeFuncional()
+        getComingMatches()
+/*         navChallengeFuncional() */
         createRoomFunctional()
 
     },[])
 
-
+    const Connected = useContext(ContextConnected)
     const [selectMatch , setSelectMatch] = useState(false)
     const [selectTeam , setSelectTeam] = useState(false)
     const [amountTokens , setAmountTokens] = useState(false)
 
+
+    const [salaCreada , setSalaCreada] = useState()
+    const [messajePopup , setMessajePopup] = useState()
+    
+
+    //Trae partidos disponibles p crear
+    const getComingMatches = async () => {
+        let matches = await api.get('/matches/getComingMatches')
+        setComingMatches(matches.data)
+    }
+
+    //setea el partido elegido
+  /*  const setMatchForRoom = async (item) => {
+        setSelectMatch(item)
+    }  */
+
     const amountTokenss= e => {
 
         if(e.target.value >= 10){
-            setAmountTokens(true)
+            setAmountTokens(e.target.value)
             console.log(amountTokens)
-        }else{
-            setAmountTokens(false)
         }
 
 
@@ -59,14 +72,76 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
             e.target.value = e.target.value.slice(0,6);
         }
 
+    }
 
+
+    const createRoom = async () => {
+        try {
+            if ( selectMatch && selectTeam && amountTokens) {
+                const roomCreated = await api.post('/challenge/createRoom' , {
+                    ownerAddress: Connected.account[0] ,
+                    address : Connected.account[0] ,
+                    signature : Connected.signature,
+                    tokensRoom : amountTokens ,
+                    matchId : selectMatch._id , 
+                    ownerSelection : selectTeam
+                })
+
+
+
+                if (roomCreated.status==200) {
+                /*     alert(roomCreated.data) */
+
+
+                    setMessajePopup(roomCreated.data)
+                    setSalaCreada(true)
+                    setTimeout(() => {
+                        setMessajePopup("")
+                        setSalaCreada()
+                    }, 6000);
+                } 
+            }
+        } catch (error) {
+            /* alert(error.response.data) */
+
+            setMessajePopup(error.response.data)
+            setSalaCreada(false)
+            setTimeout(() => {
+                setMessajePopup("")
+                setSalaCreada()
+            }, 6000);
+
+        }
 
     }
 
 
+
+
   return (
+    <>
+
+    
+    { salaCreada === true? 
+        <PopupChallenge 
+            salaCreada={salaCreada} 
+            messajePopup={messajePopup}
+        /> 
+    : salaCreada === false?
+
+        <PopupChallenge 
+            salaCreada={salaCreada} 
+            messajePopup={messajePopup}
+        /> 
+    :
+    null
+
+    }
+
+        
     <Suspense fallback={<Spinner/>}>
         <div className="container_navChallenge">
+            <PopupChallenge/>
             <div className="nav_challengeRoom">
                 <h2>{ladder}</h2>
                 <div className="links_challengeRoom">
@@ -75,26 +150,17 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                                 colorPred()
                                 setPublicRooms(true) 
                                 setMyRooms(false)
-                                setHistory(false)  
                             } }>
                             Public Rooms
                         </li>
-{/*                         <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                        <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                 ColorMyRecord()
                                 setMyRooms(true)
                                 setPublicRooms(false) 
-                                setHistory(false) 
                             }}>
                             My Rooms
                         </li>
-                        <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                colorRank()
-                                setMyRooms(false)
-                                setPublicRooms(false) 
-                                setHistory(true) 
-                            }}>
-                            History
-                        </li> */}
+
                     </ul>
                 </div>
                 <div className="container_links_movile_challengeRoom">
@@ -106,29 +172,19 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                         <div className="links_movile_challengeRoom">
                             <ul>
                                 <li className='link_nav_challengeRoom'   style={{color : colorP}}  onClick={() => {
-                                    setMyRooms(true) 
-                                    setPublicRooms(false)
-                                    setHistory(false)    
+                                    setMyRooms(false) 
+                                    setPublicRooms(true)
                                     colorPred()
                                     } }> 
                                     Public Rooms
                                 </li>
-{/*                                 <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                                <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                     setMyRooms(true)
                                     setPublicRooms(false) 
-                                    setHistory(false) 
                                     ColorMyRecord()
                                     } }>
                                     My Rooms
                                 </li>
-                                <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                    setMyRooms(false)
-                                    setPublicRooms(false) 
-                                    setHistory(true) 
-                                    colorRank()
-                                    }}>
-                                    History
-                                </li> */}
                             </ul>
                         </div>
                 
@@ -137,7 +193,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
              
             </div>
             <div className="box_create_sala">
-                <div className="container_find_click"></div>
+              {/*   <div className="container_find_click"></div>
                 <div className="containerFilter_match">
                     <img className='busqueda_match' src={busquedaImg} alt="busqueda icono" />
                     <p>Find Match</p>
@@ -152,7 +208,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="container_room_click"></div>
                 <div className="container_createRoom">
@@ -167,18 +223,26 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
                         <div className="box_elegir_partido_challenge">
+                        {comingMatches.length > 0  ? 
+
                             <form className='formPartidos_challenge' action="POST" >
 
-                                <div className="containerRadio_check">
+                                    {comingMatches.map( (item , index ) => {
+                                        return <div key={index} className="containerRadio_check">
 
-                                    <label className='label_match_challenge'>
-                                        <input type="radio" name="radio" value="match_create_room"   onClick={() => setSelectMatch(true)}/>
-                                        <span>{paisesJson.argentina.name} &nbsp; vs &nbsp; {paisesJson.brazil.name}</span>
-                                    </label>
+                                                    <label className='label_match_challenge'>
+                                                        <input type="radio" name="radio" value="match_create_room"   onClick={() =>  setSelectMatch(item)}/>
+                                                        <span className='span_select_part'>{paisesJson[item.team1].name} &nbsp; vs &nbsp; {paisesJson[item.team2].name}</span>
+                                                    </label>
+    
+                                                </div>
+                                    })
 
-                                </div>
+                                }
                            
                             </form>
+                        :
+                            null}
                         </div>
 
                                         {/* select equipo */}
@@ -189,24 +253,29 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
                         <div className="box_elegir_team_challenge" >
-                            <form className='formTeams_challenge' action="POST" >
-                          
-                                <div className="containerRadio_check">
+                            {
+                                selectMatch ? 
+                                    <form className='formTeams_challenge' action="POST" >
+                            
+                                    <div className="containerRadio_check">
 
-                                        <label className='label_match_challenge'>
-                                            <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(true)} />
-                                            <span>{paisesJson.brazil.name}</span>
-                                        </label>
-                                        <label className='label_match_challenge'>
-                                            <input type="radio" name="radio" value="tie_select"   onClick={() => setSelectTeam(true)} />
-                                            <span>TIE</span>
-                                        </label>
-                                        <label className='label_match_challenge'>
-                                            <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(true)} />
-                                            <span>{paisesJson.argentina.name} </span>
-                                        </label>
-                                </div>
-                            </form>
+                                           <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(selectMatch.team1)} />
+                                                <span className='span_select_part_2'>{paisesJson[selectMatch.team1].name}</span>
+                                            </label>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value="tie_select"   onClick={() => setSelectTeam("tie")} />
+                                                <span className='span_select_part_2'>TIE</span>
+                                            </label>
+                                            <label className='label_match_challenge'>
+                                                <input type="radio" name="radio" value="team1_select"  onClick={() => setSelectTeam(selectMatch.team2)} />
+                                                <span className='span_select_part_2'>{paisesJson[selectMatch.team2].name} </span>
+                                            </label>
+                                    </div>
+                                </form> :
+                                null
+                            }
+                            
                         </div>
 
                                      {/* select cant tokens */}
@@ -221,24 +290,13 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
                         </div>
 
 
-                        <form action="POST">
+            
 
-                            {
-                                selectMatch && selectTeam && amountTokens ?
+                    <button className='button_createRoom activeButtonCreateRoom' onClick={createRoom} style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.30%, rgba(42, 26, 85, 0.685) 60%)"}}>
+                        Create Room
+                    </button>
+    
 
-                                    <button className='button_createRoom' style={{background:"radial-gradient(circle, rgba(108, 50, 243, 0.363) 0%, rgba(42, 26, 85, 0.685) 60%)"}}>
-                                        Create Room
-                                    </button>
-                                         
-                                :
-                                    <div className='button_createRoom' style={{ cursor:"default" , background:"rgba(248, 245, 255, 0.322)" , color:"rgba(185, 185, 185, 0.76)"}}>
-                                          Create Room
-                                    </div>
-                            }
-
-
-
-                        </form>
                     </div>
                 </div>
             </div>
@@ -246,6 +304,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms }) => {
           
         </div>
     </Suspense>
+    </>
   )
 }
 

@@ -19,9 +19,7 @@ import { contractAddress, erc721Abi } from '../config/contract/config'
 const Nav = () => {
 
   useEffect(() => {
-    /* console.log(cookies.get("gandalf")); */
     navFuncional()
-    /* userInited()  *///persistencia
   },[])
 
     const [chainIncorrecta , setChainIncorrecta] = useState(false)
