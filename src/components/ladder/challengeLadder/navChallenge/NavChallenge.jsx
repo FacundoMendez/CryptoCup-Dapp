@@ -223,7 +223,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
                         <div className="box_elegir_partido_challenge">
-                        {comingMatches.length > 0  ? 
+                        {comingMatches && comingMatches.length > 0  ? 
 
                             <form className='formPartidos_challenge' action="POST" >
 
