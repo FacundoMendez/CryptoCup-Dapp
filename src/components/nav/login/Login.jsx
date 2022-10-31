@@ -5,7 +5,7 @@ import SelectFlags from './selectFlags/SelectFlags'
 import ContextConnected from '../../config/context/ConnectedContext'
 import x from "../src/x.png"
 import api from '../../../api'
-import { getUserData } from '../verifyUser'
+
 
 const Login = () => {
 
@@ -18,14 +18,27 @@ const Login = () => {
     const [buttonActive , setButtonActive] = useState(false)
 
     const register = async (username, flag) => {
-        const res = await api.post('/user/createUser', { address: Connected.account[0], signature: Connected.signature, username, flag });
-        if(res.data === "Account Succesfully Created."){
-            const userRes = await getUserData(Connected.account[0], Connected.signature);
-            Connected.setUserData(userRes);
 
-            Connected.setActiveLogin(false);
-            Connected.setUserLoginActive(true);
+        if (Connected.userEmail) {
+            const res = await api.post('/user/createGoogleUser', { email:Connected.userEmail , username,  flag });
+            if(res.status === 200){
+                console.log(res.data);
+                Connected.setUserData(res.data);
+                Connected.setActiveLogin(false);
+                Connected.setUserLoginActive(true);
+            }
+        } else {
+            const res = await api.post('/user/createMetamaskUser', { address: Connected.account[0], signature: Connected.signature, username,  flag });
+            if(res.status === 200){
+                console.log(res.data);
+                Connected.setUserData(res.data);
+    
+                Connected.setActiveLogin(false);
+                Connected.setUserLoginActive(true);
+            }
         }
+
+    
     }
 
 

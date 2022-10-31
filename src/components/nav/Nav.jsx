@@ -7,7 +7,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import navFuncional from './navFuncional'
 import ContextConnected from '../config/context/ConnectedContext'
 import Login from './login/Login'
-import { getUserData, verificarExistencia } from './verifyUser'
 import { ethers } from 'ethers'
 import paisesJson from "../config/paises2.json"
 import PopupError from '../config/popupsErrors/PopupError'
@@ -18,7 +17,39 @@ import { contractAddress, erc721Abi } from '../config/contract/config'
 
 const Nav = () => {
 
+  async function handleCallbackResponse(response) {
+    console.log("enconded JWT ID token "+ response.credential);
+    try {
+      const post = await api.post('/user/googleLogin' , {
+        token : response.credential
+      })
+      if (post.status === 200) {
+        cookies.set('gandalf' ,"asd232eadas", {maxAge: 86400000  , path : '/' })
+        Connected.setUserData(post.data);
+        Connected.setActiveLogin(false);
+        Connected.setUserLoginActive(true);
+      }
+
+    } catch (error) {
+      if (error.response.status === 404) {
+        console.log(error.response.data);
+        Connected.setUserEmail(error.response.data)
+        Connected.setActiveLogin(true);
+      } 
+    }
+  }
+
   useEffect(() => {
+    /* global google  ESTE COMENTARIO NO HAY QUE BORRARLO NUNCA */
+  /*   google.accounts.id.initialize({
+      client_id:"820212833361-dafbpq530ajj2o2459sj94qi10fvk6p0.apps.googleusercontent.com",
+      callback:handleCallbackResponse
+    })
+
+    google.accounts.id.renderButton(
+      document.getElementById("googleLogin") ,  EL googleLogin es el boton , podes ponerlo donde quieras. solo tenes que hacer un div con ese id 
+      { theme : "outline" , size : "large"}
+    ) */
     navFuncional()
   },[])
 
@@ -50,7 +81,7 @@ const Nav = () => {
       }
   }
 
-  const userInited = async () => {
+ /*  const userInited = async () => {
      const res = await api.get('/user/cookieLogin') 
      if (res.status === 200) {
         const {address , signature} = res.data 
@@ -66,7 +97,7 @@ const Nav = () => {
        
      }
      console.log(res.data);
-  }
+  } */
 
   const logOut =  async () => {
       const res = await api.get('/user/logout') 
@@ -99,18 +130,19 @@ const Nav = () => {
     const signature = await _signer.signMessage(message.toString()); // Aca hay que guardar el valor durante todo el dia y en el context para solo tener que pedirlo una vez.
     Connected.setSignature(signature);
 
-    const userRegistered = await verificarExistencia(_account[0], signature);
-    
-    if (userRegistered === false) {
-      Connected.setActiveLogin(true);
-    } else {
-      const userRes = await getUserData(_account[0], signature);
-      Connected.setUserData(userRes);
+    //Verify if user exists 
+    try {
+      const res = await api.post('/user/metamaskLogin', { address: _account[0] , signature });
+      cookies.set('gandalf' ,"asd232eadas", {maxAge: 86400000  , path : '/' })
+      Connected.setUserData(res.data);
 
       Connected.setActiveLogin(false);
       Connected.setUserLoginActive(true);
+    } catch (error) {
+      if (error.response.status === 404) {
+        Connected.setActiveLogin(true);
+      } 
     }
-
   }
   
 
@@ -170,6 +202,9 @@ const Nav = () => {
               <li className='buttonLogin'/*  style={{backgroundColor: "gray"}} */>
                 Connect
               </li>
+              <div id='googleLogin'/*  style={{backgroundColor: "gray"}} */>
+                
+              </div>
             </ul>
           }
 

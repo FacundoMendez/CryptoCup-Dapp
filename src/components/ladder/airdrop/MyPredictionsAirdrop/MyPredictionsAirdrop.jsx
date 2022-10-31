@@ -66,7 +66,7 @@ const MyPredictions = () => {
 
 
 
-              <p className='fecha_MyRecord'> --/ -- /2022 </p>   {/* <<<--- fecha */}
+              <p className='fecha_MyRecord'> {new Date(item.relatedGame[0].startDate).getDate()}/{new Date(item.relatedGame[0].startDate).getMonth()}/{new Date(item.relatedGame[0].startDate).getFullYear()} </p>   {/* <<<--- fecha */}
 
 
               <div className="date_match">

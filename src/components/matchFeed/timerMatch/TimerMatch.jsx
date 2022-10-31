@@ -10,6 +10,9 @@ const TimerMatch = ({timer, finishDate}) => {
         const [minutes,setMinutes]=useState()
         const [statusTimer , setStatusTimer] = useState()
 
+        //Set date of the past matches
+        const [matchDate , setMatchDate] = useState() 
+
        /*  console.log(finishDate); */
             //Get Unit/MS
         let msecPerMinute = 1000 * 60;
@@ -39,9 +42,16 @@ const TimerMatch = ({timer, finishDate}) => {
             setMinutes(minutesLeft) 
         }
 
+        function getMatchDate()  {
+            const fecha = new Date(timer)
+            const mesDia = `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()}`
+            console.log(fecha.getDate());
+            setMatchDate(mesDia)
+        }
 
         useEffect(() => {
             getTimeMatch()
+            getMatchDate()
         },[]);
     
 
@@ -52,7 +62,7 @@ const TimerMatch = ({timer, finishDate}) => {
             
             <div className="reloj finish">
                 <h2 className='finished_matchFeed'>Finished</h2>
-                <div className="dateMatchFeed"> --/--/2022</div>
+                <div className="dateMatchFeed"> {matchDate}</div>
             </div>
                 :
             statusTimer==="startIn" ?

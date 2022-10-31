@@ -30,6 +30,7 @@ function App() {
   const [provider,setProvider]=useState(undefined)
   const [account,setAccount]=useState(undefined)
   const [signer,setSigner]=useState(undefined)
+  const [userEmail , setUserEmail] = useState(undefined)
 
   const [signature, setSignature] = useState(undefined)
   const [paisFlag, setPaisFlag] = useState("germany")
@@ -38,7 +39,7 @@ function App() {
 
   const [basicTicketsInv, setBasicTicketsInv] = useState([])
   const [boostTicketsInv, setBoostTicketsInv] = useState([])
-  console.log(basicTicketsInv)
+
   return (
     <ContextConnected.Provider value={{
       userLogginActive, 
@@ -51,6 +52,8 @@ function App() {
       setAccount,
       signer,
       setSigner,
+      userEmail,
+      setUserEmail,
       signature,
       setSignature,
       paisFlag,
