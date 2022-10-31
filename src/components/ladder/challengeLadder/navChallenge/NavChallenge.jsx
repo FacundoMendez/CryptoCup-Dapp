@@ -13,36 +13,29 @@ import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
 import PopupChallenge from '../../../config/popupsChallenge/PopupChallenge'
 
-const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }) => {
+const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
 
     const [colorP, setColorP] = useState("#bebdff")
     const [colorM, setColorM] = useState("white")
-    const [colorR , setColorR] = useState("white")
+
     const [comingMatches , setComingMatches] = useState([])  // partidos disponibles p crear room
 
     const colorPred = ( ) => {
         setColorM('white')
         setColorP('#bebdff')
-        setColorR('white')
     }
+
     const ColorMyRecord= ( ) => {
         setColorM('#bebdff')
         setColorP('white')
-        setColorR('white')
     }
-    const colorRank = ( ) => {
-        setColorM('white')
-        setColorP('white')
-        setColorR('#bebdff')
-    }
+
 
     useEffect(() => {
         colorPred()
         getComingMatches()
-        navChallengeFuncional()
+/*         navChallengeFuncional() */
         createRoomFunctional()
-        
-        createRoom()
 
     },[])
 
@@ -55,7 +48,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
     const [salaCreada , setSalaCreada] = useState()
     const [messajePopup , setMessajePopup] = useState()
     
-    console.log(messajePopup)
 
     //Trae partidos disponibles p crear
     const getComingMatches = async () => {
@@ -80,9 +72,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
             e.target.value = e.target.value.slice(0,6);
         }
 
-
-
     }
+
 
     const createRoom = async () => {
         try {
@@ -101,7 +92,6 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                 if (roomCreated.status==200) {
                 /*     alert(roomCreated.data) */
 
-           /*          getData() */
 
                     setMessajePopup(roomCreated.data)
                     setSalaCreada(true)
@@ -160,26 +150,17 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                                 colorPred()
                                 setPublicRooms(true) 
                                 setMyRooms(false)
-                                setHistory(false)  
                             } }>
                             Public Rooms
                         </li>
-{/*                         <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                        <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                 ColorMyRecord()
                                 setMyRooms(true)
                                 setPublicRooms(false) 
-                                setHistory(false) 
                             }}>
                             My Rooms
                         </li>
-                        <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                colorRank()
-                                setMyRooms(false)
-                                setPublicRooms(false) 
-                                setHistory(true) 
-                            }}>
-                            History
-                        </li> */}
+
                     </ul>
                 </div>
                 <div className="container_links_movile_challengeRoom">
@@ -191,29 +172,19 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                         <div className="links_movile_challengeRoom">
                             <ul>
                                 <li className='link_nav_challengeRoom'   style={{color : colorP}}  onClick={() => {
-                                    setMyRooms(true) 
-                                    setPublicRooms(false)
-                                    setHistory(false)    
+                                    setMyRooms(false) 
+                                    setPublicRooms(true)
                                     colorPred()
                                     } }> 
                                     Public Rooms
                                 </li>
-{/*                                 <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
+                                <li className='link_nav_challengeRoom'  style={{color : colorM}}  onClick={() => {
                                     setMyRooms(true)
                                     setPublicRooms(false) 
-                                    setHistory(false) 
                                     ColorMyRecord()
                                     } }>
                                     My Rooms
                                 </li>
-                                <li className='link_nav_challengeRoom'  style={{color : colorR}}  onClick={() =>  {
-                                    setMyRooms(false)
-                                    setPublicRooms(false) 
-                                    setHistory(true) 
-                                    colorRank()
-                                    }}>
-                                    History
-                                </li> */}
                             </ul>
                         </div>
                 
@@ -222,7 +193,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
              
             </div>
             <div className="box_create_sala">
-                <div className="container_find_click"></div>
+              {/*   <div className="container_find_click"></div>
                 <div className="containerFilter_match">
                     <img className='busqueda_match' src={busquedaImg} alt="busqueda icono" />
                     <p>Find Match</p>
@@ -237,7 +208,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="container_room_click"></div>
                 <div className="container_createRoom">
@@ -252,11 +223,11 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                             <div className="triangleFilter triangleFilter1"></div>
                         </div>
                         <div className="box_elegir_partido_challenge">
+                        {comingMatches && comingMatches.length > 0  ? 
+
                             <form className='formPartidos_challenge' action="POST" >
 
-                                {
-                                    comingMatches.length>0 ?
-                                    comingMatches.map( (item , index ) => {
+                                    {comingMatches.map( (item , index ) => {
                                         return <div key={index} className="containerRadio_check">
 
                                                     <label className='label_match_challenge'>
@@ -265,11 +236,13 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                                                     </label>
     
                                                 </div>
-                                    }) :
-                                    <p>No matches coming</p>
+                                    })
+
                                 }
                            
                             </form>
+                        :
+                            null}
                         </div>
 
                                         {/* select equipo */}

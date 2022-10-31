@@ -3,7 +3,7 @@ const preloadFuncional = () => {
     setTimeout(function(){
         preload.classList.add("cerrar");
         preload.style.zIndex=0;
-    },700)
+    },500)
 }
 
 export default preloadFuncional;

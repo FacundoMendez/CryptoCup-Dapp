@@ -1,5 +1,4 @@
 import React, {useState , useContext , Suspense} from 'react'
-import "./rowRoom.css"
 import paisesJson from "../../../../config/paises2.json"
 import imgToken from "../../../../nav_inventario/src/tokenNav.png"
 import { NavLink } from 'react-router-dom'
@@ -7,37 +6,30 @@ import ContextConnected from '../../../../config/context/ConnectedContext'
 import Spinner from '../../../../config/spinner/Spinner'
 
 
-const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,flagTeam1 , flagTeam2 ,ownerSelect , tokens }) => {
+const RowMyRooms = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,flagTeam1 , flagTeam2 ,ownerSelect , tokens }) => {
 
 
     const Connected = useContext(ContextConnected)
-/*     console.log(Connected.account[0]);
-    console.log(opponentAddress);
-    console.log(Connected.account[0]==opponentAddress);
-    console.log(Connected.account[0]==ownerAddress);
- */
 
 
     const renderButton = () => {
-              //Si el oponente u owner es el usuario conectado muestra view
+            
+
+        /* si el user gano muestra win, sino lose  */
+
         if ( opponentAddress===Connected.account[0] || ownerAddress===Connected.account[0]) {
-            return  <NavLink to={`/challengeLadder/${id}`} >
-                        <button className='room_data room_myRoom'>
-                            <p>VIEW</p>
-                        </button>
-                    </NavLink>
+            return(
+                <div className='room_data room_myRoom' style={{cursor:"default"}}>
+                    <p>WIN</p>
+                </div>
+            )
+
         } 
-        else if ( status==="open" ) {
-            return  <NavLink to={`/challengeLadder/${id}`} >
-                        <button className='challenge room_data'>
-                                <p>CHALLENGE</p>
-                        </button>
-                    </NavLink>
-        } 
+
         else if (status==="close") {
-            return   <button className='room_data room_full'>
-                        <p>FULL</p>
-                    </button>
+            return   <div className='room_data room_full'>
+                        <p>LOSE</p>
+                    </div>
         } 
       
     }
@@ -82,4 +74,4 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
   )
 }
 
-export default RowRoom
+export default RowMyRooms

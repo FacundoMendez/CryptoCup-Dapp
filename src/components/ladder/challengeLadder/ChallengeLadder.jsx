@@ -4,13 +4,15 @@ import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
 import NavChallenge from './navChallenge/NavChallenge'
 import TableChallenge from './tableChalllenge/TableChallenge'
+import MyRoomsData from './myRooms/MyRoomsData'
+
 
 
 const ChallengeLadder = () => {
 
   const [publicRooms , setPublicRooms] = useState(true)
   const [myRooms , setMyRooms] = useState(false)
-  const [history , setHistory] = useState(false)
+
   const Connected = useContext(ContextConnected)
 
 
@@ -20,7 +22,7 @@ const ChallengeLadder = () => {
                 ladder="Challenge Room"
                 setMyRooms={setMyRooms}
                 setPublicRooms={setPublicRooms}
-                setHistory={setHistory}
+
               />
 
             <div className="container_friendsLadder">
@@ -35,18 +37,11 @@ const ChallengeLadder = () => {
                 {
                   myRooms ? 
             
-                    <img className='candado' src={candado} alt="candado" />
+                    <MyRoomsData/>
                   :
                   null
                 }
                 
-                {
-                  history ? 
-             
-                    <img className='candado' src={candado} alt="candado" />
-                  :
-                  null
-                }
               </div>
           </div>
   )

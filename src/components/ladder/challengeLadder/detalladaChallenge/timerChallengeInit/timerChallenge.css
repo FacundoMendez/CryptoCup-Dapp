@@ -128,3 +128,15 @@
 	
 
 }
+
+
+@media screen and (max-width:800px) {
+    
+	#countdown{
+		display: none;
+	
+	}
+
+	
+
+}
