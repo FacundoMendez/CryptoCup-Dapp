@@ -255,6 +255,7 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                             <form className='formPartidos_challenge' action="POST" >
 
                                 {
+                                    comingMatches.length>0 ?
                                     comingMatches.map( (item , index ) => {
                                         return <div key={index} className="containerRadio_check">
 
@@ -264,7 +265,8 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms , getData }
                                                     </label>
     
                                                 </div>
-                                    })
+                                    }) :
+                                    <p>No matches coming</p>
                                 }
                            
                             </form>

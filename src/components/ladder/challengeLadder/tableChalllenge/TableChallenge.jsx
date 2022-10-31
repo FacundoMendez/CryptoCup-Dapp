@@ -51,6 +51,7 @@ const TableChallenge = () => {
                 <tr >
                     <td className='row-map'>
                         {
+                          challengeRoom.length>0 ?
                         challengeRoom.map((item,index) => {
 
                           return <RowRoom key={index}
@@ -65,7 +66,10 @@ const TableChallenge = () => {
                                       tokens= {item.tokensRoom}
                                       getData={getData}
                                     />   
-                      })}
+                      })
+                      :
+                      null
+                    }
                     </td> 
                 </tr>  
             </tbody>
