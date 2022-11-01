@@ -1,4 +1,4 @@
-.container_myPrediction{
+.container_myPrediction_boost{
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,13 +8,14 @@
     overflow-y: scroll;
     gap: .5rem;
     margin: 2rem 0;
+
 }
 
 
 /* my predictions */
 
 
-.box_myPrediction{
+.box_myPrediction_boost{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -32,7 +33,7 @@
     flex-wrap: wrap;
 }
 
-.myPrediction{
+.myPrediction_boost{
     width: 46.5rem;
     height: 32rem;
     border-radius: 10px;
@@ -51,7 +52,7 @@
 
 /* header card */
 
-.date_match{
+.date_match_boost{
     position: relative;
     width: 100%;
     height: 15%;
@@ -64,7 +65,7 @@
 }
 
 
-.fecha_MyRecord{
+.fecha_MyRecord_boost{
     font-size: 1.4rem;
     width: 100%;
     display: flex;
@@ -84,7 +85,7 @@
 
 /* main card */
 
-.box_match_mypred{
+.box_match_mypred_boost{
     position: relative;
     width: 100%;
     height: 60%;
@@ -96,7 +97,7 @@
     padding: 1rem;
 }
 
-.mySelection{
+.mySelection_boost{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +110,7 @@
 
 
 
-.flag_mySelection_mypred , .flag_result_mypred{
+.flag_mySelection_mypred_boost , .flag_result_mypred_boost{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +125,7 @@
 }
 
 
-.flag_mySelection_mypred img, .flag_result_mypred img{   
+.flag_mySelection_mypred_boost img, .flag_result_mypred_boost img{   
     width: 10rem;
     height: 10rem;
     filter: contrast(110%) brightness(110%);
@@ -132,14 +133,14 @@
 }
 
 
-.loader, .loader:before, .loader:after {
+.loader_boost, .loader_boost:before, .loader_boost:after {
     border-radius: 50%;
     width: 2em;
     height: 2em;
     animation-fill-mode: both;
     animation: bblFadInOut 1.8s infinite ease-in-out;
   }
-  .loader {
+  .loader_boost {
     color: rgb(207, 182, 253);
     font-size: 5px;
     position: relative;
@@ -147,17 +148,17 @@
     animation-delay: -0.16s;
     top: -1rem;
   }
-  .loader:before,
-  .loader:after {
+  .loader_boost:before,
+  .loader_boost:after {
     content: '';
     position: absolute;
     top: 0;
   }
-  .loader:before {
+  .loader_boost:before {
     left: -3.5em;
     animation-delay: -0.32s;
   }
-  .loader:after {
+  .loader_boost:after {
     left: 3.5em;
   }
   
@@ -170,7 +171,7 @@
 /* botom card */
 
 
-.result_mypred{
+.result_mypred_boost{
     position: relative;
     width: 100%;
     height: 20%;
@@ -184,20 +185,20 @@
 
 }
 
-.result_mypred {
+.result_mypred_boost {
     font-size: 2.2rem;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.884);
 }
 
-.winResult{
+.winResult_boost{
     color: rgb(181, 255, 212);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
 }
 
-.loseWin{
+.loseWin_boost{
     color: rgb(255, 181, 181);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -205,7 +206,7 @@
 }
 
 
-.date_match{
+.date_match_boost{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,11 +216,11 @@
     font-size: 1.7rem;
 }
 
-.date_match p{
+.date_match_boost p{
     width: 50%;
 }
 
-.vs_myPred{
+.vs_myPred_boost{
     width: 10% !important;
     font-size: 3rem;
 }
@@ -227,7 +228,7 @@
 
 @media screen and (max-width:1440px) {
   
-    .box_myPrediction{
+    .box_myPrediction_boost{
         width: 100%;
         height: 100%;
         position: absolute;
@@ -245,17 +246,17 @@
         flex-wrap: wrap;
     }
     
-    .date_match p{
+    .date_match_boost p{
         font-size: 1.4rem;
     }
 
-    .myPrediction{
+    .myPrediction_boost{
         width: 40.5rem;
         height: 30rem;
     }
 
 
-    .flag_mySelection_mypred , .flag_result_mypred{
+    .flag_mySelection_mypred_boost , .flag_result_mypred_boost{
         gap: 1rem;
         padding: 1rem;
         width: 15rem;
@@ -263,7 +264,7 @@
     }
     
     
-    .flag_mySelection_mypred img, .flag_result_mypred img{   
+    .flag_mySelection_mypred_boost img, .flag_result_mypred_boost img{   
         width: 8rem;
         height: 8rem;
     }
@@ -275,31 +276,31 @@
 
 @media screen and (max-width:440px) {
   
-    .myPrediction{
+    .myPrediction_boost{
         width: 35.5rem;
         height: 30rem;
     }
     
 
-    .flag_mySelection_mypred , .flag_result_mypred{
+    .flag_mySelection_mypred_boost , .flag_result_mypred_boost{
         
         width: 12rem;
         height: 12rem;
        
     }
 
-    .flag_mySelection_mypred p, .flag_result_mypred p{
+    .flag_mySelection_mypred_boost p, .flag_result_mypred_boost p{
         font-size: 1.6rem;
     }
     
-    .flag_mySelection_mypred img, .flag_result_mypred img{   
+    .flag_mySelection_mypred_boost img, .flag_result_mypred_boost img{   
         width: 8rem;
         height: 8rem;
         filter: contrast(110%) brightness(110%);
         object-fit: contain;
     }
     
-    .vs_myPred{
+    .vs_myPred_boost{
         font-size: 1.3rem;
     }
 
@@ -309,31 +310,31 @@
 
 @media screen and (max-width:350px) {
   
-    .myPrediction{
+    .myPrediction_boost{
         width: 30rem;
         height: 30rem;
     }
     
 
-    .flag_mySelection_mypred , .flag_result_mypred{
+    .flag_mySelection_mypred_boost , .flag_result_mypred_boost{
         
         width: 12rem;
         height: 12rem;
        
     }
 
-    .flag_mySelection_mypred p, .flag_result_mypred p{
+    .flag_mySelection_mypred_boost p, .flag_result_mypred_boost p{
         font-size: 1.6rem;
     }
     
-    .flag_mySelection_mypred img, .flag_result_mypred img{   
+    .flag_mySelection_mypred_boost img, .flag_result_mypred_boost img{   
         width: 8rem;
         height: 8rem;
         filter: contrast(110%) brightness(110%);
         object-fit: contain;
     }
 
-    .vs_myPred{
+    .vs_myPred_boost{
         font-size: 1.5rem;
     }
     
