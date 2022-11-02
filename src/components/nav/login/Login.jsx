@@ -22,16 +22,17 @@ const Login = () => {
         if (Connected.userEmail) {
             const res = await api.post('/user/createGoogleUser', { email:Connected.userEmail , username,  flag });
             if(res.status === 200){
-                console.log(res.data);
-                Connected.setUserData(res.data);
+                Connected.setUserData(res.data.user);
+                Connected.setUserToken(res.data.token)
                 Connected.setActiveLogin(false);
                 Connected.setUserLoginActive(true);
             }
         } else {
             const res = await api.post('/user/createMetamaskUser', { address: Connected.account[0], signature: Connected.signature, username,  flag });
             if(res.status === 200){
-                console.log(res.data);
-                Connected.setUserData(res.data);
+                
+                Connected.setUserData(res.data.user);
+                Connected.setUserToken(res.data.token)
     
                 Connected.setActiveLogin(false);
                 Connected.setUserLoginActive(true);

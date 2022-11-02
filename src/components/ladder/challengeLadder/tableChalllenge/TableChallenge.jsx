@@ -20,11 +20,12 @@ const TableChallenge = () => {
 
        const getData = async () => {
         const rooms = await api.get('/challenge/getRooms')
-        if (rooms.data != challengeRoom) {
-          setChallengeRoom(rooms.data)
+        console.log(rooms.data);
+        /* if (rooms.data != challengeRoom) {
+          
+        } */
+        setChallengeRoom(rooms.data)
           setLoading(false)
-        }
-        
       }
 
 
@@ -50,7 +51,7 @@ const TableChallenge = () => {
             <tbody >
                 <tr >
                     <td className='row-map'>
-                        {challengeRoom.length > 0  ?
+                       {challengeRoom.length > 0  ?
                         challengeRoom.map((item,index) => {
 
                           return <RowRoom key={index}
@@ -67,7 +68,7 @@ const TableChallenge = () => {
                       })
                     
                       : null
-                    }
+                    }  
                     </td> 
                 </tr>  
             </tbody>

@@ -77,22 +77,22 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
 
     const createRoom = async () => {
         try {
+            console.log(Connected.account[0]);
             if ( selectMatch && selectTeam && amountTokens) {
-                const roomCreated = await api.post('/challenge/createRoom' , {
+                const roomCreated = await api('/challenge/createRoom' , {method:"POST",
+                headers:{
+                  'Authorization' : 'Bearer ' + Connected.userToken
+                },
+                data:{
                     ownerAddress: Connected.account[0] ,
-                    address : Connected.account[0] ,
-                    signature : Connected.signature,
+                    address : Connected.account?.[0] ,
                     tokensRoom : amountTokens ,
                     matchId : selectMatch._id , 
                     ownerSelection : selectTeam
+                }
                 })
 
-
-
                 if (roomCreated.status==200) {
-                /*     alert(roomCreated.data) */
-
-
                     setMessajePopup(roomCreated.data)
                     setSalaCreada(true)
                     setTimeout(() => {
@@ -102,15 +102,17 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                 } 
             }
         } catch (error) {
-            /* alert(error.response.data) */
-
-            setMessajePopup(error.response.data)
-            setSalaCreada(false)
-            setTimeout(() => {
-                setMessajePopup("")
-                setSalaCreada()
-            }, 6000);
-
+            if (error.response?.data) {
+                setMessajePopup(error.response.data)
+                setSalaCreada(false)
+                setTimeout(() => {
+                    setMessajePopup("")
+                    setSalaCreada()
+                }, 6000);
+            } else {
+                //FACU POPUP
+                alert("You need a linked address")
+            }
         }
 
     }

@@ -24,39 +24,42 @@ const Predictions = ({id,timer,nameTeam1,nameTeam2,resultTeam1,resultTeam2,round
    },[])
  
    const makePrediction = async () => {
-     const res = await api.post(`/predictions/placeFriendlyBet/${id}`, {
-       address: Connected.account[0] ,
-       prediction: predictionChoose,
-       signature: Connected.signature
-     })  
-     console.log(res.data);
-     if (res.data === "Prediction Succesfully Created.") {
-       //Que aparezca con color de que se hizo correctamente
-       //DESAPARECER LA PREDICCIÓN CONFIRMADA
-       setActivePrediction()
-       setColorTeam1('transparent')
-       setColorEmpate('transparent')
-       setColorTeam2('transparent')
-       setColorTeam1_text("white")
-       setColorEmpate_text("white")
-       setColorTeam2_text("white")
- 
-       getPredictionsAvailables()
- 
-       Connected.setConfirmedPrediction(true)
-       setTimeout(() => {
-         Connected.setConfirmedPrediction()
-       }, 6000);
-     }
-     
-     if (res.data === "Prediction already made") {
-       //que aparezca con color erroneo
-       Connected.setConfirmedPrediction(false)
- 
-       setTimeout(() => {
-         Connected.setConfirmedPrediction()
-       }, 6000);
-     }
+    try {
+      console.log(predictionChoose);
+      const res = await api(`/predictions/placeFreeBet/${id}`, {
+          method:"POST",
+          headers:{
+            'Authorization' : 'Bearer ' + Connected.userToken
+          },
+          data:{
+            prediction: predictionChoose
+          }
+      })  
+
+        //DESAPARECER LA PREDICCIÓN CONFIRMADA
+        setActivePrediction()
+        setColorTeam1('transparent')
+        setColorEmpate('transparent')
+        setColorTeam2('transparent')
+        setColorTeam1_text("white")
+        setColorEmpate_text("white")
+        setColorTeam2_text("white")
+  
+        getPredictionsAvailables()
+  
+        Connected.setConfirmedPrediction(true)
+        setTimeout(() => {
+          Connected.setConfirmedPrediction()
+        }, 6000);
+      
+    } catch (error) {
+        Connected.setConfirmedPrediction(false)
+  
+        setTimeout(() => {
+          Connected.setConfirmedPrediction()
+        }, 6000);
+        console.log(error);
+    }
    }
 
 

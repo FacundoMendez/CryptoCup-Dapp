@@ -12,14 +12,19 @@ const MyPredictions = () => {
   const [loading ,setLoading]=useState(true)
   const [predictionsHistory , setPredictionsHistory] = useState([]) 
 
-  useEffect(() => {
-    getPredictionsHistory()
+  useEffect( async () => {
+    if (Connected.userToken) {
+      getPredictionsHistory()
+    }
+
    },[]);
 
   const getPredictionsHistory = async () => {
-    const res = await api.post('/predictions/getPredictionsHistory', {
-      address: Connected.account[0]
-    })
+    const res = await api.get('/predictions/getFreePredictionsHistory', {
+      headers:{
+        'Authorization' : 'Bearer ' + Connected.userToken
+      }
+  })
     setPredictionsHistory(res.data)
     setLoading(false) 
   }

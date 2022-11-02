@@ -18,21 +18,22 @@ import { contractAddress, erc721Abi } from '../config/contract/config'
 const Nav = () => {
 
   async function handleCallbackResponse(response) {
-    console.log("enconded JWT ID token "+ response.credential);
     try {
       const post = await api.post('/user/googleLogin' , {
-        token : response.credential
+        googleToken : response.credential
       })
       if (post.status === 200) {
-        cookies.set('gandalf' ,"asd232eadas", {maxAge: 86400000  , path : '/' })
-        Connected.setUserData(post.data);
+        Connected.setUserData(post.data.user);
+        Connected.setUserToken(post.data.token)
         Connected.setActiveLogin(false);
         Connected.setUserLoginActive(true);
+        setTimeout(() => {
+          refreshAccessToken()
+        }, 1164000  );
       }
 
     } catch (error) {
       if (error.response.status === 404) {
-        console.log(error.response.data);
         Connected.setUserEmail(error.response.data)
         Connected.setActiveLogin(true);
       } 
@@ -40,25 +41,54 @@ const Nav = () => {
   }
 
   useEffect(() => {
-    /* global google  ESTE COMENTARIO NO HAY QUE BORRARLO NUNCA */
-  /*   google.accounts.id.initialize({
+    /* global google */
+    google.accounts.id.initialize({
       client_id:"820212833361-dafbpq530ajj2o2459sj94qi10fvk6p0.apps.googleusercontent.com",
       callback:handleCallbackResponse
     })
 
     google.accounts.id.renderButton(
-      document.getElementById("googleLogin") ,  EL googleLogin es el boton , podes ponerlo donde quieras. solo tenes que hacer un div con ese id 
+      document.getElementById("googleLogin") ,  
       { theme : "outline" , size : "large"}
-    ) */
+    ) 
     navFuncional()
+    verificarPersistencia()
   },[])
 
     const [chainIncorrecta , setChainIncorrecta] = useState(false)
 
     const Connected = useContext(ContextConnected)
     const cookies = new Cookies()
+
+    const verificarPersistencia = async () => {
+      const persistencia = await api.get('/user/refreshToken') 
+      if (persistencia.status === 200) {
+        try {
+          const res = await api('/user/getUser' ,{
+            method: "GET",
+            headers: {
+              "Authorization" : "Bearer " +persistencia.data.token
+            }
+          })
+          if (res.status === 200) {
+            Connected.setUserData(res.data);
+            Connected.setUserToken(persistencia.data.token)
+            Connected.setActiveLogin(false);
+            Connected.setUserLoginActive(true); 
+            setTimeout(() => {
+              refreshAccessToken()
+            }, 1164000  );
+          }
+         
+        } catch (error) {
+          console.log(error);
+        }
+       
+      }
+    }
+
     //Cargamos datos blockchain del usuario y generamos mensaje
-    const init=async ()=>{
+    const initMetamask=async ()=>{
       try {
           if (window.ethereum) {
               const newProvider = await new ethers.providers.Web3Provider(window.ethereum);
@@ -101,8 +131,8 @@ const Nav = () => {
 
   const logOut =  async () => {
       const res = await api.get('/user/logout') 
-      cookies.remove("gandalf")
       Connected.setUserData(undefined);
+      Connected.setUserToken(undefined)
       Connected.setUserLoginActive(false);
       Connected.setSignature(undefined);
   }
@@ -133,11 +163,14 @@ const Nav = () => {
     //Verify if user exists 
     try {
       const res = await api.post('/user/metamaskLogin', { address: _account[0] , signature });
-      cookies.set('gandalf' ,"asd232eadas", {maxAge: 86400000  , path : '/' })
-      Connected.setUserData(res.data);
-
+      
+      Connected.setUserData(res.data.user);
+      Connected.setUserToken(res.data.token)
       Connected.setActiveLogin(false);
       Connected.setUserLoginActive(true);
+      setTimeout(() => {
+        refreshAccessToken()
+      }, 1164000  );
     } catch (error) {
       if (error.response.status === 404) {
         Connected.setActiveLogin(true);
@@ -145,8 +178,15 @@ const Nav = () => {
     }
   }
   
-
-
+  const refreshAccessToken = async () => {
+   const res = await api.get('/user/refreshToken')
+   if (res.status === 200) {
+      Connected.setUserToken(res.data.token); 
+      setTimeout(() => {
+        refreshAccessToken()
+      }, 1164000   );
+   }
+  }
   return (
     <header className='header'>
       {chainIncorrecta ? <PopupError chainIncorrecta={chainIncorrecta} /> : null}
@@ -198,8 +238,8 @@ const Nav = () => {
               </li>
             </ul>
           :
-            <ul className='listNav_login' onClick={ () => init()}>
-              <li className='buttonLogin'/*  style={{backgroundColor: "gray"}} */>
+            <ul className='listNav_login' >
+              <li className='buttonLogin' onClick={ () => initMetamask()}/*  style={{backgroundColor: "gray"}} */>
                 Connect
               </li>
               <div id='googleLogin'/*  style={{backgroundColor: "gray"}} */>

@@ -36,6 +36,15 @@
     gap: .6rem;
 }
 
+.button_connectAddress {
+    font-size: 2rem;
+    color: black;
+    height: 30%;
+    width: 30%;
+    border-radius: 50px;
+    background-color:  rgb(177, 157, 209);
+}
+
 .nav_profileUser h2{
     color: white;
     font-size: 2.5rem;

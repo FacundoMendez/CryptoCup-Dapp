@@ -23,19 +23,22 @@ const Airdrop = () => {
   
   
     useEffect(() => {
-      getPredictionsAvailables()
+      if (Connected.userToken) {
+        getPredictionsAvailables()
+      }
+  
      },[]);
    
        //Get all matches from DB
        const getPredictionsAvailables=async()=>{
-         const res=await api.post(`/predictions/`, {
-          address: Connected.account[0] ,
-          signature: Connected.signature
+        const res=await api.get(`/predictions/getFreePredictions`, {
+          headers:{
+            'Authorization' : 'Bearer ' + Connected.userToken
+          }
          })
          const predictionsArray=res.data
-         console.log(res.data);
          setPredictionCards(predictionsArray)
-         setLoading(false) 
+         setLoading(false)  
      }
   
   

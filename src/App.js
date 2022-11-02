@@ -33,6 +33,7 @@ function App() {
   const [userEmail , setUserEmail] = useState(undefined)
 
   const [signature, setSignature] = useState(undefined)
+  const [userToken , setUserToken] = useState(undefined)
   const [paisFlag, setPaisFlag] = useState("germany")
 
   const [userData, setUserData] = useState(undefined)
@@ -56,6 +57,8 @@ function App() {
       setUserEmail,
       signature,
       setSignature,
+      userToken,
+      setUserToken,
       paisFlag,
       setPaisFlag,
       userData,

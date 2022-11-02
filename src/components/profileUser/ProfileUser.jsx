@@ -6,17 +6,19 @@ import ContextConnected from '../config/context/ConnectedContext'
 import profileTicketsMovement from './profileTicketsMovement'
 import ticketBasicImg from "../nav_inventario/src/ticketBasic.png"
 import ticketBoostImg from "../nav_inventario/src/ticketBoost.png"
+import logoMTM from "./src/metamask.png"
 import api from '../../api'
-
+import { ethers } from 'ethers'
 
 
 const ProfileUser = () => {
   
   const Connected = useContext(ContextConnected)
+  const [userAddress,setUserAddress] = useState(undefined)
 
   useEffect(() => {
     profileTicketsMovement()
-  },[])
+  }, [Connected.userData])
 
 
 
@@ -39,6 +41,45 @@ const ProfileUser = () => {
     setColorBo('#bebdff')
   }
 
+  const connectAddress = async () => {
+    try {
+      if (window.ethereum) {
+        const newProvider = await new ethers.providers.Web3Provider(window.ethereum);
+        const { chainId } = await newProvider.getNetwork();
+        const newAccount = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const newSigner = await newProvider.getSigner();
+        if (chainId === 56) {
+          Connected.setProvider(newProvider)
+          Connected.setAccount(newAccount)
+          Connected.setSigner(newSigner)
+          console.log(newAccount[0]);
+          try {
+            const updateAddress = await api('/user/connectAddress' , {
+              method:"PUT",
+              headers:{
+                'Authorization' : 'Bearer ' + Connected.userToken
+              },
+              data:{
+                address: newAccount[0]
+              }
+            }) 
+            Connected.setUserData(updateAddress.data)
+            alert("address agregada")
+          } catch (error) {
+            alert(error.response.data)
+          }
+         
+        } else {
+          alert("error . Chain must be BSC ")
+        }  
+    }
+    } catch (error) {
+      console.log(error);
+    }
+   
+   
+  }
+
   console.log(Connected.basicTicketsInv)
   console.log(Connected.boostTicketsInv)
   return (
@@ -52,7 +93,13 @@ const ProfileUser = () => {
             <img src={paisesJson[Connected.userData.flag].img} alt="Flag user" />
             <div className="data_user_name">
               <h2>{Connected.userData.username}</h2>
-              <p>{Connected.userData.address}</p>
+              {
+                Connected.userData.address ? 
+                  <p>{Connected.userData.address}</p>
+                  :
+                  <button className='button_connectAddress' onClick={connectAddress}> Connect your address </button>
+              }
+             
             </div>
           </div>
 
