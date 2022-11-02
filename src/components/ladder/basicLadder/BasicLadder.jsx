@@ -58,40 +58,6 @@ const BasicLadder = () => {
         
         <div className="container_basicLadder">
 
-          <div className="box_predictions">
-
-            <div className='spin' >
-              {loading ? <Spinner/> : null}
-            </div>
-        
-
-
-
-            {/* matches */}
-            
-          { typeof predictionCards != "string" && predictionCards.length > 0 && Matches ? 
-
-                <Suspense fallback={<Spinner/>}>
-                { 
-                  predictionCards? predictionCards.map((item,index)=>{
-                    return <Predictions key={index}
-                      id={item._id}
-                      timer={item.startDate}
-                      round={item.round}
-                      nameTeam1={item.team1}
-                      nameTeam2={item.team2}
-                      resultTeam1={item.scoreTeam1}
-                      resultTeam2={item.scoreTeam2}
-                      getPredictionsAvailables={getPredictionsAvailables}
-                    />  
-                  }) : null 
-                }
-                </Suspense>
-              :
-              loading === false && (predictionCards.length <= 0 ) && Matches ? <p className='noPredictions'> NO MATCHS </p> : null 
-            }
-          </div>
-
   
 
             {
@@ -109,7 +75,6 @@ const BasicLadder = () => {
           {
             ranking ? 
               <Suspense fallback={<Spinner/>}>
-                {/* Falta Pasar Los rankings */}
                 { rankings && rankings.length > 0 ?<Ranking rankings={rankings} /> : null }
               </Suspense>
             :
