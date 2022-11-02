@@ -9,7 +9,6 @@ import Login from './login/Login'
 import { ethers } from 'ethers'
 import paisesJson from "../config/paises2.json"
 import PopupError from '../config/popupsErrors/PopupError'
-import userImg from "./src/profile.png"
 import api from '../../api'
 import Cookies from 'universal-cookie/cjs/Cookies'
 import { contractAddress, erc721Abi } from '../config/contract/config'
@@ -46,18 +45,13 @@ const Nav = () => {
     /* global google */
     google.accounts.id.initialize({
       client_id:"820212833361-dafbpq530ajj2o2459sj94qi10fvk6p0.apps.googleusercontent.com",
-      callback:handleCallbackResponse
+      callback:handleCallbackResponse,
     })
 
     google.accounts.id.renderButton(
       document.getElementById("googleLogin") ,  
-      {
-      'scope': 'profile email',
-      'width': 20,
-      'height': 50,
-      'longtitle': true,
-      'theme': 'dark',
-      }
+      {  type: "icon" , theme : "filled_black"  ,shape: "circle" ,size: "large" }
+      
     ) 
     navFuncional()
     verificarPersistencia()
@@ -251,9 +245,7 @@ const Nav = () => {
                 Connect
                 <img src={logoMetamask} alt="logoMetamask" />
               </li>
-              <div id='googleLogin'/*  style={{backgroundColor: "gray"}} */>
-
-              </div>
+              <div id='googleLogin'></div>
             </ul>
           }
 
