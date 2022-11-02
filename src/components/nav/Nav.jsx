@@ -1,5 +1,4 @@
 import React,{useEffect , useContext , useState} from 'react'
-import "./nav.css"
 import { NavLink } from 'react-router-dom'
 import logoCC from "./src/logoPng.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,6 +14,8 @@ import api from '../../api'
 import Cookies from 'universal-cookie/cjs/Cookies'
 import { contractAddress, erc721Abi } from '../config/contract/config'
 import logoMetamask from "./src/logoMetamask.png"
+import "./nav.css"
+
 
 const Nav = () => {
 
@@ -50,7 +51,13 @@ const Nav = () => {
 
     google.accounts.id.renderButton(
       document.getElementById("googleLogin") ,  
-      { theme : "outline" , size : "large"}
+      {
+      'scope': 'profile email',
+      'width': 20,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      }
     ) 
     navFuncional()
     verificarPersistencia()
