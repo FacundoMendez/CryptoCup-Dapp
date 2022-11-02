@@ -14,6 +14,7 @@ import userImg from "./src/profile.png"
 import api from '../../api'
 import Cookies from 'universal-cookie/cjs/Cookies'
 import { contractAddress, erc721Abi } from '../config/contract/config'
+import logoMetamask from "./src/logoMetamask.png"
 
 const Nav = () => {
 
@@ -241,9 +242,10 @@ const Nav = () => {
             <ul className='listNav_login' >
               <li className='buttonLogin' onClick={ () => initMetamask()}/*  style={{backgroundColor: "gray"}} */>
                 Connect
+                <img src={logoMetamask} alt="logoMetamask" />
               </li>
               <div id='googleLogin'/*  style={{backgroundColor: "gray"}} */>
-                
+
               </div>
             </ul>
           }

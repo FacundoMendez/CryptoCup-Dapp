@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 6rem;
     flex-wrap: nowrap;
     z-index: 99999;
     border-radius: 25px;
@@ -22,6 +21,31 @@
     box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(170, 139, 255, 0.226) -3px -3px 6px 1px inset;
 }
 
+/* google */
+
+.nsm7Bb-HzV7m-LgbsSe-BPrWId{
+    display: none;
+}
+
+
+    /* logo */
+.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+    height: 25px;
+    margin-right: 0px;
+    width: 25px;
+}
+
+
+.nsm7Bb-HzV7m-LgbsSe{
+    border: none;
+    transition: all .7s ease;
+    border-radius: 10px;
+}
+
+
+
+
+/* ---- */
 
 .header{
     width: 100%;
@@ -65,18 +89,17 @@
 
 .listNav_login{
     position: relative;
-    width: 53%;
+    width: 61%;
     height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
 }
 
 .buttonLogin , .buttonLogin_desconnect{
-    display: inline-block;
     color: #ffffff;
     letter-spacing: 1px;
     font-size: 1.7rem;
@@ -84,18 +107,24 @@
     border: 1px solid rgba(255, 255, 255, 0.116);
     padding: 1rem;
     border-radius: 10px;
-    width: 14rem;
+    width: 16rem;
     height: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     text-align: center;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(255, 255, 255, 0.164);
     backdrop-filter: blur(1rem);
     background: linear-gradient(90.23deg, #933dc5d3 -1.47%, #7a47d9d0 99.8%);
+}
+
+.buttonLogin img{
+    width: 4rem;
 }
 
 .user_flag{
@@ -238,7 +267,7 @@
         width: 80%;
     }
     .listNav_login{
-        width: 26%;
+        width: 40%;
     }
     
     .listNav li{
@@ -347,8 +376,7 @@
 
     .listNav_login{
         position: absolute;
-        width: 18rem;
-        width: 30%;
+        width: 40%;
     }
 
     .logoNav{
@@ -380,15 +408,25 @@
     .user_flag{
         right: 33%;
     }
+
+    
+    .listNav_login{
+        position: absolute;
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:500px) {
     
-    .buttonLogin , .buttonLogin_desconnect{
-        font-size: 1.7rem;
-        width: 14rem;
+    .buttonLogin, .buttonLogin_desconnect {
+        font-size: 1.4rem;
         height: 4.5rem;
-        right: 2rem;
+        width: 15rem;
+        gap: .5rem;
+    }
+
+    .listNav_login{
+        margin-right: 1rem;
     }
 
     .user_flag{
@@ -397,8 +435,23 @@
 }
 
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:400px) {
     .user_flag{
         right: 50%;
+    }
+    .buttonLogin, .buttonLogin_desconnect {
+        font-size: 1.2rem;
+        height: 4.5rem;
+        width: 17rem;
+        gap: .5rem;
+    }
+
+    .listNav_login {
+        position: absolute;
+        width: 60%;
+    }
+
+    .buttonLogin img {
+        width: 3.5rem;
     }
 }
