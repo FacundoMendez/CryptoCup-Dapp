@@ -12,7 +12,7 @@ const MyPredictions = () => {
   const [loading ,setLoading]=useState(true)
   const [predictionsHistory , setPredictionsHistory] = useState([]) 
 
-  useEffect( async () => {
+  useEffect( () => {
     if (Connected.userToken) {
       getPredictionsHistory()
     }
