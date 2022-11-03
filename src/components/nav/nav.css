@@ -100,7 +100,6 @@
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
     background-color: rgba(255, 255, 255, 0.164);
-    backdrop-filter: blur(1rem);
     background: linear-gradient(90.23deg, #933dc5d3 -1.47%, #7a47d9d0 99.8%);
 }
 

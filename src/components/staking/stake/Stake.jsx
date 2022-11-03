@@ -1,6 +1,7 @@
 import React , {useState , Suspense} from 'react'
 import AmountStake from './amountStake/AmountStake'
 import Checkpoints from './checkpoints/Checkpoints'
+import ConfirmationStake from './confirmation/ConfirmationStake'
 import PreAuth from './preAuth/PreAuth'
 import "./stake.css"
 
@@ -12,9 +13,8 @@ const Stake = () => {
     /* SELECTIONS */
 
     const [checkpoints, setCheckpoints] = useState(false)
-    const [amountStake, setAmountStake] = useState(true)
-    const [preAutorizacion, setPreAutorization] = useState(true)
-    const [confirm, setConfirm] = useState(false)
+    const [amountStake, setAmountStake] = useState(false)
+    const [preAutorizacion, setPreAutorization] = useState(false)
     const [confirmation, setConfirmation] = useState(false)
 
     
@@ -30,17 +30,17 @@ const Stake = () => {
             <div className="card_stake">
                 <h2>Number of Stakers</h2>
                 <div className="line_card"></div>
-                <p>2220</p>
+                <p>0</p>
             </div>
             <div className="card_stake">
-                <h2>Total QTR22 Staked</h2>
+                <h2>Total CCT Staked</h2>
                 <div className="line_card"></div>
-                <p>2220</p>
+                <p>0</p>
             </div>
             <div className="card_stake">
                 <h2>APY</h2>
                 <div className="line_card"></div>
-                <p>220%</p>
+                <p>0%</p>
             </div>
         </div>
 
@@ -75,7 +75,29 @@ const Stake = () => {
         </div>
 
         <div className="components_selection_stake">
-            <h2>CHECKPOINTS</h2>
+
+        {
+                numberConfirm === 1 ?
+                    <h2>CHECKPOINTS</h2>
+                :
+
+                numberConfirm === 2 ? 
+                    <h2>Please enter the Amount of CCT you want to Stake.</h2>
+                :
+
+                numberConfirm === 3 ? 
+                    <h2>Authorize the Stake</h2>
+                :
+                numberConfirm === 4 ? 
+                    <h2>Confirm the Transaction</h2>
+                :
+                numberConfirm === 5 ? 
+                    <h2>Your Stake was Confirmed Successfully</h2>
+                :
+                null
+
+            }
+       
 
             {
                 numberConfirm === 1 ?
@@ -86,11 +108,21 @@ const Stake = () => {
                 :
 
                 numberConfirm === 2 ? 
-                    <AmountStake/>
+                    <AmountStake
+                        setAmountStake={setAmountStake}
+                    />
                 :
 
                 numberConfirm === 3 ? 
-                    <PreAuth/>
+                    <PreAuth
+                    setPreAutorization={setPreAutorization}
+                    />
+                :
+                numberConfirm === 3 ? 
+                    <ConfirmationStake
+                        setConfirmation={setConfirmation}
+                        confirmation={confirmation}
+                    />
                 :
                 null
 
@@ -118,6 +150,7 @@ const Stake = () => {
                 <button  onClick={() => {
                     setNumberConfirm(numberConfirm -1)
                     setPreAutorization(false)
+                    setAmountStake(false)
                 }}>PREVIUS</button>
             :
                 null

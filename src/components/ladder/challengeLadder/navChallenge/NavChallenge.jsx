@@ -110,8 +110,13 @@ const NavChallenge = ({ladder ,setHistory,setPublicRooms ,setMyRooms  }) => {
                     setSalaCreada()
                 }, 6000);
             } else {
-                //FACU POPUP
-                alert("You need a linked address")
+
+                setMessajePopup("You need a linked address")
+                setSalaCreada(false)
+                setTimeout(() => {
+                    setMessajePopup("")
+                    setSalaCreada()
+                }, 6000);
             }
         }
 

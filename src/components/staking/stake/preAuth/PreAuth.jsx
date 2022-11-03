@@ -1,8 +1,14 @@
 import React from 'react'
+import "./preAuth.css"
 
-const PreAuth = () => {
+const PreAuth = ({setPreAutorization}) => {
+
+  setPreAutorization(true)  /* detectar si el usuario autorizo metamask */
+
   return (
-    <div>PreAuth</div>
+    <div className='preAuth'>
+      <div className="loader"></div>
+    </div>
   )
 }
 
