@@ -9,7 +9,7 @@ import ticketBoostImg from "../nav_inventario/src/ticketBoost.png"
 import logoMTM from "./src/metamask.png"
 import api from '../../api'
 import { ethers } from 'ethers'
-
+import PopupChallenge from '../config/popupsChallenge/PopupChallenge'
 
 const ProfileUser = () => {
   
@@ -23,19 +23,18 @@ const ProfileUser = () => {
 
 
   const [ticketBasic, setTicketBasic] = useState(true)
-  const [ticketBoost, setTicketBoost] = useState()
+  const [ticketBoost, setTicketBoost] = useState(true)
   const [arrayTicketBasic, setArrayTicketBasic] = useState([])
   const [arrayTicketBoost, setArrayTicketBoost] = useState([])
+
+  const [successPopup , setSuccessPopup] = useState()
+  const [messajePopup , setMessajePopup] = useState()
 
 
   const [colorBa, setColorBa] = useState("#bebdff")
   const [colorBo, setColorBo] = useState("#white")
 
 
-  const colorBasic= ( ) => {
-    setColorBa('#bebdff')
-    setColorBo('white')
-  }
   const colorBoost= ( ) => {
     setColorBa('white')
     setColorBo('#bebdff')
@@ -64,13 +63,30 @@ const ProfileUser = () => {
               }
             }) 
             Connected.setUserData(updateAddress.data)
-            alert("address agregada")
+            setMessajePopup("address added")
+            setSuccessPopup(true)
+            setTimeout(() => {
+                setMessajePopup("")
+                setSuccessPopup()
+            }, 6000);
+
           } catch (error) {
-            alert(error.response.data)
+
+            setMessajePopup(error.response.data)
+            setSuccessPopup(false)
+            setTimeout(() => {
+                setMessajePopup("")
+                setSuccessPopup()
+            }, 6000);
           }
          
         } else {
-          alert("error . Chain must be BSC ")
+          setMessajePopup("error. Chain must be BSC ")
+          setSuccessPopup(false)
+          setTimeout(() => {
+              setMessajePopup("")
+              setSuccessPopup()
+          }, 6000);
         }  
     }
     } catch (error) {
@@ -80,9 +96,28 @@ const ProfileUser = () => {
    
   }
 
-  console.log(Connected.basicTicketsInv)
-  console.log(Connected.boostTicketsInv)
   return (
+
+    <>
+
+    
+    { successPopup === true? 
+        <PopupChallenge 
+            salaCreada={successPopup} 
+            messajePopup={messajePopup}
+        /> 
+    : successPopup === false?
+
+        <PopupChallenge 
+            salaCreada={successPopup} 
+            messajePopup={messajePopup}
+        /> 
+    :
+    null
+
+    }
+
+
 
     <Suspense fallback={<Spinner /> }>    
      {
@@ -105,12 +140,6 @@ const ProfileUser = () => {
 
           <div className=" profile_cabecera">
             <div className="box_cabecera">
-              <p style={{color : colorBa}}  onClick={() => {
-                  setTicketBasic(true)
-                  setTicketBoost(false)
-                  colorBasic()
-                }}>Tickets Basic
-              </p>
 
               <p style={{color : colorBo}}  onClick={() => {
                   setTicketBoost(true)
@@ -125,33 +154,12 @@ const ProfileUser = () => {
           <div className="container_profileUser">
             
 
-            {ticketBasic ? 
+            {ticketBoost ? 
 
               <div className="container_tickets_profile">
                 {
-                  Connected.basicTicketsInv.length > 0 ?
-                  Connected.basicTicketsInv.map((item, index)=> {
-                        return <div className="box_tickets_profileUser ">
-                          <div className="ticket_box">
-                              <img className='ticketImg' src={ticketBasicImg} alt="ticketBasic" />
-                              <p className='puntuacion_ticket'>#0</p>
-                          </div>
-                        </div>
-                    })
-                  : 
-                  
-                  Connected.basicTicketsInv.length <= 0  && ticketBasic ? <p className='noPredictions'> NO TICKETS BASIC </p> : null 
-
-                  
-                }
-                 
-                
-              </div>
-              :
-              <div className="container_tickets_profile">
-                {
-                  Connected.basicTicketsInv.length > 0 ?
-                  Connected.basicTicketsInv.map((item, index)=> {
+                  Connected.boostTicketsInv.length > 0 ?
+                    Connected.boostTicketsInv.map((item, index)=> {
                           return <div className="box_tickets_profileUser ">
                             <div className="ticket_box">
                               <img className='ticketImg' src={ticketBoostImg} alt="ticketBoost" />
@@ -160,22 +168,23 @@ const ProfileUser = () => {
                           </div>
                       })
                 : 
-                Connected.basicTicketsInv.length <= 0  && !ticketBasic ? <p className='noPredictions'> NO TICKETS BOOST </p> : null 
+                Connected.boostTicketsInv.length <= 0  && ticketBoost ? <p className='noPredictions'> NO TICKET BOOST </p> : null 
                 }
               
-          </div>
+            </div>
+              :
+            null
           }
 
+          </div>
         </div>
-
-        </div>
-
-
       :
       window.location.href = "/"
     }
       
     </Suspense>
+
+  </>
   )
 }
 

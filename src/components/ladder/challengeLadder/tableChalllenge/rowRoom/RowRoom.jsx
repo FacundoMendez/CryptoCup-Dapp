@@ -11,11 +11,7 @@ const RowRoom = ({ id , status ,ownerUsername ,ownerAddress , opponentAddress,fl
 
 
     const Connected = useContext(ContextConnected)
-/*     console.log(Connected.account[0]);
-    console.log(opponentAddress);
-    console.log(Connected.account[0]==opponentAddress);
-    console.log(Connected.account[0]==ownerAddress);
- */
+
 
 
     const renderButton = () => {
