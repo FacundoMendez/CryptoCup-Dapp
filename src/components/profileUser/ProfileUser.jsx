@@ -10,6 +10,7 @@ import logoMTM from "./src/metamask.png"
 import api from '../../api'
 import { ethers } from 'ethers'
 import PopupChallenge from '../config/popupsChallenge/PopupChallenge'
+import imgMetamask from "../nav/src/logoMetamask.png"
 
 const ProfileUser = () => {
   
@@ -36,7 +37,6 @@ const ProfileUser = () => {
 
 
   const colorBoost= ( ) => {
-    setColorBa('white')
     setColorBo('#bebdff')
   }
 
@@ -130,9 +130,12 @@ const ProfileUser = () => {
               <h2>{Connected.userData.username}</h2>
               {
                 Connected.userData.address ? 
-                  <p>{Connected.userData.address}</p>
+                    <p>{Connected.userData.address}</p>
                   :
-                  <button className='button_connectAddress' onClick={connectAddress}> Connect your address </button>
+                  <div className='button_connectAddress' onClick={connectAddress}> 
+                    Connect your Wallet  
+                    <img className='logoMetamaskButton' src={imgMetamask} alt="logoMetamaskk" />
+                  </div>
               }
              
             </div>
