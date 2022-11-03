@@ -82,10 +82,9 @@
 
 .buttonLogin , .buttonLogin_desconnect{
     color: #ffffff;
-    letter-spacing: 1px;
-    font-size: 1.7rem;
+    letter-spacing: 1.2px;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    border: 1px solid rgba(255, 255, 255, 0.116);
     padding: 1rem;
     border-radius: 10px;
     width: 16rem;
@@ -98,10 +97,30 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.226);
-    background-color: rgba(255, 255, 255, 0.164);
-    background: linear-gradient(90.23deg, #933dc5d3 -1.47%, #7a47d9d0 99.8%);
+    background: linear-gradient(90.23deg, #b758eed3 -1.47%, #9155ffde 99.8%);
+    transition: all .7s ease;
+    box-shadow: rgba(0, 0, 0, 0.068) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.068) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.062) 0px 4px 2px, rgba(0, 0, 0, 0.068) 0px 8px 4px;
+    border: 2px ridge rgba(180, 130, 238, 0.438);
 }
+
+#googleLogin{
+    scale: 1.2;
+    transition: all .7s ease;
+}
+
+
+#googleLogin:hover{
+    scale: 1.3;
+    transition: all .7s ease;
+}
+
+
+.buttonLogin:hover , .buttonLogin_desconnect:hover ,.user_flag:hover{
+    scale: 1.05;
+    transition: all .7s ease;
+>>>>>>> 68cee4abb285015d890abac5bebb35e42aec99f4
+}
+
 
 .buttonLogin img{
     width: 4rem;
@@ -118,6 +137,7 @@
     filter: drop-shadow(0 0 2px rgba(150, 120, 221, 0.158));
     cursor: pointer;
     z-index: 999;
+    transition: all .7s ease;
 }
 
 .pais_profile_img{
