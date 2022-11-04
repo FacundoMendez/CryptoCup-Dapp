@@ -113,8 +113,14 @@
 .chekpointsAccess p{
     font-size: 1.6rem;
     letter-spacing: 1px;
+    /* color:rgb(127, 255, 206); */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.chekpointsAccess img{
+    object-fit: cover;
+    filter: hue-rotate(240deg) brightness(150%) contrast(110%);
+}
 
 /* buttons */
 

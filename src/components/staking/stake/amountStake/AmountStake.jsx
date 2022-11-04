@@ -3,10 +3,11 @@ import "./amountStake.css"
 
 const AmountStake = ({setAmountStake}) => {
 
+const [cantTokensUser , setCantTokensUser] = useState(300) /* cantidad de tokens del usuario */ 
 
-const [maxAmountTokens , setMaxAmountTokens] = useState(99999)  /* enlazar el maximo de tokens del usuario */
 
-const [cantTokensUser , setCantTokensUser] = useState(100000) /* cantidad de tokens del usuario */ 
+const [maxAmountTokens , setMaxAmountTokens] = useState(cantTokensUser)  /* enlazar el maximo de tokens del usuario */
+
 
 const [num, setNum] = useState([]);   /* aca se guarda la cantida de tokens que seteo el usuario */
 
@@ -41,7 +42,7 @@ useEffect(() => {
       <div className="text_amount">
         <div className="amountWallet">
           <p>My Wallet:</p>
-          <p>0</p>    {/* amount tokens wallet user */}
+          <p>{cantTokensUser}</p>    {/* amount tokens wallet user */}
         </div>
       </div>
 

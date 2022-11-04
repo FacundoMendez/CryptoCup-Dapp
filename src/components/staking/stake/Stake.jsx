@@ -6,6 +6,24 @@ import PreAuth from './preAuth/PreAuth'
 import "./stake.css"
 
 
+/* img */
+
+import amountIcon from "../assets/AmountBlanco.png"
+import amountIconColor from "../assets/AmountColor.png"
+
+import checkpointsIcon from "../assets/CheckpointBlanco.png"
+import checkpointsIconColor from "../assets/CheckpointColor.png"
+
+import confirmationIcon from "../assets/ConfirmationBlanco.png"
+import confirmationIconColor from "../assets/ConfirmationColor.png"
+
+import confirmIcon from "../assets/ConfirmBlanco.png"
+import confirmIconColor from "../assets/ConfirmColor.png"
+
+
+
+
+
 
 const Stake = () => {
 
@@ -15,7 +33,6 @@ const Stake = () => {
     const [checkpoints, setCheckpoints] = useState(false)
     const [amountStake, setAmountStake] = useState(false)
     const [preAutorizacion, setPreAutorization] = useState(false)
-    const [confirmation, setConfirmation] = useState(false)
 
     
     /*CONFIRM SELECTIONS  */
@@ -50,23 +67,61 @@ const Stake = () => {
             <div className="next_containers">
 
                 <div className="chekpointsAccess">
-                    <p>Checkpoints</p>
+                    { checkpoints? 
+                            <img src={checkpointsIconColor} alt="checkpoints" />
+                        :
+                            <img src={checkpointsIcon} alt="checkpoints color" />
+                    }
+                    { checkpoints? 
+                            <p style={{color:"rgb(127, 255, 206)"}}>Checkpoints</p>
+                        :
+                            <p>Checkpoints</p>
+                    }
+                   
                 </div>
                 
                 <div className="chekpointsAccess">
-                    <p>Amount to Stake</p>
+                    { amountStake ? 
+                            <img src={amountIconColor} alt="amountIcon" />
+                        :
+                            <img src={amountIcon} alt="amountIcon color" />
+                    }
+
+                    { amountStake? 
+                            <p style={{color:"rgb(127, 255, 206)"}}>Amount to Stake</p>
+                        :
+                            <p>Amount to Stake</p>
+                    }
+
                 </div>
                 
                 <div className="chekpointsAccess">
-                    <p>Pre-Authorization</p>
+                    { preAutorizacion? 
+                            <img src={confirmIconColor} alt="Confirm" />
+                        :
+                            <img src={confirmIcon} alt="Confirm color" />
+                    }
+                    { preAutorizacion? 
+                            <p style={{color:"rgb(127, 255, 206)"}}>Confirm</p>
+                        :
+                            <p>Confirm</p>
+                    }
                 </div>
                 
                 <div className="chekpointsAccess">
-                    <p>Confirm</p>
-                </div>
-                
-                <div className="chekpointsAccess">
-                    <p>Confirmation</p>
+                    {
+                        numberConfirm === 4  ?
+                            <img src={confirmationIconColor} alt="Confirmation Color" />
+
+                        :
+                            <img src={confirmationIcon} alt="Confirmation " />
+
+                    }
+                    { numberConfirm === 4? 
+                            <p style={{color:"rgb(127, 255, 206)"}}>Confirmation</p>
+                        :
+                            <p>Confirmation</p>
+                    }
                 </div>
 
             </div>
@@ -86,12 +141,9 @@ const Stake = () => {
                 :
 
                 numberConfirm === 3 ? 
-                    <h2>Authorize the Stake</h2>
+                    <h2>Confirm the Claiming Transaction</h2>
                 :
                 numberConfirm === 4 ? 
-                    <h2>Confirm the Transaction</h2>
-                :
-                numberConfirm === 5 ? 
                     <h2>Your Stake was Confirmed Successfully</h2>
                 :
                 null
@@ -118,10 +170,9 @@ const Stake = () => {
                     setPreAutorization={setPreAutorization}
                     />
                 :
-                numberConfirm === 3 ? 
-                    <ConfirmationStake
-                        setConfirmation={setConfirmation}
-                        confirmation={confirmation}
+                numberConfirm === 4 ? 
+                    <ConfirmationStake 
+                        iconConfirm = {confirmationIcon}
                     />
                 :
                 null

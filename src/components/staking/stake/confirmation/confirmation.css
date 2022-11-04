@@ -1,0 +1,13 @@
+.confirmStakeIcon {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmStakeIcon img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}

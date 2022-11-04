@@ -1,13 +1,16 @@
-import React from 'react'
+import React  from 'react'
+import "./confirmation.css"
 
-const ConfirmationStake = ({setConfirmation , confirmation}) => {
+const ConfirmationStake = ({iconConfirm}) => {
+
   return (
-    <div className="confirmStake">
+
+    <div className="confirmationStake">
         {
-            confirmation ?
-                <img src="" alt="successfully" />
-            :
-                <img src="" alt="error" />
+          <div className="confirmStakeIcon">
+              <img src={iconConfirm} alt="successfully"  />
+          </div>
+               
         }
 
     </div>

@@ -33,12 +33,13 @@
 }
 
 .card_checkpoint h2{
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
 }
 
 .card_checkpoint p{
     font-size: 1.4rem;
     letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
