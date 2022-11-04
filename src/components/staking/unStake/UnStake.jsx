@@ -1,10 +1,8 @@
 import React , {useState , Suspense} from 'react'
-import AmountStake from './amountStake/AmountStake'
-import Checkpoints from './checkpoints/Checkpoints'
-import ConfirmationStake from './confirmation/ConfirmationStake'
-import PreAuth from './preAuth/PreAuth'
-import "./stake.css"
-
+import "../stake/stake.css"
+import PreAuth from '../stake/preAuth/PreAuth'
+import ConfirmationStake from '../stake/confirmation/ConfirmationStake'
+import Checkpoints from '../stake/checkpoints/Checkpoints'
 
 /* img */
 
@@ -19,13 +17,15 @@ import confirmationIconColor from "../assets/ConfirmationColor.png"
 
 import confirmIcon from "../assets/ConfirmBlanco.png"
 import confirmIconColor from "../assets/ConfirmColor.png"
+import MyFee from './myFee/MyFee'
+import AmountStaking from './amountStaking/AmountStaking'
 
 
 
 
 
 
-const Stake = () => {
+const UnStake = () => {
 
 
     /* SELECTIONS */
@@ -63,7 +63,7 @@ const Stake = () => {
 
 
         <div className="box_stake_next">
-            <h2>STAKE YOUR CCT</h2>
+            <h2>UNSTAKE YOUR CCT</h2>
             <div className="next_containers">
 
                 <div className="chekpointsAccess">
@@ -90,7 +90,7 @@ const Stake = () => {
                     { amountStake? 
                             <p style={{color:"rgb(127, 255, 206)"}}>Amount to Stake</p>
                         :
-                            <p>Amount to Stake</p>
+                            <p>Amount to UnStake</p>
                     }
 
                 </div>
@@ -160,7 +160,7 @@ const Stake = () => {
                 :
 
                 numberConfirm === 2 ? 
-                    <AmountStake
+                    <AmountStaking
                         setAmountStake={setAmountStake}
                     />
                 :
@@ -179,15 +179,18 @@ const Stake = () => {
 
             }
 
-
+                {numberConfirm === 1   ?           
+                        <MyFee/>
+                    : 
+                        null
+                }
             <div className="buttons_stake">
-
                 {/* previus */}
 
                 {numberConfirm === 1   ?           
                         <div className='buttonDisable'>PREVIUS</div>
                     : 
-
+                
                 numberConfirm === 2   ?
                     <button  onClick={() => {
                         setNumberConfirm(numberConfirm -1)
@@ -241,12 +244,13 @@ const Stake = () => {
                 null
             }
 
-            </div>
-            <div className="separador"></div>
-        
         </div>
+
+        <div className="separador"></div>
+        </div>
+
     </div>
   )
 }
 
-export default Stake
+export default UnStake

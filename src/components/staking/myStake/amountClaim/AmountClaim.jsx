@@ -1,13 +1,10 @@
 import React, {useState , useEffect} from 'react'
-import "./amountStake.css"
 
-const AmountStake = ({setAmountStake}) => {
+const AmountClaim = ({setAmountStake}) => {
 
 const [cantTokensUser , setCantTokensUser] = useState(300) /* cantidad de tokens del usuario */ 
 
-
 const [maxAmountTokens , setMaxAmountTokens] = useState(cantTokensUser)  /* enlazar el maximo de tokens del usuario */
-
 
 const [num, setNum] = useState([]);   /* aca se guarda la cantida de tokens que seteo el usuario */
 
@@ -41,8 +38,7 @@ useEffect(() => {
     <div className="amount_box">
       <div className="text_amount">
         <div className="amountWallet">
-          <p>My Wallet:</p>
-          <p className='cantTokensUser_staking'> {cantTokensUser}</p>    {/* amount tokens wallet user */}
+          <p>Amount your want to claim</p>
         </div>
       </div>
 
@@ -63,4 +59,4 @@ useEffect(() => {
   )
 }
 
-export default AmountStake
+export default AmountClaim

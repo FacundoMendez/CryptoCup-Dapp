@@ -5,7 +5,8 @@ import ContextConnected from '../config/context/ConnectedContext'
 import Spinner from '../config/spinner/Spinner'
 import NavStaking from './navStaking/NavStaking'
 import Stake from './stake/Stake'
-
+import UnStake from './unStake/UnStake'
+import MyRewards from './myStake/MyRewards'
 
 const Staking = () => {
 
@@ -53,14 +54,14 @@ const Staking = () => {
 
                   {
                   unstake ? 
-                    <img className='candado' src={candado} alt="candado" />
+                    <UnStake/>
                     :
                     null
                   }
                   
                   {
                     myStake ? 
-                      <img className='candado' src={candado} alt="candado" />
+                      <MyRewards/>
                     :
                     null
                   }

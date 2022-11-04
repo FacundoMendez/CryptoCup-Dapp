@@ -149,14 +149,13 @@
         visibility: hidden;
         opacity: 0;
         transition: all .2s ease-in-out;
-        border: 2px solid rgba(255, 255, 255, 0.178);
         border-radius:10px;
         border-top: none;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        box-shadow: rgba(166, 128, 255, 0.226) 3px 3px 6px 0px inset, rgba(210, 194, 255, 0.103) -3px -3px 6px 1px inset;
-        background: radial-gradient(circle, rgba(254, 254, 255, 0.384) 0%, rgba(67, 56, 97, 0.801) 60%);
-        background-color: rgba(61, 15, 134, 0.932);
+        box-shadow: rgb(191 152 255 / 21%) 3px 3px 6px 0px inset, rgb(191 152 255 / 21%) -3px -3px 6px 1px inset;
+        background: rgb(39,25,78);
+        background: radial-gradient(circle, rgb(67, 32, 114) 0%, rgba(27, 11, 48, 0.966) 90%);
     }
 
     .box_links_movile_active_staking{
@@ -218,6 +217,9 @@
 
 @media screen and (max-width:480px) {
 
+    .nav_staking{
+        width: 98vw;
+    }
     .nav_basicLadder_staking{
         width: 98vw;
         height: 6rem;

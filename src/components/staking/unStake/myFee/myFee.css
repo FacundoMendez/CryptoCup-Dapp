@@ -1,0 +1,178 @@
+.myFee{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 500;
+    
+}
+
+.buttonMyFee{
+    padding: 2rem;
+    background: radial-gradient(circle, rgb(52, 34, 97) 0%, rgba(39, 16, 68, 0.966) 90%);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .6s ease;
+    cursor: pointer;
+    scale: 1;
+    position: relative;
+    letter-spacing: 1px;
+    box-shadow: rgb(166 128 255 / 34%) 3px 3px 6px 0px inset, rgb(170 139 255 / 30%) -3px -3px 6px 1px inset;
+    animation: luz 2s infinite linear;
+}
+
+.buttonMyFee_activ{
+    display: none;
+}
+
+@keyframes luz {
+    0%{
+
+    }
+    50%{
+        filter: drop-shadow( 0 0 10px rgba(246, 237, 255, 0.808));
+        
+    box-shadow: rgb(166 128 255 / 54%) 3px 3px 6px 0px inset, rgb(170 139 255 / 50%) -3px -3px 6px 1px inset;
+    }
+    100%{
+
+    }
+}
+
+.buttonMyFee:hover{
+    scale: 1.05;
+    transition: all .6s ease;
+}
+
+
+/* box */
+
+.containerInfoFee{
+    width: 72vw;
+    height: 77vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.514);
+    z-index: 10;
+    backdrop-filter: blur(13px);
+    border-radius: 15px;
+    z-index: 500;
+    border: 5px ridge rgba(190, 132, 255, 0.336);
+
+}
+
+
+.boxInfoFee{
+    position: absolute;
+    width: 44rem;
+    height: 20rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 15px;
+    z-index: 100;
+    background-color: #140224e1;
+    box-shadow: rgba(199, 176, 255, 0.541) 3px 3px 6px 0px inset, rgba(199, 176, 255, 0.541) -3px -3px 6px 1px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.boxInfoFee p{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(160deg,#a78fff,#c18aff,#d5b9ff,#fff,#d5b9ff,#c18aff,#a78fff);
+    color: transparent;
+
+}
+
+.boxInfoFee h4{
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(160deg,#a78fff,#c18aff,#d5b9ff,#fff,#d5b9ff,#f5ebff,#efeaff);
+    color: transparent;
+}
+
+.exitFee{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1440px) {
+
+    .containerInfoFee{
+        width: 90vw;
+        height: 72vh;
+    }
+      
+}
+
+@media screen and (max-width:1024px) {
+
+    .containerInfoFee{
+        width: 90vw;
+        height: 73vh;
+
+    }
+ 
+}
+
+
+@media screen and (max-width:480px) {
+
+    .containerInfoFee{
+        width: 98vw;
+    }
+
+    .boxInfoFee {
+        position: absolute;
+        width: 35rem;
+        height: 20rem;
+    }
+
+    .boxInfoFee p {
+        font-size: 1.5rem;
+    }
+  
+    .boxInfoFee h4 {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+@media screen and (max-width:380px) {
+
+    .containerInfoFee{
+        width: 98vw;
+    }
+
+    .boxInfoFee {
+        position: absolute;
+        width: 30rem;
+        height: 20rem;
+    }
+
+    .boxInfoFee p {
+        font-size: 1.2rem;
+    }
+  
+    .boxInfoFee h4 {
+        font-size: 2rem;
+    }
+}

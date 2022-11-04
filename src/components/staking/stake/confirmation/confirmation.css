@@ -4,10 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .confirmStakeIcon img{
-    width: 10rem;
-    height: 10rem;
-    object-fit: contain;
+/*     width: 10rem;
+    height: 10rem; */
+    object-fit: cover;
+    filter: hue-rotate(240deg) brightness(150%) contrast(110%);
 }

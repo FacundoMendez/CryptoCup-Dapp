@@ -11,12 +11,12 @@ const Checkpoints = ({setCheckpoints }) => {
             </div>
             <div className="card_checkpoint">
                 <h2>CCT Available to Deposit</h2>
-                <p>0</p>
+                <p className='cctDeposit'>0</p>
             </div>
             <div className="card_checkpoint">
                 <h2>BNB Available in Wallet</h2>
                 <p>BNB is requiered to pay transaction fees on the BSC Network.</p>
-                <p>0.00</p>
+                <p className='bnbWallet'>0.00</p>
             </div>
         </div>
 

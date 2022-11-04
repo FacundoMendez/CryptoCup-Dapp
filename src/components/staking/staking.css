@@ -28,10 +28,9 @@
     overflow-y: scroll;
     box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
     background: rgb(39,25,78);
-    background: radial-gradient(circle, rgb(65, 44, 121) 0%, rgba(36, 15, 63, 0.966) 60%);
+    background: radial-gradient(circle, rgb(67, 32, 114) 0%, rgba(27, 11, 48, 0.966) 90%);
     overflow: hidden;
     overflow-y: scroll;
-
 } 
 
 .box_predictions_staking{
@@ -110,6 +109,7 @@
         row-gap: 2rem;
         justify-content: center;
         flex-wrap: wrap;
+
     }
     .nav_staking{
         width: 90vw;

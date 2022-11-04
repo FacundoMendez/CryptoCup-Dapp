@@ -26,6 +26,11 @@
 .text_amount p {
     font-size: 1.6rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(160deg,#a78fff,#c18aff,#d5b9ff,#fff,#d5b9ff,#c18aff,#a78fff);
+    color: transparent;
 }
 
 .amountWallet{
@@ -77,6 +82,9 @@
     color: white;
     padding: 1rem;
     cursor: pointer;
-    z-index: 9999;
     font-size: 1.7rem;
+}
+
+.cantTokensUser_staking{
+    color: white !important;
 }

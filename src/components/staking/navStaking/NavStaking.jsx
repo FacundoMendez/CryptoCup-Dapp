@@ -3,6 +3,7 @@ import "./navStaking.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Spinner from '../../config/spinner/Spinner'
+import navLadderActive from '../../ladder/componentsLadders/navLadder/navLadderActive'
 
 
 const NavStaking = ({ladder, setMyStake, setStake , setUnstake }) => {
@@ -30,7 +31,20 @@ const NavStaking = ({ladder, setMyStake, setStake , setUnstake }) => {
 
     useEffect(() => {
         colorPred()
-/*         navLadderActive() */
+        const toggle_link = document.querySelector(".toggle_link_staking")
+        const box_links_movile = document.querySelector(".box_links_movile_staking")
+        const link_nav = document.querySelectorAll(".link_nav_staking")
+        
+        toggle_link.addEventListener("click" , function(){
+            box_links_movile.classList.toggle("box_links_movile_active_staking")
+        })
+    
+        for( let element of link_nav ){
+    
+            element.addEventListener("click" , function(){
+                box_links_movile.classList.toggle("box_links_movile_active_staking")
+            })
+        }
     },[])
 
     return (
