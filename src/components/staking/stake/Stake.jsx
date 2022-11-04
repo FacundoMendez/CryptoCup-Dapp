@@ -187,6 +187,7 @@ const Stake = () => {
                 <div className='buttonDisable'>NEXT</div>
 
             :
+
             null
             }
 
