@@ -8,6 +8,8 @@ import api from '../../../api'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
 import PredictionsBoost from './predictionsBoost/PredictionsBoost'
 import MyPredictionsBoost from './MyPredictionsBoost/MyPredictionsBoost'
+import { rankings } from '../componentsLadders/ranking/rankings'
+import Ranking from '../componentsLadders/ranking/Ranking'
 
 
 const BoostLadder = () => {
@@ -103,7 +105,9 @@ const BoostLadder = () => {
                 
                 {
                   ranking ? 
-                    <img className='candado' src={candado} alt="candado" />
+                    <Suspense fallback={<Spinner/>}>
+                      { rankings && rankings.length > 0 ?<Ranking rankings={rankings} /> : null }
+                    </Suspense>
                   :
                   null
                 }

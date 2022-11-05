@@ -55,36 +55,37 @@ const MyPredictions = () => {
 
 
           {
-           predictionsHistory.map( (item , index ) => {        /* <-  paginacion */
-              return  <div key={index} className={
-                item.relatedGame[0].result === "" ? 
-                   "myPrediction " 
-                   :  item.relatedGame[0].result == item.prediction ? 
-                    "myPrediction predictionSuccess" 
-                   :
-                   "myPrediction predictionLose"
-                }>
+            typeof predictionsHistory != "string" && predictionsHistory.length > 0 ?
+              predictionsHistory.map( (item , index ) => {        /* <-  paginacion */
+                  return  <div key={index} className={
+                    item.relatedGame[0].result === "" ? 
+                      "myPrediction " 
+                      :  item.relatedGame[0].result == item.prediction ? 
+                        "myPrediction predictionSuccess" 
+                      :
+                      "myPrediction predictionLose"
+                    }>
 
-              <div className="date_match">
-                <p> -/-/-   </p>
-                <p>{item.relatedGame[0].team1} &nbsp; vs &nbsp; {item.relatedGame[0].team2} </p>
-              </div>
-
-            <div className="box_match_mypred">
-                <div className="mySelection">
-
-                  <div className="flag_mySelection_mypred">
-                    <p>My choice</p>
-                    <img className='imgSelected' src={paisesJson[item.prediction].img} alt="bandera team 1" />   {/* bandera equipo select */}
+                  <div className="date_match">
+                    <p> -/-/-   </p>
+                    <p>{item.relatedGame[0].team1} &nbsp; vs &nbsp; {item.relatedGame[0].team2} </p>
                   </div>
-  
-                  <div className="flag_result_mypred">  
-                    <p>Result</p>
-                    <img src={paisesJson[item.relatedGame[0].result].img} alt="bandera team 1" />  {/* bandera resultado */}
-                  </div>
-  
+
+                <div className="box_match_mypred">
+                    <div className="mySelection">
+
+                      <div className="flag_mySelection_mypred">
+                        <p>My choice</p>
+                        <img className='imgSelected' src={paisesJson[item.prediction].img} alt="bandera team 1" />   {/* bandera equipo select */}
+                      </div>
+      
+                      <div className="flag_result_mypred">  
+                        <p>Result</p>
+                        <img src={paisesJson[item.relatedGame[0].result].img} alt="bandera team 1" />  {/* bandera resultado */}
+                      </div>
+      
+                    </div>
                 </div>
-            </div>
 
             {
               (item.relatedGame[0].result === "") ? 
@@ -107,7 +108,7 @@ const MyPredictions = () => {
   
             }
           </div>
-            })
+            }) : null
           }
       </div>
 

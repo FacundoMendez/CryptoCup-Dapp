@@ -8,7 +8,8 @@ import NavLadder from '../componentsLadders/navLadder/NavLadder'
 import Predictions from './predictionsBasic/PredictionsBasic'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
 import MyPredictions from './MyPredictions/MyPredictions'
-
+import Ranking from '../componentsLadders/ranking/Ranking'
+import { rankings } from '../componentsLadders/ranking/rankings';
 
 const BasicLadder = () => {
 
@@ -33,10 +34,13 @@ const BasicLadder = () => {
         address: Connected.account[0] ,
         signature: Connected.signature
        })
+
        const predictionsArray=res.data
        setPredictionCards(predictionsArray)
        setLoading(false) 
    }
+
+   console.log(predictionCards)
 
 
   return (
@@ -53,39 +57,6 @@ const BasicLadder = () => {
         />
         
         <div className="container_basicLadder">
-
-          <div className="box_predictions">
-
-            <div className='spin' >
-              {loading ? <Spinner/> : null}
-            </div>
-        
-
-
-
-            {/* matches */}
-            
-          { (predictionCards.length > 0 ) && Matches ? 
-                <Suspense fallback={<Spinner/>}>
-                { 
-                  predictionCards.map((item,index)=>{
-                    return <Predictions key={index}
-                      id={item._id}
-                      timer={item.startDate}
-                      round={item.round}
-                      nameTeam1={item.team1}
-                      nameTeam2={item.team2}
-                      resultTeam1={item.scoreTeam1}
-                      resultTeam2={item.scoreTeam2}
-                      getPredictionsAvailables={getPredictionsAvailables}
-                    />  
-                  })   
-                }
-                </Suspense>
-              :
-              loading === false && (predictionCards.length <= 0 ) && Matches ? <p className='noPredictions'> NO MATCHS </p> : null 
-            }
-          </div>
 
   
 
@@ -104,8 +75,7 @@ const BasicLadder = () => {
           {
             ranking ? 
               <Suspense fallback={<Spinner/>}>
-                {/*  <Ranking/> */}
-                <img className='candado' src={candado} alt="candado" />
+                { rankings && rankings.length > 0 ?<Ranking rankings={rankings} /> : null }
               </Suspense>
             :
             null

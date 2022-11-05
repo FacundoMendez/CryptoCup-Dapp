@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table-header {
+    height: 31px;
+    border: none;
+    background-color: #201828;
+}
+
+.table-row {
+    height: 40px;
+}
+
+.table-element {
+    height: 40px;
+    border: none;
+    background-color: #3D2F4E;
+}
