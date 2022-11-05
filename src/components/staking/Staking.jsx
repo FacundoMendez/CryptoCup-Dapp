@@ -46,7 +46,7 @@ const Staking = () => {
 
                   {
                   stake ? 
-                    <Stake/>
+                    <img className='candado'  src={candado} alt="candado" />
                   :
                     null
                   }
@@ -54,14 +54,14 @@ const Staking = () => {
 
                   {
                   unstake ? 
-                    <UnStake/>
+                    <img className='candado' src={candado} alt="candado" />
                     :
                     null
                   }
                   
                   {
                     myStake ? 
-                      <MyRewards/>
+                      <img className='candado'  src={candado} alt="candado" />
                     :
                     null
                   }
