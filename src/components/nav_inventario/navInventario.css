@@ -235,6 +235,8 @@
     border-right: none;
     border-top: none;
     padding: .5rem .8rem;
+    user-select: none;
+
 }
 
 
@@ -301,16 +303,20 @@
     font-size: 1.8rem;
     color: white;
     text-transform: uppercase;
-    cursor: pointer;
     transition: all .3s ease;
     height: 3.5rem;
     letter-spacing: 1px;
+    background-color: rgba(170, 170, 170, 0.712);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+/* 
+    cursor: pointer; */
 }
 
-.buy_multi:hover , .buttonCant:hover{
+/* .buy_multi:hover , .buttonCant:hover{
     background-color: rgba(185, 147, 255, 0.253);
     transition: all .3s ease;
-}
+} */
 
 
 
@@ -343,7 +349,10 @@
 }
 
 .box_claim p{
-    background-color: blueviolet;
+/*  background-color: blueviolet; 
+    cursor: pointer;*/
+    background-color: rgba(170, 170, 170, 0.712);
+    user-select: none;
     width: 100%;
     display: flex;
     justify-content: center;

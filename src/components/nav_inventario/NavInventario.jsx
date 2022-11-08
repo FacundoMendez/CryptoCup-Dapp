@@ -36,10 +36,10 @@ const NavInventario = () => {
   const [activeButtonWithdrawl , setActiveButtonWithdrawl] = useState(false)
 
   const handlerActiveDeposit = () => {
-    setActiveButtonDeposit(!activeButtonDeposit)
+   /*  setActiveButtonDeposit(!activeButtonDeposit) */
   }
   const handlerActiveWithdrawl = () => {
-    setActiveButtonWithdrawl(!activeButtonWithdrawl)
+   /*  setActiveButtonWithdrawl(!activeButtonWithdrawl) */
   }
 
  
