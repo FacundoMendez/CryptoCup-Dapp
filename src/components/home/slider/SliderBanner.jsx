@@ -28,14 +28,14 @@ const SliderBanner = () => {
           <SplideSlide>
 
             <Suspense fallback={<Spinner/>}>
-              <img src={back1} alt="background Slider 2"/>
+              <img src={back3} alt="background Slider 2"/>
             </Suspense>
 
           </SplideSlide>
           <SplideSlide>
 
             <Suspense fallback={<Spinner/>}>
-              <img src={back3} alt="background Slider 3"/>
+              <img src={back1} alt="background Slider 3"/>
             </Suspense>
             
           </SplideSlide>

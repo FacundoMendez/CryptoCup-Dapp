@@ -87,20 +87,13 @@ const Home = () => {
 
               { Connected.userLogginActive ?    
 
-                <NavLink to="/airdrop" >
+                <NavLink to="/basicLadder" >
                   <div className="containerDapp_cards-miniGames cardMain " ></div>
                 </NavLink> 
               :
                 <div className="containerDapp_cards-miniGames cardMain" onClick={() => setConnectedPopup(true) }></div>
               }
               
-              { Connected.userLogginActive ? 
-               /*  <NavLink to="/basicLadder" > */
-                  <div className="containerDapp_cards-basic cardMain" ></div>
-               /*  </NavLink> */
-                :
-                <div className="containerDapp_cards-basic cardMain" onClick={() => setConnectedPopup(true) }> </div>
-              }
               
               { Connected.userLogginActive ? 
                 /* <NavLink to="/boostLadder" > */
@@ -111,7 +104,13 @@ const Home = () => {
               }
 
 
-
+            { Connected.userLogginActive ? 
+              /* <NavLink to="/challengeLadder" > */
+                <div className="containerDapp_cards-friends cardMain " ></div>
+             /*  </NavLink>  */
+              : 
+              <div className="containerDapp_cards-friends cardMain " onClick={() => setConnectedPopup(true) }> </div>
+            }   
      
             </div>
 
@@ -120,13 +119,7 @@ const Home = () => {
           
           <div className="containerDapp_cards">
 
-            { Connected.userLogginActive ? 
-              /* <NavLink to="/challengeLadder" > */
-                <div className="containerDapp_cards-friends cardMain " ></div>
-             /*  </NavLink>  */
-              : 
-              <div className="containerDapp_cards-friends cardMain " onClick={() => setConnectedPopup(true) }> </div>
-            }   
+
 
             { Connected.userLogginActive ?    
                 /* <NavLink to="/Staking" > */

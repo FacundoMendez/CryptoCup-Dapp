@@ -7,7 +7,7 @@ import MiniGame from './components/miniGame/MiniGame';
 import ProfileUser from './components/profileUser/ProfileUser';
 import Marketplace from "./components/marketPlace/Marketplace"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Airdrop from './components/ladder/airdrop/Airdrop';
+import Airdrop from './components/ladder/airdrop/BasicLadder';
 
 import NavInventario from './components/nav_inventario/NavInventario';
 import Spinner from './components/config/spinner/Spinner';
@@ -16,7 +16,6 @@ import LadderHome from './components/ladder/ladderHome/LadderHome';
 import DetailChallenge from './components/ladder/challengeLadder/detalladaChallenge/DetailChallenge';
 
 const Home = lazy(() => import ('./components/home/Home'))
-const BasicLadder = lazy(() => import ("./components/ladder/basicLadder/BasicLadder"))
 const BoostLadder = lazy(() => import ('./components/ladder/boostLadder/BoostLadder'))
 const ChallengeLadder = lazy(() => import ("./components/ladder/challengeLadder/ChallengeLadder"))
 
@@ -80,8 +79,7 @@ function App() {
                 
                 <Route exact path="/ladder" element={<LadderHome/>}/>
 
-                <Route exact path="/airdrop" element={<Airdrop/>}/>
-                <Route exact path="/basicLadder" element={<BasicLadder/>}/>
+                <Route exact path="/basicLadder" element={<Airdrop/>}/>
                 <Route exact path="/boostLadder" element={<BoostLadder/>}/>
 
                 <Route exact path="/challengeLadder" element={<ChallengeLadder/>}/>

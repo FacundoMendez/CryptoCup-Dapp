@@ -1,5 +1,5 @@
 import React, {useState, useEffect , useContext} from 'react'
-import "./predictionsAirdrop.css"
+import "./predictionsBasic.css"
 import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'

@@ -1,16 +1,16 @@
 import React, {useState, Suspense, useEffect ,useContext} from 'react'
 import Spinner from '../../config/spinner/Spinner'
-import "./airdrop.css"
+import "./basicLadder.css"
 import api from '../../../api'
 import candado from "../../config/src/candado.png"
 import ContextConnected from '../../config/context/ConnectedContext'
 import NavLadder from '../componentsLadders/navLadder/NavLadder'
-import Predictions from './predictionsAirdrop/PredictionsAirdrop'
+import Predictions from './predictionsBasic/PredictionsBasic'
 import PopupPrediction from '../../config/popupsPredictions/PopupPrediction'
 import MyPredictions from './MyPredictionsAirdrop/MyPredictionsAirdrop'
 
 
-const Airdrop = () => {
+const BasicLadder = () => {
     const [Matches , setMatches] = useState(true)
     const [myRecord , setMyRecord] = useState(false)
     const [ranking , setRanking] = useState(false)
@@ -118,4 +118,4 @@ const Airdrop = () => {
     )
 }
 
-export default Airdrop
+export default BasicLadder

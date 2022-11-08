@@ -148,14 +148,7 @@
     filter: drop-shadow(0 0 10px rgba(154, 120, 248, 0.534));
 }
 
-.containerDapp_cards-basic{
-    background-image: url("./src/basicCandado.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: brightness(180%);
-    
-} 
+
 
 .containerDapp_cards-miniGames{
     padding: .5rem;
@@ -174,7 +167,7 @@
     height: 96%;
     top: 0;
     z-index: 99999 !important;
-    background-image: url("./src/AirdropCard.jpg");
+    background-image: url("./src/CardDappBasicLadder.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 15px;

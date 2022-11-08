@@ -6,7 +6,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "./ladderHome.css"
 import '@splidejs/splide/css/sea-green';
 
-import basicImg from "./src/basicCandado.jpg"
+import basicImg from "./src/basic.jpg"
 import boostImg from "./src/boostCandado.jpg"
 import challengeImg from "./src/challengeCandado.jpg"
 
@@ -81,30 +81,17 @@ const LadderHome = () => {
                                           
                           <SplideSlide className='box_splide airdrop '>
                                 {Connected.userLogginActive ? 
-                                    <NavLink to="/airdrop">
-                                        <img  src={airdropImg} alt="Airdrop Slider "/>
+                                    <NavLink to="/basicLadder">
+                                        <img  src={basicImg} alt="Basic Slider "/>
                                     </NavLink>
                                   :
                                       <div onClick={() => setConnectedPopup(true) }>
-                                        <img  src={airdropImg} alt="Airdrop Slider" />
+                                        <img  src={basicImg} alt="Basic Slider" />
                                       </div>
                                 }
                             </SplideSlide>
                     
-                            <SplideSlide className='box_splide '>
-                                {Connected.userLogginActive ? 
-                                  <NavLink to="/basicLadder">
-                                    <img  src={basicImg} alt="Basic ladder Slider " />
-                                  </NavLink>
-                             
-                                  :
-                                      <div onClick={() => setConnectedPopup(true) }>
-                                        <img  src={basicImg} alt="Basic ladder Slider " />
-                                      </div>
-                                }
 
-
-                            </SplideSlide>
 
                             <SplideSlide className='box_splide'>
                                   {Connected.userLogginActive ? 
