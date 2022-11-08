@@ -158,11 +158,6 @@
 } 
 
 .containerDapp_cards-miniGames{
-/*     background-image: url("./src/AirdropCard.jpg");
-    background-position: center;
-    background-size: 98% 95%;
-    border-radius: 10px;
-    background-repeat: no-repeat; */
     padding: .5rem;
     background-image: url("./src/recuardoCard.gif");
     background-size: 105% 100%;
@@ -446,6 +441,8 @@
         width: 29.3vw;
     }
 
+
+
     .text_live {
         height: 6rem;
         width: 15rem;
@@ -476,10 +473,15 @@
         padding: 2rem 1rem;
     }
 
+    .containerDapp_cards-miniGames::after{
+        background-position: 0% 30%;
+
+    }
     .cardMain{
-        height: 30rem;
+        height: 25rem;
         width: 90vw;
         object-fit: cover;
+        background-position: 0% 30%;
     }
     
     .cardMain::before{

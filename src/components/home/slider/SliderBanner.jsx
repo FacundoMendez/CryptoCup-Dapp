@@ -1,7 +1,7 @@
 import React, {Suspense}  from 'react'
 import back1 from "./src/slider1.jpeg"
 /* import back2 from "./src/slider2.jpeg" */
-import back3 from "./src/slider3.jpeg"
+import back3 from "./src/challengeSlider.jpg"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Spinner from '../../config/spinner/Spinner';
 import '@splidejs/splide/css/sea-green';

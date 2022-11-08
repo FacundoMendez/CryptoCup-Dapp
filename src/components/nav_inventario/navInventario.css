@@ -1,14 +1,14 @@
 .nav_inventario{
     padding: 0 2rem;
     height: 90.3vh;
-    width: 37rem;
-    display: flex;
-    justify-content: center;
+    width: 30rem;
     top: 54.8%;
-    left: -37rem;
-    align-items: center;
-    gap: 2rem;
+    left: -30rem;
     position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     backdrop-filter: blur(10px);
     border-radius: 15px;
     border-top-left-radius: 0;
@@ -29,6 +29,8 @@
     transition: all .4s ease ;
 }
 
+
+
 .nav_Toggle_inventario{
     position: fixed;
     width: 7rem;
@@ -44,7 +46,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     transition: all .2s ease-in-out;
     box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
     background: radial-gradient(circle, rgb(70, 37, 155) 0%, rgb(23, 10, 39) 90%);
@@ -77,7 +78,7 @@
 
 /* tickets y token */
 
-.tickets_navHorizontal-Basic , .tickets_navHorizontal-Boost , .token_navHorizontal{
+.tickets_navHorizontal-Boost , .token_navHorizontal{
     height: 4.5rem;
     border: 2px inset rgb(182, 117, 255);
     border-radius: 7px;
@@ -85,10 +86,10 @@
     display: flex;
     align-items: center;
     padding: .2rem 1.3rem;
-    top: 0;
+    top: -3rem;
 }
 
-.tickets_navHorizontal-Basic img , .tickets_navHorizontal-Boost img, .token_navHorizontal img{
+.tickets_navHorizontal-Boost img, .token_navHorizontal img{
     object-fit: contain;
     width: 5rem;
     height: 5rem;
@@ -97,7 +98,7 @@
     filter: contrast(120%) brightness(105%);
 }
 
-.tickets_navHorizontal-Basic-cant , .contadorToken_navHorizontal , .tickets_navHorizontal-Boost-cant{
+.contadorToken_navHorizontal , .tickets_navHorizontal-Boost-cant{
     color: white;
     /* padding-left: 3rem; */
     font-size: 1.8rem;
@@ -113,10 +114,321 @@
     gap:2rem;
     width: 90%;
     left: 0;
-    height: 100%;
     padding-top: 4rem;
     position: relative;
 }
+
+
+
+
+/* multiplicadores */
+
+
+.box_multi{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 2rem;
+}
+
+.contain_multi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px inset rgba(181, 117, 255, 0.603);
+    width: 20rem;
+    border-radius: 10px;
+    backdrop-filter: blur(1rem);
+    box-shadow: rgba(191, 152, 255, 0.205) 3px 3px 6px 0px inset, rgba(191, 152, 255, 0.205) -3px -3px 6px 1px inset;
+    background: rgb(39,25,78);
+    background: radial-gradient(circle, rgb(52, 33, 102) 0%, rgba(29, 13, 48, 0.966) 60%);
+    position: relative;
+    top: -5rem;
+}
+
+
+
+
+/* price multi */
+
+
+.boxPrice{
+    width: 100%;
+    border: 2px inset rgba(181, 117, 255, 0.705);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 1px;
+    height: 3.5rem;
+}
+
+.priceMulti{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .5rem;
+    width: 5rem;
+}
+
+.boxPrice img{
+    width: 3.5rem;
+}
+
+
+
+/* box img */
+
+.box_img_multi {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.box_img_multi img{
+    width: 8rem;
+    padding: 2rem 0;
+    position: relative;
+    left: -1rem;
+    filter: drop-shadow( 0 0 10px rgba(198, 130, 238, 0.534)) contrast(110%) brightness(105%);
+}
+
+.imgMulti2{
+    position: relative;
+    top: -.7rem;
+}
+.imgMulti3{
+    position: relative;
+    top: 0rem;
+}
+.imgMulti5{
+    position: relative;
+    top: -.5rem;
+}
+
+/* cant user mutli */
+
+.cant_multi_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: white;
+    position: absolute;
+    right: -.1rem;
+    top: -.2rem;
+    border: 2px inset rgb(182, 117, 255);
+    border-radius: 5px;
+    border-right: none;
+    border-top: none;
+    padding: .5rem .8rem;
+}
+
+
+/* incremento de multi */
+
+.box_agregar_multi{
+    width: 100%;
+    border: 2px inset rgb(182, 117, 255);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    gap: 2rem;
+    user-select: none;
+    z-index: 100;
+}
+
+.buttonCant{
+    padding: 0 1rem;
+    border: 2px inset rgb(182, 117, 255);
+    cursor: pointer;
+    width: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.valor_cant_multi{
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decr_button{
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+.incr_button{
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+/* buy multy */
+
+.buy_multi{
+    width: 100%;
+    border: 2px inset rgb(182, 117, 255);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    height: 3.5rem;
+    letter-spacing: 1px;
+}
+
+.buy_multi:hover , .buttonCant:hover{
+    background-color: rgba(185, 147, 255, 0.253);
+    transition: all .3s ease;
+}
+
+
+
+/* CLAIM */
+
+.claim{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    top: -5rem;
+    height: 10rem;
+
+}
+
+.box_claim{
+    width: 47%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+
+.box_claim p{
+    background-color: blueviolet;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    height: 4rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+
+.cant_claim{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cant_claim button{
+    position: absolute;
+    width: 3rem;
+    height: 100%;
+    height: 2.4rem;
+    right: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: white;
+    color: black;
+    z-index: 200;
+    transition: all .3s ease;
+}
+
+
+.cant_claim button:hover{
+    background-color: rgb(140, 255, 236);
+    transition: all .3s ease;
+}
+
+.cant_claim img{
+    width: 2.2rem;
+    position: relative;
+    left: .4rem;
+}
+
+.cant_claim input{
+    width: 100%;
+    border-radius: 15px;
+    height: 2.6rem;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    background: rgba(190, 141, 255, 0.151);
+    border: 1px solid rgba(202, 162, 255, 0.295);
+    color: rgb(231, 231, 231);
+    transition: 1.5s;
+    letter-spacing: 1px;
+    font-weight: bold;
+    z-index: 90;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.cant_claim input[type="date"] {
+    color: #ffffff;
+    font-family: qatar;
+    font-size: 1.6rem;
+}
+
+.cant_claim input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: 0 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: auto;
+}
+
 
 
 @media screen and (max-width:1480px) {
@@ -135,21 +447,26 @@
 @media screen and (max-width:1024px) {
     .nav_inventario{
         width: 100vw;
-        height: 120vh;
         display: flex;
-        justify-content: center;
-        top: 158%;
+        top: 140.7%;
         left: 0rem;
         align-items: center;
+        justify-content:flex-start;
         border-top-left-radius: 15px;
-        gap: 2rem;
+        gap: 3rem;
         z-index: 9999;
         transform: translate(0 , -50%);
     }
+
     
+    .nav_inventario_active{
+        top: 100.7%;
+        transition: all .3s ease ;
+    }
+
     .nav_inventario:hover{
         width: 100vw;
-        height: 120vh;
+        height: 110vh;
         top: 100%;
         transition: all .3s ease ;
     }
@@ -157,13 +474,12 @@
     .nav_Toggle_inventario{
         position: fixed;
         width: 20rem;
-        height: 4rem;
-        top:-4rem;
+        height: 4.5rem;
+        top:-4.5rem;
         left: 50%;
         transform: translate(-50%, 0%);
         border-radius: 15px;
-        border: 6px double rgba(177, 130, 238, 0.589);
-        border-left: 6px double rgba(177, 130, 238, 0.589);
+        border: 2px solid rgba(177, 130, 238, 0.589);
         border-bottom: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -175,6 +491,12 @@
         gap: 2rem;
         transition: all .2s ease-in-out;
     }
+
+
+    .nav_Toggle_inventario:hover > .arrowDesplegable{
+        rotate: 180deg;
+        transition: all .4s ease ;
+    }
     
     
     .nav_Toggle_inventario img{
@@ -184,5 +506,141 @@
         transform: rotate(-90deg);
         cursor: pointer;
     }
+
+    .contain_multi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 20rem;
+        top: -5rem;
+    }
+    .box_navHorizontal-contadores {
+        padding-top: 6rem;
+        position: relative;
+    }
+
+    .box_multi {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
     
+    .nav_inventario:hover{
+        height: 110vh;
+    }
+
+    .cant_claim input{
+        font-size: 1.4rem;
+        letter-spacing: 1.5px;
+    }
+    
+    
+
 }
+
+
+
+@media screen and (max-width:584px) {
+
+    .nav_inventario:hover{
+        height: 90rem;
+    }
+
+    .box_multi {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+
+    .box_img_multi img{
+        width: 5rem;
+        padding: 1rem 0;
+        left: -.5rem;
+    }
+    
+    .valor_cant_multi {
+        width: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+     
+    .nav_inventario:hover{
+        height: 130rem;
+    }
+    
+    .claim{
+        top: -6rem;
+    }
+
+    /* multiplicadores */
+
+
+    .box_multi{
+        top: -3rem;
+    }
+    .contain_multi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 16rem;
+        top: -5rem;
+    }
+
+    /* price multi */
+
+    .boxPrice{
+        font-size: 1.3rem;
+        height: 3.5rem;
+    }
+
+    .box_multi {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .boxPrice img{
+        width: 3.2rem;
+    }
+
+
+    /* box img */
+
+    .box_img_multi {
+        width: 100%;
+        height: 3.5rem;
+    }
+
+    .imgMulti2 {
+        top: -0.3rem;
+    }
+
+    .box_img_multi img{
+        width: 4.5rem;
+        padding: .5rem 0;
+        left: -.5rem;
+    }
+
+
+    .cant_multi_user {
+        font-size: 1.3rem;
+        position: absolute;
+        padding: 0.3rem 0.8rem;
+        top: 0;
+    }
+
+    /* incremento de multi */
+
+    .box_agregar_multi{
+        font-size: 1.5rem;
+    }
+
+
+}
+
