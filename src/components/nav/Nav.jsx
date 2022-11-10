@@ -137,6 +137,7 @@ const Nav = () => {
       Connected.setUserToken(undefined)
       Connected.setUserLoginActive(false);
       Connected.setSignature(undefined);
+      window.location.href = "/"
   }
  
 

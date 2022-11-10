@@ -43,78 +43,89 @@ const BasicLadder = () => {
   
   
     return (
-      <Suspense fallback={<Spinner/>}>
-        <div className="basicLadder">
-        {PredictionContext.confirmedPrediction === true  ? <PopupPrediction /> : null}
-        {PredictionContext.confirmedPrediction === false ? <PopupPrediction /> : null}
-        
-          <NavLadder 
-              ladder="Airdrop"
-              setMyRecord={setMyRecord}
-              setMatches={setMatches}
-              setRanking={setRanking}
-          />
+      <>
+      {
+        Connected.userLogginActive ?  
+
+
+        <Suspense fallback={<Spinner/>}>
+          <div className="basicLadder">
+          {PredictionContext.confirmedPrediction === true  ? <PopupPrediction /> : null}
+          {PredictionContext.confirmedPrediction === false ? <PopupPrediction /> : null}
           
-          <div className="container_basicLadder">
-  
-            <div className="box_predictions_airdrop">
-  
-              <div className='spin' >
-                {loading ? <Spinner/> : null}
-              </div>
-          
-  
-              {/* matches */}
-              
-            { (predictionCards.length > 0 ) && Matches ? 
-                  <Suspense fallback={<Spinner/>}>
-                  { 
-                    predictionCards.map((item,index)=>{
-                      return <Predictions key={index}
-                        id={item._id}
-                        timer={item.startDate}
-                        finishDate={item.finishDate}
-                        round={item.round}
-                        nameTeam1={item.team1}
-                        nameTeam2={item.team2}
-                        resultTeam1={item.scoreTeam1}
-                        resultTeam2={item.scoreTeam2}
-                        getPredictionsAvailables={getPredictionsAvailables}
-                      />  
-                    })   
-                  }
-                  </Suspense>
-                :
-                loading === false && (predictionCards.length <= 0 ) && Matches ? <p className='noPredictions'> NO MATCHS </p> : null 
-              }
-            </div>
-  
+            <NavLadder 
+                ladder="Basic Ladder"
+                setMyRecord={setMyRecord}
+                setMatches={setMatches}
+                setRanking={setRanking}
+            />
+            
+            <div className="container_basicLadder">
     
-  
+              <div className="box_predictions_airdrop">
+    
+                <div className='spin' >
+                  {loading ? <Spinner/> : null}
+                </div>
+            
+    
+                {/* matches */}
+                
+              { (predictionCards.length > 0 ) && Matches ? 
+                    <Suspense fallback={<Spinner/>}>
+                    { 
+                      predictionCards.map((item,index)=>{
+                        return <Predictions key={index}
+                          id={item._id}
+                          timer={item.startDate}
+                          finishDate={item.finishDate}
+                          round={item.round}
+                          nameTeam1={item.team1}
+                          nameTeam2={item.team2}
+                          resultTeam1={item.scoreTeam1}
+                          resultTeam2={item.scoreTeam2}
+                          getPredictionsAvailables={getPredictionsAvailables}
+                        />  
+                      })   
+                    }
+                    </Suspense>
+                  :
+                  loading === false && (predictionCards.length <= 0 ) && Matches ? <p className='noPredictions'> The tournament starts on November 20, 2022</p> : null 
+                }
+              </div>
+    
+      
+    
+                {
+                  myRecord ? 
+                    <Suspense fallback={<Spinner/>}>
+                      <MyPredictions/> 
+                    </Suspense>
+                  :
+                  null
+                }
+
+    
+    
               {
-                myRecord ? 
+                ranking ? 
                   <Suspense fallback={<Spinner/>}>
-                    <MyPredictions/> 
-                    {/* <img className='candado' src={candado} alt="candado" /> */}
+                    {/*  <Ranking/> */}
+                    <img className='candado' src={candado} alt="candado" />
                   </Suspense>
                 :
                 null
               }
-
-  
-  
-            {
-              ranking ? 
-                <Suspense fallback={<Spinner/>}>
-                  {/*  <Ranking/> */}
-                  <img className='candado' src={candado} alt="candado" />
-                </Suspense>
-              :
-              null
-            }
+            </div>
           </div>
-        </div>
-      </Suspense>
+        </Suspense>
+      
+      :
+
+      window.location.href = "/"
+    
+    }
+    </>
     )
 }
 

@@ -17,6 +17,11 @@ const ChallengeLadder = () => {
 
 
   return (
+
+    <>
+    {
+      Connected.userLogginActive ?  
+
         <div className="friendsLadder"> 
             <NavChallenge 
                 ladder="Challenge Room"
@@ -44,6 +49,13 @@ const ChallengeLadder = () => {
                 
               </div>
           </div>
+
+      :
+
+      window.location.href = "/"
+
+      }
+      </>
   )
 }
 

@@ -4,7 +4,7 @@ import paisesJson from "../../../config/paises2.json"
 import api from '../../../../api'
 import ContextConnected from '../../../config/context/ConnectedContext'
 import Spinner from '../../../config/spinner/Spinner'
-import Paginacion from '../../../config/paginacion/Paginacion'
+
 
 const MyPredictions = () => {
   
@@ -30,25 +30,14 @@ const MyPredictions = () => {
   }
 
 
-
-    /* paginacion */
-
-   /*  const [number, setNumber] = useState(1); 
-    const [postPerPage] = useState(8);
-    const lastPost = number * postPerPage;
-    const firstPost = lastPost - postPerPage;
-    const currentPost = predictionsHistory.slice(firstPost, lastPost);
-    const pageNumber = [];
-  
-    for (let i = 1; i <= Math.ceil(predictionsHistory.length / postPerPage); i++) {
-      pageNumber.push(i);
-    } */
-  
-  
-  
-    /* ------------ */
-
   return (
+  <>
+
+  {
+
+      (predictionsHistory.length > 0 ) ? 
+
+
     <div className="container_myPrediction">
 
         <div className="box_myPrediction">
@@ -123,17 +112,12 @@ const MyPredictions = () => {
           }
       </div>
 
-{/*     {!loading  ?  
-      <Paginacion
-        setNumber={setNumber}
-        number= {number}
-        pageNumber={ pageNumber}
-      />
-    : 
-      null
-    } */}
     
     </div>
+  :
+    loading === false && (predictionsHistory.length <= 0 ) ? <p className='noPredictions'> The tournament starts on November 20, 2022</p> : null 
+  }
+  </>
   )
 }
 
